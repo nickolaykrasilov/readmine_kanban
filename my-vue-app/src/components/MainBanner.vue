@@ -25,6 +25,11 @@
             </span>
           </button>
         </div>
+        <img
+          src="../assets/images/screen.png"
+          alt="Redmine Kanban Screen"
+          class="main-banner__screen"
+        >
       </div>
     </div>
   </section>
@@ -33,8 +38,9 @@
 <style lang="scss">
 .main-banner {
   background: linear-gradient(180deg, #FFFFFF 0%, #E3F0FC 87%);
-  padding: 80px 0;
+  padding: 80px 0 120px; /* Увеличил нижний padding */
   min-height: 100vh;
+  position: relative;
 
   &__container {
     max-width: 1200px;
@@ -50,6 +56,9 @@
     text-align: center;
     position: relative;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__ellipse {
@@ -74,8 +83,7 @@
 
   &__text-block {
     width: 436px;
-    min-height: 150px;
-    margin: 0 auto;
+    margin: 0 auto 40px; /* Добавил margin-bottom */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -146,8 +154,33 @@
     height: 16px;
   }
 
+  &__screen {
+    width: 1100px;
+    height: 616px;
+    margin-top: 40px; /* Заменил absolute на margin-top */
+    opacity: 1;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative; /* Изменил на relative */
+  }
+
+  @media (max-width: 1200px) {
+    &__screen {
+      width: 900px;
+      height: 504px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__screen {
+      width: 700px;
+      height: 392px;
+    }
+  }
+
   @media (max-width: 768px) {
-    padding: 60px 0;
+    padding: 60px 0 80px;
 
     &__title {
       font-size: 40px;
@@ -158,6 +191,7 @@
       width: 100%;
       padding: 0 15px;
       gap: 20px;
+      margin-bottom: 30px;
     }
 
     &__btn {
@@ -180,6 +214,13 @@
         width: 14px;
         height: 14px;
       }
+    }
+
+    &__screen {
+      width: calc(100% - 40px);
+      height: auto;
+      max-height: 300px;
+      margin-top: 30px;
     }
   }
 }
