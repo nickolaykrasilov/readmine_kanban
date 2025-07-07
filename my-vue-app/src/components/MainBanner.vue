@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import '../assets/styles/MainBanner.scss'
+import '../assets/styles/MainBanner.scss';
 
 export default {
   name: 'MainBanner'

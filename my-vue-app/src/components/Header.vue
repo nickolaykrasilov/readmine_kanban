@@ -1,9 +1,9 @@
 <script setup>
-import logo from '../assets/images/logo.png'
-import userIcon from '../assets/icons/people.png'
-import DemoButton from './DemoButton.vue'
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import '../assets/styles/Header.scss'
+import logo from '../assets/images/logo.png';
+import userIcon from '../assets/icons/people.png';
+import DemoButton from './DemoButton.vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import '../assets/styles/Header.scss';
 
 const isMobileMenuOpen = ref(false)
 const isMobile = ref(false)
