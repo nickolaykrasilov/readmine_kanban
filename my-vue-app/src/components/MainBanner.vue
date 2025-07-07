@@ -26,7 +26,7 @@
           </button>
         </div>
         <img
-          src="../assets/images/screen.png"
+          src="../assets/images/screen.jpg"
           alt="Redmine Kanban Screen"
           class="main-banner__screen"
         >
@@ -38,7 +38,7 @@
 <style lang="scss">
 .main-banner {
   background: linear-gradient(180deg, #FFFFFF 0%, #E3F0FC 87%);
-  padding: 80px 0 120px; /* Увеличил нижний padding */
+  padding: 80px 0 120px; 
   min-height: 100vh;
   position: relative;
 
@@ -83,7 +83,7 @@
 
   &__text-block {
     width: 436px;
-    margin: 0 auto 40px; /* Добавил margin-bottom */
+    margin: 0 auto 40px; 
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -157,12 +157,12 @@
   &__screen {
     width: 1100px;
     height: 616px;
-    margin-top: 40px; /* Заменил absolute на margin-top */
+    margin-top: 40px; 
     opacity: 1;
     border-radius: 8px;
     z-index: 1;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    position: relative; /* Изменил на relative */
+    position: relative; 
   }
 
   @media (max-width: 1200px) {
