@@ -85,16 +85,24 @@ import DemoButton from './DemoButton.vue'
 
   &__dropdown {
     &-select {
-      padding: 0.3rem;
-      border: 1px solid #ddd;
+      padding: 0.5rem 1rem;
+      border: 1px solid #3D3D3D;
       border-radius: 4px;
-      background: none;
       font-weight: 500;
       color: #333;
       cursor: pointer;
+      background-color: white;
+      min-width: 100px;
+      transition: all 0.2s ease;
 
       &:hover {
+        border-color: #0066ff;
         color: #0066ff;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
       }
     }
   }
@@ -103,6 +111,7 @@ import DemoButton from './DemoButton.vue'
     color: #333;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.2s ease;
 
     &:hover {
       color: #0066ff;
@@ -112,15 +121,22 @@ import DemoButton from './DemoButton.vue'
   &__controls {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  &__lang {
-    
-    &-select {
-      padding: 0.3rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+  &__lang-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #3D3D3D;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    background-color: white;
+    min-width: 60px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #0066ff;
     }
   }
 
@@ -138,9 +154,6 @@ import DemoButton from './DemoButton.vue'
       font-size: 14px;
       font-weight: 400;
       line-height: 100%;
-      letter-spacing: 0%;
-      width: 37px;
-      height: 17px;
     }
 
     &-icon {
