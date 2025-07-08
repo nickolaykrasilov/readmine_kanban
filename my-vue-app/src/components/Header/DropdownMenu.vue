@@ -25,7 +25,6 @@ const selectItem = (value) => {
   emit('update:isOpen', false);
 };
 </script>
-
 <template>
   <div class="header__dropdown">
     <button
@@ -39,7 +38,6 @@ const selectItem = (value) => {
         <img :src="dropdownArrow" alt="Dropdown arrow" class="dropdown-arrow-icon">
       </span>
     </button>
-
     <ul class="header__dropdown-list" v-show="isOpen">
       <li
         v-for="item in items"
