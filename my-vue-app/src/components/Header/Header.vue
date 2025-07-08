@@ -1,8 +1,8 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import DemoButton from '../DemoButton.vue';
 import HeaderNav from './HeaderNav.vue';
-import NavLink from './NavLink.vue';
+import DropdownMenu from './DropdownMenu.vue';
 import logo from '../../assets/images/logo.png';
 import userIcon from '../../assets/icons/people.svg';
 import dropdownArrow from '../../assets/icons/check_mark.svg';
@@ -12,7 +12,7 @@ const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const isMobile = ref(false);
 
-// Selected values with computed for better reactivity
+// Selected values
 const selected = {
   plugin: ref('Plugins'),
   theme: ref('Themes'),
@@ -53,7 +53,7 @@ const closeDropdowns = () => {
   activeDropdown.value = null;
 };
 
-const selectItem = (type, value) => {
+const selectItem = ({ type, value }) => {
   if (dropdowns[type]) {
     dropdowns[type].selected.value = value;
     setTimeout(closeDropdowns, 100);
@@ -98,41 +98,22 @@ onBeforeUnmount(() => {
       <HeaderNav
         :is-mobile="isMobile"
         :dropdowns="dropdowns"
-        v-model:active-dropdown="activeDropdown"
+        :active-dropdown="activeDropdown"
+        @update:active-dropdown="toggleDropdown"
         @select-item="selectItem"
-        @toggle-dropdown="toggleDropdown"
         :class="{ 'header__nav--active': isMobileMenuOpen }"
       />
       
       <div class="header__controls" :class="{ 'header__controls--active': isMobileMenuOpen }">
-        <NavLink :mobile="isMobile" href="#">
-          Support
-        </NavLink>
+        <a href="#" class="header__nav-link">Support</a>
 
-        <div class="header__dropdown">
-          <button
-            class="header__dropdown-button"
-            @click="toggleDropdown('language')"
-            aria-haspopup="true"
-            :aria-expanded="activeDropdown === 'language'"
-          >
-            {{ dropdowns.language.selected.value }}
-            <span class="header__dropdown-arrow">
-              <img :src="dropdownArrow" alt="Dropdown arrow" class="dropdown-arrow-icon">
-            </span>
-          </button>
-
-          <ul class="header__dropdown-list" v-show="activeDropdown === 'language'">
-            <li
-              v-for="lang in dropdowns.language.items"
-              :key="lang"
-              class="header__dropdown-item"
-              @click.stop="selectItem('language', lang)"
-            >
-              {{ lang }}
-            </li>
-          </ul>
-        </div>
+        <DropdownMenu
+          :items="dropdowns.language.items"
+          :selected-value="dropdowns.language.selected.value"
+          :is-open="activeDropdown === 'language'"
+          @update:is-open="(isOpen) => isOpen ? toggleDropdown('language') : closeDropdowns()"
+          @select="(value) => selectItem({ type: 'language', value })"
+        />
 
         <a href="#" class="header__login-link">
           <span class="header__login-text">Login</span>
