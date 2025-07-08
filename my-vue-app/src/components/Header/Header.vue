@@ -1,9 +1,9 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
-import DemoButton from './DemoButton.vue'
-import logo from '../assets/images/logo.png'
-import userIcon from '../assets/icons/people.svg'
-import dropdownArrow from '../assets/icons/check_mark.svg'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
+import DemoButton from '../DemoButton.vue';
+import logo from '../../assets/images/logo.png'
+import userIcon from '../../assets/icons/people.svg';
+import dropdownArrow from '../../assets/icons/check_mark.svg';
 
 // Reactive state
 const isMobileMenuOpen = ref(false)
@@ -83,16 +83,14 @@ onBeforeUnmount(() => {
       <div class="header__logo">
         <img :src="logo" alt="Company Logo" class="header__logo-img">
       </div>
-
       <button
         v-if="isMobile"
         class="header__mobile-menu-button"
         @click="isMobileMenuOpen = !isMobileMenuOpen"
         aria-label="Toggle menu"
       >
-        <span class="header__mobile-menu-icon"></span>
+        <span class="header__mobile-menu-icon" />
       </button>
-
       <nav class="header__nav" :class="{ 'header__nav--active': isMobileMenuOpen }">
         <div
           v-for="(config, type) in { plugin: dropdowns.plugin, theme: dropdowns.theme, pricing: dropdowns.pricing }"
@@ -166,5 +164,5 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/styles/Header.scss';
+@import '../../assets/styles/Header.scss';
 </style>
