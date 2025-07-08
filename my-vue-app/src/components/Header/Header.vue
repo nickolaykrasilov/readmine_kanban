@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import DemoButton from '../DemoButton.vue';
 import HeaderNav from './HeaderNav.vue';
 import logo from '../../assets/images/logo.png';
@@ -11,7 +11,7 @@ const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const isMobile = ref(false);
 
-// Selected values with computed for better reactivity
+// Selected values
 const selected = {
   plugin: ref('Plugins'),
   theme: ref('Themes'),
@@ -52,7 +52,7 @@ const closeDropdowns = () => {
   activeDropdown.value = null;
 };
 
-const selectItem = (type, value) => {
+const selectItem = ({ type, value }) => {
   if (dropdowns[type]) {
     dropdowns[type].selected.value = value;
     setTimeout(closeDropdowns, 100);
@@ -97,9 +97,9 @@ onBeforeUnmount(() => {
       <HeaderNav
         :is-mobile="isMobile"
         :dropdowns="dropdowns"
-        v-model:active-dropdown="activeDropdown"
+        :active-dropdown="activeDropdown"
+        @update:active-dropdown="toggleDropdown"
         @select-item="selectItem"
-        @toggle-dropdown="toggleDropdown"
         :class="{ 'header__nav--active': isMobileMenuOpen }"
       />
       
@@ -124,7 +124,7 @@ onBeforeUnmount(() => {
               v-for="lang in dropdowns.language.items"
               :key="lang"
               class="header__dropdown-item"
-              @click.stop="selectItem('language', lang)"
+              @click.stop="selectItem({ type: 'language', value: lang })"
             >
               {{ lang }}
             </li>

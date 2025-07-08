@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
 import dropdownArrow from '../../assets/icons/check_mark.svg';
 
 const props = defineProps({
@@ -7,24 +7,23 @@ const props = defineProps({
   dropdowns: {
     type: Object,
     required: true
-  }
+  },
+  activeDropdown: String
 });
 
-const emit = defineEmits(['select-item', 'toggle-dropdown']);
-
-const activeDropdown = defineModel('activeDropdown');
+const emit = defineEmits(['update:activeDropdown', 'selectItem']);
 
 const visibleDropdowns = computed(() => {
   const { language, ...rest } = props.dropdowns;
   return rest;
 });
 
-const selectItem = (type, value) => {
-  emit('select-item', { type, value });
+const handleToggle = (type) => {
+  emit('update:activeDropdown', type);
 };
 
-const toggleDropdown = (dropdownName) => {
-  emit('toggle-dropdown', dropdownName);
+const handleSelect = (type, value) => {
+  emit('selectItem', { type, value });
 };
 </script>
 
@@ -37,7 +36,7 @@ const toggleDropdown = (dropdownName) => {
     >
       <button
         class="header__dropdown-button"
-        @click="toggleDropdown(type)"
+        @click.stop="handleToggle(type)"
         aria-haspopup="true"
         :aria-expanded="activeDropdown === type"
       >
@@ -52,7 +51,7 @@ const toggleDropdown = (dropdownName) => {
           v-for="item in config.items"
           :key="item"
           class="header__dropdown-item"
-          @click.stop="selectItem(type, item)"
+          @click.stop="handleSelect(type, item)"
         >
           {{ item }}
         </li>
