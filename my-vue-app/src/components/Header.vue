@@ -9,6 +9,11 @@ const isMobileMenuOpen = ref(false)
 const isMobile = ref(false)
 const activeDropdown = ref(null)
 
+const selectedPlugin = ref('Plugins')
+const selectedTheme = ref('Themes')
+const selectedPricing = ref('Pricing')
+const selectedLanguage = ref('En')
+
 const checkScreenSize = () => {
   isMobile.value = window.innerWidth < 768
 }
@@ -21,13 +26,41 @@ const closeDropdowns = () => {
   activeDropdown.value = null
 }
 
+const selectItem = (type, value) => {
+  switch(type) {
+    case 'plugin':
+      selectedPlugin.value = value
+      break
+    case 'theme':
+      selectedTheme.value = value
+      break
+    case 'pricing':
+      selectedPricing.value = value
+      break
+    case 'language':
+      selectedLanguage.value = value
+      break
+  }
+  setTimeout(closeDropdowns, 100)
+}
+
 onMounted(() => {
   checkScreenSize()
   window.addEventListener('resize', checkScreenSize)
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header__dropdown')) {
+      closeDropdowns()
+    }
+  })
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', checkScreenSize)
+  document.removeEventListener('click', (e) => {
+    if (!e.target.closest('.header__dropdown')) {
+      closeDropdowns()
+    }
+  })
 })
 </script>
 
@@ -52,11 +85,10 @@ onBeforeUnmount(() => {
           <button 
             class="header__dropdown-button"
             @click="toggleDropdown('plugins')"
-            @blur="closeDropdowns"
             aria-haspopup="true"
             :aria-expanded="activeDropdown === 'plugins'"
           >
-            Plugins
+            {{ selectedPlugin }}
             <span class="header__dropdown-arrow">
               <img 
                 :src="dropdownArrow" 
@@ -69,8 +101,14 @@ onBeforeUnmount(() => {
             class="header__dropdown-list"
             v-show="activeDropdown === 'plugins'"
           >
-            <li class="header__dropdown-item">Plugin 1</li>
-            <li class="header__dropdown-item">Plugin 2</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('plugin', 'Plugin 1')"
+            >Plugin 1</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('plugin', 'Plugin 2')"
+            >Plugin 2</li>
           </ul>
         </div>
         
@@ -78,11 +116,10 @@ onBeforeUnmount(() => {
           <button 
             class="header__dropdown-button"
             @click="toggleDropdown('themes')"
-            @blur="closeDropdowns"
             aria-haspopup="true"
             :aria-expanded="activeDropdown === 'themes'"
           >
-            Themes
+            {{ selectedTheme }}
             <span class="header__dropdown-arrow">
               <img 
                 :src="dropdownArrow" 
@@ -95,8 +132,14 @@ onBeforeUnmount(() => {
             class="header__dropdown-list"
             v-show="activeDropdown === 'themes'"
           >
-            <li class="header__dropdown-item">Theme 1</li>
-            <li class="header__dropdown-item">Theme 2</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('theme', 'Theme 1')"
+            >Theme 1</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('theme', 'Theme 2')"
+            >Theme 2</li>
           </ul>
         </div>
         
@@ -104,11 +147,10 @@ onBeforeUnmount(() => {
           <button 
             class="header__dropdown-button"
             @click="toggleDropdown('pricing')"
-            @blur="closeDropdowns"
             aria-haspopup="true"
             :aria-expanded="activeDropdown === 'pricing'"
           >
-            Pricing
+            {{ selectedPricing }}
             <span class="header__dropdown-arrow">
               <img 
                 :src="dropdownArrow" 
@@ -121,8 +163,14 @@ onBeforeUnmount(() => {
             class="header__dropdown-list"
             v-show="activeDropdown === 'pricing'"
           >
-            <li class="header__dropdown-item">Basic</li>
-            <li class="header__dropdown-item">Pro</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('pricing', 'Basic')"
+            >Basic</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('pricing', 'Pro')"
+            >Pro</li>
           </ul>
         </div>
         
@@ -136,11 +184,10 @@ onBeforeUnmount(() => {
           <button 
             class="header__dropdown-button"
             @click="toggleDropdown('language')"
-            @blur="closeDropdowns"
             aria-haspopup="true"
             :aria-expanded="activeDropdown === 'language'"
           >
-            En
+            {{ selectedLanguage }}
             <span class="header__dropdown-arrow">
               <img 
                 :src="dropdownArrow" 
@@ -153,8 +200,14 @@ onBeforeUnmount(() => {
             class="header__dropdown-list"
             v-show="activeDropdown === 'language'"
           >
-            <li class="header__dropdown-item">En</li>
-            <li class="header__dropdown-item">Ru</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('language', 'En')"
+            >En</li>
+            <li 
+              class="header__dropdown-item" 
+              @click.stop="selectItem('language', 'Ru')"
+            >Ru</li>
           </ul>
         </div>
         
