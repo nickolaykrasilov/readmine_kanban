@@ -157,23 +157,6 @@
     }
   }
 
-  &__nav-link {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.5;
-
-    @media (max-width: 767px) {
-      font-size: 18px;
-      padding: 1rem;
-    }
-
-    &:hover {
-      color: #0066ff;
-    }
-  }
-
   &__controls {
     display: flex;
     align-items: center;

@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
 import DemoButton from '../DemoButton.vue';
 import HeaderNav from './HeaderNav.vue';
+import NavLink from './NavLink.vue';
 import logo from '../../assets/images/logo.png';
 import userIcon from '../../assets/icons/people.svg';
 import dropdownArrow from '../../assets/icons/check_mark.svg';
@@ -104,7 +105,9 @@ onBeforeUnmount(() => {
       />
       
       <div class="header__controls" :class="{ 'header__controls--active': isMobileMenuOpen }">
-        <a href="#" class="header__nav-link">Support</a>
+        <NavLink :mobile="isMobile" href="#">
+          Support
+        </NavLink>
 
         <div class="header__dropdown">
           <button

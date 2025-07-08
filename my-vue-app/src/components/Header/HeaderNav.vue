@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue';
+import NavLink from './NavLink.vue';
 import dropdownArrow from '../../assets/icons/check_mark.svg';
 
 const props = defineProps({
@@ -59,7 +60,9 @@ const toggleDropdown = (dropdownName) => {
       </ul>
     </div>
 
-    <a href="#" class="header__nav-link">Resources</a>
+    <NavLink :mobile="isMobile" href="#">
+      Resources
+    </NavLink>
   </nav>
 </template>
 
