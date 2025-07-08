@@ -9,7 +9,3 @@ import MainBanner from './components/MainBanner.vue';
     <MainBanner />
   </div>
 </template>
-
-<style>
-
-</style>

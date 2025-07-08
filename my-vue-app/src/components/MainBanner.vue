@@ -1,3 +1,11 @@
+<script>
+import '../assets/styles/MainBanner.scss';
+
+export default {
+  name: 'MainBanner'
+}
+</script>
+
 <template>
   <section class="main-banner">
     <div class="main-banner__container">
@@ -34,11 +42,3 @@
     </div>
   </section>
 </template>
-
-<script>
-import '../assets/styles/MainBanner.scss';
-
-export default {
-  name: 'MainBanner'
-}
-</script>

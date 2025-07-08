@@ -1,6 +1,6 @@
 <script setup>
 import logo from '../assets/images/logo.png';
-import userIcon from '../assets/icons/people.png';
+import userIcon from '../assets/icons/people.svg';
 import DemoButton from './DemoButton.vue';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import '../assets/styles/Header.scss';
