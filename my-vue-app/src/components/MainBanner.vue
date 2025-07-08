@@ -40,5 +40,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/MainBanner.scss';
+@use '../assets/styles/components/MainBanner.scss';
 </style>

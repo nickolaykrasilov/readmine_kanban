@@ -164,5 +164,5 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/Header.scss';
+@use '../../assets/styles/components/header/Header.scss'
 </style>

@@ -5,5 +5,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/DemoButton.scss';
+@use '../assets/styles/components/DemoButton.scss';
 </style>
