@@ -1,24 +1,44 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import DemoButton from './DemoButton.vue'
 import logo from '../assets/images/logo.png'
 import userIcon from '../assets/icons/people.svg'
 import dropdownArrow from '../assets/icons/check_mark.svg'
 
-// Состояние компонента
+// Reactive state
 const isMobileMenuOpen = ref(false)
-const isMobile = ref(false)
 const activeDropdown = ref(null)
+const isMobile = ref(false)
 
-// Выбранные значения
-const selectedValues = {
+// Selected values with computed for better reactivity
+const selected = {
   plugin: ref('Plugins'),
   theme: ref('Themes'),
   pricing: ref('Pricing'),
   language: ref('En')
 }
 
-// Методы
+// Dropdown configuration
+const dropdowns = {
+  plugin: {
+    items: ['Plugin 1', 'Plugin 2'],
+    selected: selected.plugin
+  },
+  theme: {
+    items: ['Theme 1', 'Theme 2'],
+    selected: selected.theme
+  },
+  pricing: {
+    items: ['Basic', 'Pro'],
+    selected: selected.pricing
+  },
+  language: {
+    items: ['En', 'Ru'],
+    selected: selected.language
+  }
+}
+
+// Methods
 const checkScreenSize = () => {
   isMobile.value = window.innerWidth < 768
 }
@@ -32,13 +52,19 @@ const closeDropdowns = () => {
 }
 
 const selectItem = (type, value) => {
-  if (selectedValues[type]) {
-    selectedValues[type].value = value
+  if (dropdowns[type]) {
+    dropdowns[type].selected.value = value
+    setTimeout(closeDropdowns, 100)
   }
-  setTimeout(closeDropdowns, 100)
 }
 
-// Хуки жизненного цикла
+const handleDocumentClick = (e) => {
+  if (!e.target.closest('.header__dropdown')) {
+    closeDropdowns()
+  }
+}
+
+// Lifecycle hooks
 onMounted(() => {
   checkScreenSize()
   window.addEventListener('resize', checkScreenSize)
@@ -49,105 +75,90 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', checkScreenSize)
   document.removeEventListener('click', handleDocumentClick)
 })
-
-// Вспомогательные функции
-const handleDocumentClick = (e) => {
-  if (!e.target.closest('.header__dropdown')) {
-    closeDropdowns()
-  }
-}
 </script>
 
 <template>
   <header class="header">
     <div class="header__container">
-      <!-- Логотип -->
       <div class="header__logo">
         <img :src="logo" alt="Company Logo" class="header__logo-img">
       </div>
 
-      <!-- Кнопка мобильного меню -->
-      <button 
+      <button
         v-if="isMobile"
-        class="header__mobile-menu-button" 
+        class="header__mobile-menu-button"
         @click="isMobileMenuOpen = !isMobileMenuOpen"
         aria-label="Toggle menu"
       >
         <span class="header__mobile-menu-icon"></span>
       </button>
 
-      <!-- Основная навигация -->
       <nav class="header__nav" :class="{ 'header__nav--active': isMobileMenuOpen }">
-        <div 
-          v-for="(item, index) in [
-            { type: 'plugin', name: 'Plugins', items: ['Plugin 1', 'Plugin 2'] },
-            { type: 'theme', name: 'Themes', items: ['Theme 1', 'Theme 2'] },
-            { type: 'pricing', name: 'Pricing', items: ['Basic', 'Pro'] }
-          ]" 
-          :key="index"
+        <div
+          v-for="(config, type) in { plugin: dropdowns.plugin, theme: dropdowns.theme, pricing: dropdowns.pricing }"
+          :key="type"
           class="header__dropdown"
         >
-          <button 
+          <button
             class="header__dropdown-button"
-            @click="toggleDropdown(item.type)"
+            @click="toggleDropdown(type)"
             aria-haspopup="true"
-            :aria-expanded="activeDropdown === item.type"
+            :aria-expanded="activeDropdown === type"
           >
-            {{ selectedValues[item.type].value }}
+            {{ config.selected.value }}
             <span class="header__dropdown-arrow">
               <img :src="dropdownArrow" alt="Dropdown arrow" class="dropdown-arrow-icon">
             </span>
           </button>
-          
-          <ul class="header__dropdown-list" v-show="activeDropdown === item.type">
-            <li 
-              v-for="(subItem, subIndex) in item.items"
-              :key="subIndex"
-              class="header__dropdown-item" 
-              @click.stop="selectItem(item.type, subItem)"
+
+          <ul class="header__dropdown-list" v-show="activeDropdown === type">
+            <li
+              v-for="item in config.items"
+              :key="item"
+              class="header__dropdown-item"
+              @click.stop="selectItem(type, item)"
             >
-              {{ subItem }}
+              {{ item }}
             </li>
           </ul>
         </div>
-        
+
         <a href="#" class="header__nav-link">Resources</a>
       </nav>
 
-      <!-- Управляющие элементы -->
       <div class="header__controls" :class="{ 'header__controls--active': isMobileMenuOpen }">
         <a href="#" class="header__nav-link">Support</a>
-        
+
         <div class="header__dropdown">
-          <button 
+          <button
             class="header__dropdown-button"
             @click="toggleDropdown('language')"
             aria-haspopup="true"
             :aria-expanded="activeDropdown === 'language'"
           >
-            {{ selectedValues.language.value }}
+            {{ dropdowns.language.selected.value }}
             <span class="header__dropdown-arrow">
               <img :src="dropdownArrow" alt="Dropdown arrow" class="dropdown-arrow-icon">
             </span>
           </button>
-          
+
           <ul class="header__dropdown-list" v-show="activeDropdown === 'language'">
-            <li 
-              v-for="lang in ['En', 'Ru']"
+            <li
+              v-for="lang in dropdowns.language.items"
               :key="lang"
-              class="header__dropdown-item" 
+              class="header__dropdown-item"
               @click.stop="selectItem('language', lang)"
             >
               {{ lang }}
             </li>
           </ul>
         </div>
-        
+
         <a href="#" class="header__login-link">
           <span class="header__login-text">Login</span>
           <img :src="userIcon" alt="User icon" class="header__login-icon">
         </a>
-        
+
         <DemoButton class="header__demo-btn" />
       </div>
     </div>
