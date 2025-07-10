@@ -16,10 +16,12 @@
             ensure that all necessary tasks are completed 
             throughout the project lifecycle.
           </p>
-          <button class="main-banner__btn">
-            <span class="main-banner__btn-text">
-              Get a Free Demo
-            </span>
+          <div class="main-banner__btn-wrapper">
+            <UiButton 
+              class="main-banner__btn" 
+              button-text=
+              "Get a Free Demo"
+            />
             <span class="main-banner__btn-rect">
               <img 
                 src="../assets/images/icons/arrow.svg" 
@@ -27,7 +29,7 @@
                 class="main-banner__btn-arrow"
               />
             </span>
-          </button>
+          </div>
         </div>
         <img
           src="../assets/images/screen.jpg"
@@ -38,6 +40,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import UiButton from './ui/UiButton.vue';
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/components/main-banner.scss';
