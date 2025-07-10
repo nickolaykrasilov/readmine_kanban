@@ -3,7 +3,7 @@
     <div class="main-banner__container">
       <div class="main-banner__content">
         <img 
-          src="../assets/images/Ellipse.svg" 
+          src="../assets/images/Ellipse.png" 
           alt="Decorative ellipse" 
           class="main-banner__ellipse"
         />
