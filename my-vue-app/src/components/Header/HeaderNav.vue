@@ -1,26 +1,32 @@
 <script setup>
-import { computed } from 'vue';
-import DropdownMenu from './DropdownMenu.vue';
+import { computed } from 'vue'
+import DropdownMenu from './DropdownMenu.vue'
 
 const props = defineProps({
-  isMobile: Boolean,
+  isMobile: {
+    type: Boolean,
+    default: false
+  },
   dropdowns: {
     type: Object,
-    required: true,
+    required: true
   },
-  activeDropdown: String
-});
+  activeDropdown: {
+    type: String,
+    default: null
+  }
+})
 
-const emit = defineEmits(['update:activeDropdown', 'selectItem']);
+const emit = defineEmits(['update:activeDropdown', 'selectItem'])
 
 const visibleDropdowns = computed(() => {
-  const { language, ...rest } = props.dropdowns;
-  return rest;
-});
+  const { language, ...rest } = props.dropdowns
+  return rest
+})
 
 const toggleDropdown = (type) => {
-  emit('update:activeDropdown', props.activeDropdown === type ? null : type);
-};
+  emit('update:activeDropdown', props.activeDropdown === type ? null : type)
+}
 </script>
 
 <template>
