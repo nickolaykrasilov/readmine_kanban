@@ -5,15 +5,15 @@ import DropdownMenu from './DropdownMenu.vue'
 const props = defineProps({
   isMobile: {
     type: Boolean,
-    default: false
+    default: false,
   },
   dropdowns: {
     type: Object,
-    required: true
+    required: true,
   },
   activeDropdown: {
     type: String,
-    default: null
+    default: null,
   }
 })
 
