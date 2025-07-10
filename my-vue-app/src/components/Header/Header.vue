@@ -18,11 +18,11 @@ const isMobile = ref(false);
 const dropdowns = {
   plugin: {
     items: ['Plugin 1', 'Plugin 2'],
-    selected: ref('Plugins')
+    selected: ref('Plugins'),
   },
   theme: {
     items: ['Theme 1', 'Theme 2'],
-    selected: ref('Themes')
+    selected: ref('Themes'),
   },
   pricing: {
     items: ['Basic', 'Pro'],

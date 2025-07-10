@@ -35,7 +35,7 @@ const props = defineProps({
   },
   selectedValue: {
     type: String,
-    required: true
+    required: true,
   },
   isOpen: Boolean,
   type: String
