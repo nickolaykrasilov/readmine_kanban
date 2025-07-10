@@ -6,7 +6,7 @@ const props = defineProps({
   isMobile: Boolean,
   dropdowns: {
     type: Object,
-    required: true
+    required: true,
   },
   activeDropdown: String
 });
@@ -33,7 +33,9 @@ const toggleDropdown = (type) => {
       @update:is-open="(isOpen) => isOpen ? toggleDropdown(type) : emit('update:activeDropdown', null)"
       @select="(value) => emit('selectItem', { type, value })"
     />
-    <a href="#" class="header__nav-link">Resources</a>
+    <a href="#" class="header__nav-link">
+      Resources
+    </a>
   </nav>
 </template>
 

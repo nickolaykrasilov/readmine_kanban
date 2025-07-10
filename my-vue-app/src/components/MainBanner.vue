@@ -7,16 +7,15 @@
           alt="Decorative ellipse" 
           class="main-banner__ellipse"
         />
-        
         <h1 class="main-banner__title">
           Powerful Agile & Kanban solutions for Redmine
         </h1>
-        
         <div class="main-banner__text-block">
           <p class="main-banner__subtitle">
-            Our plugins will help you stay organized and ensure that all necessary tasks are completed throughout the project lifecycle.
+            Our plugins will help you stay organized and 
+            ensure that all necessary tasks are completed 
+            throughout the project lifecycle.
           </p>
-          
           <button class="main-banner__btn">
             <span class="main-banner__btn-text">
               Get a Free Demo
@@ -30,7 +29,6 @@
             </span>
           </button>
         </div>
-        
         <img
           src="../assets/images/screen.jpg"
           alt="Redmine Kanban Screen"

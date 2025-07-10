@@ -11,32 +11,46 @@ import dropdownArrow from '../../assets/images/icons/check_mark.svg';
 const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const isMobile = ref(false);
+
 // Selected values
 const selected = {
   plugin: ref('Plugins'),
   theme: ref('Themes'),
   pricing: ref('Pricing'),
-  language: ref('En')
+  language: ref('En'),
 };
 // Dropdown configuration
 const dropdowns = {
   plugin: {
-    items: ['Plugin 1', 'Plugin 2'],
+    items: [
+      'Plugin 1', 
+      'Plugin 2'
+    ],
     selected: selected.plugin
   },
   theme: {
-    items: ['Theme 1', 'Theme 2'],
+    items: [
+      'Theme 1', 
+      'Theme 2'
+    ],
     selected: selected.theme
   },
   pricing: {
-    items: ['Basic', 'Pro'],
+    items: [
+      'Basic',
+       'Pro'
+      ],
     selected: selected.pricing
   },
   language: {
-    items: ['En', 'Ru'],
+    items: [
+      'En', 
+      'Ru'
+    ],
     selected: selected.language
   }
 };
+
 // Methods
 const checkScreenSize = () => {
   isMobile.value = window.innerWidth < 768;
@@ -58,6 +72,7 @@ const handleDocumentClick = (e) => {
     closeDropdowns();
   }
 };
+
 // Lifecycle hooks
 onMounted(() => {
   checkScreenSize();
@@ -75,7 +90,11 @@ onBeforeUnmount(() => {
   <header class="header">
     <div class="header__container">
       <div class="header__logo">
-        <img :src="logo" alt="Company Logo" class="header__logo-img">
+        <img 
+        :src="logo" 
+        alt="Company Logo" 
+        class="header__logo-img"
+        >
       </div>
       <button
         v-if="isMobile"
@@ -94,7 +113,9 @@ onBeforeUnmount(() => {
         :class="{ 'header__nav--active': isMobileMenuOpen }"
       />
       <div class="header__controls" :class="{ 'header__controls--active': isMobileMenuOpen }">
-        <a href="#" class="header__nav-link">Support</a>
+        <a href="#" class="header__nav-link">
+          Support
+        </a>
         <DropdownMenu
           :items="dropdowns.language.items"
           :selected-value="dropdowns.language.selected.value"
@@ -103,7 +124,9 @@ onBeforeUnmount(() => {
           @select="(value) => selectItem({ type: 'language', value })"
         />
         <a href="#" class="header__login-link">
-          <span class="header__login-text">Login</span>
+          <span class="header__login-text">
+            Login
+          </span>
           <img :src="userIcon" alt="User icon" class="header__login-icon">
         </a>
         <DemoButton class="header__demo-btn" />
