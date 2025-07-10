@@ -12,7 +12,7 @@ const props = defineProps({
     required: true,
   },
   isOpen: Boolean,
-  type: String
+  type: String,
 });
 
 const emit = defineEmits(['update:isOpen', 'select']);

@@ -2,7 +2,7 @@
 defineProps({
   buttonText: {
     type: String,
-    default: 'Get a Free Demo'
+    default: 'Get a Free Demo',
   }
 });
 </script>

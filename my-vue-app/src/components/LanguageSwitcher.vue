@@ -5,11 +5,11 @@ import dropdownArrow from '../assets/images/icons/check-mark.svg';
 const languages = [
   { 
     code: 'En', 
-    name: 'English' 
+    name: 'English' ,
   },
   { 
     code: 'Ru', 
-    name: 'Русский' 
+    name: 'Русский' ,
   }
 ];
 

@@ -26,7 +26,7 @@ const dropdowns = {
   },
   pricing: {
     items: ['Basic', 'Pro'],
-    selected: ref('Pricing')
+    selected: ref('Pricing'),
   }
 };
 
@@ -48,11 +48,11 @@ const selectItem = ({ type, value }) => {
     },
     theme: {
       'Theme 1': '/themes/theme1',
-      'Theme 2': '/themes/theme2'
+      'Theme 2': '/themes/theme2',
     },
     pricing: {
       'Basic': '/pricing/basic',
-      'Pro': '/pricing/pro'
+      'Pro': '/pricing/pro',
     }
   };
   router.push(routeMap[type]?.[value] || '/');
@@ -125,5 +125,5 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/header/header.scss';
+@use '../../assets/styles/components/header/header.scss';
 </style>
