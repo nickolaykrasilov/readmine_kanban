@@ -1,10 +1,7 @@
 <script setup>
-//import Header from './components/Header/Header.vue';
-
 import Header from './components/Header/Header.vue';
 import MainBanner from './components/MainBanner.vue';
 </script>
-
 <template>
   <div class="app">
     <Header />
