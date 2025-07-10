@@ -1,28 +1,30 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import dropdownArrow from '../../assets/images/icons/check_mark.svg';
 
 const props = defineProps({
   items: {
     type: Array,
-    required: true
+    required: true,
   },
-  selectedValue: {
+  initialValue: {  
     type: String,
-    required: true
-  },
-  isOpen: Boolean
+    default: null,
+  }
 });
 
-const emit = defineEmits(['update:is-open', 'select']);
+const emit = defineEmits(['select']); 
+const isOpen = ref(false);
+const selectedValue = ref(props.initialValue || props.items[0]); 
 
 const toggle = () => {
-  emit('update:is-open', !props.isOpen); 
+  isOpen.value = !isOpen.value; 
 };
 
 const selectItem = (value) => {
-  emit('select', value);
-  emit('update:is-open', false); 
+  selectedValue.value = value;
+  emit('select', value); 
+  isOpen.value = false;
 };
 </script>
 
@@ -36,10 +38,14 @@ const selectItem = (value) => {
     >
       {{ selectedValue }}
       <span class="header__dropdown-arrow">
-        <img :src="dropdownArrow" alt="Dropdown arrow" class="dropdown-arrow-icon">
+        <img :src="dropdownArrow" 
+        alt="Dropdown arrow" 
+        class="dropdown-arrow-icon">
       </span>
     </button>
-    <ul class="header__dropdown-list" v-show="isOpen">
+    <ul 
+    class="header__dropdown-list" 
+    v-show="isOpen">
       <li
         v-for="item in items"
         :key="item"
