@@ -1,6 +1,5 @@
 <script setup>
 import { ref, computed } from 'vue';
-//import dropdownArrow from '../../assets/icons/check_mark.svg';
 import dropdownArrow from '../../assets/images/icons/check_mark.svg';
 
 const props = defineProps({
@@ -15,15 +14,15 @@ const props = defineProps({
   isOpen: Boolean
 });
 
-const emit = defineEmits(['update:isOpen', 'select']);
+const emit = defineEmits(['update:is-open', 'select']);
 
 const toggle = () => {
-  emit('update:isOpen', !props.isOpen);
+  emit('update:is-open', !props.isOpen); 
 };
 
 const selectItem = (value) => {
   emit('select', value);
-  emit('update:isOpen', false);
+  emit('update:is-open', false); 
 };
 </script>
 
