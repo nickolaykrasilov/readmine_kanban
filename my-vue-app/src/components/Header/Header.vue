@@ -113,5 +113,5 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/header/Header.scss';
+@use '../../assets/styles/components/header/header.scss';
 </style>

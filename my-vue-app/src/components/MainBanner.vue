@@ -18,7 +18,9 @@
           </p>
           
           <button class="main-banner__btn">
-            <span class="main-banner__btn-text">Get a Free Demo</span>
+            <span class="main-banner__btn-text">
+              Get a Free Demo
+            </span>
             <span class="main-banner__btn-rect">
               <img 
                 src="../assets/icons/Arrow.svg" 
@@ -40,5 +42,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/components/MainBanner.scss';
+@use '../assets/styles/components/main-banner.scss';
 </style>
