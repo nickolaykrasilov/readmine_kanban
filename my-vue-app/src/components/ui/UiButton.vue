@@ -1,7 +1,16 @@
+<script setup>
+defineProps({
+  buttonText: {
+    type: String,
+    default: 'Get a Free Demo'
+  }
+});
+</script>
+
 <template>
   <button class="ui-button">
     <span class="ui-button__text">
-      Get a Free Demo
+      {{ buttonText }}
     </span>
   </button>
 </template>
