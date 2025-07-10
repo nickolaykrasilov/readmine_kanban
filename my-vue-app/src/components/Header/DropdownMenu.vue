@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue';
-import dropdownArrow from '../../assets/icons/check_mark.svg';
+//import dropdownArrow from '../../assets/icons/check_mark.svg';
+import dropdownArrow from '../../assets/images/icons/check_mark.svg';
 
 const props = defineProps({
   items: {
@@ -25,6 +26,7 @@ const selectItem = (value) => {
   emit('update:isOpen', false);
 };
 </script>
+
 <template>
   <div class="header__dropdown">
     <button

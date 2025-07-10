@@ -4,8 +4,8 @@ import DemoButton from '../DemoButton.vue';
 import HeaderNav from './HeaderNav.vue';
 import DropdownMenu from './DropdownMenu.vue';
 import logo from '../../assets/images/logo.png';
-import userIcon from '../../assets/icons/people.svg';
-import dropdownArrow from '../../assets/icons/check_mark.svg';
+import userIcon from '../../assets/images/icons/people.svg';
+import dropdownArrow from '../../assets/images/icons/check_mark.svg';
 
 // Reactive state
 const isMobileMenuOpen = ref(false);
