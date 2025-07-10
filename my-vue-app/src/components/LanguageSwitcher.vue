@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import dropdownArrow from '../assets/images/icons/check_mark.svg';
+import dropdownArrow from '../assets/images/icons/check-mark.svg';
 
 const languages = [{ 
     code: 'en', 

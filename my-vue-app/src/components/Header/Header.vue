@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
-import DemoButton from '../DemoButton.vue';
+import UiButton from '../ui/UiButton.vue';
 import HeaderNav from './HeaderNav.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 import logo from '../../assets/images/logo.png';
@@ -118,7 +118,7 @@ onBeforeUnmount(() => {
           class="header__login-icon"
           >
         </router-link>
-        <DemoButton class="header__demo-btn" />
+        <UiButton class="header__demo-btn" />
       </div>
     </div>
   </header>

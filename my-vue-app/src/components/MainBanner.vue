@@ -22,7 +22,7 @@
             </span>
             <span class="main-banner__btn-rect">
               <img 
-                src="../assets/icons/Arrow.svg" 
+                src="../assets/images/icons/arrow.svg" 
                 alt="Arrow icon"
                 class="main-banner__btn-arrow"
               />
@@ -32,7 +32,7 @@
         <img
           src="../assets/images/screen.jpg"
           alt="Redmine Kanban Screen"
-          class="main-banner__screen"
+          class="main-banner__screen" 
         />
       </div>
     </div>

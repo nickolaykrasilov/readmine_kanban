@@ -7,5 +7,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/components/demo-button.scss';
+@use '../../assets/styles/components/ui/ui-button.scss';
 </style>
