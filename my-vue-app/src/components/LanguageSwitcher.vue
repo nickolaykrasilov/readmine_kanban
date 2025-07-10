@@ -28,7 +28,7 @@ const toggleDropdown = () => {
 };
 
 const switchLanguage = (langCode) => {
-  currentLanguage.value = langCode; // Убрано toUpperCase()
+  currentLanguage.value = langCode; 
   localStorage.setItem('userLanguage', langCode);
   isOpen.value = false;
 };
