@@ -1,3 +1,37 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import dropdownArrow from '../assets/images/icons/check_mark.svg';
+
+const languages = [{ 
+    code: 'en', 
+    name: 'English' 
+},
+  { 
+    code: 'ru', 
+    name: 'Русский' 
+},];
+
+const currentLanguage = ref('EN');
+const isOpen = ref(false);
+
+onMounted(() => {
+  const savedLang = localStorage.getItem('userLanguage');
+  if (savedLang) {
+    currentLanguage.value = savedLang.toUpperCase();
+  }
+});
+
+const toggleDropdown = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const switchLanguage = (langCode) => {
+  currentLanguage.value = langCode.toUpperCase();
+  localStorage.setItem('userLanguage', langCode);
+  isOpen.value = false;
+};
+</script>
+
 <template>
   <div class="language-switcher">
     <button
@@ -8,10 +42,16 @@
     >
       {{ currentLanguage }}
       <span class="language-switcher__arrow">
-        <img :src="dropdownArrow" alt="Dropdown arrow">
+        <img 
+        :src="dropdownArrow" 
+        alt="Dropdown arrow"
+        >
       </span>
     </button>
-    <ul v-show="isOpen" class="language-switcher__list">
+    <ul 
+    v-show="isOpen" 
+    class="language-switcher__list"
+    >
       <li
         v-for="lang in languages"
         :key="lang.code"
@@ -23,33 +63,6 @@
     </ul>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import dropdownArrow from '@/assets/images/icons/check_mark.svg';
-
-const { locale } = useI18n();
-
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'ru', name: 'Русский' },
-];
-
-const currentLanguage = ref(locale.value.toUpperCase());
-const isOpen = ref(false);
-
-const toggleDropdown = () => {
-  isOpen.value = !isOpen.value;
-};
-
-const switchLanguage = (langCode) => {
-  currentLanguage.value = langCode.toUpperCase();
-  locale.value = langCode;
-  localStorage.setItem('userLanguage', langCode);
-  isOpen.value = false;
-};
-</script>
 
 <style scoped>
 .language-switcher {
@@ -68,6 +81,12 @@ const switchLanguage = (langCode) => {
   font: inherit;
   cursor: pointer;
   padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.language-switcher__button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .language-switcher__list {
@@ -75,23 +94,24 @@ const switchLanguage = (langCode) => {
   top: 100%;
   right: 0;
   background: white;
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0;
   border-radius: 4px;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 4px 0;
+  margin: 4px 0 0;
   min-width: 120px;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .language-switcher__item {
   padding: 8px 16px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .language-switcher__item:hover {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .language-switcher__arrow img {

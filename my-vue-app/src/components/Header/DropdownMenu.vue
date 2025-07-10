@@ -1,33 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-import dropdownArrow from '../../assets/images/icons/check_mark.svg';
-
-const props = defineProps({
-  items: {
-    type: Array,
-    required: true,
-  },
-  initialValue: {  
-    type: String,
-    default: null,
-  }
-});
-
-const emit = defineEmits(['select']); 
-const isOpen = ref(false);
-const selectedValue = ref(props.initialValue || props.items[0]); 
-
-const toggle = () => {
-  isOpen.value = !isOpen.value; 
-};
-
-const selectItem = (value) => {
-  selectedValue.value = value;
-  emit('select', value); 
-  isOpen.value = false;
-};
-</script>
-
 <template>
   <div class="header__dropdown">
     <button
@@ -38,14 +8,10 @@ const selectItem = (value) => {
     >
       {{ selectedValue }}
       <span class="header__dropdown-arrow">
-        <img :src="dropdownArrow" 
-        alt="Dropdown arrow" 
-        class="dropdown-arrow-icon">
+        <img :src="dropdownArrow" alt="Dropdown arrow" class="dropdown-arrow-icon">
       </span>
     </button>
-    <ul 
-    class="header__dropdown-list" 
-    v-show="isOpen">
+    <ul class="header__dropdown-list" v-show="isOpen">
       <li
         v-for="item in items"
         :key="item"
@@ -57,6 +23,34 @@ const selectItem = (value) => {
     </ul>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import dropdownArrow from '../../assets/images/icons/check_mark.svg';
+
+const props = defineProps({
+  items: {
+    type: Array,
+    required: true,
+  },
+  selectedValue: {
+    type: String,
+    required: true
+  },
+  isOpen: Boolean,
+  type: String
+});
+
+const emit = defineEmits(['update:isOpen', 'select']);
+
+const toggle = () => {
+  emit('update:isOpen', !props.isOpen);
+};
+
+const selectItem = (value) => {
+  emit('select', value);
+};
+</script>
 
 <style lang="scss" scoped>
 @use '../../assets/styles/components/header/header.scss';

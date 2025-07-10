@@ -17,6 +17,7 @@ const visibleDropdowns = computed(() => {
   const { language, ...rest } = props.dropdowns;
   return rest;
 });
+
 const toggleDropdown = (type) => {
   emit('update:activeDropdown', props.activeDropdown === type ? null : type);
 };
@@ -27,15 +28,16 @@ const toggleDropdown = (type) => {
     <DropdownMenu
       v-for="(config, type) in visibleDropdowns"
       :key="type"
+      :type="type"
       :items="config.items"
       :selected-value="config.selected.value"
       :is-open="activeDropdown === type"
       @update:is-open="(isOpen) => isOpen ? toggleDropdown(type) : emit('update:activeDropdown', null)"
       @select="(value) => emit('selectItem', { type, value })"
     />
-    <a href="#" class="header__nav-link">
+    <router-link to="/resources" class="header__nav-link">
       Resources
-    </a>
+    </router-link>
   </nav>
 </template>
 

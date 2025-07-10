@@ -1,53 +1,32 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useRouter } from 'vue-router';
 import DemoButton from '../DemoButton.vue';
 import HeaderNav from './HeaderNav.vue';
-import DropdownMenu from './DropdownMenu.vue';
+import LanguageSwitcher from '../LanguageSwitcher.vue';
 import logo from '../../assets/images/logo.png';
 import userIcon from '../../assets/images/icons/people.svg';
-import dropdownArrow from '../../assets/images/icons/check_mark.svg';
+
+const router = useRouter();
 
 // Reactive state
 const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const isMobile = ref(false);
 
-// Selected values
-const selected = {
-  plugin: ref('Plugins'),
-  theme: ref('Themes'),
-  pricing: ref('Pricing'),
-  language: ref('En'),
-};
 // Dropdown configuration
 const dropdowns = {
   plugin: {
-    items: [
-      'Plugin 1', 
-      'Plugin 2'
-    ],
-    selected: selected.plugin
+    items: ['Plugin 1', 'Plugin 2'],
+    selected: ref('Plugins')
   },
   theme: {
-    items: [
-      'Theme 1', 
-      'Theme 2'
-    ],
-    selected: selected.theme
+    items: ['Theme 1', 'Theme 2'],
+    selected: ref('Themes')
   },
   pricing: {
-    items: [
-      'Basic',
-       'Pro'
-      ],
-    selected: selected.pricing
-  },
-  language: {
-    items: [
-      'En', 
-      'Ru'
-    ],
-    selected: selected.language
+    items: ['Basic', 'Pro'],
+    selected: ref('Pricing')
   }
 };
 
@@ -55,21 +34,33 @@ const dropdowns = {
 const checkScreenSize = () => {
   isMobile.value = window.innerWidth < 768;
 };
+
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName;
 };
-const closeDropdowns = () => {
-  activeDropdown.value = null;
-};
+
 const selectItem = ({ type, value }) => {
-  if (dropdowns[type]) {
-    dropdowns[type].selected.value = value;
-    setTimeout(closeDropdowns, 100);
-  }
+  dropdowns[type].selected.value = value;
+  const routeMap = {
+    plugin: {
+      'Plugin 1': '/plugins/plugin1',
+      'Plugin 2': '/plugins/plugin2'
+    },
+    theme: {
+      'Theme 1': '/themes/theme1',
+      'Theme 2': '/themes/theme2'
+    },
+    pricing: {
+      'Basic': '/pricing/basic',
+      'Pro': '/pricing/pro'
+    }
+  };
+  router.push(routeMap[type]?.[value] || '/');
 };
+
 const handleDocumentClick = (e) => {
   if (!e.target.closest('.header__dropdown')) {
-    closeDropdowns();
+    activeDropdown.value = null;
   }
 };
 
@@ -113,22 +104,20 @@ onBeforeUnmount(() => {
         :class="{ 'header__nav--active': isMobileMenuOpen }"
       />
       <div class="header__controls" :class="{ 'header__controls--active': isMobileMenuOpen }">
-        <a href="#" class="header__nav-link">
+        <router-link to="/support" class="header__nav-link">
           Support
-        </a>
-        <DropdownMenu
-          :items="dropdowns.language.items"
-          :selected-value="dropdowns.language.selected.value"
-          :is-open="activeDropdown === 'language'"
-          @update:is-open="(isOpen) => isOpen ? toggleDropdown('language') : closeDropdowns()"
-          @select="(value) => selectItem({ type: 'language', value })"
-        />
-        <a href="#" class="header__login-link">
+        </router-link>
+        <LanguageSwitcher />
+        <router-link to="/login" class="header__login-link">
           <span class="header__login-text">
             Login
           </span>
-          <img :src="userIcon" alt="User icon" class="header__login-icon">
-        </a>
+          <img 
+          :src="userIcon" 
+          alt="User icon" 
+          class="header__login-icon"
+          >
+        </router-link>
         <DemoButton class="header__demo-btn" />
       </div>
     </div>
@@ -136,5 +125,5 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/header/header.scss';
+@import '../../assets/styles/components/header/header.scss';
 </style>
