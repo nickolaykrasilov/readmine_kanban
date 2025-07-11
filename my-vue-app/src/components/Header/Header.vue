@@ -22,7 +22,7 @@ const dropdowns = {
   },
   theme: {
     items: ['Theme 1', 'Theme 2'],
-    selected: ref('Themes') ,
+    selected: ref('Themes'),
   },
   pricing: {
     items: ['Basic', 'Pro'],
@@ -46,26 +46,26 @@ const routeMap = {
 };
 
 const toggleDropdown = (dropdownName) => {
-  activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
+  activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName;
 };
 
 const selectItem = ({ type, value }) => {
-  dropdowns[type].selected.value = value
-  router.push(routeMap[type]?.[value] || '/')
+  dropdowns[type].selected.value = value;
+  router.push(routeMap[type]?.[value] || '/');
 };
 
 const handleDocumentClick = (e) => {
   if (!e.target.closest('.header__dropdown')) {
-    activeDropdown.value = null
+    activeDropdown.value = null;
   }
 };
 
 onMounted(() => {
-  document.addEventListener('click', handleDocumentClick)
+  document.addEventListener('click', handleDocumentClick);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener('click', handleDocumentClick)
+  document.removeEventListener('click', handleDocumentClick);
 });
 </script>
 
@@ -113,9 +113,10 @@ onBeforeUnmount(() => {
           is-login
           class="header__login-link"
         />
-        <UIButton class="header__demo-button">
-          Get Demo
-        </UIButton>
+        <UIButton 
+          :buttonText="'Get Demo'"
+          class="header__demo-button"
+        />
       </div>
     </div>
   </header>
