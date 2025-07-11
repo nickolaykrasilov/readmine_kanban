@@ -20,12 +20,12 @@ import UiButton from './ui/UiButton.vue';
             ensure that all necessary tasks are completed 
             throughout the project lifecycle.
           </p>
-          <div class="main-banner__btn-wrapper">
+          <div class="main-banner__button-wrapper">
             <UiButton
-              class="main-banner__btn"
+              class="main-banner__button"
               button-text="Get a Free Demo"
             />
-            <span class="main-banner__btn-rect">
+            <span class="main-banner__button-rect">
               <img
                 src="../assets/images/icons/arrow.svg"
                 alt="Arrow icon"
