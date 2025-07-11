@@ -2,8 +2,8 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
 import { useScreenSize } from '../../utils/screen';
-import UiButton from '../ui/UiButton.vue';
-import UiLink from '../ui/UiLink.vue';
+import UIButton from '../ui/UIButton.vue';
+import UiLink from '../ui/UILink.vue';
 import HeaderNav from './HeaderNav.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 import logo from '../../assets/images/logo.png';
@@ -113,9 +113,9 @@ onBeforeUnmount(() => {
           is-login
           class="header__login-link"
         />
-        <UiButton class="header__demo-btn">
+        <UIButton class="header__demo-btn">
           Get Demo
-        </UiButton>
+        </UIButton>
       </div>
     </div>
   </header>

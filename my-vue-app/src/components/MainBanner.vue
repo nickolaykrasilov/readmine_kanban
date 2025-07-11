@@ -1,5 +1,5 @@
 <script setup>
-import UiButton from './ui/UiButton.vue';
+import UIButton from './ui/UIButton.vue';
 </script>
 
 <template>
@@ -21,7 +21,7 @@ import UiButton from './ui/UiButton.vue';
             throughout the project lifecycle.
           </p>
           <div class="main-banner__button-wrapper">
-            <UiButton
+            <UIButton
               class="main-banner__button"
               button-text="Get a Free Demo"
             />
