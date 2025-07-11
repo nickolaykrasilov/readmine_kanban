@@ -1,30 +1,27 @@
 <script setup>
 defineProps({
   to: {
-    type: [String, Object],
+    type: String,
     required: true,
   },
-
   text: {
     type: String,
     required: true,
   },
-
   icon: {
     type: String,
     default: null,
   },
-
   iconAlt: {
     type: String,
     default: '',
   },
-
-  isLogin: {
-    type: Boolean,
-    default: false
-  }
-})
+  variant: {
+    type: String,
+    default: 'default', 
+    validator: (value) => ['default', 'primary', 'danger', 'login'].includes(value),
+  },
+});
 </script>
 
 <template>
@@ -32,7 +29,7 @@ defineProps({
     :to="to"
     :class="[
       'ui-link',
-      { 'ui-link--login': isLogin }
+      `ui-link--${variant}`,
     ]"
   >
     <span class="ui-link__text">
