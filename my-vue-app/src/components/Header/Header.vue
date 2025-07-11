@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
+import { useScreenSize } from '../../utils/screen';
 import UiButton from '../ui/UiButton.vue';
 import HeaderNav from './HeaderNav.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
@@ -8,11 +9,11 @@ import logo from '../../assets/images/logo.png';
 import userIcon from '../../assets/images/icons/people.svg';
 
 const router = useRouter();
+const { isMobile } = useScreenSize();
 
 // Reactive state
 const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
-const isMobile = ref(false);
 
 // Dropdown configuration
 const dropdowns = {
@@ -31,10 +32,6 @@ const dropdowns = {
 };
 
 // Methods
-const checkScreenSize = () => {
-  isMobile.value = window.innerWidth < 768;
-};
-
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName;
 };
@@ -66,13 +63,10 @@ const handleDocumentClick = (e) => {
 
 // Lifecycle hooks
 onMounted(() => {
-  checkScreenSize();
-  window.addEventListener('resize', checkScreenSize);
   document.addEventListener('click', handleDocumentClick);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', checkScreenSize);
   document.removeEventListener('click', handleDocumentClick);
 });
 </script>
@@ -82,9 +76,9 @@ onBeforeUnmount(() => {
     <div class="header__container">
       <div class="header__logo">
         <img 
-        :src="logo" 
-        alt="Company Logo" 
-        class="header__logo-img"
+          :src="logo" 
+          alt="Company Logo" 
+          class="header__logo-img"
         >
       </div>
       <button
@@ -113,9 +107,9 @@ onBeforeUnmount(() => {
             Login
           </span>
           <img 
-          :src="userIcon" 
-          alt="User icon" 
-          class="header__login-icon"
+            :src="userIcon" 
+            alt="User icon" 
+            class="header__login-icon"
           >
         </router-link>
         <UiButton class="header__demo-btn" />
