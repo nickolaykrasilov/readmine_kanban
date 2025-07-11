@@ -34,16 +34,5 @@
   @media (max-width: $breakpoint-md) {
     font-size: $font-size-base;
     padding: 1.2rem;
-
-    &--login {
-      .ui-link__text {
-        font-size: $font-size-base;
-      }
-    }
-
-    &__icon {
-      width: 20px;
-      height: 20px;
-    }
   }
 }
