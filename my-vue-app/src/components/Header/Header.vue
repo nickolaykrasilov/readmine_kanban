@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
           is-login
           class="header__login-link"
         />
-        <UIButton class="header__demo-btn">
+        <UIButton class="header__demo-button">
           Get Demo
         </UIButton>
       </div>

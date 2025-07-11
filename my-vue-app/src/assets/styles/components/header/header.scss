@@ -109,9 +109,12 @@
       &:hover {
         color: #0066ff;
 
-        .header__dropdown-arrow svg path {
-          stroke: #0066ff;
-        }
+      .header__dropdown-arrow {
+        svg {
+          path {
+            stroke: #0066ff;
+          }
+        }        }
       }
     }
 
@@ -194,7 +197,7 @@
     }
   }
 
-  &__demo-btn {
+  &__demo-button {
     @media (max-width: 768px) {
       width: 100%;
       max-width: 200px;
