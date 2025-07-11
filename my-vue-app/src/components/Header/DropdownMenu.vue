@@ -7,25 +7,23 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-
   selectedValue: {
     type: String,
     required: true,
   },
-
   isOpen: Boolean,
   type: String,
-})
+});
 
-const emit = defineEmits(['update:isOpen', 'select'])
+const emit = defineEmits(['update:isOpen', 'select']);
 
 const toggle = () => {
   emit('update:isOpen', !props.isOpen)
-}
+};
 
 const selectItem = (value) => {
   emit('select', value)
-}
+};
 </script>
 
 <template>

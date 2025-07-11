@@ -1,10 +1,12 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
+const MOBILE_BREAKPOINT = 768;
+
 export function useScreenSize() {
   const isMobile = ref(false);
 
   const checkScreenSize = () => {
-    isMobile.value = window.innerWidth < 768;
+    isMobile.value = window.innerWidth < MOBILE_BREAKPOINT;
   };
 
   onMounted(() => {
@@ -17,4 +19,4 @@ export function useScreenSize() {
   });
 
   return { isMobile };
-}
+};

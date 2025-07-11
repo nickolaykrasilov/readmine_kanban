@@ -5,33 +5,33 @@ import dropdownArrow from '../assets/images/icons/check-mark.svg';
 const languages = [
   { 
     code: 'En', 
-    name: 'English'
+    name: 'English',
   },
   { 
     code: 'Ru', 
-    name: 'Русский'
+    name: 'Русский',
   }
-]
+];
 
-const currentLanguage = ref('En')
-const isOpen = ref(false)
+const currentLanguage = ref('En');
+const isOpen = ref(false);
 
 onMounted(() => {
   const savedLang = localStorage.getItem('userLanguage')
   if (savedLang) {
     currentLanguage.value = savedLang
-  }
-})
+  };
+});
 
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value
-}
+};
 
 const switchLanguage = (langCode) => {
   currentLanguage.value = langCode
   localStorage.setItem('userLanguage', langCode)
   isOpen.value = false
-}
+};
 </script>
 
 <template>

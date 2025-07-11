@@ -15,20 +15,23 @@ const props = defineProps({
 
   activeDropdown: {
     type: String,
-    default: null
+    default: null,
   }
-})
+});
 
-const emit = defineEmits(['update:activeDropdown', 'selectItem'])
+const emit = defineEmits([
+  'update:activeDropdown',
+   'selectItem',
+  ]);
 
 const visibleDropdowns = computed(() => {
   const { language, ...rest } = props.dropdowns
   return rest
-})
+});
 
 const toggleDropdown = (type) => {
   emit('update:activeDropdown', props.activeDropdown === type ? null : type)
-}
+};
 </script>
 
 <template>
