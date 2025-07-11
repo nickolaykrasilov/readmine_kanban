@@ -36,7 +36,7 @@
     font-family: 'Axiforma', sans-serif;
     font-weight: 700;
     font-size: 60px;
-    line-height: 110%;
+    line-height: 1; 
     max-width: 773px;
     margin: 0 auto 20px;
     position: relative;
@@ -58,7 +58,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    line-height: 160%;
+    line-height: 1.6; 
     margin: 0;
   }
 
@@ -83,7 +83,7 @@
 
     & .ui-button__text {
       position: absolute;
-      width: 113px;
+      width: 112px; 
       height: 17px;
       top: 50%;
       left: 24px;
@@ -91,7 +91,7 @@
       font-family: 'Inter', sans-serif;
       font-weight: 600;
       font-size: 14px;
-      line-height: 100%;
+      line-height: 1; 
       color: white;
       display: flex;
       align-items: center;
@@ -167,21 +167,21 @@
 
     &__btn {
       & .ui-button__text {
-        width: 103px;
+        width: 100px; 
         left: 20px;
         font-size: 13px;
       }
     }
 
     &__btn-rect {
-      width: 33px;
-      height: 33px;
+      width: 32px;
+      height: 32px;
       right: 5px;
     }
 
     &__btn-arrow {
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
     }
 
     &__screen {

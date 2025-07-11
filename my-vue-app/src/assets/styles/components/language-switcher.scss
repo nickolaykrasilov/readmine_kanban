@@ -15,8 +15,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  line-height: 1; 
+  letter-spacing: 0;
   color: #3D3D3D;
   cursor: pointer;
   padding: 8px 12px;
@@ -39,7 +39,7 @@
   padding: 4px 0;
   margin: 4px 0 0;
   min-width: 120px;
-  z-index: 100;
+  z-index: 100; 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,8 +51,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  line-height: 1; 
+  letter-spacing: 0;
   color: #3D3D3D;
 }
 
