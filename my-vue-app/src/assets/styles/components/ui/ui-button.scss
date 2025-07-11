@@ -1,36 +1,35 @@
+@import '../main/variables'; 
+
 .ui-button {
   position: relative;
-
   width: 160px;
   height: 48px;
   padding: 0;
   overflow: hidden;
 
-  background-color: #0094ff;
+  background-color: $ui-button-blue;
   border: none;
   border-radius: 4px;
 
-  font-family: 'Inter', sans-serif;
+  font-family: $font-family-base;
   font-weight: 600;
-  font-size: 14px;
+  font-size: $font-size-sm;
   line-height: 1;
   letter-spacing: 0;
-  color: #ffffff;
+  color: $bg-primary;
   text-align: center;
 
   transition: background-color 0.2s ease;
-
   cursor: pointer;
 
   &:hover {
-    background-color: #007acc;
+    background-color: $ui-button-blue-hover;
   }
 
   &__text {
     position: absolute;
     top: 16px;
     left: 24px;
-
     width: 112px;
     height: 16px;
     display: flex;
