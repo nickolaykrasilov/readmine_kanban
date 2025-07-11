@@ -7,45 +7,47 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+
   selectedValue: {
     type: String,
     required: true,
   },
+
   isOpen: Boolean,
   type: String,
-});
+})
 
-const emit = defineEmits(['update:isOpen', 'select']);
+const emit = defineEmits(['update:isOpen', 'select'])
 
 const toggle = () => {
-  emit('update:isOpen', !props.isOpen);
-};
+  emit('update:isOpen', !props.isOpen)
+}
 
 const selectItem = (value) => {
-  emit('select', value);
-};
+  emit('select', value)
+}
 </script>
 
 <template>
   <div class="header__dropdown">
     <button
       class="header__dropdown-button"
-      @click.stop="toggle"
-      aria-haspopup="true"
       :aria-expanded="isOpen"
+      aria-haspopup="true"
+      @click.stop="toggle"
     >
       {{ selectedValue }}
       <span class="header__dropdown-arrow">
-        <img 
-        :src="dropdownArrow" 
-        alt="Dropdown arrow" 
-        class="dropdown-arrow-icon"
+        <img
+          :src="dropdownArrow"
+          alt="Dropdown arrow"
+          class="dropdown-arrow-icon"
         >
       </span>
     </button>
-    <ul 
-    class="header__dropdown-list" 
-    v-show="isOpen"
+    <ul
+      v-show="isOpen"
+      class="header__dropdown-list"
     >
       <li
         v-for="item in items"

@@ -1,19 +1,21 @@
 <script setup>
-import { computed } from 'vue'
-import DropdownMenu from './DropdownMenu.vue'
+import { computed } from 'vue';
+import DropdownMenu from './DropdownMenu.vue';
 
 const props = defineProps({
   isMobile: {
     type: Boolean,
     default: false,
   },
+
   dropdowns: {
     type: Object,
     required: true,
   },
+
   activeDropdown: {
     type: String,
-    default: null,
+    default: null
   }
 })
 
@@ -41,7 +43,10 @@ const toggleDropdown = (type) => {
       @update:is-open="(isOpen) => isOpen ? toggleDropdown(type) : emit('update:activeDropdown', null)"
       @select="(value) => emit('selectItem', { type, value })"
     />
-    <router-link to="/resources" class="header__nav-link">
+    <router-link
+      to="/resources"
+      class="header__nav-link"
+    >
       Resources
     </router-link>
   </nav>

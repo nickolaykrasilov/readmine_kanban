@@ -2,30 +2,34 @@
 defineProps({
   to: {
     type: [String, Object],
-    required: true
+    required: true,
   },
+
   text: {
     type: String,
-    required: true
+    required: true,
   },
+
   icon: {
     type: String,
-    default: null
+    default: null,
   },
+
   iconAlt: {
     type: String,
-    default: ''
+    default: '',
   },
+
   isLogin: {
     type: Boolean,
     default: false
   }
-});
+})
 </script>
 
 <template>
-  <router-link 
-    :to="to" 
+  <router-link
+    :to="to"
     :class="[
       'ui-link',
       { 'ui-link--login': isLogin }
@@ -34,10 +38,10 @@ defineProps({
     <span class="ui-link__text">
       {{ text }}
     </span>
-    <img 
-      v-if="icon" 
-      :src="icon" 
-      :alt="iconAlt" 
+    <img
+      v-if="icon"
+      :src="icon"
+      :alt="iconAlt"
       class="ui-link__icon"
     >
   </router-link>

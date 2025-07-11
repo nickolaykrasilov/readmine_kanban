@@ -1,12 +1,16 @@
+<script setup>
+import UiButton from './ui/UiButton.vue';
+</script>
+
 <template>
   <section class="main-banner">
     <div class="main-banner__container">
       <div class="main-banner__content">
-        <img 
-          src="../assets/images/ellipse.png" 
-          alt="Decorative ellipse" 
+        <img
+          src="../assets/images/ellipse.png"
+          alt="Decorative ellipse"
           class="main-banner__ellipse"
-        />
+        >
         <h1 class="main-banner__title">
           Powerful Agile & Kanban solutions for Redmine
         </h1>
@@ -17,33 +21,28 @@
             throughout the project lifecycle.
           </p>
           <div class="main-banner__btn-wrapper">
-            <UiButton 
-              class="main-banner__btn" 
-              button-text=
-              "Get a Free Demo"
+            <UiButton
+              class="main-banner__btn"
+              button-text="Get a Free Demo"
             />
             <span class="main-banner__btn-rect">
-              <img 
-                src="../assets/images/icons/arrow.svg" 
+              <img
+                src="../assets/images/icons/arrow.svg"
                 alt="Arrow icon"
                 class="main-banner__btn-arrow"
-              />
+              >
             </span>
           </div>
         </div>
         <img
           src="../assets/images/screen.jpg"
           alt="Redmine Kanban Screen"
-          class="main-banner__screen" 
-        />
+          class="main-banner__screen"
+        >
       </div>
     </div>
   </section>
 </template>
-
-<script setup>
-import UiButton from './ui/UiButton.vue';
-</script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/components/main-banner.scss';
