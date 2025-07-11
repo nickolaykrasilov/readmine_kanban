@@ -1,0 +1,46 @@
+.ui-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #0066ff;
+  }
+
+  &--login {
+    .ui-link__text {
+      color: #0094FF;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    padding: 1rem;
+
+    &--login {
+      .ui-link__text {
+        font-size: 18px;
+      }
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
