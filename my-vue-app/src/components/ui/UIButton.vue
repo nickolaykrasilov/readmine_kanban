@@ -2,19 +2,19 @@
 defineProps({
   label: {
     type: String,
-    default: 'Get a Free Demo'
+    default: 'Get a Free Demo',
   },
   disabled: {
     type: Boolean,
-    default: false
+    default: false,
   },
   iconLeft: {
     type: String,
-    default: null
+    default: null,
   },
   iconRight: {
     type: String,
-    default: null
+    default: null,
   }
 });
 </script>
@@ -25,20 +25,30 @@ defineProps({
     :class="{ 'is-disabled': disabled }"
     :disabled="disabled"
   >
-    <span v-if="iconLeft" class="ui-button__icon ui-button__icon--left">
-      <img :src="iconLeft" alt="" aria-hidden="true" />
+    <span 
+    v-if="iconLeft" 
+    class="ui-button__icon ui-button__icon--left"
+    >
+      <img 
+      :src="iconLeft" 
+      alt="" 
+      aria-hidden="true" />
     </span>
-    
     <span class="ui-button__text">
       {{ label }}
     </span>
-    
-    <span v-if="iconRight" class="ui-button__icon ui-button__icon--right">
-      <img :src="iconRight" alt="" aria-hidden="true" />
+    <span 
+    v-if="iconRight" 
+    class="ui-button__icon ui-button__icon--right"
+    >
+      <img 
+      :src="iconRight" 
+      alt="" 
+      aria-hidden="true" 
+      />
     </span>
   </button>
 </template>
-
 
 <style lang="scss" scoped>
 @use '../../assets/styles/components/ui/ui-button.scss';

@@ -38,7 +38,10 @@ defineProps({
     ]"
     :aria-disabled="disabled"
   >
-    <slot v-if="$slots.iconLeft" name="iconLeft" />
+    <slot 
+    v-if="$slots.iconLeft" 
+    name="iconLeft" 
+    />
     <component
       v-else-if="typeof iconLeft === 'object'"
       :is="iconLeft"
@@ -55,7 +58,10 @@ defineProps({
         {{ text }}
       </slot>
     </span>
-    <slot v-if="$slots.iconRight" name="iconRight" />
+    <slot 
+    v-if="$slots.iconRight" 
+    name="iconRight" 
+    />
     <component
       v-else-if="typeof iconRight === 'object'"
       :is="iconRight"
