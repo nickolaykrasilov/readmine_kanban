@@ -7,12 +7,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-
   dropdowns: {
     type: Object,
     required: true,
   },
-
   activeDropdown: {
     type: String,
     default: null,

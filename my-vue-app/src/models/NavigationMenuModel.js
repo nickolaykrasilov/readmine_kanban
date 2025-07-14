@@ -35,9 +35,9 @@ export class NavigationMenuModel {
 
   getDropdowns() {
     return this.dropdowns;
-  }
+  };
 
   getRoute(type, value) {
     return this.routeMap[type]?.[value] || '/';
-  }
-}
+  };
+};
