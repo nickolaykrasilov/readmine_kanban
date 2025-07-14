@@ -1,45 +1,45 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { useRouter } from 'vue-router'
-import { useScreenSize } from '../../utils/screen'
-import { NavigationMenuModel } from '../../models/NavigationMenuModel'
-import UIButton from '../ui/UIButton.vue'
-import UILink from '../ui/UILink.vue'
-import HeaderNav from './HeaderNav.vue'
-import LanguageSwitcher from '../LanguageSwitcher.vue'
-import logo from '../../assets/images/logo.png'
-import userIcon from '../../assets/images/icons/people.svg'
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useRouter } from 'vue-router';
+import { useScreenSize } from '../../utils/screen';
+import { NavigationMenuModel } from '../../models/NavigationMenuModel';
+import UIButton from '../ui/UIButton.vue';
+import UILink from '../ui/UILink.vue';
+import HeaderNav from './HeaderNav.vue';
+import LanguageSwitcher from '../LanguageSwitcher.vue';
+import logo from '../../assets/images/logo.png';
+import userIcon from '../../assets/images/icons/people.svg';
 
-const router = useRouter()
-const { isMobile } = useScreenSize()
-const navigationModel = new NavigationMenuModel()
+const router = useRouter();
+const { isMobile } = useScreenSize();
+const navigationModel = new NavigationMenuModel();
 
-const isMobileMenuOpen = ref(false)
-const activeDropdown = ref(null)
-const dropdowns = navigationModel.getDropdowns()
+const isMobileMenuOpen = ref(false);
+const activeDropdown = ref(null);
+const dropdowns = navigationModel.getDropdowns();
 
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
-}
+};
 
 const selectItem = ({ type, value }) => {
   dropdowns[type].selected.value = value
   router.push(navigationModel.getRoute(type, value))
-}
+};
 
 const handleDocumentClick = (e) => {
   if (!e.target.closest('.header__dropdown')) {
     activeDropdown.value = null
   }
-}
+};
 
 onMounted(() => {
   document.addEventListener('click', handleDocumentClick)
-})
+});
 
 onBeforeUnmount(() => {
   document.removeEventListener('click', handleDocumentClick)
-})
+});
 </script>
 
 <template>
