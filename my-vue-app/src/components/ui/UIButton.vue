@@ -1,16 +1,24 @@
 <script setup>
 defineProps({
-  buttonText: {
+  label: {
     type: String,
-    default: 'Get a Free Demo',
+    default: 'Get a Free Demo'
+  },
+  disabled: {
+    type: Boolean,
+    default: false
   }
 });
 </script>
 
 <template>
-  <button class="ui-button">
+  <button
+    class="ui-button"
+    :class="{ 'is-disabled': disabled }"
+    :disabled="disabled"
+  >
     <span class="ui-button__text">
-      {{ buttonText }}
+      {{ label }}
     </span>
   </button>
 </template>
