@@ -80,12 +80,12 @@
 
   &__button-wrapper {
     position: relative;
-    width: 186px;
+    width: 210px;
     height: 48px;
     margin: 0 auto;
 
     @media (max-width: $breakpoint-md) {
-      width: 170px;
+      width: 210px;
       height: 44px;
     }
   }
@@ -112,7 +112,7 @@
         transform: translateY(-50%);
 
         width: 112px;              
-        height: 17px;
+        height: 16px;
         display: flex;             
         align-items: center;       
         justify-content: center;   
