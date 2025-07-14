@@ -1,54 +1,76 @@
+@import '../main/index';
+
 .header {
-  $self: &; 
+  $self: &;
 
   position: relative;
-  z-index: 10;
+  z-index: $z-index-sticky;
+
+  display: block;
+  width: 100%;
   padding: 1.2rem 0;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  margin: 0;
+
+  background-color: $bg-primary;
+  box-shadow: $box-shadow;
 
   &__container {
+    position: relative;
+
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    width: 100%;
+    max-width: $breakpoint-xl;
     margin: 0 auto;
     padding: 0 1.2rem;
-    flex-wrap: wrap;
+
+    font-family: $font-family-base;
   }
 
   &__logo-img {
+    display: block;
     height: 40px;
     width: auto;
   }
 
   &__mobile-menu-button {
+    position: relative;
     z-index: 30;
+
     display: none;
     padding: 0.8rem;
+
     background-color: transparent;
     border: none;
     cursor: pointer;
 
-    @media (max-width: 768px) {
+    appearance: none;
+
+    @media (max-width: $breakpoint-md) {
       display: block;
     }
   }
 
   &__mobile-menu-icon {
     position: relative;
+
     display: block;
     width: 24px;
     height: 2px;
-    background-color: #333333;
+
+    background-color: $text-primary;
 
     &::before,
     &::after {
       position: absolute;
       left: 0;
+
       width: 100%;
       height: 2px;
-      background-color: #333333;
+
+      background-color: $text-primary;
       content: '';
     }
 
@@ -63,21 +85,24 @@
 
   &__nav {
     display: flex;
-    gap: 1.6rem;
     align-items: center;
+    gap: 1.6rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       position: fixed;
       top: 0;
       left: 0;
+      z-index: $z-index-modal;
+
       width: 100%;
       height: 100vh;
       padding: 80px 20px 20px;
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
-      z-index: 20;
-      background-color: #ffffff;
+
+      background-color: $bg-primary;
+
       transform: translateX(-100%);
       transition: transform 0.3s ease;
 
@@ -88,7 +113,8 @@
   }
 
   &__dropdown {
-    $dropdown: &; // Локальная переменная для dropdown
+    $dropdown: &;
+
     position: relative;
 
     &-button {
@@ -96,25 +122,27 @@
       align-items: center;
       gap: 0.4rem;
       padding: 0.8rem 1.2rem 0.8rem 0.8rem;
-      font-size: 16px;
-      line-height: 1.5;
+
+      font-size: $font-size-base;
+      line-height: $line-height-base;
       font-weight: 500;
-      color: #333333;
+      color: $language-switcher-text;
+
       background-color: transparent;
       border: none;
+
       cursor: pointer;
 
-      @media (max-width: 768px) {
+      @media (max-width: $breakpoint-md) {
         padding: 1.2rem 1.6rem 1.2rem 1.2rem;
-        font-size: 16px;
       }
 
       &:hover {
-        color: #0066ff;
+        color: $link-hover-color;
 
         #{$dropdown}-arrow {
           svg path {
-            stroke: #0066ff;
+            stroke: $link-hover-color;
           }
         }
       }
@@ -124,8 +152,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 12px;
-      height: 12px;
+      width: $language-switcher-arrow-size;
+      height: $language-switcher-arrow-size;
       margin-left: 8px;
 
       svg {
@@ -133,7 +161,8 @@
         height: 100%;
 
         path {
-          stroke: #333333;
+          stroke: $language-switcher-text;
+
           transition: stroke 0.2s ease;
         }
       }
@@ -143,13 +172,16 @@
       position: absolute;
       top: 100%;
       left: 0;
+      z-index: $z-index-dropdown;
+
       min-width: 200px;
       padding: 0.8rem 0;
       margin-top: 0.8rem;
-      background-color: #ffffff;
+
+      background-color: $bg-primary;
       border-radius: 4px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-      z-index: 15;
+      box-shadow: $box-shadow;
+
       opacity: 0;
       visibility: hidden;
       transition: all 0.2s ease;
@@ -162,13 +194,16 @@
 
     &-item {
       padding: 0.8rem 1.2rem;
+
       list-style: none;
+
       cursor: pointer;
+
       transition: all 0.2s ease;
 
       &:hover {
-        background-color: #f5f5f5;
-        color: #0066ff;
+        background-color: $language-switcher-item-hover;
+        color: $link-hover-color;
       }
     }
   }
@@ -178,18 +213,21 @@
     align-items: center;
     gap: 1.6rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       position: fixed;
       top: 0;
       left: 0;
+      z-index: $z-index-modal;
+
       width: 100%;
       height: 100vh;
       padding: 80px 20px 20px;
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
-      z-index: 20;
-      background-color: #ffffff;
+
+      background-color: $bg-primary;
+
       transform: translateX(-100%);
       transition: transform 0.3s ease;
 
@@ -200,14 +238,14 @@
   }
 
   &__demo-button {
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       width: 100%;
       max-width: 200px;
       padding: 1.2rem;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     #{$self}__mobile-menu-button {
       display: block;
     }
