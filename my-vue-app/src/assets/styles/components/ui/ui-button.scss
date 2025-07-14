@@ -1,6 +1,7 @@
 @import '../main/index'; 
 
 .ui-button {
+  $self: &; 
   position: relative;
   width: 160px;
   height: 48px;

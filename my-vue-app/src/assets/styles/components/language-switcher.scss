@@ -1,69 +1,70 @@
 @import './main/index';
 
 .language-switcher {
+  $self: &; 
   position: relative;
   display: inline-block;
   margin-left: 16px;
-}
 
-.language-switcher__button {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 8px 12px;
-  font-family: $font-family-base;
-  font-weight: 400;
-  font-style: normal;
-  font-size: $font-size-sm;
-  line-height: 1;
-  letter-spacing: 0;
-  color: $language-switcher-text;
-  background: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-style: normal;
+    font-size: $font-size-sm;
+    line-height: 1;
+    letter-spacing: 0;
+    color: $language-switcher-text;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 
-  &:hover {
-    background-color: $language-switcher-hover-bg;
+    &:hover {
+      background-color: $language-switcher-hover-bg;
+    }
   }
-}
 
-.language-switcher__list {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: $z-index-dropdown;
-  padding: 4px 0;
-  margin: 4px 0 0;
-  min-width: 120px;
-  background: $bg-primary;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  list-style: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.language-switcher__item {
-  padding: 8px 16px;
-  font-family: $font-family-base;
-  font-weight: 400;
-  font-style: normal;
-  font-size: $font-size-sm;
-  line-height: 1;
-  letter-spacing: 0;
-  color: $language-switcher-text;
-  cursor: pointer;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: $language-switcher-item-hover;
+  &__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: $z-index-dropdown;
+    padding: 4px 0;
+    margin: 4px 0 0;
+    min-width: 120px;
+    background: $bg-primary;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    list-style: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-}
 
-.language-switcher__arrow img {
-  width: $language-switcher-arrow-size;
-  height: $language-switcher-arrow-size;
-  opacity: 1;
-  transition: transform 0.2s;
+  &__item {
+    padding: 8px 16px;
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-style: normal;
+    font-size: $font-size-sm;
+    line-height: 1;
+    letter-spacing: 0;
+    color: $language-switcher-text;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: $language-switcher-item-hover;
+    }
+  }
+
+  &__arrow img {
+    width: $language-switcher-arrow-size;
+    height: $language-switcher-arrow-size;
+    opacity: 1;
+    transition: transform 0.2s;
+  }
 }

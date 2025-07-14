@@ -1,6 +1,7 @@
 @import '../main/index';
 
 .ui-link {
+  $self: &; 
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -19,7 +20,7 @@
   }
 
   &--login {
-    .ui-link__text {
+    #{$self}__text { 
       color: $link-login-color;
       font-weight: 400;
       line-height: 1;
