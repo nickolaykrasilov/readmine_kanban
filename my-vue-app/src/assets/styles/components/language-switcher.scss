@@ -4,7 +4,7 @@
   $self: &; 
 
   position: relative;
-  
+
   display: inline-block;
   margin-left: 16px;
 
@@ -17,23 +17,22 @@
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
-    font-style: normal;
     line-height: 1;
     letter-spacing: 0;
-
     color: $language-switcher-text;
+
     background: none;
     border: none;
     border-radius: 4px;
 
     transition: background-color 0.2s;
- 
+
     cursor: pointer;
 
-    &:hover {
-      background-color: $language-switcher-hover-bg;
-    }
+  &:hover {
+    background-color: $language-switcher-hover-bg;  
   }
+}
 
   &__list {
     position: absolute;
@@ -51,28 +50,25 @@
     box-shadow: $box-shadow;
 
     list-style: none;
-  }
-
+}
   &__item {
     padding: 8px 16px;
 
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
-    font-style: normal;
     line-height: 1;
     letter-spacing: 0;
-
     color: $language-switcher-text;
 
     transition: background-color 0.2s;
 
     cursor: pointer;
 
-    &:hover {
-      background-color: $language-switcher-item-hover;
-    }
+  &:hover {
+    background-color: $language-switcher-item-hover; 
   }
+}
 
   &__arrow {
     img {

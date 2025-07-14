@@ -18,6 +18,14 @@ const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const dropdowns = navigationModel.getDropdowns();
 
+onMounted(() => {
+  document.addEventListener('click', handleDocumentClick)
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleDocumentClick)
+});
+
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
 };
@@ -32,14 +40,6 @@ const handleDocumentClick = (e) => {
     activeDropdown.value = null
   }
 };
-
-onMounted(() => {
-  document.addEventListener('click', handleDocumentClick)
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener('click', handleDocumentClick)
-});
 </script>
 
 <template>

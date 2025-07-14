@@ -10,7 +10,7 @@ const languages = [
   { 
     code: 'Ru', 
     name: 'Русский',
-  }
+  },
 ];
 
 const currentLanguage = ref('En');
