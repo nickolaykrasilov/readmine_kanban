@@ -7,14 +7,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
-  iconLeft: {
-    type: String,
-    default: null,
-  },
   iconRight: {
     type: String,
     default: null,
-  }
+  },
 });
 </script>
 
@@ -24,15 +20,6 @@ defineProps({
     :class="{ 'is-disabled': disabled }"
     :disabled="disabled"
   >
-    <span 
-    v-if="iconLeft" 
-    class="ui-button__icon ui-button__icon--left"
-    >
-      <img 
-      :src="iconLeft" 
-      alt="" 
-      aria-hidden="true" />
-    </span>
     <span class="ui-button__text">
       {{ label }}
     </span>
