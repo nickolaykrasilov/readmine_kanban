@@ -1,84 +1,88 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useRouter } from 'vue-router';
-import { useScreenSize } from '../../utils/screen';
-import UIButton from '../ui/UIButton.vue';
-import UiLink from '../ui/UILink.vue';
-import HeaderNav from './HeaderNav.vue';
-import LanguageSwitcher from '../LanguageSwitcher.vue';
-import logo from '../../assets/images/logo.png';
-import userIcon from '../../assets/images/icons/people.svg';
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router'
+import { useScreenSize } from '../../utils/screen'
+import UIButton from '../ui/UIButton.vue'
+import UILink from '../ui/UILink.vue'
+import HeaderNav from './HeaderNav.vue'
+import LanguageSwitcher from '../LanguageSwitcher.vue'
+import logo from '../../assets/images/logo.png'
+import userIcon from '../../assets/images/icons/people.svg'
 
-const router = useRouter();
-const { isMobile } = useScreenSize();
+const router = useRouter()
+const { isMobile } = useScreenSize()
 
-const isMobileMenuOpen = ref(false);
-const activeDropdown = ref(null);
+const isMobileMenuOpen = ref(false)
+const activeDropdown = ref(null)
 
 const dropdowns = {
   plugin: {
     items: ['Plugin 1', 'Plugin 2'],
-    selected: ref('Plugins'),
+    selected: ref('Plugins')
   },
   theme: {
     items: ['Theme 1', 'Theme 2'],
-    selected: ref('Themes'),
+    selected: ref('Themes')
   },
   pricing: {
     items: ['Basic', 'Pro'],
-    selected: ref('Pricing'),
+    selected: ref('Pricing')
   }
-};
+}
 
 const routeMap = {
   plugin: {
     'Plugin 1': '/plugins/plugin1',
-    'Plugin 2': '/plugins/plugin2',
+    'Plugin 2': '/plugins/plugin2'
   },
   theme: {
     'Theme 1': '/themes/theme1',
-    'Theme 2': '/themes/theme2',
+    'Theme 2': '/themes/theme2'
   },
   pricing: {
     'Basic': '/pricing/basic',
-    'Pro': '/pricing/pro',
+    'Pro': '/pricing/pro'
   }
-};
+}
 
 const toggleDropdown = (dropdownName) => {
-  activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName;
-};
+  activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
+}
 
 const selectItem = ({ type, value }) => {
-  dropdowns[type].selected.value = value;
-  router.push(routeMap[type]?.[value] || '/');
-};
+  dropdowns[type].selected.value = value
+  router.push(routeMap[type]?.[value] || '/')
+}
 
 const handleDocumentClick = (e) => {
   if (!e.target.closest('.header__dropdown')) {
-    activeDropdown.value = null;
+    activeDropdown.value = null
   }
-};
+}
 
 onMounted(() => {
-  document.addEventListener('click', handleDocumentClick);
-});
+  document.addEventListener('click', handleDocumentClick)
+})
 
 onBeforeUnmount(() => {
-  document.removeEventListener('click', handleDocumentClick);
-});
+  document.removeEventListener('click', handleDocumentClick)
+})
 </script>
 
 <template>
   <header class="header">
     <div class="header__container">
-      <div class="header__logo">
+      <UILink
+        to="/"
+        class="header__logo"
+      >
         <img
           :src="logo"
           alt="Company Logo"
           class="header__logo-img"
         >
-      </div>
+      </UILink>
+
       <button
         v-if="isMobile"
         class="header__mobile-menu-button"
@@ -87,6 +91,7 @@ onBeforeUnmount(() => {
       >
         <span class="header__mobile-menu-icon" />
       </button>
+
       <HeaderNav
         :is-mobile="isMobile"
         :dropdowns="dropdowns"
@@ -95,26 +100,31 @@ onBeforeUnmount(() => {
         @update:active-dropdown="toggleDropdown"
         @select-item="selectItem"
       />
+
       <div
         class="header__controls"
         :class="{ 'header__controls--active': isMobileMenuOpen }"
       >
-        <UiLink
+        <UILink
           to="/support"
+          variant="text"
           text="Support"
           class="header__nav-link"
         />
+
         <LanguageSwitcher />
-        <UiLink
+
+        <UILink
           to="/login"
-          text="Login"
-          :icon="userIcon"
-          icon-alt="User icon"
-          is-login
+          variant="text"
+          :icon-left="userIcon"
           class="header__login-link"
-        />
-        <UIButton 
-          :buttonText="'Get Demo'"
+        >
+          <template #default>Login</template>
+        </UILink>
+
+        <UIButton
+          label="Get Demo"
           class="header__demo-button"
         />
       </div>
