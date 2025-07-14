@@ -17,9 +17,9 @@ const currentLanguage = ref('En');
 const isOpen = ref(false);
 
 onMounted(() => {
-  const savedLang = localStorage.getItem('userLanguage')
+  const savedLang = localStorage.getItem('userLanguage');
   if (savedLang) {
-    currentLanguage.value = savedLang
+    currentLanguage.value = savedLang;
   };
 });
 
