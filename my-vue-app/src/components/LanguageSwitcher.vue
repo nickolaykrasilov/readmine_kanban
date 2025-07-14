@@ -24,13 +24,13 @@ onMounted(() => {
 });
 
 const toggleDropdown = () => {
-  isOpen.value = !isOpen.value
+  isOpen.value = !isOpen.value;
 };
 
 const switchLanguage = (langCode) => {
-  currentLanguage.value = langCode
-  localStorage.setItem('userLanguage', langCode)
-  isOpen.value = false
+  currentLanguage.value = langCode;
+  localStorage.setItem('userLanguage', langCode);
+  isOpen.value = false;
 };
 </script>
 
