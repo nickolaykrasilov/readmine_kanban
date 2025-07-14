@@ -1,26 +1,27 @@
-@import '../main/index'; 
+@import '../main/index';
 
 .ui-button {
-  $self: &; 
   position: relative;
+
   width: 160px;
   height: 48px;
   padding: 0;
   overflow: hidden;
 
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+
   background-color: $ui-button-blue;
   border: none;
   border-radius: 4px;
-
-  font-family: $font-family-base;
-  font-weight: 600;
-  font-size: $font-size-sm;
-  line-height: 1;
-  letter-spacing: 0;
   color: $bg-primary;
-  text-align: center;
 
   transition: background-color 0.2s ease;
+
   cursor: pointer;
 
   &:hover {
@@ -31,6 +32,7 @@
     position: absolute;
     top: 16px;
     left: 24px;
+  
     width: 112px;
     height: 16px;
     display: flex;
