@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useScreenSize } from '../../utils/screen'
+import { NavigationMenuModel } from '../../models/NavigationMenuModel'
 import UIButton from '../ui/UIButton.vue'
 import UILink from '../ui/UILink.vue'
 import HeaderNav from './HeaderNav.vue'
@@ -11,39 +12,11 @@ import userIcon from '../../assets/images/icons/people.svg'
 
 const router = useRouter()
 const { isMobile } = useScreenSize()
+const navigationModel = new NavigationMenuModel()
 
 const isMobileMenuOpen = ref(false)
 const activeDropdown = ref(null)
-
-const dropdowns = {
-  plugin: {
-    items: ['Plugin 1', 'Plugin 2'],
-    selected: ref('Plugins')
-  },
-  theme: {
-    items: ['Theme 1', 'Theme 2'],
-    selected: ref('Themes')
-  },
-  pricing: {
-    items: ['Basic', 'Pro'],
-    selected: ref('Pricing')
-  }
-}
-
-const routeMap = {
-  plugin: {
-    'Plugin 1': '/plugins/plugin1',
-    'Plugin 2': '/plugins/plugin2'
-  },
-  theme: {
-    'Theme 1': '/themes/theme1',
-    'Theme 2': '/themes/theme2'
-  },
-  pricing: {
-    'Basic': '/pricing/basic',
-    'Pro': '/pricing/pro'
-  }
-}
+const dropdowns = navigationModel.getDropdowns()
 
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
@@ -51,7 +24,7 @@ const toggleDropdown = (dropdownName) => {
 
 const selectItem = ({ type, value }) => {
   dropdowns[type].selected.value = value
-  router.push(routeMap[type]?.[value] || '/')
+  router.push(navigationModel.getRoute(type, value))
 }
 
 const handleDocumentClick = (e) => {
@@ -82,7 +55,6 @@ onBeforeUnmount(() => {
           class="header__logo-img"
         >
       </UILink>
-
       <button
         v-if="isMobile"
         class="header__mobile-menu-button"
@@ -91,7 +63,6 @@ onBeforeUnmount(() => {
       >
         <span class="header__mobile-menu-icon" />
       </button>
-
       <HeaderNav
         :is-mobile="isMobile"
         :dropdowns="dropdowns"
@@ -100,7 +71,6 @@ onBeforeUnmount(() => {
         @update:active-dropdown="toggleDropdown"
         @select-item="selectItem"
       />
-
       <div
         class="header__controls"
         :class="{ 'header__controls--active': isMobileMenuOpen }"
@@ -111,9 +81,7 @@ onBeforeUnmount(() => {
           text="Support"
           class="header__nav-link"
         />
-
         <LanguageSwitcher />
-
         <UILink
           to="/login"
           variant="text"
@@ -122,7 +90,6 @@ onBeforeUnmount(() => {
         >
           <template #default>Login</template>
         </UILink>
-
         <UIButton
           label="Get Demo"
           class="header__demo-button"
