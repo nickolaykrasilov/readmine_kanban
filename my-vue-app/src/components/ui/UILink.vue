@@ -3,23 +3,27 @@ defineProps({
   to: {
     type: String,
     required: true,
+  },  
+  variant: {
+    type: String,
+    default: 'default',
+    validator: (value) => ['default', 'primary', 'danger', 'accent'].includes(value),
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
   },
   text: {
     type: String,
-    required: true,
-  },
-  icon: {
-    type: String,
-    default: null,
-  },
-  iconAlt: {
-    type: String,
     default: '',
   },
-  variant: {
-    type: String,
-    default: 'default', 
-    validator: (value) => ['default', 'primary', 'danger', 'login'].includes(value),
+  iconLeft: {
+    type: [String, Object],
+    default: null,
+  },
+  iconRight: {
+    type: [String, Object],
+    default: null,
   },
 });
 </script>
@@ -30,16 +34,38 @@ defineProps({
     :class="[
       'ui-link',
       `ui-link--${variant}`,
+      { 'is-disabled': disabled }
     ]"
+    :aria-disabled="disabled"
   >
-    <span class="ui-link__text">
-      {{ text }}
-    </span>
+    <slot v-if="$slots.iconLeft" name="iconLeft" />
+    <component
+      v-else-if="typeof iconLeft === 'object'"
+      :is="iconLeft"
+      class="ui-link__icon-left"
+    />
     <img
-      v-if="icon"
-      :src="icon"
-      :alt="iconAlt"
-      class="ui-link__icon"
+      v-else-if="iconLeft"
+      :src="iconLeft"
+      alt=""
+      class="ui-link__icon-left"
+    >
+    <span class="ui-link__text">
+      <slot>
+        {{ text }}
+      </slot>
+    </span>
+    <slot v-if="$slots.iconRight" name="iconRight" />
+    <component
+      v-else-if="typeof iconRight === 'object'"
+      :is="iconRight"
+      class="ui-link__icon-right"
+    />
+    <img
+      v-else-if="iconRight"
+      :src="iconRight"
+      alt=""
+      class="ui-link__icon-right"
     >
   </router-link>
 </template>
