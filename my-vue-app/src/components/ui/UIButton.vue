@@ -2,7 +2,6 @@
 defineProps({
   label: {
     type: String,
-    default: 'Get a Free Demo',
   },
   disabled: {
     type: Boolean,

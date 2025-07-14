@@ -22,8 +22,8 @@ import UIButton from './ui/UIButton.vue';
           </p>
           <div class="main-banner__button-wrapper">
             <UIButton
-              class="main-banner__button"
-              button-text="Get a Free Demo"
+               label="Get a Free Demo"  
+               class="main-banner__button"
             />
             <span class="main-banner__button-rect">
               <img
