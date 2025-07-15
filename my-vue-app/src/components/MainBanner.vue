@@ -22,16 +22,19 @@ import UIButton from './ui/UIButton.vue';
           </p>
           <div class="main-banner__button-wrapper">
             <UIButton
-               label="Get a Free Demo"  
-               class="main-banner__button"
-            />
-            <span class="main-banner__button-rect">
-              <img
-                src="../assets/images/icons/arrow.svg"
-                alt="Arrow icon"
-                class="main-banner__button-arrow"
-              >
-            </span>
+              class="main-banner__button"
+            >
+              Get a Free Demo
+              <template #icon>
+                <span class="main-banner__button-rect">
+                  <img
+                    src="../assets/images/icons/arrow.svg"
+                    alt="Arrow icon"
+                    class="main-banner__button-arrow"
+                  >
+                </span>
+              </template>
+            </UIButton>
           </div>
         </div>
         <img
