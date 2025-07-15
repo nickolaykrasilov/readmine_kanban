@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import dropdownArrow from '../../assets/images/icons/check-mark.svg';
 
 const props = defineProps({
   items: {
