@@ -16,28 +16,15 @@ export class NavigationMenuModel {
         selected: ref('Pricing')
       }
     };
-
-    this.routeMap = {
-      plugin: {
-        'Plugin 1': '/plugins/plugin1',
-        'Plugin 2': '/plugins/plugin2'
-      },
-      theme: {
-        'Theme 1': '/themes/theme1',
-        'Theme 2': '/themes/theme2'
-      },
-      pricing: {
-        'Basic': '/pricing/basic',
-        'Pro': '/pricing/pro'
-      }
-    };
   }
 
   getDropdowns() {
     return this.dropdowns;
   };
 
-  getRoute(type, value) {
-    return this.routeMap[type]?.[value] || '/';
-  };
+  updateSelected(type, value) {
+    if (this.dropdowns[type]) {
+      this.dropdowns[type].selected.value = value;
+    }
+  }
 };

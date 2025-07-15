@@ -18,14 +18,6 @@ const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const dropdowns = navigationModel.getDropdowns();
 
-onMounted(() => {
-  document.addEventListener('click', handleDocumentClick)
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener('click', handleDocumentClick)
-});
-
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
 };
@@ -33,13 +25,7 @@ const toggleDropdown = (dropdownName) => {
 const selectItem = ({ type, value }) => {
   dropdowns[type].selected.value = value
   router.push(navigationModel.getRoute(type, value))
-};
-
-const handleDocumentClick = (e) => {
-  if (!e.target.closest('.header__dropdown')) {
-    activeDropdown.value = null
-  }
-};
+};  
 </script>
 
 <template>
@@ -86,10 +72,9 @@ const handleDocumentClick = (e) => {
           to="/login"
           variant="text"
           :icon-left="userIcon"
+          text="Login"
           class="header__login-link"
-        >
-          <template #default>Login</template>
-        </UILink>
+        />
         <UIButton
           label="Get Demo"
           class="header__demo-button"

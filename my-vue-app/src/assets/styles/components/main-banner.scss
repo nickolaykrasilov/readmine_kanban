@@ -28,7 +28,7 @@
 
   &__ellipse {
     position: absolute;
-    top: 18%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: $ui-index-0;
@@ -107,9 +107,9 @@
 
       & .ui-button__text {
         position: absolute;        
-        top: 50%;
+        top: 52%;
         left: 24px;
-        transform: translateY(-50%);
+        transform: translateY(-52%);
 
         width: 112px;              
         height: 16px;
