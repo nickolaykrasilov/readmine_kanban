@@ -17,7 +17,6 @@
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
-    line-height: 1;
     letter-spacing: 0;
     color: $language-switcher-text;
 
@@ -57,7 +56,6 @@
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
-    line-height: 1;
     letter-spacing: 0;
     color: $language-switcher-text;
 
@@ -74,8 +72,6 @@
     img {
       width: $language-switcher-arrow-size;
       height: $language-switcher-arrow-size;
-
-      opacity: 1;
 
       transition: transform 0.2s;
     }
