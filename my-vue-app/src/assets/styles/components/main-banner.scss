@@ -31,12 +31,12 @@
     top: 18%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: $ui-index-0;
   }
 
   &__title {
     position: relative;
-    z-index: 1;
+    z-index: $ui-index-1;
     max-width: 772px;
     margin: 0 auto 20px;
     color: $text-primary;
@@ -53,7 +53,7 @@
 
   &__text-block {
     position: relative;
-    z-index: 1;
+    z-index: $ui-index-1;
     width: 436px;
     margin: 0 auto 40px;
     padding: 0;
@@ -136,7 +136,7 @@
     top: 50%;
     right: 6px;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: $ui-index-2;
 
     width: 36px;                
     height: 36px;
@@ -163,7 +163,7 @@
 
   &__screen {
     position: relative;
-    z-index: 1;
+    z-index: $ui-index-1;
     width: 1100px;
     height: 616px;
     margin-top: 40px;
