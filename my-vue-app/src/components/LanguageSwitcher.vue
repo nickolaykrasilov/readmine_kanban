@@ -1,26 +1,29 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import dropdownArrow from '../assets/images/icons/check-mark.svg';
+import { LANGUAGES, DEFAULT_LANGUAGE } from '../models/languages.js';
 
-const languages = [
-  { 
-    code: 'En', 
-    name: 'English',
-  },
-  { 
-    code: 'Ru', 
-    name: 'Русский',
-  },
-];
-
-const currentLanguage = ref('En');
+const currentLanguage = ref(DEFAULT_LANGUAGE);
 const isOpen = ref(false);
+const dropdownRef = ref(null);
+
+const handleClickOutside = (event) => {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+    isOpen.value = false;
+  }
+};
 
 onMounted(() => {
   const savedLang = localStorage.getItem('userLanguage');
   if (savedLang) {
     currentLanguage.value = savedLang;
-  };
+  }
+  
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
 });
 
 const toggleDropdown = () => {
@@ -35,7 +38,7 @@ const switchLanguage = (langCode) => {
 </script>
 
 <template>
-  <div class="language-switcher">
+  <div class="language-switcher" ref="dropdownRef">
     <button
       class="language-switcher__button"
       :aria-expanded="isOpen"
@@ -55,14 +58,14 @@ const switchLanguage = (langCode) => {
       class="language-switcher__list"
     >
       <li
-        v-for="lang in languages"
-        :key="lang.code"
+        v-for="lang in LANGUAGES"
+          :key="lang.code"
         class="language-switcher__item"
         @click="switchLanguage(lang.code)"
       >
         {{ lang.name }}
       </li>
-    </ul>
+    </ul>   
   </div>
 </template>
 
