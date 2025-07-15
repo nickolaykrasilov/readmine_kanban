@@ -1,4 +1,6 @@
 <script setup>
+import { LINK_VARIANTS } from '../../models/LinkVariants';
+
 defineProps({
   to: {
     type: String,
@@ -7,7 +9,7 @@ defineProps({
   variant: {
     type: String,
     default: 'default',
-    validator: (value) => ['default', 'primary', 'danger', 'accent'].includes(value),
+    validator: (value) => LINK_VARIANTS.includes(value),
   },
   disabled: {
     type: Boolean,
@@ -39,8 +41,8 @@ defineProps({
     :aria-disabled="disabled"
   >
     <slot 
-    v-if="$slots.iconLeft" 
-    name="iconLeft" 
+      v-if="$slots.iconLeft" 
+      name="iconLeft" 
     />
     <component
       v-else-if="typeof iconLeft === 'object'"
@@ -59,8 +61,8 @@ defineProps({
       </slot>
     </span>
     <slot 
-    v-if="$slots.iconRight" 
-    name="iconRight" 
+      v-if="$slots.iconRight" 
+      name="iconRight" 
     />
     <component
       v-else-if="typeof iconRight === 'object'"
