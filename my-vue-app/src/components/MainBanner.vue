@@ -29,7 +29,7 @@ import UIButton from './ui/UIButton.vue';
               <img
                 src="../assets/images/icons/arrow.svg"
                 alt="Arrow icon"
-                class="main-banner__btn-arrow"
+                class="main-banner__button-arrow"
               >
             </span>
           </div>
