@@ -59,7 +59,7 @@ const switchLanguage = (langCode) => {
     >
       <li
         v-for="lang in LANGUAGES"
-          :key="lang.code"
+        :key="lang.code"
         class="language-switcher__item"
         @click="switchLanguage(lang.code)"
       >
