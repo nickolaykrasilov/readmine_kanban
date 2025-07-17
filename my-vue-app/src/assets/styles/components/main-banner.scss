@@ -34,31 +34,10 @@
     z-index: $ui-index-0;
   }
 
-  &__title {
-    position: relative;
-    z-index: $ui-index-1;
-    max-width: 772px;
-    margin: 0 auto 20px;
-    color: $text-primary;
-    font-family: $font-family-heading;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: $line-height-1;
-
-    @media (max-width: $breakpoint-md) {
-      font-size: 40px;
-      padding: 0 16px;
-    }
-  }
 
   &__h2title {
-    position: relative;
     margin-top: 120px; 
-    max-width: 772px;
-    color: $text-primary;
-    font-family: $font-family-heading;
-    font-weight: 700; 
-    font-size: 60px;
+
 
     @media (max-width: $breakpoint-md) {
       font-size: 40px;

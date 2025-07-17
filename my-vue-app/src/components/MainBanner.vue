@@ -11,9 +11,9 @@ import UIButton from './ui/UIButton.vue';
           alt="Decorative ellipse"
           class="main-banner__ellipse"
         >
-        <h1 class="main-banner__title">
-          Powerful Agile & Kanban solutions for Redmine
-        </h1>
+        <div class="title">
+              Powerful Agile & Kanban solutions for Redmine
+        </div>
         <div class="main-banner__text-block">
           <p class="main-banner__subtitle">
             Our plugins will help you stay organized and 
@@ -63,9 +63,11 @@ import UIButton from './ui/UIButton.vue';
           alt="Redmine Kanban Screen"
           class="main-banner__screen"
         >
-        <h2 class="main-banner__h2title">
-          Redmine plugins
-        </h2>
+        <div class="title"> 
+          <div class="main-banner__h2title">
+            Redmine plugins
+          </div>
+        </div>
       </div>
     </div>
   </section>
