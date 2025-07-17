@@ -1,0 +1,13 @@
+.card {
+  width: 450px;
+  height: 329px;
+  position: absolute;
+  top: 1480px;
+  left: 100px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95); /* F2 в hex это примерно 0.95 alpha */
+  cursor: pointer;
+  transition: all 0ms; /* Instant animation */
+}

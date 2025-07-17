@@ -1,5 +1,10 @@
 <script setup>
 import UIButton from './ui/UIButton.vue';
+import UICard from './ui/UICard.vue';
+
+const handleDetailsClick = () => {
+  alert('More details clicked!');
+};
 </script>
 
 <template>
@@ -77,8 +82,16 @@ import UIButton from './ui/UIButton.vue';
               with our collection of 
               powerful plugins . 
             </p>
+        </div>  
+          <div>
+          <UICard
+            icon="../assets/images/icons/camera.svg"
+            title="Your Card Title"
+            subtitle="Your card subtitle"
+            @details-click="handleDetailsClick"
+          />
           </div>
-      </div>
+        </div>
     </div>
   </section>
 </template>
