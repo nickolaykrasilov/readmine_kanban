@@ -83,14 +83,17 @@ const handleDetailsClick = () => {
               powerful plugins . 
             </p>
         </div>  
-          <div>
-          <UICard
-            icon="../assets/images/icons/camera.svg"
-            title="Your Card Title"
-            subtitle="Your card subtitle"
-            @details-click="handleDetailsClick"
-          />
-          </div>
+            <div>
+              <YourIcon 
+                size="72" 
+                class="icons" 
+              />  
+              <UICard
+                title="Your Card Title"
+                subtitle="Your card subtitle"
+                @details-click="handleDetailsClick"
+              />
+            </div>
         </div>
     </div>
   </section>

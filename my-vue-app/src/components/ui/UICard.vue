@@ -1,15 +1,6 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <div class="card-icon">
-        <slot name="icon">
-          <img 
-            v-if="icon"
-            :src="icon" 
-            alt="Icon" 
-          >
-        </slot>
-      </div>
       <h3 class="card-title">{{ title }}</h3>
       <p class="card-subtitle">{{ subtitle }}</p>
       <button class="card-button" @click="$emit('details-click')">
@@ -22,7 +13,6 @@
 
 <script setup>
 defineProps({
-  icon: String,
   title: {
     type: String,
     default: ''
@@ -58,18 +48,6 @@ defineEmits(['details-click']);
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.card-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 24px;
-  display: block
-}
-
-.card-icon img {    
-  width: 2%;
-  height: 2%;
 }
 
 .card-title {

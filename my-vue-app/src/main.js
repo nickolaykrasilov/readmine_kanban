@@ -1,4 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-createApp(App).mount('#app');
+import YourIconPlugin from './plugins/icons'; // Импорт плагина
+
+const app = createApp(App);
+app.use(YourIconPlugin); // Регистрируем плагин
+app.mount('#app');
