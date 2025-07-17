@@ -15,11 +15,14 @@ import UIButton from './ui/UIButton.vue';
               Powerful Agile & Kanban solutions for Redmine
         </div>
         <div class="main-banner__text-block">
-          <p class="main-banner__subtitle">
-            Our plugins will help you stay organized and 
-            ensure that all necessary tasks are completed 
-            throughout the project lifecycle.
-          </p>
+          <div class="subtitle">
+            <p class="main-banner__subtitle">
+              Our plugins will help you stay organized and 
+              ensure that all necessary tasks are completed 
+              throughout the project lifecycle.
+            </p>
+          </div>
+          
           <div class="main-banner__button-wrapper">
             <UIButton
               class="main-banner__button"
@@ -68,6 +71,13 @@ import UIButton from './ui/UIButton.vue';
             Redmine plugins
           </div>
         </div>
+          <div class="subtitle">
+            <p class="main-banner__subtitle">
+              Extend the capabilities of Redmine 
+              with our collection of 
+              powerful plugins . 
+            </p>
+          </div>
       </div>
     </div>
   </section>
