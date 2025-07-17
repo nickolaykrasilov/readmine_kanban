@@ -63,6 +63,9 @@ import UIButton from './ui/UIButton.vue';
           alt="Redmine Kanban Screen"
           class="main-banner__screen"
         >
+        <h2 class="main-banner__h2title">
+          Redmine plugins
+        </h2>
       </div>
     </div>
   </section>
