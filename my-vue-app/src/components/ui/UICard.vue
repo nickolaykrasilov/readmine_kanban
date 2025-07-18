@@ -53,15 +53,25 @@ defineEmits(['details-click']);
 .card-title {
   font-size: 24px;
   font-weight: 600;
-  margin: 0 0 12px 0;
+  margin: 0 12px 0 0;
   color: #333;
+  position: relative;
+  top: 80px; 
+  left: -120px; 
 }
 
 .card-subtitle {
   font-size: 16px;
   color: #666;
-  margin: 0 0 auto 0;
+  margin: 0;
   line-height: 1.5;
+  position: relative;
+  top: 100px; 
+  left: -148px; 
+  white-space: pre-line; /* Поддержка \n */
+  word-wrap: break-word; /* Перенос длинных слов */
+  display: inline-block;
+  max-width: 100%; /* Чтобы не выходил за границы */ 
 }
 
 .card-button {
