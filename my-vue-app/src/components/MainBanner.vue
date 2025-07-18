@@ -8,8 +8,6 @@ const handleDetailsClick = () => {
 };
 </script>
 
-
-
 <template>
   <section class="main-banner">
     <div class="main-banner__container">
@@ -86,28 +84,38 @@ const handleDetailsClick = () => {
             </p>
           </div>  
             <div>
-              <YourIcon 
-                size="72" 
-                class="icons" 
-              />
-              <div class="icon_check"> 
-                <CheckmarkIcon 
-                  size="72" 
-                  class="icons" 
-                />  
-             </div>
-             <div class="icon_line">
-              <LineIcon
-                size="72" 
-                class="icons" 
-              />
-             </div>
               <div class="cards-wrapper">
-                  <UICard
-                    v-for="(card, index) in cards"
-                    :key="index"
-                    :card-data="card"
-                  />
+                <UICard
+                  v-for="(card, index) in cards"
+                  :key="index"
+                  :card-data="card"
+                >
+                  <template #icon>
+                    <YourIcon 
+                      v-if="card.iconType === 'kanban'"
+                      size="72" 
+                      class="icons" 
+                    />
+                    <div 
+                      v-else-if="card.iconType === 'checkmark'"
+                      class="icon_check"
+                    >
+                      <CheckmarkIcon 
+                        size="72" 
+                        class="icons" 
+                      />  
+                    </div>
+                    <div 
+                      v-else-if="card.iconType === 'line'"
+                      class="icon_line"
+                    >
+                      <LineIcon
+                        size="72" 
+                        class="icons" 
+                      />
+                    </div>
+                  </template>
+                </UICard>
               </div>
             </div>
         </div> 

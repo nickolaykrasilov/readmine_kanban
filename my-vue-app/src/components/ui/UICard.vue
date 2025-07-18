@@ -3,15 +3,17 @@
     <h3 class="card-title">
       {{ cardData.title }}
     </h3>
+    
+    <!-- Слот для иконки -->
+    <slot name="icon">
+      <!-- Fallback, если иконка не передана -->
+      <YourIcon size="72" class="icons" />
+    </slot>
+    
     <p class="card-subtitle">
       {{ cardData.description }}
     </p>
-    <a
-      v-if="showButton"
-      href="#"
-      class="card-link"
-      @click.prevent="handleDetailsClick"
-    >
+    <a href="#" class="card-link" @click.prevent="handleDetailsClick">
       More details
       <span class="card-arrow">→</span>
     </a>

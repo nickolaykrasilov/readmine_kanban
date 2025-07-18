@@ -1,26 +1,32 @@
 @import '../main/index';
 
-
-
 .card-title {
-  font-size: 24px;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
-  margin: 0 12px 0 0;
-  color: #333;
+  font-size: 24px;
+  line-height: 100%;
+  color: #222939;
+  
+  text-align: left; 
   position: relative;
-  top: 80px;
-  left: -120px;
+  top: 70px;
+  left: -12px; 
+  margin-bottom: 8px; 
 }
 
 .card-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  color: #666;
-  margin: 0;
-  line-height: 1.5;
+  line-height: 1.5; 
+  color: #717171;
+  
   position: relative;
-  top: 100px;
-  left: -148px;
-  white-space: pre-line;
+  top: 60px;
+  left: -12px; 
+  width: 390px; 
+  white-space: pre-line; 
+  text-align: left; 
   word-break: normal;
 }
 
@@ -34,7 +40,8 @@
   margin-top: auto;
   align-self: flex-start; 
   padding: 0;
-  top: 20px;
+  left: -12px; 
+  top: 16px;
   display: flex;
   position: relative;
 }
@@ -46,3 +53,4 @@
 .arrow {
   margin-left: 8px;
 }
+
