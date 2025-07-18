@@ -33,18 +33,9 @@
 .card {
   width: 450px;
   height: 329px;
-  position: absolute;
-  top: 1480px;
-  left: 100px;
-  transform: rotate(0deg);
-  opacity: 1;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  transition: all 0ms;
+  background: white;
   padding: 32px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
   
