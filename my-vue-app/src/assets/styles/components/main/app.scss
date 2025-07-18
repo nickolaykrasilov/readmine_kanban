@@ -26,7 +26,6 @@
 
 .icons {
   transform: translate(-450px, 180px); 
-  position: relative;
   z-index: 2; 
 }
 
@@ -36,6 +35,6 @@
   border-radius: 16px;
   background: white;
   padding: 32px;
+  display: flex;
+  flex-direction: column;
 }
-
-  

@@ -1,41 +1,44 @@
 <template>
   <div class="card">
-    <!-- Заголовок через слот -->
-    <h3 v-if="$slots.title" class="card-title">
-      <slot name="title"></slot>
+    <h3 class="card-title">
+      {{ cardData.title }}
     </h3>
-
-    <!-- Описание через слот -->
-    <p v-if="$slots.description" class="card-subtitle">
-      <slot name="description"></slot>
+    <p class="card-subtitle">
+      {{ cardData.description }}
     </p>
-
-    <!-- Кнопка (всегда отображается, если не передано showButton=false) -->
-    <button 
+    <a
       v-if="showButton"
-      class="card-button" 
-      @click="$emit('details-click')"
+      href="#"
+      class="card-link"
+      @click.prevent="handleDetailsClick"
     >
       More details
-      <span class="arrow">→</span>
-    </button>
+      <span class="card-arrow">→</span>
+    </a>
   </div>
 </template>
 
-<script>
-export default {
-  name: "UICard",
-  props: {
-    showButton: {
-      type: Boolean,
-      default: true, // По умолчанию кнопка видна
-    },
+<script setup>
+import { defineProps, defineEmits } from 'vue';
+
+const props = defineProps({
+  cardData: {
+    type: Object,
+    required: true,
   },
-  emits: ["details-click"],
+  showButton: {
+    type: Boolean,
+    default: true,
+  },
+});
+
+const emit = defineEmits(['details-click']);
+
+const handleDetailsClick = () => {
+  alert('Details clicked!'); 
+  emit('details-click');   
 };
 </script>
-
-
 
 <style lang="scss" scoped>
 @use '../../assets/styles/components/ui/ui-card.scss';

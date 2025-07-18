@@ -24,18 +24,19 @@
   word-break: normal;
 }
 
-.card-button {
-  position: absolute;
-  bottom: 20px;
+.card-link {
   left: 20px;
   background: none;
   border: none;
   color: #0066cc;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
-  padding: 8px 0;
+  margin-top: auto;
+  align-self: flex-start; 
+  padding: 0;
+  top: 20px;
   display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .card-button:hover {
@@ -44,9 +45,4 @@
 
 .arrow {
   margin-left: 8px;
-  transition: transform 0.2s;
-}
-
-.card-button:hover .arrow {
-  transform: translateX(4px);
 }

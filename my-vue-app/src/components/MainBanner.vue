@@ -1,33 +1,13 @@
 <script setup>
 import UICard from './ui/UICard.vue';
 import UIButton from './ui/UIButton.vue';
+import { cards } from '../models/cards-data.js';
+
 const handleDetailsClick = () => {
   alert('More details clicked!');
 };
-
-// Данные для карточек
-const cards = [
-  {
-    title: 'Kanban board',
-    description: `Agile tool with modal windows for viewing and
-editing tasks. Locking and highlighting problematic
-issues, configuring the workflow, and Kanban
-board filters.`
-  },
-  {
-    title: 'Agile plugin',
-    description: `Scrum and Agile methodologies support
-with sprint planning, burndown charts,
-and velocity tracking for Redmine.`
-  },
-  {
-    title: 'Time tracking',
-    description: `Advanced time management features
-including reports, calendar integration
-and customizable workflows.`
-  }
-];
 </script>
+
 
 
 <template>
@@ -122,18 +102,13 @@ and customizable workflows.`
                 class="icons" 
               />
              </div>
-                <div class="cards-wrapper">
-                  <div class="cards-container">
-                    <UICard
-                      v-for="(card, index) in cards"
-                      :key="index"
-                      @details-click="handleDetailsClick"
-                    >
-                      <template #title>{{ card.title }}</template>
-                      <template #description>{{ card.description }}</template>
-                    </UICard>
-                  </div>
-                </div>
+              <div class="cards-wrapper">
+                  <UICard
+                    v-for="(card, index) in cards"
+                    :key="index"
+                    :card-data="card"
+                  />
+              </div>
             </div>
         </div> 
     </div>
