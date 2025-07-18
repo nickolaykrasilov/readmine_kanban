@@ -1,13 +1,58 @@
-.card {
-  width: 450px;
-  height: 329px;
-  position: absolute;
-  top: 1480px;
-  left: 100px;
-  transform: rotate(0deg);
-  opacity: 1;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.95); 
+@import '../main/index';
+
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 12px 0 0;
+  color: #333;
+  position: relative;
+  top: 80px; 
+  left: -120px; 
+}
+
+.card-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  position: relative;
+  top: 100px; 
+  left: -148px; 
+  white-space: pre-line; 
+   word-break: normal;
+
+}
+
+.card-button {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #0066cc;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0ms; 
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-button:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.card-button:hover .arrow {
+  transform: translateX(4px);
 }

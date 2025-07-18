@@ -27,7 +27,6 @@ const handleDetailsClick = () => {
               throughout the project lifecycle.
             </p>
           </div>
-          
           <div class="main-banner__button-wrapper">
             <UIButton
               class="main-banner__button"
@@ -82,7 +81,7 @@ const handleDetailsClick = () => {
               with our collection of 
               powerful plugins . 
             </p>
-        </div>  
+          </div>  
             <div>
               <YourIcon 
                 size="72" 
@@ -100,7 +99,15 @@ const handleDetailsClick = () => {
                 class="icons" 
               />
              </div>
-              <UICard
+              <UICard class="uicard__lefthand"
+                title="Kanban board"
+                subtitle="Agile tool with modal windows for viewing and \n 
+                editing tasks. Locking and highlighting problematic 
+                issues, configuring the workflow, and Kanban
+                 board filters."
+                @details-click="handleDetailsClick"
+              />
+                <UICard class="uicard__central"
                 title="Kanban board"
                 subtitle="Agile tool with modal windows for viewing and \n editing tasks. Locking and highlighting problematic issues, configuring the workflow, and Kanban board filters."
                 @details-click="handleDetailsClick"
