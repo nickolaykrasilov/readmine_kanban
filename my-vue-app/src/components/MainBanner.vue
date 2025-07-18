@@ -88,14 +88,18 @@ const handleDetailsClick = () => {
                 size="72" 
                 class="icons" 
               />
-              <CheckmarkIcon 
-                size="72" 
-                class="icons" 
-              />  
+              <div class="icon_check"> 
+                <CheckmarkIcon 
+                  size="72" 
+                  class="icons" 
+                />  
+             </div>
+             <div class="icon_line">
               <LineIcon
                 size="72" 
                 class="icons" 
               />
+             </div>
               <UICard
                 title="Kanban board"
                 subtitle="Agile tool with modal windows for viewing and \n editing tasks. Locking and highlighting problematic issues, configuring the workflow, and Kanban board filters."
