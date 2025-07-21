@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue';
+import { cards, iconComponents } from '../models/cards-data.js';
 
 const props = defineProps({
   cardData: {
@@ -22,11 +23,12 @@ const handleDetailsClick = () => {
 
 <template>
   <div class="card">
-    <slot name="icon">
-      <YourIcon 
-      size="72"  
+    <div class="icons"> 
+      <component
+        :is="iconComponents[cardData.iconType]"
+        :size="72"
       />
-    </slot>
+    </div>
     <h3 class="card-title">
       {{ cardData.title }}
     </h3>    
@@ -34,13 +36,12 @@ const handleDetailsClick = () => {
       {{ cardData.description }}
     </p>
     <a 
-    href="#" 
-    class="card-link" 
-    @click.prevent="handleDetailsClick"
+      href="#" 
+      class="card-link" 
+      @click.prevent="handleDetailsClick"
     >
       More details
-      <ArrowIcon> 
-      </ArrowIcon>
+      <ArrowIcon /> 
     </a>
   </div>
 </template>

@@ -1,8 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from './ui/UIButton.vue';
-import { cards, iconComponents } from '../models/cards-data.js';
-
+import { cards } from '../models/cards-data.js';
 </script>
 
 <template>
@@ -86,15 +85,7 @@ import { cards, iconComponents } from '../models/cards-data.js';
               v-for="card in cards"
               :key="card.title"
               :card-data="card"
-            >
-              <template #icon>
-                <div class="icons"> 
-                <component
-                  :is="iconComponents[card.iconType]"
-                />
-                </div>
-              </template>
-          </MainBannerCard>
+          />
               </div>
             </div>
         </div> 
