@@ -22,14 +22,14 @@ const handleDetailsClick = () => {
 
 <template>
   <div class="card">
-    <h3 class="card-title">
-      {{ cardData.title }}
-    </h3>    
     <slot name="icon">
       <YourIcon 
       size="72"  
       />
     </slot>
+    <h3 class="card-title">
+      {{ cardData.title }}
+    </h3>    
     <p class="card-subtitle">
       {{ cardData.description }}
     </p>

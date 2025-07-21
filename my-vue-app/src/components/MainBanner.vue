@@ -6,7 +6,16 @@ import { cards } from '../models/cards-data.js';
 const handleDetailsClick = () => {
   alert('More details clicked!');
 };
+
+import icons from '../plugins/icons.js'
+
+const iconComponents = {
+  kanban: icons.YourIcon,
+  checkmark: icons.CheckmarkIcon,
+  line: icons.LineIcon
+}
 </script>
+
 
 <template>
   <section class="main-banner">
@@ -85,37 +94,20 @@ const handleDetailsClick = () => {
           </div>  
             <div>
               <div class="cards-wrapper">
-                <UICard
-                  v-for="(card, index) in cards"
-                  :key="index"
-                  :card-data="card"
-                >
-                  <template #icon>
-                    <div class="icons"
-                      v-if="card.iconType === 'kanban'"
-                    > 
-                      <YourIcon 
-                        size="72" 
-                      />
-                    </div>
-                    <div 
-                      v-else-if="card.iconType === 'checkmark'"
-                      class="icons"
-                    >
-                      <CheckmarkIcon 
-                        size="72" 
-                      />  
-                    </div>
-                    <div 
-                      v-else-if="card.iconType === 'line'"
-                      class="icons"
-                    >
-                      <LineIcon
-                        size="72" 
-                      />
-                    </div>
-                  </template>
-                </UICard>
+          <UICard
+              v-for="card in cards"
+              :key="card.title"
+              :card-data="card"
+            >
+              <template #icon>
+                <div class="icons"> 
+                <component
+                  :is="iconComponents[card.iconType]"
+                  size="72"
+                />
+                </div>
+              </template>
+          </UICard>
               </div>
             </div>
         </div> 
