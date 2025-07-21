@@ -94,7 +94,6 @@ const handleDetailsClick = () => {
                 <div class="icons"> 
                 <component
                   :is="iconComponents[card.iconType]"
-                  size="72"
                 />
                 </div>
               </template>
