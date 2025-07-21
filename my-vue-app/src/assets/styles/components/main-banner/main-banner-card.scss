@@ -1,46 +1,50 @@
 @import '../main/index';
 
 .card-title {
+  position: relative;
+  left: -12px;
+
+  margin-bottom: 8px;
+  text-align: left;
+
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 100%;
   color: $text-primary;
-  
-  text-align: left; 
-  position: relative;
-  left: -12px; 
-  margin-bottom: 8px; 
 }
 
 .card-subtitle {
+  position: relative;
+  top: -12px;
+  left: -12px;
+
+  width: 390px;
+  text-align: left;
+
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5; 
+  line-height: 1.5;
   color: $text-secondary;
-  
-  position: relative;
-  top: -12px;
-  left: -12px; 
-  width: 390px; 
-  white-space: pre-line; 
-  text-align: left; 
+  white-space: pre-line;
   word-break: normal;
 }
 
 .card-link {
-  left: 20px;
+  position: relative;
+  left: -12px;
+  top: 16px;
+  
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0;
+  
+  font-size: 20px;
+  text-decoration: none;
+  
   background: none;
   border: none;
   color: $ui-button-blue;
-  font-size: 20px;
   cursor: pointer;
-  margin-top: auto;
-  align-self: flex-start; 
-  padding: 0;
-  left: -12px; 
-  top: 16px;
-  position: relative;
-  text-decoration: none;
 }
