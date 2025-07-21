@@ -1,7 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from './ui/UIButton.vue';
-import { cards } from '../models/cards-data.js';
+import { cards, iconComponents } from '../models/cards-data.js';
 import icons from '../plugins/icons.js';
 
 
@@ -9,11 +9,7 @@ const handleDetailsClick = () => {
   alert('More details clicked!');
 };
 
-const iconComponents = {
-  kanban: icons.YourIcon,
-  checkmark: icons.CheckmarkIcon,
-  line: icons.LineIcon
-}
+
 </script>
 
 

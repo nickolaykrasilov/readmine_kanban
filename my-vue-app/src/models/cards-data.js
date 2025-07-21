@@ -1,3 +1,11 @@
+import icons from '../plugins/icons.js';
+
+export const iconComponents = {
+  kanban: icons.YourIcon,
+  checkmark: icons.CheckmarkIcon,
+  line: icons.LineIcon
+};
+
 export const cards = [
   {
     title: 'Kanban board',
