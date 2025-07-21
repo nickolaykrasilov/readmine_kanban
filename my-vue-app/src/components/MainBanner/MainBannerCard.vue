@@ -26,7 +26,6 @@ const handleDetailsClick = () => {
     <div class="icons"> 
       <component
         :is="iconComponents[cardData.iconType]"
-        :size="72"
       />
     </div>
     <h3 class="card-title">

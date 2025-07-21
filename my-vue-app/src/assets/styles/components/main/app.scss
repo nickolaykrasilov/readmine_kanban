@@ -25,17 +25,17 @@
   }
 
 .card {
-  width: 450px;
-  height: 329px;
+  width: 452px;
+  height: 328px;
   border-radius: 16px;
-  background: white;
+  background: $bg-primary;
   padding: 32px;
   display: flex;
   flex-direction: column;
 }
 
 .icons{
-  top: -10px;
+  top: -12px;
   left: -204px;
   position: relative;
 }

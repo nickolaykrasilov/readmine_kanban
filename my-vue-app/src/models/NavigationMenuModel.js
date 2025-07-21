@@ -5,15 +5,15 @@ export class NavigationMenuModel {
     this.dropdowns = {
       plugin: {
         items: ['Plugin 1', 'Plugin 2'],
-        selected: ref('Plugins')
+        selected: ref('Plugins'),
       },
       theme: {
         items: ['Theme 1', 'Theme 2'],
-        selected: ref('Themes')
+        selected: ref('Themes'),
       },
       pricing: {
         items: ['Basic', 'Pro'],
-        selected: ref('Pricing')
+        selected: ref('Pricing'),
       }
     };
   }
@@ -25,6 +25,6 @@ export class NavigationMenuModel {
   updateSelected(type, value) {
     if (this.dropdowns[type]) {
       this.dropdowns[type].selected.value = value;
-    }
-  }
+    };
+  };
 };
