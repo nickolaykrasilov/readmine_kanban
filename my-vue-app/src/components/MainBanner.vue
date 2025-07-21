@@ -1,7 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from './ui/UIButton.vue';
-import { cards } from '../models/cards-data.js';
+import { cards } from '../models/CardsData.js';
 </script>
 
 <template>
