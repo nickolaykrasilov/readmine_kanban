@@ -2,16 +2,11 @@
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from './ui/UIButton.vue';
 import { cards, iconComponents } from '../models/cards-data.js';
-import icons from '../plugins/icons.js';
-
 
 const handleDetailsClick = () => {
   alert('More details clicked!');
 };
-
-
 </script>
-
 
 <template>
   <section class="main-banner">
