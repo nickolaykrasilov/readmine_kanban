@@ -94,5 +94,5 @@ import { cards } from '../../models/CardsData.js';
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/main-banner.scss';
+@use '../../assets/styles/components/main-banner/main-banner.scss';
 </style>
