@@ -46,5 +46,5 @@ const handleDetailsClick = () => {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/ui/ui-card.scss';
-</style>  
+@use '../assets/styles/components/main-banner-card.scss';
+</style>

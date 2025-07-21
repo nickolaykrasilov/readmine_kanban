@@ -1,13 +1,13 @@
 <script setup>
-import UICard from './ui/UICard.vue';
+import MainBannerCard from './MainBannerCard.vue';
 import UIButton from './ui/UIButton.vue';
 import { cards } from '../models/cards-data.js';
+import icons from '../plugins/icons.js';
+
 
 const handleDetailsClick = () => {
   alert('More details clicked!');
 };
-
-import icons from '../plugins/icons.js'
 
 const iconComponents = {
   kanban: icons.YourIcon,
@@ -94,7 +94,7 @@ const iconComponents = {
           </div>  
             <div>
               <div class="cards-wrapper">
-          <UICard
+          <MainBannerCard
               v-for="card in cards"
               :key="card.title"
               :card-data="card"
@@ -107,7 +107,7 @@ const iconComponents = {
                 />
                 </div>
               </template>
-          </UICard>
+          </MainBannerCard>
               </div>
             </div>
         </div> 
