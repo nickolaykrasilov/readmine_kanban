@@ -153,6 +153,30 @@ const WhiteArrowIcon = defineComponent({
   }
 });
 
+const ChevronIcon = defineComponent({
+  name: 'ChevronIcon',
+  props: {
+    size: { type: [Number, String], default: 10 },
+    height: { type: [Number, String], default: 6 },
+    color: { type: String, default: '#3D3D3D' },
+  },
+  setup(props) {
+    return () => h('svg', {
+      width: props.size,
+      height: props.height,
+      viewBox: '0 0 10 6',
+      fill: 'none',
+      xmlns: 'http://www.w3.org/2000/svg',
+    }, [
+      h('path', {
+        d: 'M0.638672 1L5.13867 5L9.63867 1',
+        stroke: props.color,
+        'stroke-width': '1',
+        'stroke-linecap': 'round',
+      })
+    ]);
+  }
+});
 
 const components = {
   YourIcon,
@@ -160,7 +184,7 @@ const components = {
   LineIcon,
   ArrowIcon,
   WhiteArrowIcon, 
-
+  ChevronIcon,
 };
 
 export default {

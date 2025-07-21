@@ -56,18 +56,7 @@ const selectItem = (value) => {
       class="header__dropdown-arrow" 
       :class="{ 'header__dropdown-arrow--open': isOpen }"
     >
-      <svg 
-        width="10" 
-        height="6" 
-        viewBox="0 0 10 6" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path 
-          d="M0.638672 1L5.13867 5L9.63867 1" 
-          stroke="#3D3D3D"
-        />
-      </svg>
+      <ChevronIcon />
     </span>
     </button>
     <transition name="dropdown">
