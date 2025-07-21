@@ -27,6 +27,23 @@ const handleSelect = (type, value) => {
       :selected-value="config.selected.value"
       :onSelect="(value) => handleSelect(type, value)" 
     />
-    <a href="/resources" class="header__nav-link">Resources</a>
+    <a
+    href="/resources" 
+    class="header__nav-link"
+    >
+    Resources
+  </a>
   </nav>
 </template>
+
+<style lang="scss">
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  &-link {
+    color: inherit;
+    text-decoration: none; 
+  }
+}
+</style>

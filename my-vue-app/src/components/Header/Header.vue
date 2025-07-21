@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useScreenSize } from '../../utils/screen';
 import { NavigationMenuModel } from '../../models/NavigationMenuModel';
