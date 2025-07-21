@@ -91,27 +91,27 @@ const handleDetailsClick = () => {
                   :card-data="card"
                 >
                   <template #icon>
-                    <YourIcon 
+                    <div class="icons"
                       v-if="card.iconType === 'kanban'"
-                      size="72" 
-                      class="icons" 
-                    />
+                    > 
+                      <YourIcon 
+                        size="72" 
+                      />
+                    </div>
                     <div 
                       v-else-if="card.iconType === 'checkmark'"
-                      class="icon_check"
+                      class="icons"
                     >
                       <CheckmarkIcon 
                         size="72" 
-                        class="icons" 
                       />  
                     </div>
                     <div 
                       v-else-if="card.iconType === 'line'"
-                      class="icon_line"
+                      class="icons"
                     >
                       <LineIcon
                         size="72" 
-                        class="icons" 
                       />
                     </div>
                   </template>

@@ -22,7 +22,7 @@
   color: #717171;
   
   position: relative;
-  top: 60px;
+  top: -12px;
   left: -12px; 
   width: 390px; 
   white-space: pre-line; 
@@ -34,7 +34,7 @@
   left: 20px;
   background: none;
   border: none;
-  color: #0066cc;
+  color: $ui-button-blue;
   font-size: 20px;
   cursor: pointer;
   margin-top: auto;
@@ -42,15 +42,6 @@
   padding: 0;
   left: -12px; 
   top: 16px;
-  display: flex;
   position: relative;
+  text-decoration: none;
 }
-
-.card-button:hover {
-  text-decoration: underline;
-}
-
-.arrow {
-  margin-left: 8px;
-}
-

@@ -24,11 +24,6 @@
     line-height: $line-height-base;
   }
 
-.icons {
-  //transform: translate(-744px, 250px); 
-  //z-index: 2; 
-}
-
 .card {
   width: 450px;
   height: 329px;
@@ -37,4 +32,16 @@
   padding: 32px;
   display: flex;
   flex-direction: column;
+}
+
+.icons{
+  top: -60px;
+  left: -204px;
+  position: relative;
+}
+
+.cards-wrapper {
+  display: flex;     
+  gap: 20px;          
+  padding: 8px 0;     
 }
