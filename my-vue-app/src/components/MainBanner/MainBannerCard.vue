@@ -17,7 +17,6 @@ const emit = defineEmits(['details-click']);
 
 const handleDetailsClick = () => {
   alert('Details clicked!'); 
-  emit('details-click');   
 };
 </script>
 
