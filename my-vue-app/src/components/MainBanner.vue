@@ -3,9 +3,6 @@ import MainBannerCard from './MainBannerCard.vue';
 import UIButton from './ui/UIButton.vue';
 import { cards, iconComponents } from '../models/cards-data.js';
 
-const handleDetailsClick = () => {
-  alert('More details clicked!');
-};
 </script>
 
 <template>
