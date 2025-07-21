@@ -1,13 +1,25 @@
 import { defineComponent, h } from 'vue';
 
-// Общая конфигурация для иконок
-const baseIconProps = {
-  size: { type: [Number, String], default: 72 },
-  color: { type: String, default: '#0094FF' },
-  bgColor: { type: String, default: '#F3FAFF' }
+const COLORS = {
+  primary: '#0094ff',
+  background: '#f3faff',
 };
 
-//  Создание иконок
+const SIZES = {
+  icon: 72,          
+  arrowIcon: 11,    
+  viewBox: 72,    
+  borderRadius: 36,  
+};
+
+// Общая конфигурация для иконок
+const baseIconProps = {
+  size: { type: [Number, String], default: SIZES.icon },
+  color: { type: String, default: COLORS.primary },
+  bgColor: { type: String, default: COLORS.background },
+};
+
+// Создание иконок
 const createIcon = (name, svgContent) => {
   return defineComponent({
     name,
@@ -16,15 +28,15 @@ const createIcon = (name, svgContent) => {
       return () => h('svg', {
         width: props.size,
         height: props.size,
-        viewBox: '0 0 72 72',
+        viewBox: `0 0 ${SIZES.viewBox} ${SIZES.viewBox}`,
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg'
       }, [
         h('rect', { 
-          width: '72', 
-          height: '72', 
-          rx: '36', 
-          fill: props.bgColor 
+          width: SIZES.viewBox, 
+          height: SIZES.viewBox, 
+          rx: SIZES.borderRadius, 
+          fill: props.bgColor,
         }),
         ...svgContent(props)
       ]);
@@ -86,8 +98,8 @@ const LineIcon = createIcon('LineIcon', (props) => [
 const ArrowIcon = defineComponent({
   name: 'ArrowIcon',
   props: {
-    size: { type: [Number, String], default: 11 },
-    color: { type: String, default: '#0094FF' }
+    size: { type: [Number, String], default: SIZES.arrowIcon },
+    color: { type: String, default: COLORS.primary },
   },
   setup(props) {
     return () => h('svg', {
@@ -105,7 +117,6 @@ const ArrowIcon = defineComponent({
   }
 });
 
-// Автоматическая регистрация всех компонентов
 const components = {
   YourIcon,
   CheckmarkIcon,
@@ -119,5 +130,7 @@ export default {
       app.component(name, component);
     });
   },
-  ...components // Для возможности импорта отдельных иконок
+  ...components 
 };
+
+export { COLORS, SIZES };
