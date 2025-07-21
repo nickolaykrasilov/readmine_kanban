@@ -1,7 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
-import UIButton from './ui/UIButton.vue';
-import { cards } from '../models/CardsData.js';
+import UIButton from '../ui/UIButton.vue';
+import { cards } from '../../models/CardsData.js';
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { cards } from '../models/CardsData.js';
     <div class="main-banner__container">
       <div class="main-banner__content">
         <img
-          src="../assets/images/ellipse.png"
+          src="../../assets/images/ellipse.png"
           alt="Decorative ellipse"
           class="main-banner__ellipse"
         >
@@ -63,7 +63,7 @@ import { cards } from '../models/CardsData.js';
           </div>
         </div>
         <img
-          src="../assets/images/screen.jpg"
+          src="../../assets/images/screen.jpg"
           alt="Redmine Kanban Screen"
           class="main-banner__screen"
         >
@@ -94,5 +94,5 @@ import { cards } from '../models/CardsData.js';
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/components/main-banner.scss';
+@use '../../assets/styles/components/main-banner.scss';
 </style>

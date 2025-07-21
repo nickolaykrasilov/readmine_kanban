@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue';
-import { cards, iconComponents } from '../models/CardsData.js';
+import { iconComponents } from '../../models/CardsData.js';
 
 const props = defineProps({
   cardData: {
@@ -47,5 +47,5 @@ const handleDetailsClick = () => {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/components/main-banner-card.scss';
+@use '../../assets/styles/components/main-banner-card.scss';
 </style>
