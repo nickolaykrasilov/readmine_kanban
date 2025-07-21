@@ -18,7 +18,7 @@ const handleDetailsClick = () => {
           class="main-banner__ellipse"
         >
         <div class="title">
-              Powerful Agile & Kanban solutions for Redmine
+            Powerful Agile & Kanban solutions for Redmine
         </div>
         <div class="main-banner__text-block">
           <div class="subtitle">
