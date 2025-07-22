@@ -126,7 +126,35 @@
 }
 
 .cards-wrapper {
-  display: flex;     
-  gap: 20px;          
-  padding: 8px 0;     
+  --cards-gap: 32px;
+  --cards-margin-bottom: 48px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--cards-gap);
+  margin-bottom: var(--cards-margin-bottom);
+
+  @media (max-width: $breakpoint-xl) {
+    --cards-gap: 28px;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    --cards-gap: 24px;
+    row-gap: 32px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    --cards-gap: 20px;
+    --cards-margin-bottom: 40px;
+    row-gap: 24px;
+    column-gap: 0;
+  }
+
+  @media (max-width: 480px) {
+    --cards-gap: 16px;
+    row-gap: 20px;
+    --cards-margin-bottom: 32px;
+  }
 }
