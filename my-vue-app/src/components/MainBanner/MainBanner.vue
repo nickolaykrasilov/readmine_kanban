@@ -23,16 +23,14 @@ import { cards } from '../../models/CardsData.js';
               throughout the project lifecycle.
               </div>
             </p>
-            <UIButton 
-              label="Get a Free Demo"
-              class="main-banner__button"
-              >
-              <template #icon>
-                <span class="main-banner__button-rect">
-                  <WhiteArrowIcon class="main-banner__button-arrow" />
-                </span>
-              </template>
-            </UIButton>
+              <UIButton 
+                  label="Get a Free Demo"
+                  class="main-banner__button"
+                >
+                  <template #icon>
+                    <WhiteArrowIcon class="main-banner__button-arrow" />
+                  </template>
+              </UIButton>
         </div>
         <img
           src="../../assets/images/screen.jpg"

@@ -28,10 +28,10 @@ const handleSelect = (type, value) => {
       :onSelect="(value) => handleSelect(type, value)" 
     />
     <a
-    href="/resources" 
-    class="header__nav-link"
+      href="/resources" 
+      class="header__nav-link"
     >
-    Resources
+      Resources
   </a>
   </nav>
 </template>

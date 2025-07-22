@@ -1,5 +1,5 @@
 <script setup>
-import {validateButtonType} from '../../models/ButtonTypes'; 
+import { validateButtonType } from '../../models/ButtonTypes';
 
 defineProps({
     label: {
@@ -15,13 +15,17 @@ defineProps({
         default: 'button',
         validator: validateButtonType,
     },
+    iconRight: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const emit = defineEmits(['click']);
 
 const handleClick = (event) => {
-    alert('Вы кликнули на кнопку!');
     emit('click', event);
+    alert("Click :) Have a nice day!");
 };
 </script>
 
@@ -34,16 +38,15 @@ const handleClick = (event) => {
         @click="handleClick"
     >
         <template v-if="label">
-            <span v-html="label" />
+            <span>{{ label }}</span>
         </template>
         <template v-else>
             <slot />
         </template>
-        <span 
-            v-if="$slots.icon"
-            class="ui-button__icon"
-        >
-            <slot name="icon" />
+        <span v-if="$slots.icon" class="ui-button__icon">
+            <span class="ui-button__icon-rect">
+                <slot name="icon" />
+            </span>
         </span>
     </button>
 </template>

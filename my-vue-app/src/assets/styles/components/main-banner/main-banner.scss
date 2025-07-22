@@ -88,29 +88,6 @@
       }
     }
   }
-
-  &__button-rect {
-    position: absolute;
-    top: 52%;
-    right: 8px;
-    transform: translateY(-52%);
-    z-index: $ui-index-2;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $ui-button-blue-square;
-    border-radius: 4px;
-    pointer-events: none;
-
-    @media (max-width: $breakpoint-md) {
-      width: 32px;
-      height: 32px;
-      right: 4px;
-    }
-  }
-
   &__button-arrow {
     width: 16px;
     height: 16px;
