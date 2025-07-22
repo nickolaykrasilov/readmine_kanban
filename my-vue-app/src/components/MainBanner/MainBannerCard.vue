@@ -13,8 +13,6 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['details-click']);
-
 const handleDetailsClick = () => {
   alert('Details clicked!'); 
 };

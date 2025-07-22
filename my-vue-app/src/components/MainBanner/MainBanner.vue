@@ -24,9 +24,7 @@ import { cards } from '../../models/CardsData.js';
             </p>
           </div>
           <div class="main-banner__button-wrapper">
-            <UIButton
-              class="main-banner__button"
-            >
+            <UIButton class="main-banner__button">
               Get a Free Demo
               <template #icon>
                 <span class="main-banner__button-rect">
@@ -53,15 +51,13 @@ import { cards } from '../../models/CardsData.js';
               powerful plugins . 
             </p>
           </div>  
-            <div>
               <div class="cards-wrapper">
-          <MainBannerCard
-              v-for="card in cards"
-              :key="card.title"
-              :card-data="card"
-          />
+                <MainBannerCard
+                    v-for="card in cards"
+                    :key="card.title"
+                    :card-data="card"
+                />
               </div>
-            </div>
         </div> 
   </section>
 </template>
