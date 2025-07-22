@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
 
-  // Порядок карточек на мобильных
   @media (max-width: $breakpoint-md) {
     .cards-wrapper & {
       &:nth-child(1) { order: 1; }
@@ -35,6 +34,8 @@
     flex-grow: 1;
   }
 
+  
+
   &__link {
     margin-top: 16px;
     align-self: flex-start;
@@ -48,13 +49,7 @@
     margin-top: auto;
   }
 
-  // Адаптив для карточки
-  @media (max-width: $breakpoint-lg) {
-    min-height: 300px;
-    padding: 28px;
-  }
-
-  @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-md) {
     min-height: auto;
     padding: 24px;
 
@@ -67,4 +62,11 @@
     padding: 20px;
     &__title { font-size: 18px; }
   }
+
+  @media (max-width: $breakpoint-lg) {
+    min-height: 300px;
+    padding: 28px;
+  }
+
+
 }
