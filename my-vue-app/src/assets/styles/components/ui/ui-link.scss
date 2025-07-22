@@ -4,38 +4,17 @@
   $self: &;
 
   display: flex;
-  align-items: center;
   gap: 0.4rem;
 
   font: {
     family: $font-family-base;
     size: $font-size-base;
-    weight: 500;
   }
-  
-  line-height: $line-height-base;
-  text-decoration: none;
 
   color: $link-color;
 
-  transition: color 0.2s ease;
-
   &:hover {
     color: $link-hover-color;
-  }
-
-  &--login {
-    #{$self}__text {
-      font-weight: 400;
-      line-height: $line-height-1;
-
-      color: $link-login-color;
-    }
-  }
-
-  &__icon {
-    width: 16px;
-    height: 16px;
   }
 
   @media (max-width: $breakpoint-md) {
