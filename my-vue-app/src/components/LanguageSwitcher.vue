@@ -14,9 +14,11 @@ const handleClickOutside = (event) => {
 
 onMounted(() => {
   const savedLang = localStorage.getItem('userLanguage');
+
   if (savedLang) {
     currentLanguage.value = savedLang;
   }
+  
   document.addEventListener('click', handleClickOutside);
 });
 
