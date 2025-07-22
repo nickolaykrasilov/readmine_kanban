@@ -20,18 +20,18 @@ const handleDetailsClick = () => {
 
 <template>
   <div class="card">
-    <div class="icons"> 
+    <div class="card__icons"> 
       <component :is="iconComponents[cardData.iconType]" />
     </div>
-    <h3 class="card-title">
+    <h3 class="card__title">
       {{ cardData.title }}
     </h3>    
-    <p class="card-subtitle">
+    <p class="card__description">
       {{ cardData.description }}
     </p>
     <a 
       href="#" 
-      class="card-link" 
+      class="card__link" 
       @click.prevent="handleDetailsClick"
     >
       More details
@@ -39,6 +39,7 @@ const handleDetailsClick = () => {
     </a>
   </div>
 </template>
+
 
 <style lang="scss" scoped>
 @use '../../assets/styles/components/main-banner/main-banner-card.scss';

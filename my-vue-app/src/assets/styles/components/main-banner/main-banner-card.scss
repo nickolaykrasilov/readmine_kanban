@@ -1,6 +1,6 @@
 @import '../main/index';
 
-.card-title {
+.card__title {
   position: relative;
   left: -12px;
 
@@ -14,7 +14,7 @@
   color: $text-primary;
 }
 
-.card-subtitle {
+.card__description {
   position: relative;
   top: -12px;
   left: -12px;
@@ -31,7 +31,7 @@
   word-break: normal;
 }
 
-.card-link {
+.card__link {
   position: relative;
   left: -12px;
   top: 16px;
@@ -45,4 +45,10 @@
   
   color: $ui-button-blue;
   cursor: pointer;
+}
+
+.card__icons {
+  top: -12px;
+  left: -204px;
+  position: relative;
 }
