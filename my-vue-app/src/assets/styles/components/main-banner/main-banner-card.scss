@@ -8,11 +8,17 @@
   border-radius: 16px;
   background: $bg-primary;
   padding: 32px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto 180px 40px; 
+  grid-template-areas: 
+    "icons"
+    "title"
+    "description"
+    "link";
 
   &__title {
-    margin-bottom: 8px;
+    grid-area: title;
+    margin-bottom: 0;
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-size: 24px;
@@ -21,9 +27,9 @@
   }
 
   &__description {
-    position: relative;
-    top: -12px;
+    grid-area: description;
     width: 390px;
+    overflow-y: auto;
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -31,21 +37,25 @@
     color: $text-secondary;
     white-space: pre-line;
     word-break: normal;
+    align-self: start;
+    margin-top: 0;
+    padding-top: 8px;
   }
 
   &__link {
-    position: relative;
-    top: 16px;
-    margin-top: auto;
-    align-self: flex-start;
+    grid-area: link;
+    justify-self: start;
     font-size: 20px;
     text-decoration: none;
     color: $ui-button-blue;
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
   }
 
   &__icons {
-    top: -12px;
-    left: -204px;
-    position: relative;
+    grid-area: icons;
+    justify-self: start;
+    margin-bottom: 8px; 
   }
 }
