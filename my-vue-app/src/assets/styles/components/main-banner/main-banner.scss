@@ -3,7 +3,7 @@
 .main-banner {
   position: relative;
   padding: 80px;
-  min-height: 100vh;
+  min-height: 100px;
   background: $gradient-main-bg;
 
   &__content {
@@ -49,7 +49,7 @@
 
   &__button {
     position: relative;
-     width: 212px;
+    width: 212px;
     height: 48px;
     margin: 0 auto;
     box-shadow: $button-shadow;
