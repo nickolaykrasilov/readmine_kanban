@@ -1,55 +1,62 @@
 @import '../main/index';
 
-.card{
-  $self: &; 
+.card {
+  $self: &;
   
-  &__title{
-  position: relative;
+  width: 452px;
+  height: 328px;
+  border-radius: 16px;
+  background: $bg-primary;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
 
-  margin-bottom: 8px;
-  text-align: left;
-
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 100%;
-  color: $text-primary;
+  &__title {
+    position: relative;
+    margin-bottom: 8px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: $text-primary;
   }
 
-  &__description{
-  position: relative;
-  top: -12px;
-
-  width: 390px;
-  text-align: left;
-
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: $text-secondary;
-  white-space: pre-line;
-  word-break: normal;
+  &__description {
+    position: relative;
+    top: -12px;
+    width: 390px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $text-secondary;
+    white-space: pre-line;
+    word-break: normal;
   }
 
-  &__link{
-  position: relative;
-  top: 16px;
-  
-  margin-top: auto;
-  align-self: flex-start;
-  padding: 0;
-  
-  font-size: 20px;
-  text-decoration: none;
-  
-  color: $ui-button-blue;
-  cursor: pointer;
+  &__link {
+    position: relative;
+    top: 16px;
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: $ui-button-blue;
+    cursor: pointer;
   }
 
-  &__icons{
-  top: -12px;
-  left: -204px;
-  position: relative;
+  &__icons {
+    top: -12px;
+    left: -204px;
+    position: relative;
   }
+}
+
+.cards-wrapper {
+  display: flex;     
+  gap: 20px;          
+  padding: 8px 0;     
 }
