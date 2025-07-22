@@ -40,7 +40,7 @@ import { cards } from '../../models/CardsData.js';
           class="main-banner__screen"
         >
         <div class="title"> 
-          <div class="main-banner__h2title">
+          <div class="main-banner__title">
             Redmine plugins
           </div>
         </div>

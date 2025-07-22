@@ -1,6 +1,8 @@
 @import '../main/index';
 
 .card{
+  $self: &; 
+  
   &__title{
   position: relative;
   left: -12px;
