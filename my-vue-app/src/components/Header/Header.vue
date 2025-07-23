@@ -8,7 +8,6 @@ import UILink from '../ui/UILink.vue';
 import HeaderNav from './HeaderNav.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 import logo from '../../assets/images/logo.png';
-import userIcon from '../../assets/images/icons/people.svg';
 
 const router = useRouter();
 const { isMobile } = useScreenSize();
@@ -71,11 +70,12 @@ const selectItem = ({ type, value }) => {
         <UILink
           to="/login"
           variant="text"
-          :icon-left="userIcon"
           text="Login"
           class="header__login-link"
         />
         <UserIcon/>
+
+        
         <UIButton
           label="Get Demo"
           class="header__demo-button"
