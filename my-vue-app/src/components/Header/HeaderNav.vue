@@ -9,7 +9,7 @@ const props = defineProps({
   onSelectItem: {
     type: Function,
     required: true,
-  }
+  },
 });
 
 const handleSelect = (type, value) => {

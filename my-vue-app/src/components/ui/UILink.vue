@@ -59,7 +59,10 @@ const isExternalLink = computed(() => {
           {{ text }}
         </slot>
       </span>
-      <span v-if="$slots.icon && iconPosition === 'right'" class="ui-link__icon">
+      <span 
+        v-if="$slots.icon && iconPosition === 'right'" 
+        class="ui-link__icon"
+      >
         <slot name="icon" />
       </span>
     </span>

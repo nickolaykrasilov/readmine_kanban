@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps } from 'vue';
 import { iconComponents } from '../../models/CardsData.js';
 
 const props = defineProps({
