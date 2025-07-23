@@ -36,7 +36,7 @@ const selectItem = ({ type, value }) => {
       >
         <img
           :src="logo"
-          alt="Company Logo"
+          alt="Header Logo"
           class="header__logo-img"
         >
       </UILink>
@@ -60,6 +60,11 @@ const selectItem = ({ type, value }) => {
         class="header__controls"
         :class="{ 'header__controls--active': isMobileMenuOpen }"
       >
+        <UILink 
+          to="/resources" 
+          text="Resources" 
+          plain
+        />
         <UILink
           to="/support"
           variant="text"
@@ -72,10 +77,11 @@ const selectItem = ({ type, value }) => {
           variant="text"
           text="Login"
           class="header__login-link"
-        />
-        <UserIcon/>
-
-        
+        >
+          <template #icon>
+            <UserIcon class="header__login-icon" />
+          </template>
+        </UILink>
         <UIButton
           label="Get Demo"
           class="header__demo-button"

@@ -24,6 +24,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  iconPosition: {
+    type: String,
+    default: 'right',
+  },
 });
 
 const isExternalLink = computed(() => {
@@ -44,14 +48,20 @@ const isExternalLink = computed(() => {
       { 
         'is-disabled': disabled,
         'ui-link--plain': plain,
+        'ui-link--icon-right': iconPosition === 'right',
       }
     ]"
     :aria-disabled="disabled"
   >
-    <span class="ui-link__text">
-      <slot>
-        {{ text }}
-      </slot>
+    <span class="ui-link__content">
+      <span class="ui-link__text">
+        <slot>
+          {{ text }}
+        </slot>
+      </span>
+      <span v-if="$slots.icon && iconPosition === 'right'" class="ui-link__icon">
+        <slot name="icon" />
+      </span>
     </span>
   </component>
 </template>

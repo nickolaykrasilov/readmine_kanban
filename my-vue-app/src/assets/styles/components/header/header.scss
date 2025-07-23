@@ -243,6 +243,17 @@
     }
   }
 
+  &__login {
+    &-link {
+      color: $ui-button-blue;
+    }
+
+    &-icon {
+      margin-left: 8px; 
+      margin-bottom: -2px;
+    }
+  }
+
   @media (max-width: $breakpoint-md) {
     #{$self}__mobile-menu-button {
       display: block;
@@ -257,9 +268,4 @@
       }
     }
   }
-}
-
-.header__login-link{
-  color:  $ui-button-blue;
-  
 }

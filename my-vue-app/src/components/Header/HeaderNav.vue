@@ -1,6 +1,5 @@
 <script setup>
 import DropdownMenu from './DropdownMenu.vue';
-import UILink from '../ui/UILink.vue'; 
 
 const props = defineProps({
   dropdowns: {
@@ -28,13 +27,5 @@ const handleSelect = (type, value) => {
       :selected-value="config.selected.value"
       :onSelect="(value) => handleSelect(type, value)" 
     />
-    <UILink 
-      to="/resources" 
-      text="Resources" 
-      plain 
-    />
   </nav>
 </template>
-
-<style lang="scss">
-</style>
