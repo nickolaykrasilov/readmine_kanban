@@ -1,7 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
-import { cards } from '../../models/CardsData.js';
+import {cards} from '../../models/CardsData.js';
 </script>
 
 <template>
@@ -16,12 +16,10 @@ import { cards } from '../../models/CardsData.js';
               Powerful Agile & Kanban solutions for Redmine
           </h1>
         <div class="main-banner__text-block">
-            <p class="main-banner__subtitle">
-              <div class="subtitle main-banner__subtitle-text">
+            <p class="subtitle main-banner__subtitle">
               Our plugins will help you stay organized and 
               ensure that all necessary tasks are completed 
               throughout the project lifecycle.
-              </div>
             </p>
               <UIButton 
                   label="Get a Free Demo"
