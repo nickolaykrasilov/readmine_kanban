@@ -12,9 +12,9 @@ import { cards } from '../../models/CardsData.js';
           alt="Decorative ellipse"
           class="main-banner__ellipse"
         >
-        <div class="title">
-            Powerful Agile & Kanban solutions for Redmine
-        </div>
+          <h1 class="title">
+              Powerful Agile & Kanban solutions for Redmine
+          </h1>
         <div class="main-banner__text-block">
             <p class="main-banner__subtitle">
               <div class="subtitle">
@@ -37,11 +37,11 @@ import { cards } from '../../models/CardsData.js';
           alt="Redmine Kanban Screen"
           class="main-banner__screen"
         >
-        <div class="title"> 
+        <h2 class="title"> 
           <div class="main-banner__title">
             Redmine plugins
           </div>
-        </div>
+        </h2>
           <div class="subtitle">
             <p class="main-banner__subtitle">
               Extend the capabilities of Redmine 
