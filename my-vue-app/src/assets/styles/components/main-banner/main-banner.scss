@@ -20,7 +20,7 @@
   }
 
   &__title {
-    margin-bottom: 0px; 
+    margin-bottom: 20px; 
   }
 
   &__text-block {
@@ -36,6 +36,8 @@
   }
 
   &__subtitle {
+    margin-bottom: 32px;
+    
     @media (max-width: $breakpoint-md) {
       font-size: 16px;
     }
@@ -43,6 +45,7 @@
 
   &__secondary-title {
     margin-top: 120px;
+    margin-bottom: 32px;
 
     @media (max-width: $breakpoint-md) {
       font-size: 40px;
