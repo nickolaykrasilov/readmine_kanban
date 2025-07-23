@@ -42,7 +42,6 @@ const handleSelect = (type, value) => {
   align-items: center;
 
   &-link {
-    color: inherit;
     text-decoration: none; 
   }
 }
