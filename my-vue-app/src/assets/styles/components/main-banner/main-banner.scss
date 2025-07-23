@@ -20,7 +20,7 @@
     transform: translate(-52%, -52%);
   }
 
-  &__title {
+  &__secondary-title {
     margin-top: 120px;
 
     @media (max-width: $breakpoint-md) {
@@ -128,7 +128,7 @@
 .cards-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px; // Увеличил gap для лучшего визуального разделения
+  gap: 24px; 
 
   @media (max-width: $breakpoint-lg) {
     grid-template-columns: repeat(2, 1fr);
@@ -138,7 +138,6 @@
     grid-template-columns: 1fr;
     gap: 16px;
     
-    // Изменение порядка карточек на мобильных
     .card:nth-child(1) { order: 1; }
     .card:nth-child(2) { order: 2; }
     .card:nth-child(3) { order: 3; }
