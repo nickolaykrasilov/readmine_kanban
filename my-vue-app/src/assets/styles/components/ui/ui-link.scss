@@ -3,19 +3,10 @@
 .ui-link {
   $self: &;
 
-  display: flex;
-  gap: 0.4rem;
-
-  color: inherit;
-  text-decoration: none; 
-
-
-  font: {
-    family: $font-family-base;
-    size: $font-size-base;
-  }
-
   color: $link-color;
+  text-decoration: none;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
 
   &:hover {
     color: $link-hover-color;

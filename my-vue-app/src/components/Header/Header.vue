@@ -75,6 +75,7 @@ const selectItem = ({ type, value }) => {
           text="Login"
           class="header__login-link"
         />
+        <UserIcon/>
         <UIButton
           label="Get Demo"
           class="header__demo-button"

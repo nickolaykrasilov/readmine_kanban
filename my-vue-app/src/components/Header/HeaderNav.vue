@@ -1,19 +1,20 @@
 <script setup>
 import DropdownMenu from './DropdownMenu.vue';
+import UILink from '../ui/UILink.vue'; 
 
 const props = defineProps({
   dropdowns: {
     type: Object,
     required: true,
   },
-  onSelectItem: { // Функция-колбэк из родителя
+  onSelectItem: {
     type: Function,
     required: true,
   }
 });
 
 const handleSelect = (type, value) => {
-  props.onSelectItem({ type, value }); // Вызов колбэка
+  props.onSelectItem({ type, value });
 };
 </script>
 
@@ -27,22 +28,13 @@ const handleSelect = (type, value) => {
       :selected-value="config.selected.value"
       :onSelect="(value) => handleSelect(type, value)" 
     />
-    <a
-      href="/resources" 
-      class="header__nav-link"
-    >
-      Resources
-  </a>
+    <UILink 
+      to="/resources" 
+      text="Resources" 
+      plain 
+    />
   </nav>
 </template>
 
 <style lang="scss">
-.header__nav {
-  display: flex;
-  align-items: center;
-
-  &-link {
-    text-decoration: none; 
-  }
-}
 </style>

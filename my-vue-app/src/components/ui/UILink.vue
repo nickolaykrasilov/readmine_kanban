@@ -1,11 +1,12 @@
 <script setup>
+import { computed } from 'vue';
 import { LINK_VARIANTS } from '../../models/LinkVariants';
 
-defineProps({
+const props = defineProps({
   to: {
     type: String,
     required: true,
-  },  
+  },
   variant: {
     type: String,
     default: 'default',
@@ -19,63 +20,40 @@ defineProps({
     type: String,
     default: '',
   },
-  iconLeft: {
-    type: [String, Object],
-    default: null,
+  plain: {
+    type: Boolean,
+    default: false,
   },
-  iconRight: {
-    type: [String, Object],
-    default: null,
-  },
+});
+
+const isExternalLink = computed(() => {
+  return props.to.startsWith('http://') || 
+         props.to.startsWith('https://') || 
+         props.to.startsWith('/');
 });
 </script>
 
 <template>
-  <router-link
-    :to="to"
+  <component
+    :is="isExternalLink ? 'a' : 'router-link'"
+    :href="isExternalLink ? to : undefined"
+    :to="isExternalLink ? undefined : to"
     :class="[
       'ui-link',
       `ui-link--${variant}`,
-      { 'is-disabled': disabled }
+      { 
+        'is-disabled': disabled,
+        'ui-link--plain': plain,
+      }
     ]"
     :aria-disabled="disabled"
   >
-    <slot 
-      v-if="$slots.iconLeft" 
-      name="iconLeft" 
-    />
-    <component
-      v-else-if="typeof iconLeft === 'object'"
-      :is="iconLeft"
-      class="ui-link__icon-left"
-    />
-    <img
-      v-else-if="iconLeft"
-      :src="iconLeft"
-      alt=""
-      class="ui-link__icon-left"
-    >
     <span class="ui-link__text">
       <slot>
         {{ text }}
       </slot>
     </span>
-    <slot 
-      v-if="$slots.iconRight" 
-      name="iconRight" 
-    />
-    <component
-      v-else-if="typeof iconRight === 'object'"
-      :is="iconRight"
-      class="ui-link__icon-right"
-    />
-    <img
-      v-else-if="iconRight"
-      :src="iconRight"
-      alt=""
-      class="ui-link__icon-right"
-    >
-  </router-link>
+  </component>
 </template>
 
 <style lang="scss" scoped>
