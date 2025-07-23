@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import 'reset-css'
+import 'reset-css';
 import YourIconPlugin from './plugins/icons';
 
 const app = createApp(App);

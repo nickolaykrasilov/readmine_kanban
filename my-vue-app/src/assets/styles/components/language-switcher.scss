@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 8px 12px;
     
     font-family: $font-family-base;
     font-size: $font-size-sm;
@@ -48,7 +47,6 @@
     letter-spacing: 0;
     color: $language-switcher-text;
 
-    transition: background-color 0.2s;
 
   &:hover {
     background-color: $language-switcher-item-hover; 
