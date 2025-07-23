@@ -7,7 +7,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  variant: {
+  theme: {
     type: String,
     default: 'default',
     validator: (value) => LINK_VARIANTS.includes(value),
@@ -19,10 +19,6 @@ const props = defineProps({
   text: {
     type: String,
     default: '',
-  },
-  plain: {
-    type: Boolean,
-    default: false,
   },
   iconPosition: {
     type: String,
@@ -44,7 +40,7 @@ const isExternalLink = computed(() => {
     :to="isExternalLink ? undefined : to"
     :class="[
       'ui-link',
-      `ui-link--${variant}`,
+      `ui-link--${theme}`,
       { 
         'is-disabled': disabled,
         'ui-link--plain': plain,
@@ -68,6 +64,8 @@ const isExternalLink = computed(() => {
     </span>
   </component>
 </template>
+
+
 
 <style lang="scss" scoped>
 @use '../../assets/styles/components/ui/ui-link.scss';
