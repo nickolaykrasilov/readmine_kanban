@@ -16,7 +16,7 @@ import {cards} from '../../models/CardsData.js';
               Powerful Agile & Kanban solutions for Redmine
           </h1>
         <div class="main-banner__text-block">
-            <p class="subtitle main-banner__subtitle">
+            <p class="description main-banner__description">
               Our plugins will help you stay organized and 
               ensure that all necessary tasks are completed 
               throughout the project lifecycle.
@@ -38,7 +38,7 @@ import {cards} from '../../models/CardsData.js';
         <h2 class="title main-banner__secondary-title"> 
             Redmine plugins
         </h2>
-            <p class="subtitle main-banner__subtitle">
+            <p class="description main-banner__description">
               Extend the capabilities of Redmine 
               with our collection of 
               powerful plugins . 
