@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'; // Добавьте этот импорт
+const router = useRouter();
 
 import { useScreenSize } from '../../utils/screen.js';
 import { NavigationMenuModel } from '../../models/NavigationMenuModel.js';
@@ -20,6 +22,11 @@ const dropdowns = navigationModel.getDropdowns();
 
 const toggleDropdown = (dropdownName) => {
   activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
+};
+
+const selectItem = ({ type, value }) => {
+  dropdowns[type].selected.value = value
+  router.push(navigationModel.getRoute(type, value))
 };
 </script>
 
@@ -50,6 +57,8 @@ const toggleDropdown = (dropdownName) => {
         :active-dropdown="activeDropdown"
         :class="{ 'header__nav--active': isMobileMenuOpen }"
         @update:active-dropdown="toggleDropdown"
+        @select-item="selectItem"
+
       />
       <div
         class="header__controls"
