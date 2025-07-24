@@ -30,11 +30,12 @@ const props = defineProps({
       `ui-link--${theme}`,
     ]"
   >
-      <span class="ui-link__text">
-        <slot>
-          {{ text }}
-        </slot>
-      </span>
+      <template v-if="$slots.text">
+        <slot name="text" />
+      </template>
+      <template v-else>
+        {{ text }}
+      </template>
       <span
         v-if="$slots.icon && iconPosition === 'right'" 
         class="ui-link__icon"
@@ -47,3 +48,4 @@ const props = defineProps({
 <style lang="scss" scoped>
 @use '../../assets/styles/components/ui/ui-link.scss';
 </style>
+  

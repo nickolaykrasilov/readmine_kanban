@@ -2,6 +2,8 @@
 import { defineProps } from 'vue';
 import { iconComponents } from '../../models/CardsData.js';
 
+import UILink from '../ui/UILink.vue';
+
 const props = defineProps({
   cardData: {
     type: Object,
@@ -29,22 +31,19 @@ const handleDetailsClick = () => {
     <p class="card__description">
       {{ cardData.description }}
     </p>
-      <UILink 
-        to="#" 
-        theme="default" 
+      <UILink
+        to="/details"
+        theme="default"
+        text="More details"
         class="card__link"
-        @click="handleDetailsClick"
       >
-        <template #default> 
-          More details
-        </template>
         <template #icon>
           <ArrowIcon />
         </template>
       </UILink>
-        </div>
-</template>
 
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @use '../../assets/styles/components/main-banner/main-banner-card.scss';

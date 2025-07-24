@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router'; 
 
 import { useScreenSize } from '../../utils/screen.js';
 import { NavigationMenuModel } from '../../models/NavigationMenuModel.js';
