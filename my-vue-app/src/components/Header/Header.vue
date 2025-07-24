@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'; 
-const router = useRouter();
 
 import { useScreenSize } from '../../utils/screen.js';
 import { NavigationMenuModel } from '../../models/NavigationMenuModel.js';
@@ -26,7 +25,6 @@ const toggleDropdown = (dropdownName) => {
 
 const selectItem = ({ type, value }) => {
   dropdowns[type].selected.value = value
-  router.push(navigationModel.getRoute(type, value))
 };
 </script>
 
