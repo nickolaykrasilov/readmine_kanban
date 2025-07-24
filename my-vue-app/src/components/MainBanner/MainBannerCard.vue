@@ -29,15 +29,20 @@ const handleDetailsClick = () => {
     <p class="card__description">
       {{ cardData.description }}
     </p>
-    <a 
-      href="#" 
-      class="card__link" 
-      @click.prevent="handleDetailsClick"
-    >
-      More details
-      <ArrowIcon /> 
-    </a>
-  </div>
+      <UILink 
+        to="#" 
+        theme="default" 
+        class="card__link"
+        @click="handleDetailsClick"
+      >
+        <template #default> 
+          More details
+        </template>
+        <template #icon>
+          <ArrowIcon />
+        </template>
+      </UILink>
+        </div>
 </template>
 
 

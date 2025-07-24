@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router'; // Добавьте этот импорт
+import { useRouter } from 'vue-router'; 
 const router = useRouter();
 
 import { useScreenSize } from '../../utils/screen.js';
