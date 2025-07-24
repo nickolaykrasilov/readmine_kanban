@@ -21,7 +21,7 @@ const dropdownRef = ref(null);
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     isOpen.value = false;
-  }
+  };
 };
 
 onMounted(() => {
