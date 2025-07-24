@@ -10,9 +10,9 @@ defineProps({
         type: Boolean,
         default: false,
     },
-    type: {
+    theme: {
         type: String,
-        default: 'button',
+        default: 'default',
         validator: validateButtonType,
     },
     iconRight: {

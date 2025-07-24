@@ -1,6 +1,8 @@
 @import '../main/index';
 
 .ui-button {
+  $self: &;
+
   width: 160px;
   height: 48px;
 
@@ -15,9 +17,13 @@
 
   cursor: pointer;
 
+  // &--default {
+  //   color: red;
+  // }
   &:hover {
     background-color: $ui-button-blue-hover;
   }
+
 
   &__icon {
     position: absolute;
