@@ -35,7 +35,9 @@ const handleClick = () => {
         @click="handleClick"
     >
         <template v-if="label">
-            <span>{{ label }}</span>
+            <span>
+                {{ label }}
+            </span>
         </template>
         <slot v-else />
         <span 

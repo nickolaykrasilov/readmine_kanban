@@ -6,9 +6,10 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none;
   font-family: $font-family-base;
   font-size: $font-size-base;
+  cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     color: $link-hover-color;
@@ -17,6 +18,7 @@
   &--default {
     color:  $link-login-color;
   }
+  
   @media (max-width: $breakpoint-md) {
     padding: 1.2rem;
   }
