@@ -71,7 +71,6 @@ const selectItem = ({ type, value }) => {
           variant="text"
           text="Support"
           class="header__other-links"
-
         />
         <LanguageSwitcher />
         <UILink

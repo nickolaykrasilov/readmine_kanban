@@ -128,8 +128,8 @@ const ArrowIcon = defineComponent({
 const WhiteArrowIcon = defineComponent({
   name: 'WhiteArrowIcon',
   props: {
-    size: { type: [Number, String], default: 15 }, // Указываем размер по умолчанию из SVG
-    color: { type: String, default: 'white' }, // Цвет по умолчанию white как в SVG
+    size: { type: [Number, String], default: 15 }, 
+    color: { type: String, default: 'white' }, 
   },
   setup(props) {
     return () => h('svg', {

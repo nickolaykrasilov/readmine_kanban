@@ -9,7 +9,7 @@ const dropdownRef = ref(null);
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     isOpen.value = false;
-  }
+  };
 };
 
 onMounted(() => {
@@ -17,7 +17,7 @@ onMounted(() => {
 
   if (savedLang) {
     currentLanguage.value = savedLang;
-  }
+  };
 
   document.addEventListener('click', handleClickOutside);
 });
@@ -62,7 +62,7 @@ const switchLanguage = (langCode) => {
       >
         {{ lang.name }}
       </li>
-    </ul>   
+    </ul>
   </div>
 </template>
 
