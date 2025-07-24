@@ -1,1 +1,1 @@
-export const LINK_VARIANTS = ['default', 'primary', 'danger', 'accent'];
+export const LINK_VARIANTS = ['default', 'accent'];
