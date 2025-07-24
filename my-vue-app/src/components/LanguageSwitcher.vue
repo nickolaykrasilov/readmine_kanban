@@ -18,7 +18,7 @@ onMounted(() => {
   if (savedLang) {
     currentLanguage.value = savedLang;
   }
-  
+
   document.addEventListener('click', handleClickOutside);
 });
 
