@@ -21,10 +21,7 @@ defineProps({
     },
 });
 
-const emit = defineEmits(['click']);
-
-const handleClick = (event) => {
-    emit('click', event);
+const handleClick = () => {
     alert("Click :) Have a nice day!");
 };
 </script>
@@ -40,13 +37,12 @@ const handleClick = (event) => {
         <template v-if="label">
             <span>{{ label }}</span>
         </template>
-        <template v-else>
-            <slot />
-        </template>
-        <span v-if="$slots.icon" class="ui-button__icon">
-            <span class="ui-button__icon-rect">
-                <slot name="icon" />
-            </span>
+        <slot v-else />
+        <span 
+            v-if="$slots.icon" 
+            class="ui-button__icon"
+        >
+            <slot name="icon" />
         </span>
     </button>
 </template>

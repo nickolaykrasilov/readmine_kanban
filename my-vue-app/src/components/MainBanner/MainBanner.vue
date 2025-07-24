@@ -26,7 +26,7 @@ import {cards} from '../../models/CardsData.js';
                   class="main-banner__button"
                 >
                   <template #icon>
-                    <WhiteArrowIcon class="main-banner__button-arrow" />
+                    <WhiteArrowIcon/>
                   </template>
               </UIButton>
         </div>

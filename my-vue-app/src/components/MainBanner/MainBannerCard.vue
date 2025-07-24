@@ -14,10 +14,6 @@ const props = defineProps({
     default: true,
   },
 });
-
-const handleDetailsClick = () => {
-  alert('Details clicked!'); 
-};
 </script>
 
 <template>
@@ -31,7 +27,7 @@ const handleDetailsClick = () => {
     <p class="card__description">
       {{ cardData.description }}
     </p>
-      <UILink
+      <UILink 
         to="/details"
         theme="default"
         text="More details"
@@ -41,7 +37,6 @@ const handleDetailsClick = () => {
           <ArrowIcon />
         </template>
       </UILink>
-
   </div>
 </template>
 
