@@ -43,7 +43,7 @@ import {cards} from '../../models/CardsData.js';
               with our collection of 
               powerful plugins . 
             </p>
-              <div class="cards-wrapper">
+              <div class="main-banner__cards-wrapper">
                 <MainBannerCard
                     v-for="card in cards"
                     :key="card.title"
