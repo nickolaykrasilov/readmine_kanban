@@ -1,7 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
 import { iconComponents } from '../../models/CardsData.js';
-
 import UILink from '../ui/UILink.vue';
 
 const props = defineProps({

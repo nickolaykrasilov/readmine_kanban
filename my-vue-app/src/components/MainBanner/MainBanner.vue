@@ -6,7 +6,7 @@ import { cards } from '../../models/CardsData.js';
 
 <template>
   <section class="main-banner">
-      <div class="main-banner__content">
+    <div class="main-banner__content">
         <img
           src="../../assets/images/ellipse.png"
           alt="Decorative ellipse"
@@ -22,12 +22,12 @@ import { cards } from '../../models/CardsData.js';
               throughout the project lifecycle.
             </p>
               <UIButton 
-                  label="Get a Free Demo"
-                  class="main-banner__button"
-                >
-                  <template #icon>
-                    <WhiteArrowIcon/>
-                  </template>
+                label="Get a Free Demo"
+                class="main-banner__button"
+              >
+                <template #icon>
+                  <WhiteArrowIcon/>
+                </template>
               </UIButton>
         </div>
         <img
@@ -50,7 +50,7 @@ import { cards } from '../../models/CardsData.js';
                     :card-data="card"
                 />
               </div>
-        </div> 
+    </div> 
   </section>
 </template>
 
