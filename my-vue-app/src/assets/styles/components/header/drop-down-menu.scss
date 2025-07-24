@@ -2,13 +2,9 @@
 
 .header__dropdown {
   $self: &;
-  
-  position: relative;
-  display: inline-block;
 
   &-button {
     display: flex;
-    align-items: center;
     gap: 4px;
     padding: 8px 12px;
     

@@ -5,13 +5,11 @@
 
   position: relative;
   z-index: $ui-index-2;
-
   width: 100%;
   padding: 1.2rem 0;
-
   background-color: $bg-primary;
   box-shadow: $box-shadow;
-  
+
   &__container {
     display: flex;
     align-items: center;
@@ -23,44 +21,29 @@
 
   &__logo-img {
     height: 40px;
-    width: auto;
   }
 
   &__mobile-menu-button {
-    position: relative;
-    z-index: $ui-index-3;
-
     display: none;
     padding: 0.8rem;
-
     background-color: transparent;
     border: none;
-
     cursor: pointer;
-    appearance: none;
-
-    @media (max-width: $breakpoint-md) {
-      display: block;
-    }
   }
 
   &__mobile-menu-icon {
     position: relative;
-
     display: block;
     width: 24px;
     height: 4px;
-
     background-color: $text-primary;
 
     &::before,
     &::after {
       position: absolute;
       left: 0;
-
       width: 100%;
       height: 4px;
-
       background-color: $text-primary;
       content: '';
     }
@@ -78,98 +61,14 @@
     display: flex;
     align-items: center;
     gap: 1.6rem;
-
-    @media (max-width: $breakpoint-md) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: $ui-index-3;
-
-      width: 100%;
-      height: 100vh;
-      padding: 80px 20px 20px;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-
-      background-color: $bg-primary;
-
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-
-      &--active {
-        transform: translateX(0);
-      }
-    }
   }
 
   &__dropdown {
     $dropdown: &;
 
-    position: relative;
-
     &-button {
-      display: flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.8rem 1.2rem 0.8rem 0.8rem;
-
-      font-size: $font-size-base;
-      line-height: $line-height-base;
-      font-weight: 500;
-      color: $language-switcher-text;
-
-      background-color: transparent;
-      border: none;
-
       cursor: pointer;
-
-      @media (max-width: $breakpoint-md) {
-        padding: 1.2rem 1.6rem 1.2rem 1.2rem;
-      }
-
-      &:hover {
-        color: $link-hover-color;
-
-        #{$dropdown}-arrow {
-          svg path {
-            stroke: $link-hover-color;
-          }
-        }
-      }
-    }
-
-    &-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: $language-switcher-arrow-size;
-      height: $language-switcher-arrow-size;
-      margin-left: 8px;
-    }
-
-    &-list {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: $ui-index-1;
-
-      min-width: 200px;
-      padding: 0.8rem 0;
-      margin-top: 0.8rem;
-
-      background-color: $bg-primary;
-      border-radius: 4px;
-      box-shadow: $box-shadow;
-
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.2s ease;
-
-      &--active {
-        opacity: 1;
-        visibility: visible;
-      }
     }
 
     &-item {
@@ -177,8 +76,6 @@
       list-style: none;
 
       cursor: pointer;
-
-      transition: all 0.2s ease;
 
       &:hover {
         background-color: $language-switcher-item-hover;
@@ -213,14 +110,6 @@
       &--active {
         transform: translateX(0);
       }
-    }
-  }
-
-  &__demo-button {
-    @media (max-width: $breakpoint-md) {
-      width: 100%;
-      max-width: 200px;
-      padding: 1.2rem;
     }
   }
 
