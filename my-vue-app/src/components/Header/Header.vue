@@ -68,14 +68,12 @@ const selectItem = ({ type, value }) => {
         />
         <UILink
           to="/support"
-          variant="text"
           text="Support"
           class="header__other-links"
         />
         <LanguageSwitcher />
         <UILink
           to="/login"
-          variant="text"
           text="Login"
           class="header__login-link"
         >

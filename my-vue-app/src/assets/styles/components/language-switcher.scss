@@ -4,7 +4,6 @@
   $self: &; 
 
   position: relative;
-
   margin-left: 16px;
 
   &__button {
@@ -28,26 +27,22 @@
   &__list {
     position: absolute;
     margin: auto;
-
     padding: 4px 0;
     min-width: 100px;
-
     background: $bg-primary;
     border: 1px solid $border-divider;
     box-shadow: $box-shadow;
-
     list-style: none;
 }
   &__item {
     padding: 8px 16px;
-
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
     letter-spacing: 0;
     color: $language-switcher-text;
     cursor: pointer;
-    
+
   &:hover {
     background-color: $language-switcher-item-hover; 
   }
@@ -60,4 +55,3 @@
     }
   }
 }
-  

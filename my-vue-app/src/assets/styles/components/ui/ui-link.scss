@@ -15,8 +15,11 @@
     color: $link-hover-color;
   }
 
-  &--default {
-    color:  $link-login-color;
+  &--blue {
+    color: $link-login-color;
+  }
+  &--green{
+    color: green;
   }
 
   @media (max-width: $breakpoint-md) {
