@@ -4,7 +4,7 @@ export const LANGUAGES = [
     name: 'English',
   },
   { 
-    code: 'Ru', 
+    code: 'Ru',
     name: 'Русский',
   },
 ];
