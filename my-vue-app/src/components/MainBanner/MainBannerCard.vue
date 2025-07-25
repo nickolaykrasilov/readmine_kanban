@@ -28,7 +28,7 @@ const props = defineProps({
     </p>
       <UILink 
         to="/details"
-        theme="green"
+        theme="blue"
         text="More details"
         class="card__link"
       >

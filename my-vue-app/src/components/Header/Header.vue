@@ -74,7 +74,7 @@ const selectItem = ({ type, value }) => {
         <UILink
           to="/login"
           text="Login"
-          class="header__login-link"
+          theme="blue"
         >
           <template #icon>
             <UserIcon class="header__login-icon" />
