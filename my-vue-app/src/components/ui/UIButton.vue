@@ -1,6 +1,4 @@
 <script setup>
-import { validateButtonType } from '../../models/ButtonTypes';
-
 const props = defineProps({
     label: {
         type: String,
@@ -12,8 +10,7 @@ const props = defineProps({
     },
     theme: {
         type: String,
-        default: 'color_blue_and_white',   
-        validator: validateButtonType,
+        default: 'color_blue_and_white',
     },
     iconRight: {
         type: Boolean,
@@ -24,7 +21,7 @@ const props = defineProps({
 const handleClick = () => {
     if (!props.disabled) {
         alert("Click :) Have a nice day!");
-    }
+    };
 };
 </script>
 
