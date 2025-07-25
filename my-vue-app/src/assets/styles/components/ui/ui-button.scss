@@ -15,7 +15,7 @@
 
   cursor: pointer;
 
-  &--color {
+  &--color_blue_and_white {
     color: $bg-primary;
     background-color: $ui-button-blue;
   }
@@ -23,7 +23,6 @@
   &:hover {
     background-color: $ui-button-blue-hover;
   }
-
 
   &__icon {
     position: absolute;
