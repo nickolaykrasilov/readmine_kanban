@@ -38,7 +38,7 @@ const switchLanguage = (langCode) => {
 </script>
 
 <template>
-  <div class="language-switcher" ref="dropdownRef">
+  <div class="language-switcher">
     <button
       class="language-switcher__button"
       :aria-expanded="isOpen"

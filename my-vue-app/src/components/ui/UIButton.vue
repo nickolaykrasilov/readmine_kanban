@@ -13,7 +13,7 @@ const props = defineProps({
   theme: {
     type: String,
     default: UI_THEMES.BLUE,
-    validator: THEME_VALIDATOR
+    validator: THEME_VALIDATOR,
   },
   iconRight: {
     type: Boolean,
@@ -28,7 +28,7 @@ const handleClick = () => {
 };
 </script>
 
-<template>
+<template>  
     <button
         class="ui-button" 
         :class="[
@@ -36,7 +36,7 @@ const handleClick = () => {
             { 
                 'is-disabled': disabled, 
                 'has-icon-right': iconRight && $slots.icon,
-                'has-icon': $slots.icon
+                'has-icon': $slots.icon,
             }
         ]"
         :disabled="disabled"

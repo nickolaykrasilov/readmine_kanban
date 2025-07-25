@@ -1,5 +1,5 @@
 <script setup>
-import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes'
+import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes';
 import { ICON_POSITIONS, ICON_POSITION_VALIDATOR } from '../../models/UIIconPositions';
 
 const props = defineProps({
@@ -10,7 +10,7 @@ const props = defineProps({
   theme: {
     type: String,
     default: UI_THEMES.BLUE,
-    validator: THEME_VALIDATOR
+    validator: THEME_VALIDATOR,
   },
   label: {
     type: String,
@@ -19,7 +19,7 @@ const props = defineProps({
   iconPosition: {
     type: String,
     default: ICON_POSITIONS.RIGHT,
-    validator: ICON_POSITION_VALIDATOR
+    validator: ICON_POSITION_VALIDATOR,
   },
 });
 </script>
@@ -32,30 +32,20 @@ const props = defineProps({
       `ui-link--${theme}`,
     ]"
   >
-    <span
-      v-if="$slots.icon && iconPosition === ICON_POSITIONS.LEFT" 
-      class="ui-link__icon ui-link__icon--left"
-    >
-      <slot name="icon" />
-    </span>
-    
     <template v-if="$slots.label">
       <slot name="label" />
     </template>
     <template v-else>
       {{ label }}
     </template>
-    
     <span
       v-if="$slots.icon && iconPosition === ICON_POSITIONS.RIGHT" 
-      class="ui-link__icon ui-link__icon--right"
     >
       <slot name="icon" />
     </span>
   </a>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../../assets/styles/components/ui/ui-link.scss';
 </style>
-  

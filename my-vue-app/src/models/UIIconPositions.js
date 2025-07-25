@@ -1,6 +1,5 @@
 export const ICON_POSITIONS = {
-  LEFT: 'left',
-  RIGHT: 'right'
+  RIGHT: 'right',
 };
 
 export const ICON_POSITION_VALIDATOR = (value) => {
