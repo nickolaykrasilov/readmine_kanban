@@ -4,11 +4,11 @@
   $self: &;
 
   min-height: 328px;
-  border-radius: 16px;
-  background: $bg-primary;
   padding: 32px;
   display: flex;
   flex-direction: column;
+  background: $bg-primary;
+  border-radius: 16px;
 
   @media (max-width: $breakpoint-md) {
     .cards-wrapper & {
@@ -30,6 +30,7 @@
 
   &__description {
     width: 100%;
+    flex-grow: 1;
     text-align: left;
     font-weight: 400;
     font-size: 16px;
@@ -37,7 +38,6 @@
     font-family: 'Inter', sans-serif;
     color: $text-secondary;
     white-space: pre-line;
-    flex-grow: 1;
   }
 
   &__link {

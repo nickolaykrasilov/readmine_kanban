@@ -2,14 +2,13 @@
 
 .ui-link {
   $self: &;
-
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: $font-family-base;
+  font-family: $font-family-base; 
   font-size: $font-size-base;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     color: $link-hover-color;
@@ -18,6 +17,7 @@
   &--blue {
     color: $link-login-color;
   }
+
   &--black {
     color: $language-switcher-text;
   }

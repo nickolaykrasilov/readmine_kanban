@@ -81,12 +81,6 @@
     }
   }
 
-  &__login {
-    &-link {
-      color: $link-login-color;
-    }
-  }
-
   @media (max-width: $breakpoint-md) {
     #{$self}__mobile-menu-button {
       display: block;
