@@ -63,12 +63,12 @@ const selectItem = ({ type, value }) => {
         <UILink 
           to="/resources" 
           text="Resources" 
-          class="header__other-links"
+          theme="black"
         />
         <UILink
           to="/support"
           text="Support"
-          class="header__other-links"
+          theme="black"
         />
         <LanguageSwitcher />
         <UILink

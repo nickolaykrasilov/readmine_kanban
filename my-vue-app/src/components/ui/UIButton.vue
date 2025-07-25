@@ -1,22 +1,24 @@
 <script setup>
+import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes';
+
 const props = defineProps({
-    label: {
-        type: String,
-        default: '',
-    },
-    disabled: {
-        type: Boolean,
-        default: false,
-    },
-    theme: {
-        type: String,
-        default: 'blue',
-        validator: (value) => ['color_blue_and_white', 'green', 'red', 'gray', 'yellow', 'purple', 'white'].includes(value)
-    },
-    iconRight: {
-        type: Boolean,
-        default: false,
-    },
+  label: {
+    type: String,
+    default: '',
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+  theme: {
+    type: String,
+    default: UI_THEMES.BLUE,
+    validator: THEME_VALIDATOR
+  },
+  iconRight: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits(['click']);

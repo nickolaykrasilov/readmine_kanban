@@ -1,4 +1,7 @@
 <script setup>
+import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes'
+import { ICON_POSITIONS, ICON_POSITION_VALIDATOR } from '../../models/UIIconPositions';
+
 const props = defineProps({
   to: {
     type: String,
@@ -6,10 +9,8 @@ const props = defineProps({
   },
   theme: {
     type: String,
-    default: 'blue',
-    validator: (value) => {
-      return ['blue', 'green', 'red', 'gray', 'yellow', 'purple'].includes(value)
-    }
+    default: UI_THEMES.BLUE,
+    validator: THEME_VALIDATOR
   },
   text: {
     type: String,
@@ -17,8 +18,8 @@ const props = defineProps({
   },
   iconPosition: {
     type: String,
-    default: 'right',
-    validator: (value) => ['left', 'right'].includes(value)
+    default: ICON_POSITIONS.RIGHT,
+    validator: ICON_POSITION_VALIDATOR
   },
 });
 </script>
@@ -32,7 +33,7 @@ const props = defineProps({
     ]"
   >
     <span
-      v-if="$slots.icon && iconPosition === 'left'" 
+      v-if="$slots.icon && iconPosition === ICON_POSITIONS.LEFT" 
       class="ui-link__icon ui-link__icon--left"
     >
       <slot name="icon" />
@@ -46,7 +47,7 @@ const props = defineProps({
     </template>
     
     <span
-      v-if="$slots.icon && iconPosition === 'right'" 
+      v-if="$slots.icon && iconPosition === ICON_POSITIONS.RIGHT" 
       class="ui-link__icon ui-link__icon--right"
     >
       <slot name="icon" />

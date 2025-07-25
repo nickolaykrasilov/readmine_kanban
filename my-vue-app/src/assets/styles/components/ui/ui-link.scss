@@ -18,8 +18,8 @@
   &--blue {
     color: $link-login-color;
   }
-  &--green{
-    color: green;
+  &--black {
+    color: $language-switcher-text;
   }
 
   @media (max-width: $breakpoint-md) {
