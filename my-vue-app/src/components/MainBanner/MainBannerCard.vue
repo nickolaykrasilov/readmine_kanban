@@ -8,10 +8,6 @@ const props = defineProps({
     type: Object,
     required: true,
   },
-  showButton: {
-    type: Boolean,
-    default: true,
-  },
 });
 </script>
 
