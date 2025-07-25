@@ -12,7 +12,7 @@ const props = defineProps({
     default: UI_THEMES.BLUE,
     validator: THEME_VALIDATOR
   },
-  text: {
+  label: {
     type: String,
     default: '',
   },
@@ -39,11 +39,11 @@ const props = defineProps({
       <slot name="icon" />
     </span>
     
-    <template v-if="$slots.text">
-      <slot name="text" />
+    <template v-if="$slots.label">
+      <slot name="label" />
     </template>
     <template v-else>
-      {{ text }}
+      {{ label }}
     </template>
     
     <span

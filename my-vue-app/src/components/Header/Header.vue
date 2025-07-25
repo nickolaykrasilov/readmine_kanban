@@ -62,18 +62,18 @@ const selectItem = ({ type, value }) => {
       >
         <UILink 
           to="/resources" 
-          text="Resources" 
+          label="Resources" 
           theme="black"
         />
         <UILink
           to="/support"
-          text="Support"
+          label="Support"
           theme="black"
         />
         <LanguageSwitcher />
         <UILink
           to="/login"
-          text="Login"
+          label="Login"
           theme="blue"
         >
           <template #icon>
@@ -81,8 +81,7 @@ const selectItem = ({ type, value }) => {
           </template>
         </UILink>
         <UIButton
-          label="Get Demo"
-          class="header__demo-button"
+          label="Get a Free Demo"
           theme="color_blue_and_white"
         />
       </div>

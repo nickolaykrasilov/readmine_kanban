@@ -21,11 +21,8 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['click']);
-
 const handleClick = () => {
     if (!props.disabled) {
-        emit('click');
         alert("Click :) Have a nice day!");
     };
 };

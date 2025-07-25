@@ -29,7 +29,7 @@ const props = defineProps({
       <UILink 
         to="/details"
         theme="blue"
-        text="More details"
+        label="More details"
         class="card__link"
       >
         <template #icon>
