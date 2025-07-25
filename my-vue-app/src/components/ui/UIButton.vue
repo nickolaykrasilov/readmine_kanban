@@ -22,37 +22,37 @@ const props = defineProps({
 });
 
 const handleClick = () => {
-    if (!props.disabled) {
-        alert("Click :) Have a nice day!");
-    };
+  if (!props.disabled) {
+    alert("Click :) Have a nice day!");
+  };
 };
 </script>
 
 <template>  
-    <button
-        class="ui-button" 
-        :class="[
-            `ui-button--${theme}`,
-            { 
-                'is-disabled': disabled, 
-                'has-icon-right': iconRight && $slots.icon,
-                'has-icon': $slots.icon,
-            }
-        ]"
-        :disabled="disabled"
-        @click="handleClick"
+  <button
+    class="ui-button" 
+    :class="[
+      `ui-button--${theme}`,
+      { 
+      'is-disabled': disabled, 
+      'has-icon-right': iconRight && $slots.icon,
+      'has-icon': $slots.icon,
+      }
+    ]"
+    :disabled="disabled"
+    @click="handleClick"
+  >
+    <template v-if="label">
+      {{ label }}
+    </template>
+    <slot v-else />
+    <span
+      v-if="$slots.icon" 
+      class="ui-button__icon"
+      :class="{ 'ui-button__icon--right': iconRight }"
     >
-        <template v-if="label">
-            {{ label }}
-        </template>
-        <slot v-else />
-        <span
-            v-if="$slots.icon" 
-            class="ui-button__icon"
-            :class="{ 'ui-button__icon--right': iconRight }"
-        >
-            <slot name="icon" />
-        </span>
+      <slot name="icon" />
+    </span>
     </button>
 </template>
 

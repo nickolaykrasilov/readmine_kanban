@@ -22,16 +22,16 @@ const props = defineProps({
     <p class="card__description">
       {{ cardData.description }}
     </p>
-      <UILink 
-        to="/details"
-        label="More details"
-        theme="blue"
-        class="card__link"
-      >
-        <template #icon>
-          <ArrowIcon />
-        </template>
-      </UILink>
+    <UILink 
+      to="/details"
+      label="More details"
+      theme="blue"
+      class="card__link"
+    >
+      <template #icon>
+        <ArrowIcon />
+      </template>
+    </UILink>
   </div>
 </template>
 
