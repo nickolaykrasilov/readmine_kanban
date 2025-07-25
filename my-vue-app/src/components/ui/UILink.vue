@@ -1,5 +1,4 @@
 <script setup>
-import { LINK_VARIANTS } from '../../models/LinkVariants';
 
 const props = defineProps({
   to: {
@@ -8,8 +7,7 @@ const props = defineProps({
   },
   theme: {
     type: String,
-    default: 'default',
-    validator: (value) => LINK_VARIANTS.includes(value),
+    default: 'blue',
   },
   text: {
     type: String,
@@ -45,7 +43,7 @@ const props = defineProps({
   </a>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../../assets/styles/components/ui/ui-link.scss';
 </style>
   

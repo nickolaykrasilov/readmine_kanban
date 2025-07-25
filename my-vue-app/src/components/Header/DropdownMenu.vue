@@ -10,7 +10,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  type: String,
 });
 
 const emit = defineEmits(['select']);
