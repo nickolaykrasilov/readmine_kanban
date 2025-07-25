@@ -53,30 +53,13 @@
     }
   }
 
-  &__button {
-    position: relative;
-    width: 212px;
-    height: 48px;
+.ui-button__button {
+  box-shadow: $button-shadow;
+
+  &:hover {
     box-shadow: $button-shadow;
-
-    &:hover {
-      background: $ui-button-blue-hover;
-      box-shadow: $button-shadow;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      width: 212px;
-      height: 44px;
-    }
-
-    .ui-button__text {
-      @media (max-width: $breakpoint-md) {
-        left: 20px;
-        width: 100px;
-        font-size: 12px;
-      }
-    }
   }
+}
 
   &__screen {
     z-index: $ui-index-1;

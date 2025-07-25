@@ -3,11 +3,18 @@
 .ui-button {
   $self: &;
 
-  width: 160px;
-  height: 48px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; 
+  min-height: 48px;
+  padding: 0 12px; 
+  box-sizing: border-box;
+
   font-family: $font-family-base;
   font-size: $font-size-sm;
   font-weight: 600;
+  white-space: nowrap;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -16,28 +23,18 @@
     color: $bg-primary;
     background-color: $ui-button-blue;
   }
-  
+
   &:hover {
     background-color: $ui-button-blue-hover;
   }
 
   &__icon {
-    position: absolute;
-    top: 52%;
-    right: 8px;
-    transform: translateY(-50%);
-    width: 36px;
-    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 36px;
+    height: 36px;
     background: $ui-button-blue-square;
     border-radius: 4px;
-
-    @media (max-width: $breakpoint-md) {
-      width: 42px;
-      height: 32px;
-      right: 4px;
-    }
   }
 }
