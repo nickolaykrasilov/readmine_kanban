@@ -53,13 +53,13 @@
     }
   }
 
-.ui-button__button {
-  box-shadow: $button-shadow;
-
-  &:hover {
+  &__button {
     box-shadow: $button-shadow;
+
+    &:hover {
+      box-shadow: $button-shadow;
+    }
   }
-}
 
   &__screen {
     z-index: $ui-index-1;
