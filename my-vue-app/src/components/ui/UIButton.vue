@@ -10,7 +10,8 @@ const props = defineProps({
     },
     theme: {
         type: String,
-        default: 'color_blue_and_white',
+        default: 'blue',
+        validator: (value) => ['color_blue_and_white', 'green', 'red', 'gray', 'yellow', 'purple', 'white'].includes(value)
     },
     iconRight: {
         type: Boolean,
@@ -18,8 +19,11 @@ const props = defineProps({
     },
 });
 
+const emit = defineEmits(['click']);
+
 const handleClick = () => {
     if (!props.disabled) {
+        emit('click');
         alert("Click :) Have a nice day!");
     };
 };
@@ -32,7 +36,8 @@ const handleClick = () => {
             `ui-button--${theme}`,
             { 
                 'is-disabled': disabled, 
-                'has-icon-right': iconRight && $slots.icon 
+                'has-icon-right': iconRight && $slots.icon,
+                'has-icon': $slots.icon
             }
         ]"
         :disabled="disabled"
@@ -45,6 +50,7 @@ const handleClick = () => {
         <span
             v-if="$slots.icon" 
             class="ui-button__icon"
+            :class="{ 'ui-button__icon--right': iconRight }"
         >
             <slot name="icon" />
         </span>

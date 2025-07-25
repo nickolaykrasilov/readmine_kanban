@@ -55,7 +55,6 @@ const selectItem = ({ type, value }) => {
         :class="{ 'header__nav--active': isMobileMenuOpen }"
         @update:active-dropdown="toggleDropdown"
         @select-item="selectItem"
-
       />
       <div
         class="header__controls"
@@ -84,6 +83,7 @@ const selectItem = ({ type, value }) => {
         <UIButton
           label="Get Demo"
           class="header__demo-button"
+          theme="color_blue_and_white"
         />
       </div>
     </div>

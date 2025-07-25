@@ -24,6 +24,7 @@ import { cards } from '../../models/CardsData.js';
               <UIButton 
                 label="Get a Free Demo"
                 class="main-banner__button"
+                theme="color_blue_and_white"
               >
                 <template #icon>
                   <WhiteArrowIcon/>
