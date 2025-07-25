@@ -7,50 +7,51 @@ import { cards } from '../../models/CardsData.js';
 <template>
   <section class="main-banner">
     <div class="main-banner__content">
-        <img
-          src="../../assets/images/ellipse.png"
-          alt="Decorative ellipse"
-          class="main-banner__ellipse"
+      <img
+        src="../../assets/images/ellipse.png"
+        alt="Decorative ellipse"
+        class="main-banner__ellipse"
+      />
+      <h1 class="title main-banner__title">
+        Powerful Agile & Kanban 
+        solutions for Redmine
+      </h1>
+      <div class="main-banner__text-block">
+        <p class="description main-banner__description">
+          Our plugins will help you stay organized and 
+          ensure that all necessary tasks are completed 
+          throughout the project lifecycle.
+        </p>
+        <UIButton 
+          label="Get a Free Demo"
+          theme="color_blue_and_white"
+          class="main-banner__button"
         >
-          <h1 class="title main-banner__title">
-              Powerful Agile & Kanban solutions for Redmine
-          </h1>
-        <div class="main-banner__text-block">
-            <p class="description main-banner__description">
-              Our plugins will help you stay organized and 
-              ensure that all necessary tasks are completed 
-              throughout the project lifecycle.
-            </p>
-              <UIButton 
-                label="Get a Free Demo"
-                theme="color_blue_and_white"
-                class="main-banner__button"
-              >
-                <template #icon>
-                  <WhiteArrowIcon/>
-                </template>
-              </UIButton>
+          <template #icon>
+            <WhiteArrowIcon/>
+          </template>
+        </UIButton>
+      </div>
+      <img
+        src="../../assets/images/screen.jpg"
+        alt="Redmine Kanban Screen"
+        class="main-banner__screen"
+      />
+      <h2 class="title main-banner__secondary-title"> 
+        Redmine plugins
+      </h2>
+      <p class="description main-banner__description">
+        Extend the capabilities of Redmine 
+        with our collection of 
+        powerful plugins . 
+      </p>
+        <div class="main-banner__cards-wrapper">
+          <MainBannerCard
+            v-for="card in cards"
+            :key="card.title"
+            :card-data="card"
+          />
         </div>
-        <img
-          src="../../assets/images/screen.jpg"
-          alt="Redmine Kanban Screen"
-          class="main-banner__screen"
-        >
-        <h2 class="title main-banner__secondary-title"> 
-            Redmine plugins
-        </h2>
-            <p class="description main-banner__description">
-              Extend the capabilities of Redmine 
-              with our collection of 
-              powerful plugins . 
-            </p>
-              <div class="main-banner__cards-wrapper">
-                <MainBannerCard
-                    v-for="card in cards"
-                    :key="card.title"
-                    :card-data="card"
-                />
-              </div>
     </div> 
   </section>
 </template>
