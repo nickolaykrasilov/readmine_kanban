@@ -10,16 +10,16 @@
   font-size: $font-size-sm;
   font-weight: 600;
 
-  background-color: $ui-button-blue;
   border: none;
   border-radius: 4px;
-  color: $bg-primary;
 
   cursor: pointer;
 
-  // &--default {
-  //   color: red;
-  // }
+  &--color {
+    color: $bg-primary;
+    background-color: $ui-button-blue;
+  }
+  
   &:hover {
     background-color: $ui-button-blue-hover;
   }

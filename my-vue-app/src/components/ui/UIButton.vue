@@ -1,7 +1,7 @@
 <script setup>
 import { validateButtonType } from '../../models/ButtonTypes';
 
-defineProps({
+const props = defineProps({
     label: {
         type: String,
         default: '',
@@ -12,7 +12,7 @@ defineProps({
     },
     theme: {
         type: String,
-        default: 'default',
+        default: 'color',
         validator: validateButtonType,
     },
     iconRight: {
@@ -22,25 +22,30 @@ defineProps({
 });
 
 const handleClick = () => {
-    alert("Click :) Have a nice day!");
+    if (!props.disabled) {
+        alert("Click :) Have a nice day!");
+    }
 };
 </script>
 
 <template>
     <button
-        class="ui-button"
-        :class="{ 'is-disabled': disabled, 'has-icon-right': iconRight }"
-        :type="type"
+        class="ui-button" 
+        :class="[
+            `ui-button--${theme}`,
+            { 
+                'is-disabled': disabled, 
+                'has-icon-right': iconRight && $slots.icon 
+            }
+        ]"
         :disabled="disabled"
         @click="handleClick"
     >
         <template v-if="label">
-            <span>
-                {{ label }}
-            </span>
+            {{ label }}
         </template>
         <slot v-else />
-        <span 
+        <span
             v-if="$slots.icon" 
             class="ui-button__icon"
         >
