@@ -60,7 +60,7 @@ const selectItem = ({ type, value }) => {
         class="header__controls"
         :class="{ 'header__controls--active': isMobileMenuOpen }"
       >
-        <UILink 
+        <UILink
           to="/resources"
           label="Resources"
         />

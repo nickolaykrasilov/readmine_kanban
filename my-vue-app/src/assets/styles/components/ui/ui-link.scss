@@ -9,6 +9,8 @@
   font-size: $font-size-base;
   text-decoration: none;
   cursor: pointer;
+  color: $language-switcher-text; // Стиль по умолчанию (бывший --default)
+
 
   &:hover {
     color: $link-hover-color;
@@ -25,5 +27,4 @@
   @media (max-width: $breakpoint-md) {
     padding: 1.2rem;
   }
-  color: $language-switcher-text;
 }
