@@ -9,13 +9,10 @@ import UILink from '../ui/UILink.vue';
 import HeaderNav from './HeaderNav.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 
-import logo from '../../assets/images/logo.png';
-
 const { isMobile } = useScreenSize();
 const navigationModel = new NavigationMenuModel();
 
 const isMobileMenuOpen = ref(false);
-const activeDropdown = ref(null);
 const dropdowns = navigationModel.getDropdowns();
 </script>
 
