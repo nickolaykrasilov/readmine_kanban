@@ -34,11 +34,9 @@ const selectItem = ({ type, value }) => {
         to="/"
         class="header__logo"
       >
-        <img
-          :src="logo"
-          alt="Header Logo"
+        <LogoIcon
           class="header__logo-img"
-        >
+        />
        </a>
       <button
         v-if="isMobile"
