@@ -5,6 +5,10 @@
   padding: 40px;
   background: $gradient-main-bg;
 
+  @media (max-width: $breakpoint-md) {
+    padding: 60px 0 80px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -59,32 +63,21 @@
 
   &__screen {
     z-index: $ui-index-1;
-    width: 1100px;
-    height: 616px;
+    width: 80%; 
+    max-width: 1100px; 
+    height: auto; 
+    aspect-ratio: 1100 / 616; 
     margin-top: 40px;
     border-radius: 8px;
     box-shadow: 0 20px 40px $color-shadow-base;
 
-    @media (max-width: $breakpoint-xl) {
-      width: 900px;
-      height: 504px;
-    }
-
-    @media (max-width: $breakpoint-lg) {
-      width: 700px;
-      height: 392px;
-    }
-
     @media (max-width: $breakpoint-md) {
-      width: calc(100% - 40px);
-      max-height: 304px;
+      width: calc(100% - 40px); 
       margin-top: 32px;
     }
   }
 
-  @media (max-width: $breakpoint-md) {
-    padding: 60px 0 80px;
-  }
+  
 
   &__cards-wrapper {
     display: grid;
