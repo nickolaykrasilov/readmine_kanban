@@ -18,11 +18,8 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
-  &--color_blue_and_white {
-    color: $bg-primary;
-    background-color: $ui-button-blue;
-  }
+  color: $bg-primary;
+  background-color: $ui-button-blue;
 
   &:hover {
     background-color: $ui-button-blue-hover;

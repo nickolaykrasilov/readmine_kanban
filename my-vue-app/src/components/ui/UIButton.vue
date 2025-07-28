@@ -12,7 +12,7 @@ const props = defineProps({
   },
   theme: {
     type: String,
-    default: UI_THEMES.BLUE,
+    default: undefined,
     validator: THEME_VALIDATOR,
   },
   iconRight: {
@@ -32,7 +32,7 @@ const handleClick = () => {
   <button
     class="ui-button" 
     :class="[
-      `ui-button--${theme}`,
+      theme ? `ui-button--${theme}` : '',
       { 
       'is-disabled': disabled, 
       'has-icon-right': iconRight && $slots.icon,
