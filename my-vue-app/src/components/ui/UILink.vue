@@ -1,7 +1,7 @@
 <script setup>
 import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes';
 
-const props = defineProps({
+defineProps({
   to: {
     type: String,
     required: true,
