@@ -5,7 +5,7 @@ defineProps({
   dropdowns: {
     type: Object,
     required: true,
-  }
+  },
 });
 
 const emit = defineEmits(['select-item']);
