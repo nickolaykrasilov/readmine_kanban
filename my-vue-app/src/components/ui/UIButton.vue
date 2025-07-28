@@ -12,7 +12,7 @@ const props = defineProps({
   },
   theme: {
     type: String,
-    default: undefined,
+    default: 'blue',
     validator: THEME_VALIDATOR,
   },
   iconRight: {

@@ -9,10 +9,13 @@
   font-size: $font-size-base;
   text-decoration: none;
   cursor: pointer;
-  color: $language-switcher-text; 
-
+  
   &:hover {
     color: $link-hover-color;
+  }
+
+  &--black{
+    color: $language-switcher-text;
   }
 
   &--blue {

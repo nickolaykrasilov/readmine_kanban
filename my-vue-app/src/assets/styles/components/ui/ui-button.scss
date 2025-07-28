@@ -25,6 +25,11 @@
     background-color: $ui-button-blue-hover;
   }
 
+  &--blue{
+    color: $bg-primary;
+    background-color: $ui-button-blue;
+  }
+
   &__icon {
     display: flex;
     align-items: center;
