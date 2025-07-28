@@ -1,5 +1,5 @@
 <script setup>
-import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes';
+import { UI_THEMES } from '../../models/UIThemes';
 
 const props = defineProps({
   label: {
@@ -13,7 +13,7 @@ const props = defineProps({
   theme: {
     type: String,
     default: UI_THEMES.BLUE,
-    validator: THEME_VALIDATOR,
+    validator: (value) => Object.values(UI_THEMES).includes(value),
   },
   iconRight: {
     type: Boolean,
