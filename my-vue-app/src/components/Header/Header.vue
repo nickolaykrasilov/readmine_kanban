@@ -58,7 +58,7 @@ const dropdowns = navigationModel.getDropdowns();
           theme="blue"
         >
           <template #icon>
-            <UserIcon class="header__login-icon" />
+            <UserIcon />
           </template>
         </UILink>
         <UIButton
