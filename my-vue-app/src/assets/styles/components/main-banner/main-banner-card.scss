@@ -57,7 +57,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-sm) {
     padding: 20px;
     
     &__title {
