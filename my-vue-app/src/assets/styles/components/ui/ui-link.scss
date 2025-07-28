@@ -18,11 +18,12 @@
     color: $link-login-color;
   }
 
-  &--black {
+  &--default {
     color: $language-switcher-text;
   }
 
   @media (max-width: $breakpoint-md) {
     padding: 1.2rem;
   }
+  color: $language-switcher-text;
 }

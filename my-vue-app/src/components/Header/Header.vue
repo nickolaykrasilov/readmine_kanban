@@ -61,14 +61,12 @@ const selectItem = ({ type, value }) => {
         :class="{ 'header__controls--active': isMobileMenuOpen }"
       >
         <UILink 
-          to="/resources" 
-          label="Resources" 
-          theme="black"
+          to="/resources"
+          label="Resources"
         />
         <UILink
           to="/support"
           label="Support"
-          theme="black"
         />
         <LanguageSwitcher />
         <UILink
