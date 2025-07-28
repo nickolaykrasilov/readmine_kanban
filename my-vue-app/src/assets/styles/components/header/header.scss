@@ -14,19 +14,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: $breakpoint-xl;
+    width: 90%; 
+    max-width: $breakpoint-xl; 
     margin: 0 auto;
     font-family: $font-family-base;
   }
 
-  &__logo-text{
+  &__logo-text {
     font-weight: 600;
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 24px); 
     color: $link-login-color;
-    margin-right: 64px; 
-      .kanban {
-        color:$text-primary ; 
-      }
+    margin-right: clamp(16px, 5vw, 64px); 
+
+    .kanban {
+      color: $text-primary;
+    }
   }
 
   &__mobile-menu-button {
@@ -35,6 +37,10 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
   }
 
   &__mobile-menu-icon {
@@ -66,13 +72,13 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
+    gap: clamp(0.8rem, 2vw, 1.6rem); 
   }
 
   &__controls {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
 
     @media (max-width: $breakpoint-md) {
       position: fixed;
@@ -84,21 +90,17 @@
       flex-direction: column;
       justify-content: center;
       background-color: $bg-primary;
-    }
-  }
-
-  @media (max-width: $breakpoint-md) {
-    #{$self}__mobile-menu-button {
-      display: block;
-    }
-
-    #{$self}__nav,
-    #{$self}__controls {
       display: none;
 
       &--active {
         display: flex;
       }
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    #{$self}__nav {
+      display: none;
     }
   }
 }
