@@ -3,7 +3,7 @@ import { defineProps } from 'vue';
 import { iconComponents } from '../../models/CardsData.js';
 import UILink from '../ui/UILink.vue';
 
-const props = defineProps({
+defineProps({
   cardData: {
     type: Object,
     required: true,
