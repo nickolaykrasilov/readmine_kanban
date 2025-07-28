@@ -1,5 +1,5 @@
 <script setup>
-import { THEME_VALIDATOR } from '../../models/UIThemes';
+import { UI_THEMES, THEME_VALIDATOR } from '../../models/UIThemes';
 
 const props = defineProps({
   to: {
@@ -8,7 +8,7 @@ const props = defineProps({
   },
   theme: {
     type: String,
-    default: 'black',
+    default: UI_THEMES.BLACK,
     validator: THEME_VALIDATOR,
   },
   label: {
