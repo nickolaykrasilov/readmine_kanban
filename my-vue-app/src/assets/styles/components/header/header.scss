@@ -19,8 +19,14 @@
     font-family: $font-family-base;
   }
 
-  &__logo-img {
-    height: 40px;
+  &__logo-text{
+    font-weight: 600;
+    font-size: 24px;
+    color: $link-login-color;
+    margin-right: 64px; 
+      .kanban {
+        color:$text-primary ; 
+      }
   }
 
   &__mobile-menu-button {

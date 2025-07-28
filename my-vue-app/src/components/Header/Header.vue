@@ -19,14 +19,13 @@ const dropdowns = navigationModel.getDropdowns();
 <template>
   <header class="header">
     <div class="header__container">
-      <a
-        to="/"
-        class="header__logo"
-      >
-        <LogoIcon
-          class="header__logo-img"
-        />
-       </a>
+        <LogoIcon />
+        <span class="header__logo-text" >
+          Redmine
+          <span class="kanban">
+            Kanban
+          </span>
+        </span>
       <button
         v-if="isMobile"
         class="header__mobile-menu-button"
