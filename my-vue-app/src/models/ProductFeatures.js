@@ -6,7 +6,7 @@ export const iconComponents = {
   line: icons.LineIcon,
 };
 
-export const cards = [
+export const featureCards = [
   {
     title: 'Kanban board',
     description:`

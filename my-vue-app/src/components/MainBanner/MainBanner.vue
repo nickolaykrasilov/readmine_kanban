@@ -1,7 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
-import { cards } from '../../models/ProductFeatures.js';
+import { featureCards } from '../../models/ProductFeatures.js';
 </script>
 
 <template>
@@ -46,7 +46,7 @@ import { cards } from '../../models/ProductFeatures.js';
       </p>
         <div class="main-banner__cards-wrapper">
           <MainBannerCard
-            v-for="card in cards"
+            v-for="card in featureCards"
             :key="card.title"
             :card-data="card"
           />
