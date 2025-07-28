@@ -18,7 +18,7 @@ defineProps({
     </div>
     <h3 class="card__title">
       {{ cardData.title }}
-    </h3>    
+    </h3>
     <p class="card__description">
       {{ cardData.description }}
     </p>

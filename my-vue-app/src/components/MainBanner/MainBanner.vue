@@ -44,13 +44,13 @@ import { featureCards } from '../../models/ProductFeatures.js';
         with our collection of 
         powerful plugins . 
       </p>
-        <div class="main-banner__cards-wrapper">
-          <MainBannerCard
-            v-for="card in featureCards"
-            :key="card.title"
-            :card-data="card"
-          />
-        </div>
+      <div class="main-banner__cards-wrapper">
+        <MainBannerCard
+          v-for="card in featureCards"
+          :key="card.title"
+          :card-data="card"
+        />
+      </div>
     </div> 
   </section>
 </template>

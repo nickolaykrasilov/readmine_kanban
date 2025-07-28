@@ -51,12 +51,12 @@ const selectItem = (value) => {
       @click="toggleDropdown"
     >
       {{ selectedValue }}
-    <span 
-      class="header__dropdown-arrow" 
-      :class="{ 'header__dropdown-arrow--open': isOpen }"
-    >
-      <ChevronIcon/>
-    </span>
+      <span 
+        class="header__dropdown-arrow" 
+        :class="{ 'header__dropdown-arrow--open': isOpen }"
+      >
+        <ChevronIcon/>
+      </span>
     </button>
     <transition name="dropdown">
       <ul

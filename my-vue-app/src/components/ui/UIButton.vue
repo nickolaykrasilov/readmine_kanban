@@ -34,9 +34,9 @@ const handleClick = () => {
     :class="[
       theme ? `ui-button--${theme}` : '',
       { 
-      'is-disabled': disabled, 
-      'has-icon-right': iconRight && $slots.icon,
-      'has-icon': $slots.icon,
+        'is-disabled': disabled, 
+        'has-icon-right': iconRight && $slots.icon,
+        'has-icon': $slots.icon,
       }
     ]"
     :disabled="disabled"
@@ -53,7 +53,7 @@ const handleClick = () => {
     >
       <slot name="icon" />
     </span>
-    </button>
+  </button>
 </template>
 
 <style lang="scss" scoped>
