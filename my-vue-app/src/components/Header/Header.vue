@@ -17,14 +17,6 @@ const navigationModel = new NavigationMenuModel();
 const isMobileMenuOpen = ref(false);
 const activeDropdown = ref(null);
 const dropdowns = navigationModel.getDropdowns();
-
-const toggleDropdown = (dropdownName) => {
-  activeDropdown.value = activeDropdown.value === dropdownName ? null : dropdownName
-};
-
-const selectItem = ({ type, value }) => {
-  dropdowns[type].selected.value = value
-};
 </script>
 
 <template>
@@ -46,14 +38,10 @@ const selectItem = ({ type, value }) => {
       >
         <span class="header__mobile-menu-icon" />
       </button>
-      <HeaderNav
-        :is-mobile="isMobile"
-        :dropdowns="dropdowns"
-        :active-dropdown="activeDropdown"
-        :class="{ 'header__nav--active': isMobileMenuOpen }"
-        @update:active-dropdown="toggleDropdown"
-        @select-item="selectItem"
-      />
+<HeaderNav
+  :dropdowns="dropdowns"
+  @select-item="({type, value}) => dropdowns[type].selected.value = value"
+/>
       <div
         class="header__controls"
         :class="{ 'header__controls--active': isMobileMenuOpen }"

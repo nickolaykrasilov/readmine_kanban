@@ -1,19 +1,17 @@
 <script setup>
 import DropdownMenu from './DropdownMenu.vue';
 
-const props = defineProps({
+defineProps({
   dropdowns: {
     type: Object,
     required: true,
-  },
-  onSelectItem: {
-    type: Function,
-    required: true,
-  },
+  }
 });
 
+const emit = defineEmits(['select-item']);
+
 const handleSelect = (type, value) => {
-  props.onSelectItem({ type, value });
+  emit('select-item', { type, value });
 };
 </script>
 
@@ -25,7 +23,7 @@ const handleSelect = (type, value) => {
       :type="type"
       :items="config.items"
       :selected-value="config.selected.value"
-      :onSelect="(value) => handleSelect(type, value)" 
+      @select="(value) => handleSelect(type, value)"
     />
   </nav>
 </template>
