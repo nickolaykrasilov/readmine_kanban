@@ -1,6 +1,5 @@
 <script setup>
-import {  THEME_VALIDATOR } from '../../models/UIThemes';
-import { ICON_POSITIONS, ICON_POSITION_VALIDATOR } from '../../models/UIIconPositions';
+import { THEME_VALIDATOR } from '../../models/UIThemes';
 
 const props = defineProps({
   to: {
@@ -9,17 +8,12 @@ const props = defineProps({
   },
   theme: {
     type: String,
-    default: undefined, 
+    default: undefined,
     validator: THEME_VALIDATOR,
   },
   label: {
     type: String,
     default: '',
-  },
-  iconPosition: {
-    type: String,
-    default: ICON_POSITIONS.RIGHT,
-    validator: ICON_POSITION_VALIDATOR,
   },
 });
 </script>
@@ -29,7 +23,7 @@ const props = defineProps({
     :href="to"
     :class="[
       'ui-link',
-      theme ? `ui-link--${theme}` : '', 
+      theme ? `ui-link--${theme}` : '',
     ]"
   >
     <template v-if="$slots.label">
@@ -38,7 +32,7 @@ const props = defineProps({
     <template v-else>
       {{ label }}
     </template>
-    <span v-if="$slots.icon && iconPosition === ICON_POSITIONS.RIGHT">
+    <span v-if="$slots.icon">
       <slot name="icon" />
     </span>
   </a>
