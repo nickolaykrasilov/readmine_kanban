@@ -80,7 +80,6 @@ const selectItem = ({ type, value }) => {
         </UILink>
         <UIButton
           label="Get a Free Demo"
-          theme="color_blue_and_white"
         />
       </div>
     </div>
