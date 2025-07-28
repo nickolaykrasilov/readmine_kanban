@@ -38,10 +38,10 @@ const dropdowns = navigationModel.getDropdowns();
       >
         <span class="header__mobile-menu-icon" />
       </button>
-<HeaderNav
-  :dropdowns="dropdowns"
-  @select-item="({type, value}) => dropdowns[type].selected.value = value"
-/>
+      <HeaderNav
+        :dropdowns="dropdowns"
+        @select-item="({type, value}) => dropdowns[type].selected.value = value"
+      />
       <div
         class="header__controls"
         :class="{ 'header__controls--active': isMobileMenuOpen }"
