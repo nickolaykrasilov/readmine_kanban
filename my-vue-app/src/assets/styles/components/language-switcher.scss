@@ -38,10 +38,10 @@
     color: $language-switcher-text;
     cursor: pointer;
 
-    &:hover {
-      background-color: $language-switcher-item-hover; 
-    }
+  &:hover {
+    background-color: $language-switcher-item-hover; 
   }
+}
 
   &__arrow {
     img {
