@@ -12,10 +12,9 @@
 
   &__container {
     display: flex;
-    width: 90%; 
-    max-width: $breakpoint-xl; 
     align-items: center;
     justify-content: space-between;
+    max-width: $breakpoint-xl; 
     margin: 0 auto;
     font-family: $font-family-base;
   }
@@ -33,7 +32,7 @@
 
   &__mobile-menu-button {
     display: none;
-    padding: 0.8rem;
+    padding: 2.4rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
