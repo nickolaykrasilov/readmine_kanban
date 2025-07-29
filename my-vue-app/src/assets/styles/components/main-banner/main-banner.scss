@@ -24,7 +24,7 @@
   }
 
   &__title {
-    margin-top: 20px ; 
+    margin-top: 20px;
   }
 
   &__text-block {
@@ -62,16 +62,16 @@
 
   &__screen {
     z-index: $ui-index-1;
-    width: 80%; 
-    max-width: 1100px; 
-    height: auto; 
-    margin-top: 40px ;
+    width: 80%;
+    max-width: 1100px;
+    height: auto;
+    margin-top: 40px;
     border-radius: 8px;
     box-shadow: 0 20px 40px $color-shadow-base;
     aspect-ratio: 1100 / 616;
 
     @media (max-width: $breakpoint-md) {
-      width: calc(100% - 40px); 
+      width: calc(100% - 40px);
       margin-top: 32px;;
     }
   }
@@ -79,7 +79,7 @@
   &__cards-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px; 
+    gap: 24px;
 
     @media (max-width: $breakpoint-md) {
       grid-template-columns: 1fr;

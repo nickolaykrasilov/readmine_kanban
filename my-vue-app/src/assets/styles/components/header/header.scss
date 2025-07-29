@@ -14,15 +14,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: $breakpoint-xl; 
+    max-width: $breakpoint-xl;
     margin: 0 auto;
     font-family: $font-family-base;
   }
 
   &__logo-text {
     font-weight: 600;
-    margin-right: clamp(16px, 5vw, 64px); 
-    font-size: clamp(18px, 2.5vw, 24px); 
+    margin-right: clamp(16px, 5vw, 64px);
+    font-size: clamp(18px, 2.5vw, 24px);
     color: $link-login-color;
 
     &-kanban {
@@ -71,7 +71,7 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: clamp(0.8rem, 2vw, 1.6rem); 
+    gap: clamp(0.8rem, 2vw, 1.6rem);
   }
 
   &__controls {
