@@ -22,17 +22,16 @@
 
   &-arrow {
     display: flex;
-    width: $language-switcher-arrow-size;
-    height: $language-switcher-arrow-size;
     align-items: center;
     justify-content: center;
-
+    width: $language-switcher-arrow-size;
+    height: $language-switcher-arrow-size;
   }
 
   &-list {
     position: absolute;
-    min-width: 160px;
     z-index: $ui-index-1;
+    min-width: 160px;
     background: $bg-primary;
     border: 1px solid $border-divider;
     border-radius: 4px;

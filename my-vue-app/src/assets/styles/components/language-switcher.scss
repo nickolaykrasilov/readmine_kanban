@@ -2,7 +2,6 @@
 
 .language-switcher {
   $self: &; 
-
   margin-left: 16px;
 
   &__button {
@@ -26,7 +25,7 @@
     position: absolute;
     min-width: 100px;
     margin: auto;
-    padding: 4px 0;
+    padding-top: 4px;
     background: $bg-primary;
     border: 1px solid $border-divider;
     box-shadow: $box-shadow;
