@@ -1,21 +1,21 @@
  .title {
-    max-width: 772px;
-    font-family: $font-family-heading;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: $line-height-1;
-    color: $text-primary;
+  max-width: 772px;
+  font-family: $font-family-heading;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: $line-height-1;
+  color: $text-primary;
 
-    @media (max-width: $breakpoint-md) {
-      padding: 0 16px;
-      font-size: 40px;
-    }
+  @media (max-width: $breakpoint-md) {
+    padding: 0 16px;
+    font-size: 40px;
   }
+}
 
 .description {
-    font-family: $font-family-base;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: $line-height-base;
-    color: $text-primary;
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: $line-height-base;
+  color: $text-primary;
 }
