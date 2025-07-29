@@ -22,7 +22,7 @@ const dropdowns = navigationModel.getDropdowns();
       <LogoIcon />
       <span class="header__logo-text" >
         Redmine
-        <span class="header__logo-text-kanban">
+        <span class="header__logo-text__kanban">
           Kanban
         </span>
       </span>
