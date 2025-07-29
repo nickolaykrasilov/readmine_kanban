@@ -43,16 +43,16 @@ const dropdowns = navigationModel.getDropdowns();
         :class="{ 'header__controls--active': isMobileMenuOpen }"
       >
         <UILink
-          to="/resources"
+          href="/resources"
           label="Resources"
         />
         <UILink
-          to="/support"
+          href="/support"
           label="Support"
         />
         <LanguageSwitcher />
         <UILink
-          to="/login"
+          href="/login"
           label="Login"
           theme="blue"
         >

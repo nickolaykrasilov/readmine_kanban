@@ -23,7 +23,7 @@ defineProps({
       {{ cardData.description }}
     </p>
     <UILink 
-      to="/details"
+      href="/details"
       label="More details"
       theme="blue"
       class="card__link"

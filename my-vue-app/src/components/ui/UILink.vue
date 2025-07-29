@@ -2,7 +2,7 @@
 import { UI_THEMES } from '../../models/UIThemes';
 
 defineProps({
-  to: {
+  href: {
     type: String,
     required: true,
   },
@@ -20,7 +20,7 @@ defineProps({
 
 <template>
   <a
-    :href="to"
+    :href="href"
     :class="[
       'ui-link',
       `ui-link--${theme}`,
