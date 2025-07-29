@@ -5,8 +5,8 @@
 
   &-button {
     display: flex;
-    gap: 4px;
     padding: 8px 12px;
+    gap: 4px;
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
@@ -22,16 +22,17 @@
 
   &-arrow {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: $language-switcher-arrow-size;
     height: $language-switcher-arrow-size;
+    align-items: center;
+    justify-content: center;
+
   }
 
   &-list {
     position: absolute;
-    z-index: $ui-index-1;
     min-width: 160px;
+    z-index: $ui-index-1;
     background: $bg-primary;
     border: 1px solid $border-divider;
     border-radius: 4px;
