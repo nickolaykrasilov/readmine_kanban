@@ -28,8 +28,8 @@
   }
 
   &__text-block {
-    width: 436px;
     flex-direction: column;
+    width: 436px;
 
     @media (max-width: $breakpoint-md) {
       width: 100%;
@@ -41,7 +41,7 @@
 
   &__description {
     margin-bottom: 32px;
-    
+
     @media (max-width: $breakpoint-md) {
       font-size: 16px;
     }
@@ -66,18 +66,16 @@
     width: 80%; 
     max-width: 1100px; 
     height: auto; 
-    aspect-ratio: 1100 / 616; 
     margin-top: 40px;
     border-radius: 8px;
     box-shadow: 0 20px 40px $color-shadow-base;
+    aspect-ratio: 1100 / 616;
 
     @media (max-width: $breakpoint-md) {
       width: calc(100% - 40px); 
       margin-top: 32px;
     }
   }
-
-  
 
   &__cards-wrapper {
     display: grid;

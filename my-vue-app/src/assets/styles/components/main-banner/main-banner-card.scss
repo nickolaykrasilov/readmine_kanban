@@ -3,29 +3,29 @@
 .card {
   $self: &;
 
-  min-height: 328px;
-  padding: 32px;
   display: flex;
   flex-direction: column;
+  min-height: 328px;
+  padding: 32px;
+  font-family: $font-family-base;
   background: $bg-primary;
   border-radius: 16px;
-  font-family: $font-family-base;
 
   &__title {
     margin-bottom: 32px;
-    text-align: left;
     font-weight: 600;
     font-size: 24px;
     line-height: $line-height-1;
+    text-align: left;
     color: $text-primary;
   }
 
   &__description {
     flex-grow: 1;
-    text-align: left;
     font-weight: 400;
     font-size: 16px;
     line-height: $line-height-base;
+    text-align: left;
     color: $text-secondary;
     white-space: pre-line;
   }
