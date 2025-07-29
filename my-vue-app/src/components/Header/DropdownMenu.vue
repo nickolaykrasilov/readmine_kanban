@@ -51,9 +51,11 @@ const selectItem = (value) => {
       @click="toggleDropdown"
     >
       {{ selectedValue }}
-      <span 
-        class="header__dropdown-arrow" 
-        :class="{ 'header__dropdown-arrow--open': isOpen }"
+      <span
+        :class="[
+          'header__dropdown-arrow',
+          { 'header__dropdown-arrow--open': isOpen },
+        ]"
       >
         <ChevronIcon />
       </span>
