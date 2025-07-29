@@ -34,13 +34,13 @@
     @media (max-width: $breakpoint-md) {
       width: 100%;
       margin-top: 32px;
-      padding: 0 16px;
+      padding-right: 16px;
       gap: 20px;
     }
   }
 
   &__description {
-    margin: 32px 0 32px 0;
+    margin: 32px 0;
 
     @media (max-width: $breakpoint-md) {
       font-size: 16px;
@@ -48,10 +48,10 @@
   }
 
   &__secondary-title {
-    margin: 120px 0 32px 0;
+    margin: 120px 0 32px;
 
     @media (max-width: $breakpoint-md) {
-      padding: 0 16px;
+      padding-right: 16px;
       font-size: 40px;
     }
   }
