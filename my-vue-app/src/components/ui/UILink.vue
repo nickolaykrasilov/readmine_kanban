@@ -23,7 +23,7 @@ defineProps({
     :href="to"
     :class="[
       'ui-link',
-      theme ? `ui-link--${theme}` : '',
+      `ui-link--${theme}`,
     ]"
   >
     <template v-if="$slots.label">

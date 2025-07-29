@@ -28,13 +28,13 @@ const handleClick = () => {
 };
 </script>
 
-<template>  
+<template>
   <button
     class="ui-button" 
     :class="[
-      theme ? `ui-button--${theme}` : '',
+     `ui-button--${theme}`,
       { 
-        'is-disabled': disabled, 
+        'is-disabled': disabled,
         'has-icon-right': iconRight && $slots.icon,
         'has-icon': $slots.icon,
       }
@@ -47,7 +47,7 @@ const handleClick = () => {
     </template>
     <slot v-else />
     <span
-      v-if="$slots.icon" 
+      v-if="$slots.icon"
       class="ui-button__icon"
       :class="{ 'ui-button__icon--right': iconRight }"
     >
