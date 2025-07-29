@@ -34,9 +34,9 @@ const handleClick = () => {
     :class="[
      `ui-button--${theme}`,
       { 
-        'ui-button--is-disabled': disabled,
-        'ui-button--with-icon-right': iconRight && $slots.icon,
-        'ui-button--with-icon': $slots.icon,
+        'ui-button--disabled': disabled,
+        'ui-button--icon': $slots.icon,
+        'ui-button--icon-right': iconRight && $slots.icon,
       }
     ]"
     :disabled="disabled"

@@ -36,10 +36,10 @@ import { featureCards } from '../../models/ProductFeatures.js';
         alt="Redmine Kanban Screen"
         class="main-banner__screen"
       />
-      <h2 class="title main-banner__secondary-title"> 
+      <h2 class="main-banner__secondary-title title"> 
         Redmine plugins
       </h2>
-      <p class="description main-banner__description">
+      <p class="main-banner__description description">
         Extend the capabilities of Redmine 
         with our collection of 
         powerful plugins . 

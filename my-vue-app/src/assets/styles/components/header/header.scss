@@ -19,13 +19,13 @@
     font-family: $font-family-base;
   }
 
-  &__logo-text {
+  &__logo{
     font-weight: 600;
     margin-right: clamp(16px, 5vw, 64px);
     font-size: clamp(18px, 2.5vw, 24px);
     color: $link-login-color;
 
-    &__kanban {
+    &-part {
       color: $text-primary;
     }
   }

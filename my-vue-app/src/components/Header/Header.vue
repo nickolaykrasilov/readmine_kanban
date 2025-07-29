@@ -20,9 +20,9 @@ const dropdowns = navigationModel.getDropdowns();
   <header class="header">
     <div class="header__container">
       <LogoIcon />
-      <span class="header__logo-text" >
+      <span class="header__logo" >
         Redmine
-        <span class="header__logo-text__kanban">
+        <span class="header__logo-part">
           Kanban
         </span>
       </span>
