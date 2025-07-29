@@ -72,6 +72,10 @@
     display: flex;
     align-items: center;
     gap: clamp(0.8rem, 2vw, 1.6rem);
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
 
   &__controls {
@@ -94,12 +98,6 @@
       &--active {
         display: flex;
       }
-    }
-  }
-
-  @media (max-width: $breakpoint-md) {
-    #{$self}__nav {
-      display: none;
     }
   }
 }
