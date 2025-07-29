@@ -39,8 +39,10 @@ const dropdowns = navigationModel.getDropdowns();
         @select-item="({type, value}) => dropdowns[type].selected.value = value"
       />
       <div
-        class="header__controls"
-        :class="{ 'header__controls--active': isMobileMenuOpen }"
+        :class="[
+          `header__controls`,
+          { 'header__controls--active': isMobileMenuOpen },
+        ]"
       >
         <UILink
           href="/resources"

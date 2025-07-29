@@ -60,20 +60,20 @@ const selectItem = (value) => {
         <ChevronIcon />
       </span>
     </button>
-      <ul
-        v-show="isOpen"
-        class="header__dropdown-list"
-        :aria-hidden="!isOpen"
+    <ul
+      v-show="isOpen"
+      class="header__dropdown-list"
+      :aria-hidden="!isOpen"
+    >
+      <li
+        v-for="item in items"
+        :key="item"
+        class="header__dropdown-item"
+        @click="selectItem(item)"
       >
-        <li
-          v-for="item in items"
-          :key="item"
-          class="header__dropdown-item"
-          @click="selectItem(item)"
-        >
-          {{ item }}
-        </li>
-      </ul>
+        {{ item }}
+      </li>
+    </ul>
   </div>
 </template>
 
