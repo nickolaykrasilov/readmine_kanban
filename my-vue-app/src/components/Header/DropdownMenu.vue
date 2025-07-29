@@ -55,7 +55,7 @@ const selectItem = (value) => {
         class="header__dropdown-arrow" 
         :class="{ 'header__dropdown-arrow--open': isOpen }"
       >
-        <ChevronIcon/>
+        <ChevronIcon />
       </span>
     </button>
       <ul

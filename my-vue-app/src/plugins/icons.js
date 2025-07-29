@@ -336,7 +336,7 @@ const LogoIcon = defineComponent({
         app.component(name, component);
       });
     },
-    ...components
+    ...components,
   };
 
   export { COLORS, SIZES };

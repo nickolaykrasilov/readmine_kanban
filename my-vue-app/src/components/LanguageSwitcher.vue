@@ -47,7 +47,7 @@ const switchLanguage = (langCode) => {
     >
       {{ currentLanguage }}
       <span class="language-switcher__arrow">
-        <ChevronIcon/>
+        <ChevronIcon />
       </span>
     </button>
     <ul
