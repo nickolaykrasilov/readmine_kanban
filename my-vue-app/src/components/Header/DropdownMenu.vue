@@ -58,7 +58,6 @@ const selectItem = (value) => {
         <ChevronIcon/>
       </span>
     </button>
-    <transition name="dropdown">
       <ul
         v-show="isOpen"
         class="header__dropdown-list"
@@ -73,7 +72,6 @@ const selectItem = (value) => {
           {{ item }}
         </li>
       </ul>
-    </transition>
   </div>
 </template>
 
