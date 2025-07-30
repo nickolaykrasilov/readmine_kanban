@@ -31,7 +31,6 @@
 
   &__mobile-menu-button {
     display: none;
-    padding: 2.4rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -43,7 +42,7 @@
 
   &__mobile-menu-icon {
     position: relative;
-    width: 24px;
+    width: 28px;
     height: 4px;
     display: block;
     background-color: $text-primary;
@@ -72,7 +71,6 @@
     align-items: center;
     gap: clamp(0.8rem, 2vw, 1.6rem);
     white-space: nowrap;
-
 
     @media (max-width: $breakpoint-md) {
       display: none;

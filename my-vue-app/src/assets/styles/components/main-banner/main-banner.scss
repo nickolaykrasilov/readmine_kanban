@@ -5,10 +5,6 @@
   padding: 40px;
   background: $gradient-main-bg;
 
-  @media (max-width: $breakpoint-md) {
-    padding: 60px 0 80px;
-  }
-
   &__content {
     display: flex;
     flex-direction: column;
