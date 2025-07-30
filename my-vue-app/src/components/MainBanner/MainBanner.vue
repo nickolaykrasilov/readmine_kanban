@@ -1,6 +1,7 @@
 <script setup>
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
+
 import { featureCards } from '../../models/ProductFeatures.js';
 </script>
 
@@ -12,12 +13,12 @@ import { featureCards } from '../../models/ProductFeatures.js';
         alt="Decorative ellipse"
         class="main-banner__ellipse"
       />
-      <h1 class="title main-banner__title">
+      <h1 class="main-banner__title title">
         Powerful Agile & Kanban 
         solutions for Redmine
       </h1>
       <div class="main-banner__text-block">
-        <p class="description main-banner__description">
+        <p class="main-banner__description description">
           Our plugins will help you stay organized and 
           ensure that all necessary tasks are completed 
           throughout the project lifecycle.
