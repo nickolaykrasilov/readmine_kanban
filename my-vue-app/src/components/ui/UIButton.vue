@@ -30,9 +30,9 @@ const handleClick = () => {
 
 <template>
   <button
-    class="ui-button" 
     :class="[
-     `ui-button--${theme}`,
+      'ui-button',
+      `ui-button--${theme}`,
       { 
         'ui-button--disabled': disabled,
         'ui-button--icon': $slots.icon,

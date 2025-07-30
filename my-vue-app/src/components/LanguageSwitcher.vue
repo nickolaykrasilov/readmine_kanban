@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+
 import { LANGUAGES, DEFAULT_LANGUAGE } from '../models/languages.js';
 
 const currentLanguage = ref(DEFAULT_LANGUAGE);
