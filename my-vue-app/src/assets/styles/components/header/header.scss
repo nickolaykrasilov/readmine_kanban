@@ -16,6 +16,13 @@
     max-width: $breakpoint-xxl;
     margin: 0 auto;
     font-family: $font-family-base;
+    position: relative;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   &__logo {
@@ -34,6 +41,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: $ui-index-3;
 
     @media (max-width: $breakpoint-xl) {
       display: block;
@@ -46,6 +54,7 @@
     height: 4px;
     display: block;
     background-color: $text-primary;
+    transition: all 0.3s ease;
 
     &::before,
     &::after {
@@ -55,6 +64,7 @@
       height: 4px;
       background-color: $text-primary;
       content: '';
+      transition: all 0.3s ease;
     }
 
     &::before {
@@ -66,18 +76,7 @@
     }
   }
 
-  &__nav {
-    display: flex;
-    gap: clamp(0.8rem, 2.6vw, 3.6rem);
-    white-space: nowrap;
-
-    @media (max-width: $breakpoint-xl) {
-      display: none;
-    }
-  }
-
-  &__controls {
-    margin-left: 16px;
+  &__menu {
     display: flex;
     align-items: center;
     gap: clamp(1rem, 1.6vw, 3rem);
@@ -91,11 +90,50 @@
       flex-direction: column;
       justify-content: center;
       background-color: $bg-primary;
-      display: none;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: $ui-index-2;
+      padding: 2rem;
 
       &--active {
-        display: flex;
+        transform: translateY(0);
+        opacity: 1;
       }
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: $ui-index-3;
+    display: none;
+
+    @media (max-width: $breakpoint-xl) {
+      display: block;
+    }
+  }
+
+  &__close-icon {
+    width: 24px;
+    height: 24px;
+    stroke: $text-primary;
+    stroke-width: 2;
+    display: block;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 1.6vw, 3rem);
+
+    @media (max-width: $breakpoint-xl) {
+      flex-direction: column;
     }
   }
 }
