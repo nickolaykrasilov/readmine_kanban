@@ -318,31 +318,6 @@ const LogoIcon = defineComponent({
   }
 });
 
-const CloseIcon = defineComponent({
-  name: 'CloseIcon',
-  props: {
-    size: { type: [Number, String], default: 24 },
-    color: { type: String, default: '#3d3d3d' },
-  },
-  setup(props) {
-    return () => h('svg', {
-      width: props.size,
-      height: props.size,
-      viewBox: '0 0 24 24',
-      fill: 'none',
-      xmlns: 'http://www.w3.org/2000/svg',
-    }, [
-      h('path', {
-        d: 'M18 6L6 18M6 6L18 18',
-        stroke: props.color,
-        'stroke-width': '2',
-        'stroke-linecap': 'round',
-        'stroke-linejoin': 'round',
-      })
-    ]);
-  }
-});
-
   const components = {
     YourIcon,
     CheckmarkIcon,
@@ -352,7 +327,6 @@ const CloseIcon = defineComponent({
     ChevronIcon,
     UserIcon,
     LogoIcon,
-    CloseIcon,
   };
 
   export default {
