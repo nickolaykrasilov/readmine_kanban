@@ -1,25 +1,29 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 
-defineProps({
+const props = defineProps({
   items: {
     type: Array,
-    required: true,
-    validator: (value) => {
-      return value.every(item => typeof item === 'object' && 'text' in item && 'href' in item);
-    }
+    default: () => []
   },
   currentItem: {
     type: Object,
     required: true,
     validator: (item) => typeof item === 'object' && 'text' in item && 'href' in item
   },
+  type: {
+    type: String,
+    required: true
+  }
 });
 
 const emit = defineEmits(['item-selected']);
 
 const isOpen = ref(false);
 const dropdownRef = ref(null);
+
+// Определяем, есть ли элементы для выпадающего списка
+const hasDropdown = computed(() => props.items && props.items.length > 0);
 
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
@@ -28,35 +32,46 @@ const handleClickOutside = (event) => {
 };
 
 onMounted(() => {
-  document.addEventListener('click', handleClickOutside);
+  if (hasDropdown.value) {
+    document.addEventListener('click', handleClickOutside);
+  }
 });
 
 onUnmounted(() => {
-  document.removeEventListener('click', handleClickOutside);
+  if (hasDropdown.value) {
+    document.removeEventListener('click', handleClickOutside);
+  }
 });
 
 const toggleDropdown = (event) => {
+  if (!hasDropdown.value) return;
   event.preventDefault();
   isOpen.value = !isOpen.value;
 };
 
 const handleItemClick = (item, event) => {
+  if (!hasDropdown.value) return;
   emit('item-selected', item);
   isOpen.value = false;
 };
 </script>
 
 <template>
-  <div class="header__dropdown" ref="dropdownRef">
+  <div 
+    class="header__dropdown" 
+    :class="{ 'header__dropdown--simple': !hasDropdown }"
+    ref="dropdownRef"
+  >
     <a
       :href="currentItem.href"
       class="header__dropdown-link"
       @click="toggleDropdown"
-      :aria-expanded="isOpen"
-      aria-haspopup="true"
+      :aria-expanded="hasDropdown ? isOpen : undefined"
+      :aria-haspopup="hasDropdown ? 'true' : undefined"
     >
       {{ currentItem.text }}
       <span
+        v-if="hasDropdown"
         :class="[
           'header__dropdown-arrow',
           { 'header__dropdown-arrow--open': isOpen },
@@ -66,6 +81,7 @@ const handleItemClick = (item, event) => {
       </span>
     </a>
     <ul
+      v-if="hasDropdown"
       v-show="isOpen"
       class="header__dropdown-list"
       :aria-hidden="!isOpen"
@@ -95,9 +111,23 @@ const handleItemClick = (item, event) => {
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 0 1rem;
+
+  &--simple {
+    padding: 0;
+  }
 
   &-link {
-    text-decoration: none; /* Добавлено для ссылки */
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+
+    &:hover {
+      color: var(--primary-color);
+    }
   }
 
   &-arrow {
@@ -108,6 +138,34 @@ const handleItemClick = (item, event) => {
     }
   }
 
+  &-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 8px 0;
+    min-width: 160px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    list-style: none;
+    margin: 0;
+  }
 
+  &-item {
+    padding: 0;
+  }
+
+  &-sublink {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
 }
 </style>

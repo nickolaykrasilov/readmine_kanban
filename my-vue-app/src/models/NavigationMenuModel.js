@@ -9,7 +9,7 @@ export class NavigationMenuModel {
           current: ref({ 
             text: "Plugins", 
             href: "/plugins",
-            value: "plugins" 
+            value: "plugins",
           }),
           items: [
             { text: "Plugin 1", href: "/plugins/1", value: "plugin1" },
@@ -21,7 +21,7 @@ export class NavigationMenuModel {
           current: ref({ 
             text: "Themes", 
             href: "/themes",
-            value: "themes" 
+            value: "themes",
           }),
           items: [
             { text: "Theme 1", href: "/themes/1", value: "theme1" },
@@ -33,7 +33,7 @@ export class NavigationMenuModel {
           current: ref({ 
             text: "Pricing", 
             href: "/pricing",
-            value: "basic" 
+            value: "basic",
           }),
           items: [
             { text: "Basic", href: "/pricing/basic", value: "basic" },
@@ -45,24 +45,16 @@ export class NavigationMenuModel {
           current: ref({ 
             text: "Resources", 
             href: "/resources",
-            value: "resources" 
-          }),
+            value: "resources",
+          })
         },
-      },
-     
-      // Обычные ссылки
+      },     
       links: {
-        resources: {
-          type: 'link',
-          text: "Resources",
-          href: "/resources",
-          value: "resources"
-        },
         support: {
           type: 'link',
           text: "Support",
           href: "/support",
-          value: "support"
+          value: "support",
         }
       }
     };
@@ -73,7 +65,7 @@ export class NavigationMenuModel {
   }
 
   updateCurrent(type, newItem) {
-    if (this.navItems.dropdowns[type]) {
+    if (this.navItems.dropdowns[type] && this.navItems.dropdowns[type].type === 'dropdown') {
       this.navItems.dropdowns[type].current.value = newItem;
     }
   }
