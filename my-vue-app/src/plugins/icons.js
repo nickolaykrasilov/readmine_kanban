@@ -6,10 +6,10 @@
   };
 
   const SIZES = {
-    icon: 72,          
-    arrowIcon: 11,    
-    viewBox: 72,    
-    borderRadius: 36,  
+    icon: 72,
+    arrowIcon: 11,
+    viewBox: 72,
+    borderRadius: 36,
   };
 
   // Общая конфигурация для иконок
@@ -33,9 +33,9 @@
           xmlns: 'http://www.w3.org/2000/svg',
         }, [
           h('rect', { 
-            width: SIZES.viewBox, 
-            height: SIZES.viewBox, 
-            rx: SIZES.borderRadius, 
+            width: SIZES.viewBox,
+            height: SIZES.viewBox,
+            rx: SIZES.borderRadius,
             fill: props.bgColor,
           }),
           ...svgContent(props),
@@ -61,7 +61,7 @@
       x: '33.5', y: '28.5',
       width: '11', height: '11',
       rx: '1.9', stroke: props.color,
-      'stroke-width': '3', 
+      'stroke-width': '3',
     })
   ]);
 
@@ -73,8 +73,8 @@
       'stroke-width': '3',
     }),
     h('path', {
-      d: `M31.3199 36.5001L34.6524 40.0992C34.7336 
-      40.1869 34.8731 40.1842 34.9509 
+      d: `M31.3199 36.5001L34.6524 40.0992C34.7336
+      40.1869 34.8731 40.1842 34.9509
       40.0936L40.729 33.3637`,
       stroke: props.color,
       'stroke-width': '3',
@@ -128,8 +128,8 @@
   const WhiteArrowIcon = defineComponent({
     name: 'WhiteArrowIcon',
     props: {
-      size: { type: [Number, String], default: 15 }, 
-      color: { type: String, default: 'white' }, 
+      size: { type: [Number, String], default: 15 },
+      color: { type: String, default: 'white' },
     },
     setup(props) {
       return () => h('svg', {
@@ -182,7 +182,7 @@
     name: 'UserIcon',
     props: {
       size: { type: [Number, String], default: 16 },
-      color: { type: String, default: '#0094ff' },
+      color: { type: String, default: COLORS.primary },
     },
     setup(props) {
       return () => h('svg', {
@@ -225,10 +225,10 @@
 const LogoIcon = defineComponent({
   name: 'CubeIcon',
   props: {
-    size: { type: [Number, String], default: 35 }, 
-    color1: { type: String, default: '#0094ff' }, 
-    color2: { type: String, default: '#01cadc' }, 
-    color3: { type: String, default: '#00dbde' }, 
+    size: { type: [Number, String], default: 35 },
+    color1: { type: String, default: COLORS.primary },
+    color2: { type: String, default: '#01cadc' },
+    color3: { type: String, default: '#00dbde' },
   },
   setup(props) {
     return () => h('svg', {
@@ -308,7 +308,7 @@ const LogoIcon = defineComponent({
           y1: '19.6746',
           x2: '1.59565',
           y2: '32.3166',
-          gradientUnits: 'userSpaceOnUse'
+          gradientUnits: 'userSpaceOnUse',
         }, [
           h('stop', { 'stop-color': props.color1 }),
           h('stop', { offset: '1', 'stop-color': props.color3 })
@@ -318,13 +318,12 @@ const LogoIcon = defineComponent({
   }
 });
 
-
   const components = {
     YourIcon,
     CheckmarkIcon,
     LineIcon,
     ArrowIcon,
-    WhiteArrowIcon, 
+    WhiteArrowIcon,
     ChevronIcon,
     UserIcon,
     LogoIcon,
