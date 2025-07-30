@@ -8,10 +8,10 @@ defineProps({
   },
 });
 
-const emit = defineEmits(['select-item']);
+const emit = defineEmits(['item-selected']);
 
-const handleSelect = (type, value) => {
-  emit('select-item', { type, value });
+const handleItemSelected = (type, item) => {
+  emit('item-selected', { type, item });
 };
 </script>
 
@@ -22,8 +22,8 @@ const handleSelect = (type, value) => {
       :key="type"
       :type="type"
       :items="config.items"
-      :selected-value="config.selected.value"
-      @select="(value) => handleSelect(type, value)"
+      :current-item="config.current.value"
+      @item-selected="(item) => handleItemSelected(type, item)"
     />
   </nav>
 </template>

@@ -3,13 +3,15 @@
 .header__dropdown {
   $self: &;
 
-  &-button {
+   margin-left: 66px;
+  &-link {
     display: flex;
     padding: 8px 12px;
     gap: 4px;
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
+    text-decoration: none;
     color: $language-switcher-text;
     background: none;
     border: none;
@@ -21,20 +23,16 @@
   }
 
   &-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: $language-switcher-arrow-size;
     height: $language-switcher-arrow-size;
   }
 
   &-list {
     position: absolute;
-    z-index: $ui-index-1;
-    min-width: 160px;
+    min-width: 100px;
+    padding-top: 4px;
     background: $bg-primary;
     border: 1px solid $border-divider;
-    border-radius: 4px;
     box-shadow: $box-shadow;
   }
 
@@ -48,4 +46,11 @@
       background-color: $language-switcher-item-hover;
     }
   }
+
+    &-sublink {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
 }

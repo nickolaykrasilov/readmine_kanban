@@ -1,31 +1,33 @@
 <script setup>
 import { ref } from 'vue';
 
-import { useScreenSize } from '../../utils/screen.js';
-import { NavigationMenuModel } from '../../models/NavigationMenuModel.js';
-
 import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
 import HeaderNav from './HeaderNav.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 
+import { useScreenSize } from '../../utils/screen.js';
+import { NavigationMenuModel } from '../../models/NavigationMenuModel.js';
+
 const { isMobile } = useScreenSize();
 const navigationModel = new NavigationMenuModel();
+const navItems = navigationModel.getNavItems();
 
 const isMobileMenuOpen = ref(false);
-const dropdowns = navigationModel.getDropdowns();
+
+const handleItemSelected = ({ type, item }) => {
+  navigationModel.updateCurrent(type, item);
+};
 </script>
 
 <template>
   <header class="header">
     <div class="header__container">
-      <LogoIcon />
-      <span class="header__logo" >
-        Redmine
-        <span class="header__logo-part">
-          Kanban
+        <LogoIcon />
+        <span class="header__logo">
+          Redmine
+          <span class="header__logo-part">Kanban</span>
         </span>
-      </span>
       <button
         v-if="isMobile"
         class="header__mobile-menu-button"
@@ -34,23 +36,21 @@ const dropdowns = navigationModel.getDropdowns();
       >
         <span class="header__mobile-menu-icon" />
       </button>
-      <HeaderNav
-        :dropdowns="dropdowns"
-        @select-item="({type, value}) => dropdowns[type].selected.value = value"
-      />
-      <UILink
-        href="/resources"
-        label="Resources"
-      />
       <div
         :class="[
-          `header__controls`,
+          'header__controls',
           { 'header__controls--active': isMobileMenuOpen },
         ]"
       >
+        <HeaderNav
+          :dropdowns="navItems.dropdowns"
+          @item-selected="handleItemSelected"
+        />
         <UILink
-          href="/support"
-          label="Support"
+          v-for="(link, key) in navItems.links"
+          :key="key"
+          :href="link.href"
+          :label="link.text"
         />
         <LanguageSwitcher />
         <UILink
