@@ -1,6 +1,6 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-const MOBILE_BREAKPOINT = 768;
+const MOBILE_BREAKPOINT = 1200;
 
 export function useScreenSize() {
   const isMobile = ref(false);
