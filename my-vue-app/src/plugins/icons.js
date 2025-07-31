@@ -45,7 +45,7 @@
   };
 
   // Иконки
-  const YourIcon = createIcon('YourIcon', (props) => [
+  const yourIcon = createIcon('YourIcon', (props) => [
     h('rect', { 
       x: '21.5', y: '22.5',
       width: '29.087', height: '27',
@@ -65,7 +65,7 @@
     })
   ]);
 
-  const CheckmarkIcon = createIcon('CheckmarkIcon', (props) => [
+  const checkmarkIcon = createIcon('CheckmarkIcon', (props) => [
     h('rect', {
       x: '22.5', y: '23.5',
       width: '26', height: '26',
@@ -82,7 +82,7 @@
     })
   ]);
 
-  const LineIcon = createIcon('LineIcon', (props) => [
+  const lineIcon = createIcon('LineIcon', (props) => [
     h('rect', {
       x: '22', y: '23',
       width: '27.2381', height: '26',
@@ -97,8 +97,8 @@
     })
   ]);
 
-  const ArrowIcon = defineComponent({
-    name: 'ArrowIcon',
+  const arrowIcon = defineComponent({
+    name: 'arrowIcon',
     props: {
       size: { type: [Number, String], default: SIZES.arrowIcon },
       color: { type: String, default: COLORS.primary },
@@ -125,8 +125,8 @@
     }
   });
 
-  const WhiteArrowIcon = defineComponent({
-    name: 'WhiteArrowIcon',
+  const whiteArrowIcon = defineComponent({
+    name: 'whiteArrowIcon',
     props: {
       size: { type: [Number, String], default: 15 },
       color: { type: String, default: 'white' },
@@ -153,8 +153,8 @@
     }
   });
 
-  const ChevronIcon = defineComponent({
-    name: 'ChevronIcon',
+  const chevronIcon = defineComponent({
+    name: 'chevronIcon',
     props: {
       size: { type: [Number, String], default: 10 },
       height: { type: [Number, String], default: 6 },
@@ -178,8 +178,8 @@
     }
   });
 
-  const UserIcon = defineComponent({
-    name: 'UserIcon',
+  const userIcon = defineComponent({
+    name: 'userIcon',
     props: {
       size: { type: [Number, String], default: 16 },
       color: { type: String, default: COLORS.primary },
@@ -222,8 +222,8 @@
     }
   });
 
-const LogoIcon = defineComponent({
-  name: 'CubeIcon',
+const logoIcon = defineComponent({
+  name: 'logoIcon',
   props: {
     size: { type: [Number, String], default: 35 },
     color1: { type: String, default: COLORS.primary },
@@ -319,14 +319,14 @@ const LogoIcon = defineComponent({
 });
 
   const components = {
-    YourIcon,
-    CheckmarkIcon,
-    LineIcon,
-    ArrowIcon,
-    WhiteArrowIcon,
-    ChevronIcon,
-    UserIcon,
-    LogoIcon,
+    yourIcon,
+    checkmarkIcon,
+    lineIcon,
+    arrowIcon,
+    whiteArrowIcon,
+    chevronIcon,
+    userIcon,
+    logoIcon,
   };
 
   export default {

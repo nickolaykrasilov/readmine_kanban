@@ -30,7 +30,7 @@ defineProps({
       class="card__link"
     >
       <template #icon>
-        <ArrowIcon />
+        <arrowIcon />
       </template>
     </UILink>
   </div>

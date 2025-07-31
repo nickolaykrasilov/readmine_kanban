@@ -76,7 +76,7 @@ const handleItemClick = (item) => {
         v-if="hasDropdown"
         :class="['header__dropdown-arrow', isOpen ? 'header__dropdown-arrow--open' : '']"
       >
-        <ChevronIcon />
+        <chevronIcon />
       </span>
     </a>
     <ul

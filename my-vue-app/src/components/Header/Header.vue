@@ -40,7 +40,7 @@ const handleItemSelected = () => {
   <header class="header">
     <div class="header__container">
       <div class="header__brand">
-        <LogoIcon class="header__logo-icon" />
+        <logoIcon class="header__logo-icon" />
         <span class="header__logo">
           Redmine
           <span class="header__logo-part">
@@ -75,7 +75,7 @@ const handleItemSelected = () => {
             theme="blue"
           >
             <template #icon>
-              <UserIcon />
+              <userIcon />
             </template>
           </UILink>
           <UIButton label="Get a Free Demo" />

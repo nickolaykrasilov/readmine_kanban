@@ -28,7 +28,7 @@ import { featureCards } from '../../models/ProductFeatures.js';
           class="main-banner__button"
         >
           <template #icon>
-            <WhiteArrowIcon />
+            <whiteArrowIcon />
           </template>
         </UIButton>
       </div>

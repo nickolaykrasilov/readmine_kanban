@@ -1,9 +1,9 @@
 import icons from '../plugins/icons.js';
 
 export const iconComponents = {
-  kanban: icons.YourIcon,
-  checkmark: icons.CheckmarkIcon,
-  line: icons.LineIcon,
+  kanban: icons.yourIcon,
+  checkmark: icons.checkmarkIcon,
+  line: icons.lineIcon,
 };
 
 export const featureCards = [
