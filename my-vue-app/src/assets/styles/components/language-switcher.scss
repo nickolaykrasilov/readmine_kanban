@@ -1,7 +1,7 @@
 @import './main/index';
 
 .language-switcher {
-  $self: &; 
+  $self: &;
 
   &__button {
     display: flex;
@@ -28,10 +28,10 @@
     background: $bg-primary;
     border: 1px solid $border-divider;
     box-shadow: $box-shadow;
-    
-       @media (max-width: $breakpoint-xl) {
-        display: flex;
-        margin: -30px 100px;
+
+    @media (max-width: $breakpoint-xl) {
+      display: flex;
+      margin: -30px 100px;
     }
   }
 
@@ -42,10 +42,8 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $language-switcher-item-hover; 
+      background-color: $language-switcher-item-hover;
     }
-
- 
   }
 
   &__arrow {

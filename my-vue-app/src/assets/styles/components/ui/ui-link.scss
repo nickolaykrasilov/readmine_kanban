@@ -2,6 +2,7 @@
 
 .ui-link {
   $self: &;
+
   display: inline-flex;
   gap: 0.5rem;
   text-decoration: none;
@@ -15,7 +16,7 @@
     color: $link-hover-color;
   }
 
-  &--black{
+  &--black {
     color: $language-switcher-text;
   }
 

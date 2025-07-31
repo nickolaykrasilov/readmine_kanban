@@ -51,7 +51,7 @@ const toggleDropdown = (event) => {
 };
 
 const handleItemClick = (item) => {
-  
+
   if (!hasDropdown.value) return;
 
   emit('item-selected', item);

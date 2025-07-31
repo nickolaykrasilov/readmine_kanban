@@ -49,9 +49,7 @@ const handleItemSelected = () => {
         class="header__mobile-menu-button"
         @click="toggleMenu"
         aria-label="Toggle menu"
-      >
-        <span class="header__mobile-menu-icon" />
-      </button>
+      />
       <div
         class="header__menu"
         :class="{ 'header__menu--active': isMenuOpen || !isMobile }"

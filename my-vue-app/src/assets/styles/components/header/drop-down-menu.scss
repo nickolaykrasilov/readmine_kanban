@@ -3,20 +3,20 @@
 .header__dropdown {
   $self: &;
 
-  margin-left: 66px;
   position: relative;
-
+  margin-left: 66px;
   padding: 0 1rem;
+
   &-link {
     display: flex;
     align-items: center;
+    height: 100%;
+    gap: 4px;
     text-decoration: none;
     color: $language-switcher-text;
     background: none;
     border: none;
     cursor: pointer;
-    gap: 4px;
-    height: 100%;
 
     &:hover {
       background-color: $language-switcher-hover-bg;
@@ -31,11 +31,11 @@
   &-list {
     position: absolute;
     left: 0;
-    background: white;
-    border: 1px solid #eee;
     min-width: 160px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-     white-space: nowrap;
+    background: $bg-primary;
+    border: 1px solid $border-divider;
+    box-shadow: 0 2px 8px $color-shadow-base;
+    white-space: nowrap;
 
     @media (max-width: $breakpoint-xl) {
       display: flex;

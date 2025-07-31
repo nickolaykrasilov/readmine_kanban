@@ -18,7 +18,6 @@ defineProps({
         @item-selected="(item) => $emit('item-selected', item)"
       />
     </template>
-
     <UILink
       v-for="(link, key) in links"
       :key="`link-${key}`"

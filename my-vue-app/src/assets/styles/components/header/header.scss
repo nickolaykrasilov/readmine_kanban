@@ -6,11 +6,11 @@
   position: relative;
   z-index: $ui-index-2;
   padding: 1.2rem;
-  background-color: $bg-primary;
-  box-shadow: $box-shadow;
   font-family: $font-family-base;
   font-size: $font-size-sm;
   font-weight: 400;
+  background-color: $bg-primary;
+  box-shadow: $box-shadow;
 
   &__container {
     display: flex;
@@ -20,7 +20,7 @@
     margin: 0 auto;
     font-family: $font-family-base;
   }
-  
+
   &__brand {
     display: flex;
     align-items: center;
@@ -29,8 +29,8 @@
   }
 
   &__logo {
-    font-weight: 600;
     margin-right: 36px;
+    font-weight: 600;
     font-size: clamp(18px, 2.5vw, 28px);
     color: $link-login-color;
 
@@ -40,17 +40,14 @@
   }
 
   &__mobile-menu-button {
-    border: none;
-    cursor: pointer;
-    z-index: $ui-index-3;
-  }
-
-  &__mobile-menu-icon {
     position: relative;
+    z-index: $ui-index-3;
+    display: block;
     width: 28px;
     height: 4px;
-    display: block;
     background-color: $text-primary;
+    border: none;
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -80,20 +77,20 @@
       position: fixed;
       top: 0;
       left: 0;
+      z-index: $ui-index-2;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100%;
-      flex-direction: column;
-      align-items: center; /* Добавлено для центрирования */
-      justify-content: center; /* Уже было */
-      text-align: center; /* Для текста внутри */
+      text-align: center;
       background-color: $bg-primary;
       transform: translateY(-100%);
       transition: all 0.6s ease;
-      z-index: $ui-index-2;
 
       &--active {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
       }
     }
   }
@@ -101,23 +98,24 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 30px;
     margin-left: 40px;
+    gap: 30px;
+
     @media (max-width: $breakpoint-xl) {
       flex-direction: column;
-      gap: 1.5rem; /* Добавил отступ между элементами */
+      gap: 1.5rem;
     }
   }
 
   &-nav {
     display: grid;
     align-items: center;
-    grid-auto-flow: column; 
+    grid-auto-flow: column;
 
     @media (max-width: $breakpoint-xl) {
-      grid-auto-flow: row; 
+      grid-auto-flow: row;
+      justify-items: center;
       gap: 2rem;
-      justify-items: center; /* Центрируем элементы сетки */
     }
   }
 }
