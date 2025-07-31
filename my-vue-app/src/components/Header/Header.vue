@@ -15,14 +15,18 @@ const { navItems } = createNavigationMenu();
 
 const isMenuOpen = ref(false);
 
+function setBodyOverflow(hidden) {
+  document.body.style.overflow = hidden ? 'hidden' : '';
+}
+
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
-  document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
+  setBodyOverflow(isMenuOpen.value);
 };
 
 const closeMenu = () => {
   isMenuOpen.value = false;
-  document.body.style.overflow = '';
+  setBodyOverflow(false);
 };
 
 const handleItemSelected = () => {
