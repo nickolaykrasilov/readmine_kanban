@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
-import HeaderNav from './HeaderNav.vue';
+import HeaderLink from './HeaderLink.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 
 import { useScreenSize } from '../../utils/screen.js';
@@ -56,7 +56,7 @@ const handleItemSelected = () => {
         class="header__menu"
         :class="{ 'header__menu--active': isMenuOpen || !isMobile }"
       >
-        <HeaderNav
+        <HeaderLink
           :dropdowns="navItems.dropdowns"
           :links="navItems.links"
           @item-selected="handleItemSelected"

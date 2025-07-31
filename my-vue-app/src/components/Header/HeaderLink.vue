@@ -1,19 +1,17 @@
 <script setup>
-import DropdownMenu from './DropdownMenu.vue';
+import DropDownMenu from './DropDownMenu.vue';
 import UILink from '../ui/UILink.vue';
 
 defineProps({
   dropdowns: Object,
   links: Object,
 });
-
-defineEmits(['item-selected']);
 </script>
 
 <template>
   <nav class="header-nav">
     <template v-for="(config, type) in dropdowns" :key="`dropdown-${type}`">
-      <DropdownMenu
+      <DropDownMenu
         :type="type"
         :items="config.items || []"
         :current-item="config.current.value"
