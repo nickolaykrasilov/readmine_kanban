@@ -23,7 +23,6 @@ defineProps({
       :key="`link-${key}`"
       :href="link.href"
       :label="link.text"
-      class="header-nav__link"
     />
   </nav>
 </template>
