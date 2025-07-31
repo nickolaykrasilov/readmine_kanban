@@ -4,16 +4,16 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const props = defineProps({
   items: {
     type: Array,
-    default: () => []
+    default: () => [],
   },
   currentItem: {
     type: Object,
     required: true,
-    validator: (item) => typeof item === 'object' && 'text' in item && 'href' in item
+    validator: (item) => typeof item === 'object' && 'text' in item && 'href' in item,
   },
   type: {
     type: String,
-    required: true
+    required: true,
   }
 });
 

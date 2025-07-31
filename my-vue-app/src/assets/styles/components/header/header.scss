@@ -8,6 +8,9 @@
   padding: 1.2rem;
   background-color: $bg-primary;
   box-shadow: $box-shadow;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: 400;
 
   &__container {
     display: flex;
@@ -107,6 +110,7 @@
   display: grid;
   align-items: center;
   grid-auto-flow: column; 
+  
 
     @media (max-width: $breakpoint-xl) {
       grid-auto-flow:row; 

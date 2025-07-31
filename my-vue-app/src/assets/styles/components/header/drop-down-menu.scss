@@ -5,22 +5,16 @@
 
   margin-left: 66px;
   position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
+
   padding: 0 1rem;
   &-link {
     display: flex;
     align-items: center;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
-    font-weight: 400;
     text-decoration: none;
     color: $language-switcher-text;
     background: none;
     border: none;
     cursor: pointer;
-    color: inherit;
     gap: 4px;
     height: 100%;
 
@@ -29,8 +23,6 @@
     }
   }
 
-
-
   &-arrow {
     width: $language-switcher-arrow-size;
     height: $language-switcher-arrow-size;
@@ -38,28 +30,15 @@
 
   &-list {
     position: absolute;
-    min-width: 100px;
-    padding-top: 4px;
-    background: $bg-primary;
-    border: 1px solid $border-divider;
-    box-shadow: $box-shadow;
-        position: absolute;
-    top: 100%;
     left: 0;
     background: white;
     border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 8px 0;
     min-width: 160px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 10;
-    list-style: none;
-    margin: 0;
   }
 
   &-item {
     padding: 8px 16px;
-    font-weight: 400;
     color: $language-switcher-text;
     cursor: pointer;
 
@@ -69,7 +48,6 @@
   }
 
   &-sublink {
-    display: block;
     text-decoration: none;
     color: inherit;
   }
