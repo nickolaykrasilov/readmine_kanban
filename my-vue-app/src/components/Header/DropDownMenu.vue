@@ -27,7 +27,7 @@ const handleClickOutside = (event) => {
 
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     isOpen.value = false;
-  }
+  };
 
 };
 
@@ -101,7 +101,6 @@ const handleItemClick = (item) => {
     </ul>
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 @import '../../assets/styles/components/header/drop-down-menu.scss';

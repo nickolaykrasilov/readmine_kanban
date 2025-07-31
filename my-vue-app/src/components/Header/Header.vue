@@ -17,7 +17,7 @@ const isMenuOpen = ref(false);
 
 function setBodyOverflow(hidden) {
   document.body.style.overflow = hidden ? 'hidden' : '';
-}
+};
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
@@ -32,7 +32,7 @@ const closeMenu = () => {
 const handleItemSelected = () => {
   if (isMobile.value) {
     closeMenu();
-  }
+  };
 };
 </script>
 
