@@ -9,7 +9,7 @@ const props = defineProps({
   currentItem: {
     type: Object,
     required: true,
-    validator: (item) => typeof item === 'object' && 'text' in item && 'href' in item,
+    validator: (item) => typeof item === 'object' && 'label' in item && 'href' in item,
   },
   type: {
     type: String,
@@ -74,7 +74,7 @@ const handleItemClick = (item) => {
       :aria-expanded="hasDropdown ? isOpen : undefined"
       :aria-haspopup="hasDropdown ? 'true' : undefined"
     >
-      {{ currentItem.text }}
+      {{ currentItem.label }}
       <span
         v-if="hasDropdown"
         :class="[
@@ -101,7 +101,7 @@ const handleItemClick = (item) => {
           class="header__dropdown-sublink"
           @click="handleItemClick(item, $event)"
         >
-          {{ item.text }}
+          {{ item.label }}
         </a>
       </li>
     </ul>

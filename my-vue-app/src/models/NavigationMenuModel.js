@@ -7,43 +7,38 @@ export class NavigationMenuModel {
         plugins: {
           type: 'dropdown',
           current: ref({ 
-            text: "Plugins", 
+            label: "Plugins", 
             href: "/plugins",
-            value: "plugins",
           }),
           items: [
-            { text: "Plugin 1", href: "/plugins/1", value: "plugin1" },
-            { text: "Plugin 2", href: "/plugins/2", value: "plugin2" }
+            { label: "Plugin 1", href: "/plugins/1" },
+            { label: "Plugin 2", href: "/plugins/2" },
           ]
         },
         themes: {
           type: 'dropdown',
           current: ref({ 
-            text: "Themes", 
+            label: "Themes", 
             href: "/themes",
-            value: "themes",
           }),
           items: [
-            { text: "Theme 1", href: "/themes/1", value: "theme1" },
-            { text: "Theme 2", href: "/themes/2", value: "theme2" }
+            { label: "Theme 1", href: "/themes/1" },
+            { label: "Theme 2", href: "/themes/2" },
           ]
         },
         pricing: {
           type: 'dropdown',
-          current: ref({ 
-            text: "Pricing", 
-            href: "/pricing",
-            value: "basic",
-          }),
+          current: ref({ label: "Pricing", href: "/pricing",}
+          ),
           items: [
-            { text: "Basic", href: "/pricing/basic", value: "basic" },
-            { text: "Pro", href: "/pricing/pro", value: "pro" }
+            { label: "Basic", href: "/pricing/basic" },
+            { label: "Pro", href: "/pricing/pro" },
           ]
         },
         resources: {
           type: 'link',
           current: ref({ 
-            text: "Resources", 
+            label: "Resources", 
             href: "/resources",
           })
         },
@@ -53,11 +48,11 @@ export class NavigationMenuModel {
 
   getNavItems() {
     return this.navItems;
-  }
+  };
 
   updateCurrent(type, newItem) {
     if (this.navItems.dropdowns[type] && this.navItems.dropdowns[type].type === 'dropdown') {
       this.navItems.dropdowns[type].current.value = newItem;
-    }
-  }
-}
+    };
+  };
+};
