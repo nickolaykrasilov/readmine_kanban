@@ -63,7 +63,7 @@ const handleItemClick = (item) => {
   <div
     :class="[
       'header__dropdown',
-      { 'header__dropdown--simple': !hasDropdown }
+      { 'header__dropdown--simple': !hasDropdown },
     ]"
     ref="dropdownRef"
   >

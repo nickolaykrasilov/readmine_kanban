@@ -50,7 +50,7 @@ const handleItemSelected = () => {
         @click="toggleMenu"
         aria-label="Toggle menu"
       >
-        <span class="header__mobile-menu-icon"></span>
+        <span class="header__mobile-menu-icon" />
       </button>
       <div
         class="header__menu"

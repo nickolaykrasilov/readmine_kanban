@@ -28,6 +28,11 @@
     background: $bg-primary;
     border: 1px solid $border-divider;
     box-shadow: $box-shadow;
+    
+       @media (max-width: $breakpoint-xl) {
+        display: flex;
+        margin: -30px 100px;
+    }
   }
 
   &__item {
@@ -39,6 +44,8 @@
     &:hover {
       background-color: $language-switcher-item-hover; 
     }
+
+ 
   }
 
   &__arrow {

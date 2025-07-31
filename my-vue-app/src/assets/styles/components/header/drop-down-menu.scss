@@ -35,6 +35,12 @@
     border: 1px solid #eee;
     min-width: 160px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+     white-space: nowrap;
+
+    @media (max-width: $breakpoint-xl) {
+      display: flex;
+      margin: -30px 100px;
+    }
   }
 
   &-item {
