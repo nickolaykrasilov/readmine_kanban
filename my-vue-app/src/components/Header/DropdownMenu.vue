@@ -50,17 +50,21 @@ const toggleDropdown = (event) => {
   isOpen.value = !isOpen.value;
 };
 
-const handleItemClick = (item, event) => {
+const handleItemClick = (item) => {
+  
   if (!hasDropdown.value) return;
+
   emit('item-selected', item);
   isOpen.value = false;
 };
 </script>
 
 <template>
-  <div 
-    class="header__dropdown" 
-    :class="{ 'header__dropdown--simple': !hasDropdown }"
+  <div
+    :class="[
+      'header__dropdown',
+      { 'header__dropdown--simple': !hasDropdown }
+    ]"
     ref="dropdownRef"
   >
     <a

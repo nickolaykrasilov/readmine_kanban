@@ -4,7 +4,7 @@ import UILink from '../ui/UILink.vue';
 
 defineProps({
   dropdowns: Object,
-  links: Object
+  links: Object,
 });
 
 defineEmits(['item-selected']);
