@@ -62,6 +62,10 @@ const handleItemSelected = () => {
           @item-selected="handleItemSelected"
         />
         <div class="header__actions">
+          <UILink
+            href="/support"
+            label="Support"
+          />
           <LanguageSwitcher />
           <UILink
             href="/login"

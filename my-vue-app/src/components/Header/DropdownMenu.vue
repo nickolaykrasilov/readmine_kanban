@@ -22,7 +22,6 @@ const emit = defineEmits(['item-selected']);
 const isOpen = ref(false);
 const dropdownRef = ref(null);
 
-// Определяем, есть ли элементы для выпадающего списка
 const hasDropdown = computed(() => props.items && props.items.length > 0);
 
 const handleClickOutside = (event) => {
@@ -44,7 +43,9 @@ onUnmounted(() => {
 });
 
 const toggleDropdown = (event) => {
+
   if (!hasDropdown.value) return;
+
   event.preventDefault();
   isOpen.value = !isOpen.value;
 };
@@ -105,5 +106,4 @@ const handleItemClick = (item, event) => {
 
 <style lang="scss" scoped>
 @import '../../assets/styles/components/header/drop-down-menu.scss';
-
 </style>

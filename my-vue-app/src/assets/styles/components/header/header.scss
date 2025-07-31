@@ -28,7 +28,7 @@
   &__logo {
     font-weight: 600;
     margin-right: 52px;
-    font-size: clamp(18px, 2.5vw, 24px);
+    font-size: clamp(18px, 2.5vw, 28px);
     color: $link-login-color;
 
     &-part {
@@ -71,7 +71,6 @@
 
   &__menu {
     display: flex;
-    align-items: center;
     gap: clamp(1rem, 2.6vw, 3rem);
 
     @media (max-width: $breakpoint-xl) {
@@ -97,10 +96,25 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: clamp(1rem, 2.6vw, 5rem);
-
+    gap: 30px;
+    margin-left: 30px;
     @media (max-width: $breakpoint-xl) {
       flex-direction: column;
+      padding-left: -30px;
     }
+  }
+
+  &-nav {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column; // Чтобы по умолчанию располагать элементы в строку
+
+  @media (max-width: $breakpoint-xl) {
+    grid-auto-flow:row; // При уменьшении экрана — в ко
+    padding-left:150px;
+    gap: 2rem;
+  }
+
+
   }
 }

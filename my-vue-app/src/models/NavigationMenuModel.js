@@ -45,18 +45,9 @@ export class NavigationMenuModel {
           current: ref({ 
             text: "Resources", 
             href: "/resources",
-            value: "resources",
           })
         },
-      },     
-      links: {
-        support: {
-          type: 'link',
-          text: "Support",
-          href: "/support",
-          value: "support",
-        }
-      }
+      },
     };
   }
 

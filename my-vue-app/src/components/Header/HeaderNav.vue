@@ -32,22 +32,5 @@ defineEmits(['item-selected']);
 </template>
 
 <style lang="scss" scoped>
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  @media (max-width: 767px) {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  &__link {
-    @media (max-width: 767px) {
-      font-size: 1.2rem;
-      padding: 0.5rem 0;
-    }
-  }
-}
+@import '../../assets/styles/components/header/header.scss';
 </style>
