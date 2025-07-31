@@ -4,17 +4,14 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const props = defineProps({
   items: {
     type: Array,
-    default: () => [],
   },
   currentItem: {
     type: Object,
-    required: true,
     validator: (item) => typeof item === 'object' && 'label' in item && 'href' in item,
   },
-  type: {
+  type: { 
     type: String,
-    required: true,
-  }
+  },
 });
 
 const emit = defineEmits(['item-selected']);
@@ -22,24 +19,24 @@ const emit = defineEmits(['item-selected']);
 const isOpen = ref(false);
 const dropdownRef = ref(null);
 
-const hasDropdown = computed(() => props.items && props.items.length > 0);
+const hasDropdown = computed(() => props.items.length > 0);
 
 const handleClickOutside = (event) => {
+
+  if (!hasDropdown.value) return;
+
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     isOpen.value = false;
   }
+
 };
 
 onMounted(() => {
-  if (hasDropdown.value) {
-    document.addEventListener('click', handleClickOutside);
-  }
+  document.addEventListener('click', handleClickOutside);
 });
 
 onUnmounted(() => {
-  if (hasDropdown.value) {
-    document.removeEventListener('click', handleClickOutside);
-  }
+  document.removeEventListener('click', handleClickOutside);
 });
 
 const toggleDropdown = (event) => {
@@ -63,7 +60,7 @@ const handleItemClick = (item) => {
   <div
     :class="[
       'header__dropdown',
-      { 'header__dropdown--simple': !hasDropdown },
+      !hasDropdown ? 'header__dropdown--simple' : '',
     ]"
     ref="dropdownRef"
   >
@@ -77,10 +74,7 @@ const handleItemClick = (item) => {
       {{ currentItem.label }}
       <span
         v-if="hasDropdown"
-        :class="[
-          'header__dropdown-arrow',
-          { 'header__dropdown-arrow--open': isOpen },
-        ]"
+        :class="['header__dropdown-arrow', isOpen ? 'header__dropdown-arrow--open' : '']"
       >
         <ChevronIcon />
       </span>
@@ -99,7 +93,7 @@ const handleItemClick = (item) => {
         <a
           :href="item.href"
           class="header__dropdown-sublink"
-          @click="handleItemClick(item, $event)"
+          @click="handleItemClick(item)"
         >
           {{ item.label }}
         </a>
@@ -107,6 +101,7 @@ const handleItemClick = (item) => {
     </ul>
   </div>
 </template>
+
 
 <style lang="scss" scoped>
 @import '../../assets/styles/components/header/drop-down-menu.scss';
