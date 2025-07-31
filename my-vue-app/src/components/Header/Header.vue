@@ -7,11 +7,11 @@ import HeaderLink from './HeaderLink.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 
 import { useScreenSize } from '../../utils/screen.js';
-import { NavigationMenuModel } from '../../models/NavigationMenuModel.js';
+import { createNavigationMenu } from '../../models/NavigationMenuModel.js';
 
 const { isMobile } = useScreenSize();
-const navigationModel = new NavigationMenuModel();
-const navItems = navigationModel.getNavItems();
+
+const { navItems } = createNavigationMenu();
 
 const isMenuOpen = ref(false);
 
