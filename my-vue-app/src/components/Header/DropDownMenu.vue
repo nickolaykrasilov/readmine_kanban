@@ -4,15 +4,19 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const props = defineProps({
   items: {
     type: Array,
+    default: () => [],
+    required: false,
   },
   currentItem: {
     type: Object,
-    validator: (item) => typeof item === 'object' && 'label' in item && 'href' in item,
+    required: true,
+    default: () => ({ label: '', href: '#' }),
   },
-  type: { 
+  type: {
     type: String,
-  },
-});
+    default: 'default',
+  }
+})
 
 const emit = defineEmits(['item-selected']);
 
