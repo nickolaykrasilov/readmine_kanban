@@ -23,7 +23,7 @@ const emit = defineEmits(['item-selected']);
 const isOpen = ref(false);
 const dropdownRef = ref(null);
 
-const hasDropdown = computed(() => props.items.length > 0);
+const hasDropdown = computed(() => !!props.items.length);
 
 const handleClickOutside = (event) => {
 
