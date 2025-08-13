@@ -11,8 +11,8 @@ defineProps({
 <template>
   <nav class="header-nav">
     <template 
-    v-for="(config, type) in dropdowns" 
-    :key="`dropdown-${type}`"
+      v-for="(config, type) in dropdowns" 
+      :key="`dropdown-${type}`"
     >
       <DropDownMenu
         :type="type"
