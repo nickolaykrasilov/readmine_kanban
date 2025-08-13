@@ -26,13 +26,11 @@ const dropdownRef = ref(null);
 const hasDropdown = computed(() => !!props.items.length);
 
 const handleClickOutside = (event) => {
-
   if (!hasDropdown.value) return;
 
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     isOpen.value = false;
   };
-
 };
 
 onMounted(() => {
@@ -44,7 +42,6 @@ onUnmounted(() => {
 });
 
 const toggleDropdown = (event) => {
-
   if (!hasDropdown.value) return;
 
   event.preventDefault();
@@ -52,7 +49,6 @@ const toggleDropdown = (event) => {
 };
 
 const handleItemClick = (item) => {
-
   if (!hasDropdown.value) return;
 
   emit('item-selected', item);
