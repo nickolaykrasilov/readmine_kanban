@@ -6,6 +6,12 @@ defineProps({
   dropdowns: Object,
   links: Object,
 });
+
+const emit = defineEmits(['item-selected']);
+
+const handleItemSelected = (type, item) => {
+  emit('item-selected', type, item);
+};
 </script>
 
 <template>
@@ -15,10 +21,17 @@ defineProps({
       :key="`dropdown-${type}`"
     >
       <DropDownMenu
+        v-if="config.type === 'dropdown'"
         :type="type"
         :items="config.items || []"
-        :current-item="config.current.value"
-        @item-selected="(item) => $emit('item-selected', item)"
+        :current-item="config.current"  
+        @item-selected="(item) => handleItemSelected(type, item)"
+      />
+      <UILink
+        v-else-if="config.type === 'link'"
+        :key="`link-${type}`"
+        :href="config.current.href"
+        :label="config.current.label"
       />
     </template>
     <UILink

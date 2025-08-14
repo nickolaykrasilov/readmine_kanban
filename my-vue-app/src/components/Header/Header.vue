@@ -11,7 +11,9 @@ import LanguageSwitcher from '../LanguageSwitcher.vue';
 
 const { isMobile } = useScreenSize();
 
-const { navItems } = createNavigationMenu();
+// Обернуть navItems в reactive или ref для реактивности
+const navigation = ref(createNavigationMenu());
+const { navItems, updateCurrent } = navigation.value;
 
 const isMenuOpen = ref(false);
 
@@ -29,7 +31,8 @@ const closeMenu = () => {
   setBodyOverflow(false);
 };
 
-const handleItemSelected = () => {
+const handleItemSelected = (type, item) => {
+  updateCurrent(type, item);
   if (isMobile.value) {
     closeMenu();
   };
