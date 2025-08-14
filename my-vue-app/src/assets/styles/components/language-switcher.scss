@@ -28,6 +28,7 @@
     background: $bg-primary;
     border: 1px solid $border-divider;
     box-shadow: $box-shadow;
+    
 
     @media (max-width: $breakpoint-xl) {
       display: flex;
@@ -40,6 +41,7 @@
     letter-spacing: 0;
     color: $language-switcher-text;
     cursor: pointer;
+    list-style-type: none;
 
     &:hover {
       background-color: $language-switcher-item-hover;
