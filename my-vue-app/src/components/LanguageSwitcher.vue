@@ -68,5 +68,5 @@ const switchLanguage = (langCode) => {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/components/language-switcher.scss';
+@import '../assets/styles/components/language-switcher.scss';
 </style>

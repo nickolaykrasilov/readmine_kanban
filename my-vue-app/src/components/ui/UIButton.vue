@@ -59,5 +59,5 @@ const handleClick = () => {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/ui/ui-button.scss';
+@import '../../assets/styles/components/ui/ui-button.scss';
 </style>

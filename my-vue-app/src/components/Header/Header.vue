@@ -86,5 +86,5 @@ const handleItemSelected = () => {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/header/header.scss';
+@import '../../assets/styles/components/header/header.scss';
 </style>

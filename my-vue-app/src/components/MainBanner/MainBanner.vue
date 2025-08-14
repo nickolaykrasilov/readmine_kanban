@@ -57,5 +57,5 @@ import UIButton from '../ui/UIButton.vue';
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/main-banner/main-banner.scss';
+@import '../../assets/styles/components/main-banner/main-banner.scss';
 </style>

@@ -39,5 +39,5 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/styles/components/ui/ui-link.scss';
+@import '../../assets/styles/components/ui/ui-link.scss';
 </style>
