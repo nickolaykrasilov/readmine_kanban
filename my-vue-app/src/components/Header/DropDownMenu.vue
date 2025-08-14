@@ -74,7 +74,10 @@ const handleItemClick = (item) => {
       {{ currentItem.label }}
       <span
         v-if="hasDropdown"
-        :class="['header__dropdown-arrow', isOpen ? 'header__dropdown-arrow--open' : '']"
+        :class="{
+          'header__dropdown-arrow': true,
+          'header__dropdown-arrow--open': isOpen,
+        }"
       >
         <chevronIcon />
       </span>
