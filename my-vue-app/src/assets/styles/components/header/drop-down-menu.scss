@@ -37,8 +37,8 @@
     box-shadow: 0 2px 8px $color-shadow-base;
     white-space: nowrap;
     list-style-type: none;
-    
-    @media (max-width: $breakpoint-xl) {
+
+    @media (max-width: $breakpoint-md) {
       display: flex;
       margin: -30px 100px;
     }
