@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 import { useScreenSize } from '../../utils/screen.js';
-import { createNavigationMenu } from '../../models/NavigationMenuModel.js';
+import { navMenuModel, updateDropdownCurrent } from '../../models/NavigationMenuModel.js';
 
 import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
@@ -11,10 +11,7 @@ import LanguageSwitcher from '../LanguageSwitcher.vue';
 
 const { isMobile } = useScreenSize();
 
-// Обернуть navItems в reactive или ref для реактивности
-const navigation = ref(createNavigationMenu());
-const { navItems, updateCurrent } = navigation.value;
-
+const navItems = ref(navMenuModel);
 const isMenuOpen = ref(false);
 
 function setBodyOverflow(hidden) {
@@ -32,7 +29,7 @@ const closeMenu = () => {
 };
 
 const handleItemSelected = (type, item) => {
-  updateCurrent(type, item);
+  updateDropdownCurrent(navItems.value.dropdowns, type, item);
   if (isMobile.value) {
     closeMenu();
   };
@@ -63,7 +60,6 @@ const handleItemSelected = (type, item) => {
       >
         <HeaderLink
           :dropdowns="navItems.dropdowns"
-          :links="navItems.links"
           @item-selected="handleItemSelected"
         />
         <div class="header__actions">

@@ -1,76 +1,70 @@
-export function createNavigationMenu() {
-  const navItems = {
-    dropdowns: {
-      plugins: {
-        type: 'dropdown',
-        current: {
-          label: "Plugins", href: "/plugins",
-        },
-        items: [
-          {
-            label: "Plugin 1",
-            href: "/plugins/1",
-          },
-          {
-            label: "Plugin 2",
-            href: "/plugins/2",
-          },
-        ],
+export const navMenuModel = {
+  dropdowns: {
+    plugins: {
+      type: 'dropdown',
+      current: {
+        label: "Plugins",
+        href: "/plugins",
       },
-      themes: {
-        type: 'dropdown',
-        current: {
-          label: "Themes",
-          href: "/themes",
+      items: [
+        {
+          label: "Plugin 1",
+          href: "/plugins/1",
         },
-        items: [
-          {
-            label: "Theme 1",
-            href: "/themes/1",
-          },
-          {
-            label: "Theme 2",
-            href: "/themes/2",
-          },
-        ],
+        {
+          label: "Plugin 2",
+          href: "/plugins/2",
+        },
+      ],
+    },
+    themes: {
+      type: 'dropdown',
+      current: {
+        label: "Themes",
+        href: "/themes",
       },
-      pricing: {
-        type: 'dropdown',
-        current: {
-          label: "Pricing",
-          href: "/pricing",
+      items: [
+        {
+          label: "Theme 1",
+          href: "/themes/1",
         },
-        items: [
-          {
-            label: "Basic",
-            href: "/pricing/basic",
-          },
-          {
-            label: "Pro",
-            href: "/pricing/pro",
-          },
-        ],
+        {
+          label: "Theme 2",
+          href: "/themes/2",
+        },
+      ],
+    },
+    pricing: {
+      type: 'dropdown',
+      current: {
+        label: "Pricing",
+        href: "/pricing",
       },
-      resources: {
-        type: 'dropdown',
-        current: {
-          label: "Resources",
-          href: "/resources",
+      items: [
+        {
+          label: "Basic",
+          href: "/pricing/basic",
         },
+        {
+          label: "Pro",
+          href: "/pricing/pro",
+        },
+      ],
+    },
+    resources: {
+      type: 'dropdown',
+      current: {
+        label: "Resources",
+        href: "/resources",
       },
     },
-  };
+  },
+};
 
-  function updateCurrent(type, newItem) {
-    const item = navItems.dropdowns[type];
+export function updateDropdownCurrent(items, type, newItem) {
+  const item = items[type];
 
-    if (item && item.type === 'dropdown') {
-      item.current = newItem;
-    };
-  };
-
-  return {
-    navItems,
-    updateCurrent,
+  if (item && item.type === 'dropdown') {
+    item.current = newItem;
   };
 };
