@@ -4,8 +4,8 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const props = defineProps({
   items: {
     type: Array,
-    default: () => [],
     required: false,
+    default: () => [],
   },
   currentItem: {
     type: Object,
