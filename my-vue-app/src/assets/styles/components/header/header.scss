@@ -11,6 +11,7 @@
   font-weight: 400;
   background-color: $bg-primary;
   box-shadow: $box-shadow;
+  
 
   &__container {
     display: flex;
@@ -31,7 +32,7 @@
   &__logo {
     margin-right: 36px;
     font-weight: 600;
-    font-size: clamp(18px, 2.5vw, 28px);
+    font-size: clamp(19px, 2.5vw, 28px);
     color: $link-login-color;
 
     &-part {
@@ -41,7 +42,6 @@
     @media (max-width: $breakpoint-xxl) {
       margin-right: 0px;
     }
-    
   }
 
   &__nav {
@@ -110,10 +110,6 @@
       }
     }
 
-        @media (max-width: $breakpoint-xxl) {
-      gap: 0;
-    }
-    
   }
 
   &__actions {
@@ -126,9 +122,5 @@
       flex-direction: column;
       gap: 1.5rem;
     }
-
-
   }
-
-
 }
