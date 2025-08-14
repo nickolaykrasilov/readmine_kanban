@@ -3,8 +3,16 @@ import DropDownMenu from './DropDownMenu.vue';
 import UILink from '../ui/UILink.vue';
 
 defineProps({
-  dropdowns: Object,
-  links: Object,
+  dropdowns: {
+    type: Object,
+    required: true,
+    default: () => ({}),
+  },
+  links: {
+    type: Object,
+    required: false,
+    default: () => ({}),
+  },
 });
 
 const emit = defineEmits(['item-selected']);
