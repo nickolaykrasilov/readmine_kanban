@@ -6,12 +6,10 @@ defineProps({
   dropdowns: {
     type: Object,
     required: true,
-    default: () => ({}),
   },
   links: {
     type: Object,
     required: false,
-    default: () => ({}),
   },
 });
 

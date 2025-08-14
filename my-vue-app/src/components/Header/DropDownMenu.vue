@@ -5,7 +5,6 @@ const props = defineProps({
   items: {
     type: Array,
     required: false,
-    default: () => [],
   },
   currentItem: {
     type: Object,
