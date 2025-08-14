@@ -23,7 +23,7 @@ const handleItemSelected = (type, item) => {
 </script>
 
 <template>
-  <nav class="header-nav">
+  <nav class="header__nav">
     <template 
       v-for="(config, type) in dropdowns" 
       :key="`dropdown-${type}`"
