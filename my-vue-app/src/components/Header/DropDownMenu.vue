@@ -9,7 +9,6 @@ const props = defineProps({
   currentItem: {
     type: Object,
     required: true,
-    default: () => ({ label: '', href: '#' }),
   },
   type: {
     type: String,
