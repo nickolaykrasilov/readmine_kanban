@@ -1,8 +1,8 @@
 <script setup>
+import { featureCards } from '../../models/ProductFeatures.js';
+
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
-
-import { featureCards } from '../../models/ProductFeatures.js';
 </script>
 
 <template>

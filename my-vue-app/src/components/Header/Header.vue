@@ -1,13 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 
+import { useScreenSize } from '../../utils/screen.js';
+import { createNavigationMenu } from '../../models/NavigationMenuModel.js';
+
 import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
 import HeaderLink from './HeaderLink.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
-
-import { useScreenSize } from '../../utils/screen.js';
-import { createNavigationMenu } from '../../models/NavigationMenuModel.js';
 
 const { isMobile } = useScreenSize();
 

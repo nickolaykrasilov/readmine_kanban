@@ -1,8 +1,9 @@
 <script setup>
 import { defineProps } from 'vue';
-import UILink from '../ui/UILink.vue';
 
 import { iconComponents } from '../../models/ProductFeatures.js';
+
+import UILink from '../ui/UILink.vue';
 
 defineProps({
   cardData: {
