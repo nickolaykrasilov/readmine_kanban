@@ -37,6 +37,11 @@
     &-part {
       color: $text-primary;
     }
+
+    @media (max-width: $breakpoint-xxl) {
+      margin-right: 0px;
+    }
+    
   }
 
   &__nav {
@@ -44,14 +49,14 @@
     align-items: center;
     grid-auto-flow: column;
 
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       grid-auto-flow: row;
       justify-items: center;
       gap: 2rem;
     }
   }
 
-  &__mobile-menu-button {
+  &__tablet-menu-button {
     position: relative;
     z-index: $ui-index-3;
     display: block;
@@ -84,7 +89,7 @@
     display: flex;
     gap: clamp(1rem, 2.6vw, 3rem);
 
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       position: fixed;
       top: 0;
       left: 0;
@@ -104,6 +109,11 @@
         transition: all 0.6s ease;
       }
     }
+
+        @media (max-width: $breakpoint-xxl) {
+      gap: 0;
+    }
+    
   }
 
   &__actions {
@@ -112,10 +122,12 @@
     margin-left: 40px;
     gap: 30px;
 
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       flex-direction: column;
       gap: 1.5rem;
     }
+
+
   }
 
 

@@ -6,7 +6,7 @@
   line-height: $line-height-1;
   color: $text-primary;
 
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-lg) {
     padding-right: 16px;
     font-size: 40px;
   }

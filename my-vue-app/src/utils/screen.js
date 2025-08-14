@@ -1,12 +1,12 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-const MOBILE_BREAKPOINT = 768;
+const TABLET_BREAKPOINT = 1024;
 
 export function useScreenSize() {
-  const isMobile = ref(false);
+  const isTablet = ref(false);
 
   const checkScreenSize = () => {
-    isMobile.value = window.innerWidth < MOBILE_BREAKPOINT;
+    isTablet.value = window.innerWidth < TABLET_BREAKPOINT;
   };
 
   onMounted(() => {
@@ -18,5 +18,5 @@ export function useScreenSize() {
     window.removeEventListener('resize', checkScreenSize);
   });
 
-  return { isMobile };
+  return { isTablet };
 };

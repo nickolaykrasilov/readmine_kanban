@@ -30,7 +30,7 @@
     box-shadow: $box-shadow;
     
 
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       display: flex;
       margin: -30px 100px;
     }

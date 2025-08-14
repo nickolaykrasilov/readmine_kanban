@@ -9,7 +9,7 @@ import UILink from '../ui/UILink.vue';
 import HeaderLink from './HeaderLink.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
 
-const { isMobile } = useScreenSize();
+const { isTablet} = useScreenSize();
 
 const navItems = ref(navMenuModel);
 const isMenuOpen = ref(false);
@@ -30,7 +30,7 @@ const closeMenu = () => {
 
 const handleItemSelected = (type, item) => {
   updateDropdownCurrent(navItems.value.dropdowns, type, item);
-  if (isMobile.value) {
+  if (isTablet.value) {
     closeMenu();
   };
 };
@@ -49,15 +49,15 @@ const handleItemSelected = (type, item) => {
         </span>
       </div>
       <button
-        v-if="isMobile"
-        class="header__mobile-menu-button"
+        v-if="isTablet"
+        class="header__tablet-menu-button"
         @click="toggleMenu"
         aria-label="Toggle menu"
       />
       <div
         :class="{
           'header__menu': true,
-          'header__menu--active': isMenuOpen || !isMobile,
+          'header__menu--active': isMenuOpen || !isTablet,
         }"
       >
         <HeaderLink

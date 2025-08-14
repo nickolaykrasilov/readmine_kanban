@@ -7,6 +7,14 @@
   margin-left: 66px;
   padding: 0 1rem;
 
+          @media (max-width: $breakpoint-xxl) {
+      margin-left: 0;
+    }
+
+        @media (max-width: $breakpoint-lg) {
+      margin-left: 40px;
+    }
+
   &-link {
     display: flex;
     align-items: center;
@@ -38,7 +46,7 @@
     white-space: nowrap;
     list-style-type: none;
 
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       display: flex;
       margin: -30px 100px;
     }
