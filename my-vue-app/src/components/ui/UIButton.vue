@@ -50,7 +50,7 @@ const handleClick = () => {
       v-if="$slots.icon"
       :class="[
         `ui-button__icon`,
-        { 'ui-button__icon--right': iconRight }
+        { 'ui-button__icon--right': iconRight },
       ]"
     >
       <slot name="icon" />

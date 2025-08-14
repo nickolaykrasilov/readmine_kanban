@@ -55,8 +55,10 @@ const handleItemSelected = (type, item) => {
         aria-label="Toggle menu"
       />
       <div
-        class="header__menu"
-        :class="{ 'header__menu--active': isMenuOpen || !isMobile }"
+        :class="{
+          'header__menu': true,
+          'header__menu--active': isMenuOpen || !isMobile,
+        }"
       >
         <HeaderLink
           :dropdowns="navItems.dropdowns"
