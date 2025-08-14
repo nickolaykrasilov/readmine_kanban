@@ -52,7 +52,7 @@ const switchLanguage = (langCode) => {
       </span>
     </button>
     <ul
-      v-show="isOpen"
+      v-if="isOpen"
       class="language-switcher__list"
     >
       <li

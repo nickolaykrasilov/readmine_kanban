@@ -58,10 +58,10 @@ const handleItemClick = (item) => {
 
 <template>
   <div
-    :class="[
-      'header__dropdown',
-      !hasDropdown ? 'header__dropdown--simple' : '',
-    ]"
+    :class="{
+      'header__dropdown': true,
+      'header__dropdown--simple': !hasDropdown,
+    }"
     ref="dropdownRef"
   >
     <a
@@ -79,11 +79,10 @@ const handleItemClick = (item) => {
         <chevronIcon />
       </span>
     </a>
-    <ul
-      v-if="hasDropdown"
-      v-show="isOpen"
+    <ul 
+      v-if="hasDropdown && isOpen" 
       class="header__dropdown-list"
-      :aria-hidden="!isOpen"
+      aria-hidden="false"
     >
       <li
         v-for="(item, index) in items"
