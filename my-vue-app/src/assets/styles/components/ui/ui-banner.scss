@@ -1,0 +1,40 @@
+@import '../main/index';
+
+.ui-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-ui-bg;
+
+  &__content {
+    text-align: center;
+    z-index: $ui-index-2;
+    padding: 20px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    color: $bg-primary;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+    color: $bg-primary;
+  }
+
+  &__decoration {
+    position: absolute;
+    z-index: $ui-index-1;
+
+    &--left {
+      bottom: 0;
+      left: 0;
+    }
+
+    &--right {
+      top: 0;
+      right: 0;
+    }
+  }
+}

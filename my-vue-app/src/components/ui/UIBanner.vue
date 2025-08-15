@@ -51,11 +51,11 @@ defineProps({
       <slot name="left-image" />
     </div>
     <div class="ui-banner__content">
-      <h2 v-if="title || $slots.title" class="ui-banner__title">
+      <h2 v-if="title || $slots.title" class="ui-banner__title title">
         <slot v-if="$slots.title" name="title" />
         <template v-else>{{ title }}</template>
       </h2>
-      <p v-if="description || $slots.description" class="ui-banner__description">
+      <p v-if="description || $slots.description" class="ui-banner__description description">
         <slot v-if="$slots.description" name="description" />
         <template v-else>{{ description }}</template>
       </p>
@@ -76,52 +76,5 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-.ui-banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, #4079EA 0%, #46C3E4 100%);
-
-  &__content {
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-  }
-
-  &__title {
-    margin-bottom: 16px;
-    font-size: 24px;
-    color: white;
-  }
-
-  &__description {
-    margin-bottom: 24px;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  &__decoration {
-    position: absolute;
-    z-index: 1;
-
-    &--left {
-      bottom: 0;
-      left: 0;
-    }
-
-    &--right {
-      top: 0;
-      right: 0;
-    }
-  }
-
-  /* Темы (пример) */
-  &--gradient-blue {
-    background: linear-gradient(90deg, #4079EA 0%, #46C3E4 100%);
-  }
-
-  &--gradient-purple {
-    background: linear-gradient(90deg, #8A2BE2 0%, #FF00FF 100%);
-  }
-}
+@import '../../assets/styles/components/ui/ui-banner.scss';
 </style>
