@@ -10,8 +10,7 @@ import UIButton from '../ui/UIButton.vue';
     <div class="main-banner__content">
       <img
         src="../../assets/images/ellipse.png"
-        alt="Decorative ellipse"
-        class="main-banner__ellipse"
+        class="main-banner__ellipse-top"
       />
       <h1 class="main-banner__title title">
         Powerful Agile & Kanban 
@@ -52,6 +51,14 @@ import UIButton from '../ui/UIButton.vue';
           :card-data="card"
         />
       </div>
+      <img
+        src="../../assets/images/ellipse.png"
+        class="main-banner__cards-wrapper-ellipse-top"
+      />
+      <img
+        src="../../assets/images/ellipse.png"
+        class="main-banner__cards-wrapper-ellipse-down"
+      />
     </div> 
   </section>
 </template>

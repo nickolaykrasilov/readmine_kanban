@@ -12,11 +12,11 @@
     text-align: center;
   }
 
-  &__ellipse {
+  &__ellipse-top {
     position: absolute;
     top: 20%;
     left: 52%;
-    transform: translate(-54%, -70%);
+    transform: translate(-54%, -110%);
   }
 
   &__title {
@@ -76,10 +76,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    z-index: $ui-index-2;
 
     @media (max-width: $breakpoint-md) {
       grid-template-columns: 1fr;
       gap: 16px;
     }
   }
+}
+
+.main-banner__cards-wrapper-ellipse-top{
+  z-index: $ui-index-1;
+  transform: translate(42%, -100%);
+}
+
+.main-banner__cards-wrapper-ellipse-down{
+  z-index: $ui-index-1;
+  transform: translate(-22%, -144%);
 }
