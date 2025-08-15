@@ -3,6 +3,7 @@ import { featureCards } from '../../models/ProductFeatures.js';
 
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
+import UIBanner from '../ui/UIBanner.vue';
 </script>
 
 <template>
@@ -59,6 +60,25 @@ import UIButton from '../ui/UIButton.vue';
         src="../../assets/images/ellipse.png"
         class="main-banner__cards-wrapper-ellipse-down"
       />
+      <UIBanner
+        class="main-banner__down-banner"
+        title="Demo"
+        description="Check out all the features of our plugins in the demo"
+        button-label="Get a Free Demo"
+      >
+        <template #left-image>
+          <img 
+            src="../../assets/images/head.png"
+            alt="Left decoration"
+          />
+        </template>
+        <template #right-image>
+          <img 
+            src="../../assets/images/cloud.png"
+            alt="Right decoration"
+          />
+        </template>
+      </UIBanner>
     </div> 
   </section>
 </template>

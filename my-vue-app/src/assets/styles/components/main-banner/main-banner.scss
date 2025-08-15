@@ -16,7 +16,7 @@
     position: absolute;
     top: 20%;
     left: 52%;
-    transform: translate(-54%, -110%);
+    transform: translate(-54%, -80%);
   }
 
   &__title {
@@ -93,4 +93,9 @@
       transform: translate(-22%, -144%);
     }
   }
+
+  &__down-banner{
+    margin-top: -1240px;
+  }
+
 }
