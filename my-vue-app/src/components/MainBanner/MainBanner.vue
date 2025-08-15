@@ -66,14 +66,6 @@ import UIBanner from '../ui/UIBanner.vue';
         description="Check out all the features of our plugins in the demo"
         button-label="Get a Free Demo"
       >
-                <UIButton 
-          label="Get a Free Demo"
-          class="main-banner__button"
-        >
-          <template #icon>
-            <whiteArrowIcon />
-          </template>
-        </UIButton>
         <template #left-image>
           <img 
             src="../../assets/images/head.png"

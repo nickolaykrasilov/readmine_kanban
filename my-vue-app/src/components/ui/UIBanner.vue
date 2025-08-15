@@ -13,11 +13,11 @@ defineProps({
   },
   buttonLabel: {
     type: String,
-    default: 'Get a Free Demo',
+    default: '',
   },
   theme: {
     type: String,
-    default: UI_THEMES.GRADIENT_BLUE,
+    default: UI_THEMES.WHITE,
     validator: (value) => Object.values(UI_THEMES).includes(value),
   },
   width: {
@@ -50,19 +50,30 @@ defineProps({
     <div class="ui-banner__decoration ui-banner__decoration--left">
       <slot name="left-image" />
     </div>
-    <div class="ui-banner__content">
-      <h2 v-if="title || $slots.title" class="ui-banner__title title">
-        <slot v-if="$slots.title" name="title" />
+    <div>
+      <h2 
+      v-if="title || $slots.title" 
+      class="ui-banner__title title"
+      >
+        <slot 
+        v-if="$slots.title" 
+        name="title"
+        />
         <template v-else>{{ title }}</template>
       </h2>
-      <p v-if="description || $slots.description" class="ui-banner__description description">
-        <slot v-if="$slots.description" name="description" />
+      <p 
+      v-if="description || $slots.description"
+      class="ui-banner__description description"
+      >
+        <slot 
+        v-if="$slots.description"
+        name="description" 
+        />
         <template v-else>{{ description }}</template>
       </p>
       <UIButton
         v-if="buttonLabel || $slots.button"
         :label="buttonLabel"
-        class="ui-banner__button"
         theme="white"
       >
         <template #icon >
