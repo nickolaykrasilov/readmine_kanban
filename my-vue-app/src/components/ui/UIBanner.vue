@@ -63,6 +63,7 @@ defineProps({
         v-if="buttonLabel || $slots.button"
         :label="buttonLabel"
         class="ui-banner__button"
+        theme="white"
       >
         <template #icon >
           <whiteArrowIcon color="#222939" />
