@@ -70,12 +70,14 @@ import UIBanner from '../ui/UIBanner.vue';
           <img 
             src="../../assets/images/head.png"
             alt="Left decoration"
+            class="main-banner__down-banner-image-left"
           />
         </template>
         <template #right-image>
           <img 
             src="../../assets/images/cloud.png"
             alt="Right decoration"
+            class="main-banner__down-banner-image-rigth"
           />
         </template>
       </UIBanner>
