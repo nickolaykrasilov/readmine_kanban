@@ -83,7 +83,6 @@ import Footer from '../Footer.vue';
         </template>
       </UIBanner>
       <Footer>
-
       </Footer>
     </div> 
   </section>

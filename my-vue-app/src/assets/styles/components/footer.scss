@@ -2,18 +2,15 @@
 
 .footer {
   background-color: #04071A;
-  width: 1600px;
-  height: 744px;
-  opacity: 1;
-  position: absolute;
-  top: 2324px;
-  left: 0;
-  padding: 3rem 0;
+  width: 100%;
+  min-height: 744px;
+  margin-top: 140px;
+  padding: 4rem 3rem;
   text-align: left;
 }
 
 .footer__container {
-  max-width: 1200px;
+  max-width: 1300px; 
   margin: 0 auto;
 }
 
