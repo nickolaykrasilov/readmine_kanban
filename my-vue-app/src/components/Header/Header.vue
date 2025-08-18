@@ -68,6 +68,7 @@ const handleItemSelected = (type, item) => {
           <UILink
             href="/support"
             label="Support"
+            theme="black"
           />
           <LanguageSwitcher />
           <UILink

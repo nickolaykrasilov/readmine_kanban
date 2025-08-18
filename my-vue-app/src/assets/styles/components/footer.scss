@@ -66,8 +66,7 @@
 
 .footer__form {
   max-width: 614px;
-    padding: 0 10rem;
-
+  padding: 0 10rem;
 }
 
 .footer__form-title {
@@ -132,9 +131,14 @@
 }
 
 .form__submit {
-  width: 96%;
+  width: 100%;
+  max-width: 472px;
+  display: flex;
   justify-content: space-between;
-  padding: 0 16px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
