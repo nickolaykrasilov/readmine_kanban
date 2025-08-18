@@ -61,7 +61,11 @@ const props = defineProps({
           </div>
         </div>
         <div class="footer__form">
-          <h2 class="footer__form-title ">{{ 'Our plugins will help you stay organized and ensure that all necessary tasks are completed throughout the project lifecycle.' }}</h2>
+          <h2 class="footer__form-title ">{{ 
+          `Our plugins will help you stay organized and
+          ensure that all necessary tasks are completed
+          throughout the project lifecycle.`
+          }}</h2>
           <h3 class="footer__form-description description">{{ 'Fill out the form and we will contact you' }}</h3>
           <form class="form">
             <div class="form__group">
@@ -96,11 +100,6 @@ const props = defineProps({
                 :placeholder="formFields.text.placeholder"
               ></textarea>
             </div>
-            <!-- <UIButton 
-              type="submit" 
-              label="Send" 
-              class="form__submit" 
-            /> -->
             <UIButton
               type="submit" 
               label="Send" 
@@ -108,7 +107,7 @@ const props = defineProps({
               theme="blue"
             >
               <template #icon >
-                <whiteArrowIcon />
+                <whiteArrowIcon class="form__submit-icon" />
               </template>
             </UIButton>
           </form>
