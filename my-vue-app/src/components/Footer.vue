@@ -13,13 +13,13 @@ const props = defineProps({
   formFields: {
     type: Object,
     default: () => ({
-      name: { placeholder: 'Ivan' },
-      email: { placeholder: '@gmail.com' },
+      name: { placeholder: 'Name' },
+      email: { placeholder: 'Email' },
       type: { 
         options: ['Option 1', 'Option 2', 'Option 3'],
-        placeholder: 'Select type' 
+        placeholder: 'Type' 
       },
-      text: { placeholder: 'Your message' }
+      text: { placeholder: 'Text' }
     })
   },
   formTitle: {
@@ -60,7 +60,6 @@ const props = defineProps({
           
           <form class="form">
             <div class="form__group">
-              <label class="form__label">Name</label>
               <input 
                 type="text" 
                 class="form__input" 
