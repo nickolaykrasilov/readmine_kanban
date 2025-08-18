@@ -8,23 +8,33 @@ const props = defineProps({
   },
   email: {
     type: String,
-    default: 'support@redmine-kanban.com'
+    default: 'support@redmine-kanban.com',
   },
   formFields: {
     type: Object,
     default: () => ({
-      name: { placeholder: 'Name' },
-      email: { placeholder: 'Email' },
+      name: {
+        placeholder: 'Name',
+      },
+      email: {
+        placeholder: 'Email',
+      },
       type: { 
-        options: ['Option 1', 'Option 2', 'Option 3'],
+        options: [
+          'Option 1',
+          'Option 2',
+          'Option 3',
+        ],
         placeholder: 'Type',
       },
-      text: { placeholder: 'Text' }
+      text: {
+        placeholder: 'Text',
+      },
     })
   },
   formTitle: {
     type: String,
-    default: 'Fill out the form and we will contact you'
+    default: 'Fill out the form and we will contact you',
   },
   pluginsDescription: {
     type: String,
@@ -45,7 +55,6 @@ const props = defineProps({
               <span class="header__logo-part">Kanban</span>
             </span>
           </div>
-          
           <div class="footer__links">
             <a href="#" class="footer__link">Privacy Policy</a>
             <a href="#" class="footer__link">Contacts</a>
@@ -53,11 +62,9 @@ const props = defineProps({
             <a :href="`mailto:${email}`" class="footer__email">{{ email }}</a>
           </div>
         </div>
-
         <div class="footer__form">
           <h3 class="footer__form-description">{{ pluginsDescription }}</h3>
-          <h4 class="footer__form-title">{{ formTitle }}</h4>
-          
+          <h4 class="footer__form-title title">{{ formTitle }}</h4>
           <form class="form">
             <div class="form__group">
               <input 
@@ -66,7 +73,6 @@ const props = defineProps({
                 :placeholder="formFields.name.placeholder"
               >
             </div>
-            
             <div class="form__group">
               <input 
                 type="email" 
@@ -74,7 +80,6 @@ const props = defineProps({
                 :placeholder="formFields.email.placeholder"
               >
             </div>
-            
             <div class="form__group">
                 <select class="form__select form__input--underline">
                 <option value="" disabled selected>{{ formFields.type.placeholder }}</option>
@@ -87,14 +92,12 @@ const props = defineProps({
                 </option>
                 </select>
             </div>
-            
             <div class="form__group">
               <textarea 
                 class="form__textarea" 
                 :placeholder="formFields.text.placeholder"
               ></textarea>
             </div>
-            
             <UIButton 
               type="submit" 
               label="Send" 
