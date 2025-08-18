@@ -9,6 +9,7 @@
   top: 2324px;
   left: 0;
   padding: 3rem 0;
+  text-align: left;
 }
 
 .footer__container {
@@ -77,19 +78,20 @@
   height: fit-content;
 }
 
-.footer__form-description {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-  font-weight: 500;
+.footer__form-title {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  color: #FFFFFF;
 }
 
-.footer__form-title {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #666;
+.footer__form-description {
+  font-family: Inter;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
 }
 
 .form__group {

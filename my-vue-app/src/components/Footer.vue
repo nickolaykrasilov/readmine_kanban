@@ -4,7 +4,11 @@ import UIButton from './ui/UIButton.vue';
 const props = defineProps({
   title: {
     type: String,
-    default: 'Redmine Kanban'
+    default: ''
+  },
+  description: {
+    type: String,
+    default: '',
   },
   email: {
     type: String,
@@ -32,14 +36,6 @@ const props = defineProps({
       },
     })
   },
-  formTitle: {
-    type: String,
-    default: 'Fill out the form and we will contact you',
-  },
-  pluginsDescription: {
-    type: String,
-    default: 'Our plugins will help you stay organized and ensure that all necessary tasks are completed throughout the project lifecycle.'
-  }
 });
 </script>
 
@@ -63,8 +59,8 @@ const props = defineProps({
           </div>
         </div>
         <div class="footer__form">
-          <h3 class="footer__form-description">{{ pluginsDescription }}</h3>
-          <h4 class="footer__form-title title">{{ formTitle }}</h4>
+          <h2 class="footer__form-title ">{{ 'Our plugins will help you stay organized and ensure that all necessary tasks are completed throughout the project lifecycle.' }}</h2>
+          <h3 class="footer__form-description description">{{ 'Fill out the form and we will contact you' }}</h3>
           <form class="form">
             <div class="form__group">
               <input 
