@@ -44,11 +44,13 @@ const props = defineProps({
     <div class="footer__container">
       <div class="footer__content">
         <div class="footer__info">
-          <div class="header__brand">
-            <logoIcon class="header__logo-icon" />
-            <span class="header__logo">
+          <div class="footer__brand">
+            <logoIcon size="60" />
+            <span class="footer__logo">
               Redmine
-              <span class="header__logo-part">Kanban</span>
+              <span class="footer__logo-part">
+                Kanban
+              </span>
             </span>
           </div>
           <div class="footer__links">

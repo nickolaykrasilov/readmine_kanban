@@ -32,20 +32,22 @@
   justify-content: space-between;
 }
 
-.header__brand {
+.footer__brand {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.header__logo {
-  font-size: 1.5rem;
+.footer__logo {
+  font-size: 34px;
   font-weight: bold;
-  color: white;
+  color: #4A90E2;
+
 }
 
-.header__logo-part {
-  color: #4A90E2;
+
+.footer__logo-part {
+  color: white;
 }
 
 .footer__links {

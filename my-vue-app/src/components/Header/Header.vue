@@ -40,7 +40,7 @@ const handleItemSelected = (type, item) => {
   <header class="header">
     <div class="header__container">
       <div class="header__brand">
-        <logoIcon class="header__logo-icon" />
+        <logoIcon />
         <span class="header__logo">
           Redmine
           <span class="header__logo-part">
