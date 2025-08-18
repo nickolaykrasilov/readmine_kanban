@@ -96,11 +96,21 @@ const props = defineProps({
                 :placeholder="formFields.text.placeholder"
               ></textarea>
             </div>
-            <UIButton 
+            <!-- <UIButton 
               type="submit" 
               label="Send" 
               class="form__submit" 
-            />
+            /> -->
+            <UIButton
+              type="submit" 
+              label="Send" 
+              class="form__submit" 
+              theme="blue"
+            >
+              <template #icon >
+                <whiteArrowIcon />
+              </template>
+            </UIButton>
           </form>
         </div>
       </div>
