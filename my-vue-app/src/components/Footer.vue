@@ -17,7 +17,7 @@ const props = defineProps({
       email: { placeholder: 'Email' },
       type: { 
         options: ['Option 1', 'Option 2', 'Option 3'],
-        placeholder: 'Type' 
+        placeholder: 'Type',
       },
       text: { placeholder: 'Text' }
     })
@@ -62,36 +62,33 @@ const props = defineProps({
             <div class="form__group">
               <input 
                 type="text" 
-                class="form__input" 
+                class="form__input form__input--underline" 
                 :placeholder="formFields.name.placeholder"
               >
             </div>
             
             <div class="form__group">
-              <label class="form__label">Email</label>
               <input 
                 type="email" 
-                class="form__input" 
+                class="form__input form__input--underline" 
                 :placeholder="formFields.email.placeholder"
               >
             </div>
             
             <div class="form__group">
-              <label class="form__label">Type</label>
-              <select class="form__select">
+                <select class="form__select form__input--underline">
                 <option value="" disabled selected>{{ formFields.type.placeholder }}</option>
                 <option 
-                  v-for="(option, index) in formFields.type.options" 
-                  :key="index"
-                  :value="option"
+                    v-for="(option, index) in formFields.type.options" 
+                    :key="index"
+                    :value="option"
                 >
-                  {{ option }}
+                    {{ option }}
                 </option>
-              </select>
+                </select>
             </div>
             
             <div class="form__group">
-              <label class="form__label">Text</label>
               <textarea 
                 class="form__textarea" 
                 :placeholder="formFields.text.placeholder"

@@ -56,7 +56,6 @@
 .footer__link {
   color: #FFFFFF;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .footer__link:hover {
@@ -94,30 +93,48 @@
 }
 
 .form__group {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
-.form__label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-weight: 500;
+.form__input--underline {
+  width: 472px;
+  padding: 0.75rem 0;
+  border: none;
+  border-bottom: 1px solid #8B8B8F;
+  font-size: 1rem;
+  background: transparent;
+
+  &:focus, &:not(:placeholder-shown) {
+    color: #222939;
+  }
+  
+  &::placeholder {
+    color: #C7C7C9;
+    opacity: 1;
+  }
 }
 
-.form__input,
-.form__select,
 .form__textarea {
-  width: 100%;
+  width: 472px;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #8B8B8F;
   border-radius: 4px;
   font-size: 1rem;
-  background: #F5F5F5;
-}
-
-.form__textarea {
   min-height: 100px;
   resize: vertical;
+  outline: none;
+  background: transparent;
+  
+  
+  &:focus, &:not(:placeholder-shown) {
+    color: #222939;
+  }
+  
+  &::placeholder {
+    color: #C7C7C9;
+    opacity: 1;
+  }
 }
 
 .form__submit {
@@ -143,5 +160,14 @@
   
   .footer__form-description {
     font-size: 1.2rem;
+  }
+}
+
+.form__select {
+  cursor: pointer;
+
+    &::placeholder {
+    color: #C7C7C9;
+    opacity: 1;
   }
 }
