@@ -1,10 +1,11 @@
 <script setup>
 import UIButton from './ui/UIButton.vue';
+import UILink from './ui/UILink.vue';
 
 const props = defineProps({
   title: {
     type: String,
-    default: ''
+    default: '',
   },
   description: {
     type: String,
@@ -12,7 +13,7 @@ const props = defineProps({
   },
   email: {
     type: String,
-    default: 'support@redmine-kanban.com',
+    default: '',
   },
   formFields: {
     type: Object,
@@ -23,7 +24,7 @@ const props = defineProps({
       email: {
         placeholder: 'Email',
       },
-      type: { 
+      type: {
         options: [
           'Option 1',
           'Option 2',
@@ -54,10 +55,32 @@ const props = defineProps({
             </span>
           </div>
           <div class="footer__links">
-            <a href="#" class="footer__link">Privacy Policy</a>
-            <a href="#" class="footer__link">Contacts</a>
-            <a href="#" class="footer__link">Terms and Conditions</a>
-            <a :href="`mailto:${email}`" class="footer__email">{{ email }}</a>
+            <UILink
+              href="#"
+              label="Privacy Policy"
+              theme="white"
+              class="footer__link"
+            >
+            </UILink>
+            <UILink
+              href="#"
+              label="Contacts"
+              theme="white"
+              class="footer__link">
+            </UILink>
+            <UILink
+              href="#"
+              label="Terms and Conditions"
+              theme="white"
+              class="footer__link"
+            >
+            </UILink>
+            <UILink
+              :href="`mailto:${email}`"
+              label="support@redmine-kanban.com"
+              theme="white"
+              class="footer__email">
+            </UILink>
           </div>
         </div>
         <div class="footer__form">
