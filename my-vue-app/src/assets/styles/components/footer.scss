@@ -36,7 +36,7 @@
 }
 
 .footer__logo-part {
-  color: white;
+  color: $bg-primary;
 }
 
 .footer__links {
@@ -55,7 +55,7 @@
   font-family: Inter;
   font-weight: 600;
   font-size: 28px;
-  color: #FFFFFF;
+  color: $bg-primary;
 }
 
 .footer__form-description {
@@ -63,12 +63,12 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  color: #FFFFFF;
+  color: $bg-primary;
 }
 
 .form__group {
   margin-bottom: 1.7rem;
-  color: #C7C7C9;
+  color: $color-form-placeholder;
 }
 
 .form__input--underline {
@@ -78,7 +78,7 @@
   border-bottom: 1px solid #8B8B8F;
   font-size: 1rem;
   background: transparent;
-  color: #C7C7C9;
+  color: $color-form-placeholder;
 
   &:hover {
     border-bottom-color: #4A90E2;
@@ -86,7 +86,7 @@
 
   &:focus,
   &:not(:placeholder-shown) {
-    color: #222939;
+    color: $text-primary;
     border-bottom-color: #4A90E2;
   }
 }
@@ -98,11 +98,11 @@
   font-size: 1rem;
   min-height: 100px;
   background: transparent;
-  color: #C7C7C9;
-  
+  color: $color-form-placeholder;
+
   &:focus,
   &:not(:placeholder-shown) {
-    color: #222939;
+    color: $text-primary;
     border-bottom-color: #4A90E2;
   }
 }
@@ -111,7 +111,7 @@
   cursor: pointer;
 
   &:focus, &:not(:placeholder-shown) {
-  color: #C7C7C9;
+  color: $color-form-placeholder;
   }
 }
   
@@ -120,6 +120,7 @@
   max-width: 472px;
   display: flex;
   justify-content: space-between;
+
   @media (max-width: 768px) {
     max-width: 100%;
     width: 100%;

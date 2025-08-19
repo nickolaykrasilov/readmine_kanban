@@ -360,6 +360,14 @@ setup(props) {
 }
 });
 
+const triangleIcon = createIcon('TriangleIcon', (props) => [
+  h('path', {
+    d: `M36 27L27 45H45L36 27Z`,
+    fill: props.color,
+  })
+]);
+
+
 const components = {
   yourIcon,
   checkmarkIcon,
@@ -369,6 +377,7 @@ const components = {
   chevronIcon,
   userIcon,
   logoIcon,
+  triangleIcon,
 };
 
 export default {
