@@ -59,20 +59,17 @@ const props = defineProps({
               href="#"
               label="Privacy Policy"
               theme="white"
-              class="footer__link"
             >
             </UILink>
             <UILink
               href="#"
               label="Contacts"
               theme="white"
-              class="footer__link">
             </UILink>
             <UILink
               href="#"
               label="Terms and Conditions"
               theme="white"
-              class="footer__link"
             >
             </UILink>
             <UILink
@@ -89,19 +86,21 @@ const props = defineProps({
           ensure that all necessary tasks are completed
           throughout the project lifecycle.`
           }}</h2>
-          <h3 class="footer__form-description description">{{ 'Fill out the form and we will contact you' }}</h3>
+          <h3 class="footer__form-description description">
+            {{ 'Fill out the form and we will contact you' }}
+          </h3>
           <form class="form">
             <div class="form__group">
               <input 
-                type="text" 
-                class="form__input form__input--underline" 
+                type="text"
+                class="form__input form__input--underline"
                 :placeholder="formFields.name.placeholder"
               >
             </div>
             <div class="form__group">
-              <input 
-                type="email" 
-                class="form__input form__input--underline" 
+              <input
+                type="email"
+                class="form__input form__input--underline"
                 :placeholder="formFields.email.placeholder"
               >
             </div>

@@ -42,20 +42,8 @@
 .footer__links {
   display: flex;
   flex-direction: column;
-  font-family: Inter;
-  font-weight: 400;
-  font-style: Regular;
   font-size: 17px;
   gap: 20px;
-}
-
-.footer__link {
-  // color: #FFFFFF;
-  text-decoration: none;
-}
-
-.footer__link:hover {
-  color: #4A90E2;
 }
 
 .footer__email {
