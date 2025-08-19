@@ -76,7 +76,7 @@ const props = defineProps({
               :href="`mailto:${email}`"
               label="support@redmine-kanban.com"
               theme="white"
-              class="footer__email">
+            >
             </UILink>
           </div>
         </div>
@@ -106,7 +106,9 @@ const props = defineProps({
             </div>
             <div class="form__group">
                 <select class="form__select form__input--underline">
-                <option value="" disabled selected>{{ formFields.type.placeholder }}</option>
+                <option value="" disabled selected>
+                  {{ formFields.type.placeholder }}
+                </option>
                 <option 
                     v-for="(option, index) in formFields.type.options" 
                     :key="index"
