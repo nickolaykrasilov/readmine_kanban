@@ -104,7 +104,7 @@ const props = defineProps({
               >
             </div>
             <div class="form__group">
-                <select class="form__input--underline form__select">
+                <select class="form__select form__input--underline ">
                   <option value="" disabled selected>
                     {{ formFields.type.placeholder }}
                   </option>
@@ -126,13 +126,12 @@ const props = defineProps({
               </textarea>
             </div>
             <UIButton
-              type="submit" 
               label="Send" 
-              class="form__submit" 
+              class="form__button" 
               theme="blue"
             >
               <template #icon >
-                <whiteArrowIcon class="form__submit-icon" />
+                <whiteArrowIcon />
               </template>
             </UIButton>
           </form>
