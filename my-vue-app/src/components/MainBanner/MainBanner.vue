@@ -15,13 +15,13 @@ import Footer from '../Footer.vue';
         class="main-banner__ellipse-top"
       />
       <h1 class="main-banner__title title">
-        Powerful Agile & Kanban 
+        Powerful Agile & Kanban
         solutions for Redmine
       </h1>
       <div class="main-banner__text-block">
         <p class="main-banner__description description">
-          Our plugins will help you stay organized and 
-          ensure that all necessary tasks are completed 
+          Our plugins will help you stay organized and
+          ensure that all necessary tasks are completed
           throughout the project lifecycle.
         </p>
         <UIButton 
@@ -38,7 +38,7 @@ import Footer from '../Footer.vue';
         alt="Redmine Kanban Screen"
         class="main-banner__screen"
       />
-      <h2 class="main-banner__secondary-title title"> 
+      <h2 class="main-banner__secondary-title title">
         Redmine plugins
       </h2>
       <p class="main-banner__description description">
@@ -68,7 +68,7 @@ import Footer from '../Footer.vue';
         class="main-banner__down-banner"
       >
         <template #left-image>
-          <img 
+          <img
             src="../../assets/images/head.png"
             alt="Left decoration"
             class="main-banner__down-banner-image-left"
