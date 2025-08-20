@@ -59,33 +59,32 @@ const props = defineProps({
               href="#"
               label="Privacy Policy"
               theme="white"
-            >
-            </UILink>
+            />
             <UILink
               href="#"
               label="Contacts"
               theme="white"
-            </UILink>
+            />
             <UILink
               href="#"
               label="Terms and Conditions"
               theme="white"
-            >
-            </UILink>
+            />
             <UILink
               :href="`mailto:${email}`"
               label="support@redmine-kanban.com"
               theme="white"
-            >
-            </UILink>
+            />
           </div>
         </div>
         <div class="footer__form">
-          <h2 class="footer__form-title ">{{ 
-          `Our plugins will help you stay organized and
-          ensure that all necessary tasks are completed
-          throughout the project lifecycle.`
-          }}</h2>
+          <h2 class="footer__form-title ">
+            {{ 
+            `Our plugins will help you stay organized and
+            ensure that all necessary tasks are completed
+            throughout the project lifecycle.`
+            }}
+          </h2>
           <h3 class="footer__form-description description">
             {{ 'Fill out the form and we will contact you' }}
           </h3>
@@ -104,7 +103,7 @@ const props = defineProps({
                 :placeholder="formFields.email.placeholder"
               >
             </div>
-            <div class="form__group form__group--select">
+            <div class="form__group">
                 <select class="form__input--underline form__select">
                   <option value="" disabled selected>
                     {{ formFields.type.placeholder }}
