@@ -34,32 +34,36 @@ defineProps({
       <slot name="left-image" />
     </div>
     <div>
-      <h2 
-      v-if="title || $slots.title" 
-      class="ui-banner__title title"
+      <h2
+        v-if="title || $slots.title"
+        class="ui-banner__title title"
       >
         <slot 
-        v-if="$slots.title" 
-        name="title"
+          v-if="$slots.title" 
+          name="title"
         />
-        <template v-else>{{ title }}</template>
+        <template v-else>
+          {{ title }}
+        </template>
       </h2>
-      <p 
+      <p
       v-if="description || $slots.description"
       class="ui-banner__description description"
       >
         <slot 
-        v-if="$slots.description"
-        name="description" 
+          v-if="$slots.description"
+          name="description"
         />
-        <template v-else>{{ description }}</template>
+        <template v-else>
+          {{description }}
+        </template>
       </p>
       <UIButton
         v-if="buttonLabel || $slots.button"
         :label="buttonLabel"
         theme="white"
       >
-        <template #icon >
+        <template #icon>
           <whiteArrowIcon color="#222939" />
         </template>
       </UIButton>
