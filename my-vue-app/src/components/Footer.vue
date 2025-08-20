@@ -105,18 +105,17 @@ const props = defineProps({
               >
             </div>
             <div class="form__group">
-                
-                <select class="form__select form__input--underline">
-                <option value="" disabled selected>
-                  {{ formFields.type.placeholder }}
-                </option>
-                <option 
+                <select class="form__input--underline">
+                  <option value="" disabled selected>
+                    {{ formFields.type.placeholder }}
+                  </option>
+                  <option
                     v-for="(option, index) in formFields.type.options" 
                     :key="index"
                     :value="option"
-                >
+                  >
                     {{ option }}
-                </option>
+                  </option>
                 </select>
                 <triangleIcon />
             </div>
@@ -124,7 +123,8 @@ const props = defineProps({
               <textarea 
                 class="form__textarea" 
                 :placeholder="formFields.text.placeholder"
-              ></textarea>
+              >
+              </textarea>
             </div>
             <UIButton
               type="submit" 

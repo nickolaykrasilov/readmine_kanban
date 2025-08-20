@@ -147,3 +147,64 @@
     font-size: 1.2rem;
   }
 }
+
+.form__group--select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form__select {
+  width: 100%;
+  padding: 12px 40px 12px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  appearance: none; // Убираем стандартную стрелку
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 16px;
+  cursor: pointer;
+  
+  // Состояния
+  &:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+    
+    + .form__select-icon {
+      color: #007bff;
+    }
+  }
+}
+
+.form__select-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; // Важно! Клики проходят сквозь иконку
+  width: 16px;
+  height: 16px;
+  color: #666;
+  transition: color 0.3s ease, transform 0.3s ease;
+  
+  // Если нужно вращение при фокусе
+  .form__select:focus + & {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+// Дополнительные стили для consistency
+.form__input--underline {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 16px;
+  
+  &:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+  }
+}
