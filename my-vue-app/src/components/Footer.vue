@@ -88,23 +88,23 @@ const props = defineProps({
           <h3 class="footer__form-description description">
             {{ 'Fill out the form and we will contact you' }}
           </h3>
-          <form class="form">
-            <div class="form__group">
+          <form class="footer__form-container ">
+            <div class="footer__form-container__group">
               <input
                 type="text"
-                class="form__input form__input--underline"
+                class="footer__form-input"
                 :placeholder="formFields.name.placeholder"
               >
             </div>
-            <div class="form__group">
+            <div class="footer__form-container__group">
               <input
                 type="email"
-                class="form__input form__input--underline"
+                class="footer__form-input"
                 :placeholder="formFields.email.placeholder"
               >
             </div>
-            <div class="form__group">
-                <select class="form__select form__input--underline">
+            <div class="footer__form-container-group">
+                <select class="footer__form-select footer__form-input">
                   <option value="" disabled selected>
                     {{ formFields.type.placeholder }}
                   </option>
@@ -116,17 +116,17 @@ const props = defineProps({
                     {{ option }}
                   </option>
                 </select>
-                <triangleIcon class="form__select-icon" />
+                <triangleIcon class="footer__form-select" />
             </div>
-            <div class="form__group">
+            <div class="footer__form-group">
               <textarea 
-                class="form__textarea" 
+                class="footer__form-textarea"
                 :placeholder="formFields.text.placeholder"
               />
             </div>
             <UIButton
               label="Send" 
-              class="form__button" 
+              class="footer__form-button" 
               theme="blue"
             >
               <template #icon >
