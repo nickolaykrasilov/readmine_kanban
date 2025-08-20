@@ -122,8 +122,7 @@ const props = defineProps({
               <textarea 
                 class="form__textarea" 
                 :placeholder="formFields.text.placeholder"
-              >
-              </textarea>
+              />
             </div>
             <UIButton
               label="Send" 
