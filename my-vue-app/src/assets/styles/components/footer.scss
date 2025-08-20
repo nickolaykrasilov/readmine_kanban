@@ -5,15 +5,26 @@
   min-height: 844px;
   padding: 4rem 2rem;
   text-align: left;
+
+  @media (max-width: $breakpoint-md) {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
+  }
 }
 
 .footer__container {
-  max-width: 1340px; 
+  max-width: 1340px;
   margin: 0 auto;
 }
 
 .footer__content {
   display: flex;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+  }
 }
 
 .footer__info {
@@ -49,6 +60,10 @@
 .footer__form {
   max-width: 614px;
   padding: 0 10rem;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 100%;
+  }
 }
 
 .footer__form-title {
@@ -64,6 +79,10 @@
   font-size: 16px;
   line-height: 100%;
   color: $bg-primary;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.2rem;
+  }
 }
 
 .form__group {
@@ -136,23 +155,4 @@
   }
 }
 
-@media (max-width: $breakpoint-md) {
-  .footer {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: auto;
-  }
 
-  .footer__content {
-    flex-direction: column;
-  }
-
-  .footer__form {
-    max-width: 100%;
-  }
-  
-  .footer__form-description {
-    font-size: 1.2rem;
-  }
-}
