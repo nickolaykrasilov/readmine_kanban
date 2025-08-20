@@ -104,8 +104,8 @@ const props = defineProps({
                 :placeholder="formFields.email.placeholder"
               >
             </div>
-            <div class="form__group">
-                <select class="form__input--underline">
+            <div class="form__group form__group--select">
+                <select class="form__input--underline form__select">
                   <option value="" disabled selected>
                     {{ formFields.type.placeholder }}
                   </option>
@@ -117,7 +117,7 @@ const props = defineProps({
                     {{ option }}
                   </option>
                 </select>
-                <triangleIcon />
+                <triangleIcon class="form__select-icon" />
             </div>
             <div class="form__group">
               <textarea 
