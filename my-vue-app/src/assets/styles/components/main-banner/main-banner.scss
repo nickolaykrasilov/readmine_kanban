@@ -119,6 +119,24 @@
         margin-right: 552px;
         margin-top: 220px;
       }
+
+      @media (max-width: $breakpoint-md) {
+        width: 140px;
+        margin-right: 452px;
+        margin-top: 260px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 120px;
+        margin-right: 300px;
+        margin-top: 260px;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        width: 80px;
+        margin-right: 300px;
+        margin-top: 260px;
+      }
     }
 
     &-image-rigth {
@@ -137,6 +155,24 @@
         width: 200px;
         margin-left: 552px;
         margin-bottom: 220px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        width: 140px;
+        margin-left: 452px;
+        margin-bottom: 260px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 120px;
+        margin-left: 300px;
+        margin-bottom: 260px;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        width: 80px;
+        margin-left: 300px;
+        margin-bottom: 260px;
       }
     }
   }

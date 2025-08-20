@@ -20,7 +20,19 @@
   }
 
   @media (max-width: $breakpoint-lg) {
-    width: 768px;
+    width: 760px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    width: 570px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    width: 360px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 300px;
   }
 
   &__title {
