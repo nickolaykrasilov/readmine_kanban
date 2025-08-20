@@ -62,10 +62,10 @@ import Footer from '../Footer.vue';
         class="main-banner__cards-wrapper-ellipse-down"
       />
       <UIBanner
-        class="main-banner__down-banner"
         title="Demo"
         description="Check out all the features of our plugins in the demo"
         button-label="Get a Free Demo"
+        class="main-banner__down-banner"
       >
         <template #left-image>
           <img 

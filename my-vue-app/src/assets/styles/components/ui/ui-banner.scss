@@ -9,6 +9,7 @@
   width: 1342px;
   height: 288px;
   border-radius: 20px;
+  z-index: $ui-index-2;
 
   @media (max-width: $breakpoint-xxl) {
     width: 1292px;
@@ -26,6 +27,6 @@
 
   &__decoration {
     position: absolute;
-    z-index: $ui-index-1;
+    pointer-events: none; 
   }
 }
