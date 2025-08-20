@@ -23,14 +23,14 @@ const handleItemSelected = (type, item) => {
 <template>
   <nav class="header__nav">
     <template 
-      v-for="(config, type) in dropdowns" 
+      v-for="(config, type) in dropdowns"
       :key="`dropdown-${type}`"
     >
       <DropDownMenu
         v-if="config.type === 'dropdown'"
         :type="type"
         :items="config.items || []"
-        :current-item="config.current"  
+        :current-item="config.current"
         @item-selected="(item) => handleItemSelected(type, item)"
       />
       <UILink

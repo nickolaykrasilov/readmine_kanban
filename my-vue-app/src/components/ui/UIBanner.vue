@@ -39,7 +39,7 @@ defineProps({
         class="ui-banner__title title"
       >
         <slot 
-          v-if="$slots.title" 
+          v-if="$slots.title"
           name="title"
         />
         <template v-else>
@@ -47,10 +47,10 @@ defineProps({
         </template>
       </h2>
       <p
-      v-if="description || $slots.description"
-      class="ui-banner__description description"
+        v-if="description || $slots.description"
+        class="ui-banner__description description"
       >
-        <slot 
+        <slot
           v-if="$slots.description"
           name="description"
         />
