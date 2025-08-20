@@ -117,28 +117,28 @@
   
 .form__submit {
   width: 100%;
-  max-width: 472px;
+  max-width: 480px;
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     max-width: 100%;
     width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .footer {
     width: 100%;
     height: auto;
     position: relative;
     top: auto;
   }
-  
+
   .footer__content {
     flex-direction: column;
   }
-  
+
   .footer__form {
     max-width: 100%;
   }
