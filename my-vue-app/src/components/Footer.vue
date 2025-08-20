@@ -78,8 +78,8 @@ const props = defineProps({
           </div>
         </div>
         <div class="footer__form">
-          <h2 class="footer__form-title ">
-            {{ 
+          <h2 class="footer__form-title">
+            {{
             `Our plugins will help you stay organized and
             ensure that all necessary tasks are completed
             throughout the project lifecycle.`
@@ -90,7 +90,7 @@ const props = defineProps({
           </h3>
           <form class="form">
             <div class="form__group">
-              <input 
+              <input
                 type="text"
                 class="form__input form__input--underline"
                 :placeholder="formFields.name.placeholder"
@@ -104,7 +104,7 @@ const props = defineProps({
               >
             </div>
             <div class="form__group">
-                <select class="form__select form__input--underline ">
+                <select class="form__select form__input--underline">
                   <option value="" disabled selected>
                     {{ formFields.type.placeholder }}
                   </option>
