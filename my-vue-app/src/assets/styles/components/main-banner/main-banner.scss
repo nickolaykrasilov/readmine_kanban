@@ -105,11 +105,39 @@
     &-image-left {
       margin-top: 180px;
       margin-right: 1052px;
+
+      @media (max-width: $breakpoint-xxl) {
+        margin-right: 952px;
+      }
+
+      @media (max-width: $breakpoint-xl) {
+        margin-right: 752px;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        width: 200px;
+        margin-right: 552px;
+        margin-top: 220px;
+      }
     }
 
     &-image-rigth {
       margin-bottom: 180px;
       margin-left: 1052px;
+
+      @media (max-width: $breakpoint-xxl) {
+        margin-left: 952px;
+      }
+
+      @media (max-width: $breakpoint-xl) {
+        margin-left: 752px;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        width: 200px;
+        margin-left: 552px;
+        margin-bottom: 220px;
+      }
     }
   }
 }
