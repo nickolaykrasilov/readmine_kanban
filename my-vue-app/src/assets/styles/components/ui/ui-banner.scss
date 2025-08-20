@@ -6,6 +6,13 @@
   align-items: center;
   justify-content: center;
   background: $gradient-ui-bg;
+  width: 1342px;
+  height: 288px;
+  border-radius: 20px;
+
+  @media (max-width: $breakpoint-xxl) {
+    width: 1292px;
+  }
 
   &__title {
     margin-top: -34px;

@@ -20,18 +20,6 @@ defineProps({
     default: UI_THEMES.WHITE,
     validator: (value) => Object.values(UI_THEMES).includes(value),
   },
-  width: {
-    type: String,
-    default: '1342px',
-  },
-  height: {
-    type: String,
-    default: '288px',
-  },
-  borderRadius: {
-    type: String,
-    default: '20px',
-  },
 });
 </script>
 
@@ -41,13 +29,8 @@ defineProps({
       'ui-banner',
       `ui-banner--${theme}`,
     ]"
-    :style="{
-      width,
-      height,
-      borderRadius,
-    }"
   >
-    <div class="ui-banner__decoration ui-banner__decoration--left">
+    <div class="ui-banner__decoration">
       <slot name="left-image" />
     </div>
     <div>
@@ -81,7 +64,7 @@ defineProps({
         </template>
       </UIButton>
     </div>
-    <div class="ui-banner__decoration ui-banner__decoration--right">
+    <div class="ui-banner__decoration">
       <slot name="right-image" />
     </div>
   </div>
