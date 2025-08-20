@@ -1,18 +1,18 @@
 @import './main/index.scss';
 
 .footer {
-  background-color: $bg-footer;
   min-height: 844px;
   padding: 4rem 2rem;
   text-align: left;
+  background-color: $bg-footer;
 
   @media (max-width: $breakpoint-md) {
-    width: 100%;
-    height: auto;
     position: relative;
     top: auto;
-    padding: 2rem 1rem;
+    width: 100%;
+    height: auto;
     min-height: auto;
+    padding: 2rem 1rem;
   }
 
   &__container {
@@ -127,12 +127,12 @@
 
     &-input {
       width: 472px;
-      padding: 1rem 0;
+      padding: 32px 0;
+      font-size: 1rem;
+      color: $color-form-placeholder;
+      background: transparent;
       border: none;
       border-bottom: 1px solid $border-form;
-      font-size: 1rem;
-      background: transparent;
-      color: $color-form-placeholder;
 
       @media (max-width: $breakpoint-xl) {
         width: 100%;
@@ -152,12 +152,12 @@
 
     &-textarea {
       width: 472px;
+      min-height: 100px;
+      font-size: 1rem;
+      color: $color-form-placeholder;
+      background: transparent;
       border: 1px solid $border-form;
       border-radius: 4px;
-      font-size: 1rem;
-      min-height: 100px;
-      background: transparent;
-      color: $color-form-placeholder;
 
       @media (max-width: $breakpoint-xl) {
         width: 100%;
@@ -177,23 +177,23 @@
 
       &:focus, 
       &:not(:placeholder-shown) {
-      color: $color-form-placeholder;
+        color: $color-form-placeholder;
       }
       
-      &-icon{
+      &-icon {
         position: absolute;
-        transform: translate(-82%, 300%);
-        pointer-events: none;
         width: 10px;
         height: 6px;
+        pointer-events: none;
+        transform: translate(-82%, 300%);
       }
     }
 
     &-button {
-      width: 100%;
-      max-width: 480px;
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      max-width: 480px;
 
       @media (max-width: $breakpoint-xl) {
         max-width: none;
