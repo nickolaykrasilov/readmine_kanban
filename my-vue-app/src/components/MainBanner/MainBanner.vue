@@ -41,8 +41,8 @@ import UIBanner from '../ui/UIBanner.vue';
         Redmine plugins
       </h2>
       <p class="main-banner__description description">
-        Extend the capabilities of Redmine 
-        with our collection of 
+        Extend the capabilities of Redmine
+        with our collection of
         powerful plugins . 
       </p>
       <div class="main-banner__cards-wrapper">
