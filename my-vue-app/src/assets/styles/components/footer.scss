@@ -1,6 +1,8 @@
 @import './main/index.scss';
 
 .footer {
+  $self: &;
+
   min-height: 844px;
   padding: 4rem 2rem;
   text-align: left;

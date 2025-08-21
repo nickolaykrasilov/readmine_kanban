@@ -1,6 +1,8 @@
 @import '../main/index';
 
 .ui-banner {
+  $self: &;
+
   position: relative;
   z-index: $ui-index-2;
   display: flex;
