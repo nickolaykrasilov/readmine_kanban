@@ -57,7 +57,8 @@ const handleItemSelected = (type, item) => {
       <div
         :class="{
           'header__menu': true,
-          'header__menu--active': isMenuOpen || !isTablet,
+          // 'header__menu--active': isMenuOpen || isTablet,
+          'header__menu--active': isMenuOpen,
         }"
       >
         <HeaderLink
