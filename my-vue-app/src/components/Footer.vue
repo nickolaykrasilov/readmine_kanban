@@ -116,7 +116,7 @@ const props = defineProps({
                     {{ option }}
                   </option>
                 </select>
-                <triangleIcon class="footer__form-select" />
+                <triangleIcon class="footer__form-select-icon" />
             </div>
             <div class="footer__form-group">
               <textarea 
