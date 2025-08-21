@@ -109,7 +109,7 @@ const props = defineProps({
                     {{ formFields.type.placeholder }}
                   </option>
                   <option
-                    v-for="(option, index) in formFields.type.options" 
+                    v-for="(option, index) in formFields.type.options"
                     :key="index"
                     :value="option"
                   >
@@ -119,14 +119,14 @@ const props = defineProps({
                 <triangleIcon class="footer__form-select-icon" />
             </div>
             <div class="footer__form-group">
-              <textarea 
+              <textarea
                 class="footer__form-textarea"
                 :placeholder="formFields.text.placeholder"
               />
             </div>
             <UIButton
-              label="Send" 
-              class="footer__form-button" 
+              label="Send"
+              class="footer__form-button"
               theme="blue"
             >
               <template #icon >
