@@ -4,7 +4,6 @@ import { featureCards } from '../../models/ProductFeatures.js';
 import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
 import UIBanner from '../ui/UIBanner.vue';
-import Footer from '../Footer.vue';
 </script>
 
 <template>
@@ -84,7 +83,6 @@ import Footer from '../Footer.vue';
       </UIBanner>
     </div> 
   </section>
-  <Footer/>
 </template>
 
 <style lang="scss" scoped>
