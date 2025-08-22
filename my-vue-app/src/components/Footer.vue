@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-
+import Logo from './Logo.vue';
 import UIButton from './ui/UIButton.vue';
 import UILink from './ui/UILink.vue';
 
@@ -41,15 +41,7 @@ const description = ref('Fill out the form and we will contact you')
     <div class="footer__container">
       <div class="footer__content">
         <div class="footer__info">
-          <div class="footer__brand">
-            <logoIcon size="60" />
-            <span class="footer__logo">
-              Redmine
-              <span class="footer__logo-part">
-                Kanban
-              </span>
-            </span>
-          </div>
+          <Logo size="60" />
           <div class="footer__links">
             <UILink
               href="#"

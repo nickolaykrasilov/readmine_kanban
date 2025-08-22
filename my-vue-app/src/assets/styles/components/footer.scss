@@ -50,22 +50,6 @@
     }
   }
 
-  &__brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  &__logo {
-    font-size: 34px;
-    font-weight: bold;
-    color: $ui-button-blue;
-
-    &-part {
-      color: $bg-primary;
-    }
-  }
-
   &__links {
     display: flex;
     flex-direction: column;

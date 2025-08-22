@@ -23,27 +23,7 @@
     font-family: $font-family-base;
   }
 
-  &__brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    white-space: nowrap;
-  }
 
-  &__logo {
-    margin-right: 36px;
-    font-weight: 600;
-    font-size: clamp(19px, 2.5vw, 28px);
-    color: $link-login-color;
-
-    &-part {
-      color: $text-primary;
-    }
-
-    @media (max-width: $breakpoint-xxl) {
-      margin-right: 0px;
-    }
-  }
 
   &__nav {
     display: grid;

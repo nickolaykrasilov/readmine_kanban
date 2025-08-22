@@ -8,6 +8,7 @@ import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
 import HeaderLink from './HeaderLink.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
+import Logo from '../Logo.vue'; // Импортируем компонент Logo
 
 const { isTablet} = useScreenSize();
 
@@ -39,15 +40,7 @@ const handleItemSelected = (type, item) => {
 <template>
   <header class="header">
     <div class="header__container">
-      <div class="header__brand">
-        <logoIcon />
-        <span class="header__logo">
-          Redmine
-          <span class="header__logo-part">
-            Kanban
-          </span>
-        </span>
-      </div>
+        <Logo size="50" color="black" />
       <button
         v-if="isTablet"
         class="header__tablet-menu-button"
@@ -57,7 +50,6 @@ const handleItemSelected = (type, item) => {
       <div
         :class="{
           'header__menu': true,
-          // 'header__menu--active': isMenuOpen || isTablet,
           'header__menu--active': isMenuOpen,
         }"
       >
@@ -90,4 +82,5 @@ const handleItemSelected = (type, item) => {
 
 <style lang="scss" scoped>
 @import '../../assets/styles/components/header/header.scss';
+
 </style>
