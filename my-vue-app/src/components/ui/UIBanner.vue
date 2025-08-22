@@ -30,7 +30,7 @@ defineProps({
       `ui-banner--${theme}`,
     ]"
   >
-    <div class="ui-banner__decoration">
+    <div class="ui-banner__decoration ui-banner__decoration-left">
       <slot name="left-image" />
     </div>
     <div>
@@ -68,7 +68,7 @@ defineProps({
         </template>
       </UIButton>
     </div>
-    <div class="ui-banner__decoration">
+    <div class="ui-banner__decoration ui-banner__decoration-right">
       <slot name="right-image" />
     </div>
   </div>
