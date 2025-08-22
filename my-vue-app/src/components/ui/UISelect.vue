@@ -35,5 +35,5 @@ const attrs = useAttrs();
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/footer.scss';
+@import '../../assets/styles/components/footer/footer-form.scss';
 </style>

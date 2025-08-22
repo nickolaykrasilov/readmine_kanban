@@ -1,7 +1,10 @@
 <template>
   <div class="logo">
     <logoIcon :size="size" />
-    <span class="logo__text" :class="`logo__text--${color}`">
+    <span
+      class="logo__text"
+      :class="`logo__text--${color}`"
+    >
       Redmine
       <span class="logo__text-part">
         Kanban
@@ -11,22 +14,17 @@
 </template>
 
 <script setup>
-
 defineProps({
   size: {
     type: Number,
-    default: 60
+    default: 60,
   },
   color: {
     type: String,
-    default: 'blue'
-  }
+    default: 'blue',
+  },
 });
 </script>
-
-<style lang="scss" scoped>
-
-</style>
 
 <style lang="scss" scoped>
 @import '../assets/styles/components/logo.scss';
