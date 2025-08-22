@@ -98,14 +98,14 @@
     }
 
     &-title {
-      font-family: Inter;
+      font-family: $font-family-base;
       font-weight: 600;
       font-size: 28px;
       color: $bg-primary;
     }
 
     &-description {
-      font-family: Inter;
+      font-family: $font-family-base;
       font-weight: 400;
       font-size: 16px;
       line-height: 100%;
