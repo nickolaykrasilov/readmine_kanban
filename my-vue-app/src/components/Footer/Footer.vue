@@ -32,7 +32,6 @@ import UILink from '../ui/UILink.vue';
           />
         </div>
       </div>
-      
       <FooterForm
         :title=
           "`Our plugins will help you stay organized and
