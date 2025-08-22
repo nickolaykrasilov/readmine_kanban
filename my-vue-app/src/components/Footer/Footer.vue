@@ -1,11 +1,7 @@
 <script setup>
 import Logo from '../Logo.vue';
-import UILink from '../ui/UILink.vue';
 import FooterForm from './FooterForm.vue'; 
-
-const email = 'support@redmine-kanban.com';
-const title = 'Our plugins will help you stay organized';
-const description = 'Fill out the form and we will contact you';
+import UILink from '../ui/UILink.vue';
 </script>
 
 <template>
@@ -32,16 +28,17 @@ const description = 'Fill out the form and we will contact you';
             />
             <UILink
               :href="`mailto:${email}`"
-              :label="email"
+              :label="'support@redmine-kanban.com'"
               theme="white"
             />
           </div>
         </div>
         
         <FooterForm
-          :title="title"
-          :description="description"
-          @submit="handleFormSubmit"
+          :title="`Our plugins will help you stay organized and
+          ensure that all necessary tasks are completed
+          throughout the project lifecycle.`"
+          :description="'Fill out the form and we will contact you'"
         />
       </div>
     </div>

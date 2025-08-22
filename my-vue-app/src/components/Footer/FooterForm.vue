@@ -8,11 +8,11 @@ import UITextarea from '../ui/UITextarea.vue';
 const props = defineProps({
   title: {
     type: String,
-    default: 'Our plugins will help you stay organized',
+    default: '',
   },
   description: {
     type: String,
-    default: 'Fill out the form and we will contact you',
+    default: '',
   },
   initialData: {
     type: Object,
@@ -25,7 +25,11 @@ const props = defineProps({
   },
   selectOptions: {
     type: Array,
-    default: () => ['Option 1', 'Option 2', 'Option 3'],
+    default: () => [
+      'Option 1',
+      'Option 2',
+      'Option 3',
+    ],
   }
 });
 
