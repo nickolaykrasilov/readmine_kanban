@@ -8,7 +8,7 @@ import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
 import HeaderLink from './HeaderLink.vue';
 import LanguageSwitcher from '../LanguageSwitcher.vue';
-import Logo from '../Logo.vue'; // Импортируем компонент Logo
+import Logo from '../Logo.vue';
 
 const { isTablet} = useScreenSize();
 
@@ -82,5 +82,4 @@ const handleItemSelected = (type, item) => {
 
 <style lang="scss" scoped>
 @import '../../assets/styles/components/header/header.scss';
-
 </style>

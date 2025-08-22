@@ -3,37 +3,24 @@ import { ref } from 'vue';
 import Logo from './Logo.vue';
 import UIButton from './ui/UIButton.vue';
 import UILink from './ui/UILink.vue';
+import UIInput from './ui/UIInput.vue';
+import UISelect from './ui/UISelect.vue';
+import UITextarea from './ui/UITextarea.vue';
 
 const formData = ref({
   name: '',
   email: '',
   type: '',
   text: '',
-})
-
-const formFields = ref({
-  name: {
-    placeholder: 'Name',
-  },
-  email: {
-    placeholder: 'Email',
-  },
-  type: {
-    options: [
-      'Option 1',
-      'Option 2',
-      'Option 3',
-    ],
-    placeholder: 'Type',
-  },
-  text: {
-    placeholder: 'Text',
-  },
 });
 
-const email = ref('support@redmine-kanban.com')
-const title = ref('Our plugins will help you stay organized')
-const description = ref('Fill out the form and we will contact you')
+const email = 'support@redmine-kanban.com'
+const title = 'Our plugins will help you stay organized'
+const description = 'Fill out the form and we will contact you'
+
+function handleSubmit() {
+  console.log('Submit:', formData.value);
+}
 </script>
 
 <template>
@@ -76,56 +63,34 @@ const description = ref('Fill out the form and we will contact you')
             class="footer__form-container"
             @submit.prevent="handleSubmit"
           >
-            <div class="footer__form-container__group">
-              <input
-                v-model="formData.name"
-                type="text"
-                class="footer__form-input"
-                :placeholder="formFields.name.placeholder"
-                required
-              >
-            </div>
-            <div class="footer__form-container__group">
-              <input
-                v-model="formData.email"
-                type="email"
-                class="footer__form-input"
-                :placeholder="formFields.email.placeholder"
-                required
-              >
-            </div>
-            <div class="footer__form-container-group">
-              <select 
-                v-model="formData.type"
-                class="footer__form-select footer__form-input"
-                required
-              >
-                <option value="" disabled>
-                  {{ formFields.type.placeholder }}
-                </option>
-                <option
-                  v-for="(option, index) in formFields.type.options"
-                  :key="index"
-                  :value="option"
-                >
-                  {{ option }}
-                </option>
-              </select>
-              <triangleIcon class="footer__form-select-icon" />
-            </div>
-            <div class="footer__form-group">
-              <textarea
-                v-model="formData.text"
-                class="footer__form-textarea"
-                :placeholder="formFields.text.placeholder"
-                required
-              ></textarea>
-            </div>
+            <UIInput
+              v-model="formData.name"
+              placeholder="Name"
+              type="text"
+            />
+            <UIInput
+              v-model="formData.email"
+              placeholder="Email"
+              type="email"
+            />
+            <UISelect 
+              v-model="formData.type"
+              placeholder="Type"
+              :options="[
+                'Option 1',
+                'Option 2',
+                'Option 3',
+              ]"
+              class="footer__form-input"
+            />
+            <UITextarea
+              v-model="formData.text"
+              placeholder="Text"
+            />
             <UIButton
-              type="submit"
               label="Send"
-              class="footer__form-button"
               theme="blue"
+              class="footer__form-button"
             >
               <template #icon>
                 <whiteArrowIcon />
