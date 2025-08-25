@@ -17,6 +17,10 @@
     top: 20%;
     left: 52%;
     transform: translate(-54%, -80%);
+
+    @media (max-width: $breakpoint-xxl) {
+      transform: translate(-100%, -100%);
+    }
   }
 
   &__title {
@@ -86,11 +90,19 @@
     &-ellipse-top {
       z-index: $ui-index-1;
       transform: translate(42%, -100%);
+
+      @media (max-width: $breakpoint-xxl) {
+        transform: translate(-100%, -100%);
+      }
     }
 
     &-ellipse-down {
       z-index: $ui-index-1;
       transform: translate(-22%, -144%);
+
+      @media (max-width: $breakpoint-xxl) {
+        transform: translate(-100%, -100%);
+      }
     }
   }
 

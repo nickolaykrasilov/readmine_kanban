@@ -73,10 +73,7 @@ const handleItemSelected = (type, item) => {
               <userIcon />
             </template>
           </UILink>
-          <UIButton 
-          label="Get a Free Demo"
-          class="header_button"
-          />
+          <UIButton label="Get a Free Demo" />
         </div>
       </div>
     </div>
