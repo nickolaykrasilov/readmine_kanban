@@ -78,7 +78,6 @@ function handleSubmit() {
         label="Send"
         theme="blue"
         class="footer__form-button"
-        type="submit"
       >
         <template #icon>
           <whiteArrowIcon />
