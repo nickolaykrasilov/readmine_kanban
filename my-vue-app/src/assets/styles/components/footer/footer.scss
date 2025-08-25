@@ -31,27 +31,25 @@
     }
   }
 
-&__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
-
-  @media (max-width: $breakpoint-xl) {
-    justify-content: flex-start;
-  }
-}
-
-  &__links {
+  &__info {
     display: flex;
     flex-direction: column;
-    font-size: 17px;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 2rem;
 
     @media (max-width: $breakpoint-xl) {
-      display: grid;
+      justify-content: flex-start;
+    }
+  }
+
+  &__links {
+    display: grid;
+    font-size: 17px;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; // дефолт — одна колонка
+
+    @media (max-width: $breakpoint-xl) {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.5rem;
     }
 
     @media (max-width: $breakpoint-md) {
