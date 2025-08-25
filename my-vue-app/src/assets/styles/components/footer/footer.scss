@@ -46,7 +46,7 @@
     display: grid;
     font-size: 17px;
     gap: 1.5rem;
-    grid-template-columns: 1fr; // дефолт — одна колонка
+    grid-template-columns: 1fr;
 
     @media (max-width: $breakpoint-xl) {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
