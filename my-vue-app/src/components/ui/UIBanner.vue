@@ -1,6 +1,5 @@
 <script setup>
 import { UI_THEMES } from '../../models/UIThemes';
-
 import UIButton from './UIButton.vue';
 
 defineProps({
