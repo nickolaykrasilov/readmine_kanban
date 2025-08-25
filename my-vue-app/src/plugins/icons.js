@@ -360,6 +360,35 @@ setup(props) {
 }
 });
 
+const triangleIcon = defineComponent({
+  name: 'TriangleIcon',
+  props: {
+    size: {
+      type: [Number, String],
+      default: 10,
+    },
+    color: {
+      type: String,
+      default: 'white',
+    },
+  },
+  setup(props) {
+    return () => h('svg', {
+      width: props.size,
+      height: props.size,
+      viewBox: '0 0 10 6',
+      fill: 'none',
+      xmlns: 'http://www.w3.org/2000/svg',
+    }, [
+      h('path', {
+        d: 'M5 6L0 0H10L5 6Z',
+        fill: props.color,
+      })
+    ]);
+  }
+});
+
+
 const components = {
   yourIcon,
   checkmarkIcon,
@@ -369,6 +398,7 @@ const components = {
   chevronIcon,
   userIcon,
   logoIcon,
+  triangleIcon,
 };
 
 export default {

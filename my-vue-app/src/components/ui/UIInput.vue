@@ -1,0 +1,22 @@
+<script setup>
+import { defineProps, defineModel } from 'vue';
+
+defineProps({
+  placeholder: String,
+  type: {
+    type: String,
+    default: 'text',
+  },
+});
+
+const modelValue = defineModel();
+</script>
+
+<template>
+  <input
+    v-model="modelValue"
+    :type="type"
+    :placeholder="placeholder"
+    class="footer__form-input"
+  />
+</template>

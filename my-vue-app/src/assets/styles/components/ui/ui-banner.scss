@@ -1,0 +1,60 @@
+@import '../main/index';
+
+.ui-banner {
+  $self: &;
+
+  position: relative;
+  z-index: $ui-index-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1342px;
+  height: 288px;
+  background: $gradient-ui-bg;
+  border-radius: 20px;
+
+  @media (max-width: $breakpoint-xxl) {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: -34px;
+    color: $bg-primary;
+  }
+
+  &__description {
+    margin-top: -34px;
+    color: $bg-primary;
+  }
+
+  &__decoration {
+    position: absolute;
+    pointer-events: none;
+
+    &-left {
+      margin-top: 180px;
+      margin-right: 1052px;
+
+      @media (max-width: $breakpoint-xxl) {
+        left: -5%;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+
+    &-right {
+      margin-bottom: 180px;
+      margin-left: 1052px;
+
+      @media (max-width: $breakpoint-xxl) {
+        right: -5%;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+}

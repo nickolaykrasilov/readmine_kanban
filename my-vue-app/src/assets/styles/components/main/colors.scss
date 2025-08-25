@@ -2,14 +2,11 @@
 $primary-color: #4a6bff;
 $secondary-color: #f8f9fa;
 $accent-color: #ff7043;
+$ui-color: #d8eeff;
 
 // Текст
 $text-primary: #222939;
 $text-secondary: #717171;
-
-// Фоны
-$bg-primary: #ffffff;
-$bg-secondary: #f5f7fa;
 
 // Состояния
 $success-color: #4caf50;
@@ -28,5 +25,9 @@ $ui-button-blue-square: #4eb2ff;
 $bg-primary: #ffffff;
 $bg-secondary: #f5f7fa;
 $border-divider: #e0e0e0;
+$color-form-placeholder: #c7c7c9;
+$bg-footer: #04071a;
+$border-form: #8b8b8f;
 
-$gradient-main-bg: linear-gradient(180deg, $bg-primary 0%, #e3f0fc 86%);
+$gradient-main-bg: linear-gradient(220deg, $bg-primary 0%, #e3f0fc 87%);
+$gradient-ui-bg: linear-gradient(90deg, #4079ea 0%, #46c3e4 100%);

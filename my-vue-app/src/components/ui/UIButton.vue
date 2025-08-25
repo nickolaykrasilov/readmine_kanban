@@ -35,8 +35,7 @@ const handleClick = () => {
       `ui-button--${theme}`,
       { 
         'ui-button--disabled': disabled,
-        'ui-button--icon': $slots.icon,
-        'ui-button--icon-right': iconRight && $slots.icon,
+        'ui-button--icon-right': iconRight,
       }
     ]"
     :disabled="disabled"
@@ -46,13 +45,7 @@ const handleClick = () => {
       {{ label }}
     </template>
     <slot v-else />
-    <span
-      v-if="$slots.icon"
-      :class="[
-        `ui-button__icon`,
-        { 'ui-button__icon--right': iconRight },
-      ]"
-    >
+    <span v-if="$slots.icon" class="ui-button__icon">
       <slot name="icon" />
     </span>
   </button>

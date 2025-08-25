@@ -15,7 +15,7 @@ defineProps({
 
 <template>
   <div class="card">
-    <div class="card__icons"> 
+    <div class="card__icons">
       <component :is="iconComponents[cardData.iconType]" />
     </div>
     <h3 class="card__title">
