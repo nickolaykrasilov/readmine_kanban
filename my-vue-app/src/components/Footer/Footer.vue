@@ -1,7 +1,9 @@
 <script setup>
+
+import UILink from '../ui/UILink.vue';
+
 import Logo from '../Logo.vue';
 import FooterForm from './FooterForm.vue';
-import UILink from '../ui/UILink.vue';
 </script>
 
 <template>

@@ -1,9 +1,10 @@
 <script setup>
 import { featureCards } from '../../models/ProductFeatures.js';
 
-import MainBannerCard from './MainBannerCard.vue';
 import UIButton from '../ui/UIButton.vue';
 import UIBanner from '../ui/UIBanner.vue';
+
+import MainBannerCard from './MainBannerCard.vue';
 </script>
 
 <template>
