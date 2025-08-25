@@ -9,13 +9,13 @@
   background-color: $bg-footer;
   width: 100%;
 
-  @media (max-width: $breakpoint-xs) {
-    position: relative;
-    top: auto;
-    width: 100%;
-    height: auto;
-    padding: 2rem 1rem;
-  }
+  // @media (max-width: $breakpoint-xs) {
+  //   position: relative;
+  //   top: auto;
+  //   width: 100%;
+  //   height: auto;
+  //   padding: 2rem 1rem;
+  // }
 
   &__content {
     align-items: flex-start;
@@ -37,15 +37,15 @@
     gap: 1.5rem;
     margin-top: 420px;
 
-    @media (max-width: $breakpoint-xl) {
-      flex-direction: row; 
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+    // @media (max-width: $breakpoint-xl) {
+    //   flex-direction: row; 
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+    // }
 
-    @media (max-width: $breakpoint-md) {
-      flex-direction: column; 
-      gap: 1rem;
-    }
+    // @media (max-width: $breakpoint-md) {
+    //   flex-direction: column; 
+    //   gap: 1rem;
+    // }
   }
 }

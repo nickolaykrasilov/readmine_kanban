@@ -5,12 +5,10 @@
   padding: 0 10rem;
 
   @media (max-width: $breakpoint-xl) {
-    max-width: none;
-    padding: 0;
+    max-width: 90%;
   }
 
   @media (max-width: $breakpoint-md) {
-    max-width: 100%;
     width: 100%;
   }
 
