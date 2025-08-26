@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { CONTACT_FORM_OPTIONS } from '../../models/contactFormOptions';
 
 import UIButton from '../ui/UIButton.vue';
 import UIInput from '../ui/UIInput.vue';
@@ -13,12 +14,6 @@ const formData = ref({
   text: '',
 });
 
-const selectOptions = [
-  'Plugin Support',
-  'Customization Request',
-  'General Inquiry',
-  'Other'
-];
 </script>
 
 <template>
@@ -48,7 +43,7 @@ const selectOptions = [
       <UISelect 
         v-model="formData.type"
         placeholder="Type"
-        :options="selectOptions"
+        :options="CONTACT_FORM_OPTIONS"
         class="footer__form-input"
       />
       <UITextarea
