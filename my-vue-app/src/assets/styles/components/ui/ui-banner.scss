@@ -11,13 +11,9 @@
   background: $gradient-ui-bg;
   border-radius: 20px;
 
-  &__title {
-    // margin-top: -34px;
-    color: $bg-primary;
-  }
-
+  &__title,
   &__description {
-    // margin-top: -34px;
+    margin-top: -24px;
     color: $bg-primary;
   }
 
