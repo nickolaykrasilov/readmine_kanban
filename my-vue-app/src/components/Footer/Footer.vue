@@ -31,13 +31,7 @@ import FooterForm from './FooterForm.vue';
         />
       </div>
     </div>
-      <FooterForm
-        :title="`
-          Our plugins will help you stay organized and
-          ensure that all necessary tasks are completed
-          throughout the project lifecycle.`"
-        :description="'Fill out the form and we will contact you'"
-      />
+      <FooterForm />
   </footer>
 </template>
 

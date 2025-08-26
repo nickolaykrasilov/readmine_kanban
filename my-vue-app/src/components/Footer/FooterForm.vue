@@ -7,14 +7,6 @@ import UISelect from '../ui/UISelect.vue';
 import UITextarea from '../ui/UITextarea.vue';
 
 const props = defineProps({
-  title: {
-    type: String,
-    default: '',
-  },
-  description: {
-    type: String,
-    default: '',
-  },
   initialData: {
     type: Object,
     default: () => ({
@@ -46,10 +38,12 @@ function handleSubmit() {
 <template>
   <div class="footer__form">
     <h2 class="footer__form-title">
-      {{ title }}
+      Our plugins will help you stay organized and
+      ensure that all necessary tasks are completed
+      throughout the project lifecycle.
     </h2>
     <h3 class="footer__form-description description">
-      {{ description }}
+      Fill out the form and we will contact you
     </h3>
     <form 
       class="footer__form-container"
