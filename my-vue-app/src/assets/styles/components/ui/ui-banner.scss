@@ -32,12 +32,10 @@
     pointer-events: none;
 
     &-left {
-      margin-top: 180px;
-      margin-right: 1052px;
+      top: 30%;
+      left: 5%;
 
-      @media (max-width: $breakpoint-xxl) {
-        left: -5%;
-      }
+
 
       @media (max-width: $breakpoint-lg) {
         display: none;
@@ -45,8 +43,8 @@
     }
 
     &-right {
-      margin-bottom: 180px;
-      margin-left: 1052px;
+      top: -42%;
+      left: 62%;
 
       @media (max-width: $breakpoint-xxl) {
         right: -5%;
