@@ -20,6 +20,6 @@ const modelValue = defineModel();
     v-model="modelValue"
     :type="type"
     :placeholder="placeholder"
-    class="footer__form-input"
+    class="footer-form__input"
   />
 </template>

@@ -17,17 +17,17 @@ const formData = ref({
 </script>
 
 <template>
-  <div class="footer__form">
-    <h2 class="footer__form-title">
+  <div class="footer-form">
+    <h2 class="footer-form__title">
       Our plugins will help you stay organized and
       ensure that all necessary tasks are completed
       throughout the project lifecycle.
     </h2>
-    <p3 class="footer__form-description description">
+    <p3 class="footer-form__description description">
       Fill out the form and we will contact you
     </p3>
     <form 
-      class="footer__form-container"
+      class="footer-form__container"
       @submit.prevent="handleSubmit"
     >
       <UIInput
@@ -44,7 +44,7 @@ const formData = ref({
         v-model="formData.type"
         placeholder="Type"
         :options="CONTACT_FORM_OPTIONS"
-        class="footer__form-input"
+        class="footer-form__input"
       />
       <UITextarea
         v-model="formData.text"
@@ -53,7 +53,7 @@ const formData = ref({
       <UIButton
         label="Send"
         theme="blue"
-        class="footer__form-button"
+        class="footer-form__button"
       >
         <template #icon>
           <whiteArrowIcon />

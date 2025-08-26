@@ -33,7 +33,7 @@ const attrs = useAttrs();
         {{ option }}
       </option>
     </select>
-    <triangleIcon class="footer__form-select-icon" />
+    <triangleIcon class="footer-form__select-icon" />
   </div>
 </template>
 
