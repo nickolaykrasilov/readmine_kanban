@@ -1,8 +1,10 @@
 <script setup>
+import { LOGO_SIZES } from '../models/LogoSizes';
+
 defineProps({
   size: {
-    type: Number,
-    default: 60,
+    type: String,
+    default: LOGO_SIZES.MD,
   },
   color: {
     type: String,

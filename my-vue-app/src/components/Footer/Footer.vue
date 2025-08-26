@@ -7,7 +7,7 @@ import FooterForm from './FooterForm.vue';
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <Logo size="60" />
+      <Logo />
       <div class="footer__links">
         <UILink
           href="#"

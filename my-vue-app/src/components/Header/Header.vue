@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 import { useScreenSize } from '../../utils/screen.js';
 import { navMenuModel, updateDropdownCurrent } from '../../models/NavigationMenuModel.js';
+import { LOGO_SIZES } from '../../models/LogoSizes.js';
 
 import UIButton from '../ui/UIButton.vue';
 import UILink from '../ui/UILink.vue';
@@ -40,7 +41,10 @@ const handleItemSelected = (type, item) => {
 <template>
   <header class="header">
     <div class="header__container">
-      <Logo size="50" color="black" />
+      <Logo
+        :size="LOGO_SIZES.SM"
+        color="black"
+      />
       <button
         v-if="isTablet"
         class="header__tablet-menu-button"
