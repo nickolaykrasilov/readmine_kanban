@@ -1,34 +1,35 @@
 @import './main/index';
 
 .logo {
-    display: flex;
-    align-items: center;
-    margin-right: 36px;
-    gap: 0.5rem;
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-right: 36px;
+  gap: 0.5rem;
+  white-space: nowrap;
 
-    @media (max-width: $breakpoint-xxl) {
-        margin-right: 0px;
-    }
+  @media (max-width: $breakpoint-xxl) {
+      margin-right: 0px;
+  }
 
-    &__text {
-        font-size: 34px;
-        font-weight: bold;
+  &__text {
+      font-size: 34px;
+      font-weight: bold;
 
-        &--blue {
-            color: $ui-button-blue;
-        }
+      &--blue {
+          color: $ui-button-blue;
+      }
 
-        &--blue &-part {
-            color: $bg-primary;
-        }
+      &--blue &-part {
+          color: $bg-primary;
+      }
 
-        &--black {
-            color: $link-login-color;
-        }
+      &--black {
+          color: $link-login-color;
+      }
 
-        &--black &-part {
-            color: $text-primary;
-        }
-    }
+      &--black &-part {
+          color: $text-primary;
+      }
+  }
 }
+
