@@ -1,8 +1,6 @@
 @import '../main/index';
 
 .ui-link {
-  $self: &;
-
   display: inline-flex;
   gap: 0.5rem;
   text-decoration: none;

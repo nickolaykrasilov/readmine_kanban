@@ -1,8 +1,6 @@
 @import '../main/index';
 
 .ui-banner {
-  $self: &;
-
   position: relative;
   z-index: $ui-index-2;
   display: flex;
@@ -14,12 +12,12 @@
   border-radius: 20px;
 
   &__title {
-    margin-top: -34px;
+    // margin-top: -34px;
     color: $bg-primary;
   }
 
   &__description {
-    margin-top: -34px;
+    // margin-top: -34px;
     color: $bg-primary;
   }
 
@@ -30,8 +28,6 @@
     &-left {
       top: 30%;
       left: 5%;
-
-
 
       @media (max-width: $breakpoint-lg) {
         display: none;

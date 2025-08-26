@@ -1,8 +1,6 @@
 @import './main/index';
 
 .logo {
-    $self: &;
-
     display: flex;
     align-items: center;
     margin-right: 36px;

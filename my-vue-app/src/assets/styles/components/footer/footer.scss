@@ -1,8 +1,6 @@
 @import '../main/index.scss';
 
 .footer {
-  $self: &;
-
   display: flex;
   justify-content: center;
   padding: 40px 0 200px;

@@ -1,8 +1,6 @@
 @import '../main/index';
 
 .card {
-  $self: &;
-
   display: flex;
   flex-direction: column;
   min-height: 328px;
