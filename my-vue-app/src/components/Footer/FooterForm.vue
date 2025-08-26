@@ -1,38 +1,24 @@
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue';
+import { ref } from 'vue';
 
 import UIButton from '../ui/UIButton.vue';
 import UIInput from '../ui/UIInput.vue';
 import UISelect from '../ui/UISelect.vue';
 import UITextarea from '../ui/UITextarea.vue';
 
-const props = defineProps({
-  initialData: {
-    type: Object,
-    default: () => ({
-      name: '',
-      email: '',
-      type: '',
-      text: '',
-    })
-  },
-  selectOptions: {
-    type: Array,
-    default: () => [
-      'Option 1',
-      'Option 2',
-      'Option 3',
-    ],
-  }
+const formData = ref({
+  name: '',
+  email: '',
+  type: '',
+  text: '',
 });
 
-const emit = defineEmits(['submit']);
-
-const formData = ref({ ...props.initialData });
-
-function handleSubmit() {
-  emit('submit', formData.value);
-}
+const selectOptions = [
+  'Plugin Support',
+  'Customization Request',
+  'General Inquiry',
+  'Other'
+];
 </script>
 
 <template>
