@@ -1,5 +1,6 @@
 <script setup>
 import { LOGO_SIZES } from '../models/LogoSizes';
+import { UI_THEMES } from '../models/UIThemes';
 
 defineProps({
   size: {
@@ -8,18 +9,19 @@ defineProps({
   },
   color: {
     type: String,
-    default: 'blue',
+    default: UI_THEMES.BLUE,
+    validator: (value) => Object.values(UI_THEMES).includes(value),
   },
 });
 </script>
 
 <template>
-  <div class="logo">
+  <div 
+    class="logo"
+    :class="`logo--${color}`" 
+  >
     <logoIcon :size="size" />
-    <span
-      class="logo__text"
-      :class="`logo__text--${color}`"
-    >
+    <span class="logo__text">
       Redmine
       <span class="logo__text-part">
         Kanban
