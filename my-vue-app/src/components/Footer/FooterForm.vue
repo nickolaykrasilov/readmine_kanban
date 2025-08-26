@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { CONTACT_FORM_OPTIONS } from '../../models/contactFormOptions';
+import { CONTACT_FORM_OPTIONS } from '../../models/ContactFormOptions';
 
 import UIButton from '../ui/UIButton.vue';
 import UIInput from '../ui/UIInput.vue';
