@@ -108,13 +108,12 @@
       height: 6px;
       pointer-events: none;
       transform: translate(-82%, 700%);
-
       @media (max-width: $breakpoint-md) {
-        transform: translate(-82%, 500%);
+        left: 82%;
       }
 
       @media (max-width: $breakpoint-xs) {
-        transform: translate(-82%, 400%);
+        left: 70%;
       }
     }
   }
