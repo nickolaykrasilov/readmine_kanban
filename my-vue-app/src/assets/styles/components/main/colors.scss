@@ -1,32 +1,36 @@
-// Основные цвета
-$primary-color: #4a6bff;
-$secondary-color: #f8f9fa;
-$accent-color: #ff7043;
-$ui-color: #d8eeff;
+// Система цветов (Blue)
+$color-blue-100: #d8eeff;    // был $ui-color
+$color-blue-300: #4eb2ff;    // был $ui-button-blue-square
+$color-blue-400: #0094ff;    // был $ui-button-blue
+$color-blue-500: #4a6bff;    // был $primary-color
+$color-blue-600: #4079ea;    // используется в градиенте
+$color-blue-700: #007acc;    // был $ui-button-blue-hover
 
-// Текст
-$text-primary: #222939;
-$text-secondary: #717171;
+// Система цветов (Gray)
+$color-gray-100: #f8f9fa;    // был $secondary-color
+$color-gray-200: #f5f7fa;    // был $bg-secondary
+$color-gray-300: #e0e0e0;    // был $border-divider
+$color-gray-400: #c7c7c9;    // был $color-form-placeholder
+$color-gray-500: #8b8b8f;    // был $border-form
+$color-gray-600: #717171;    // был $text-secondary
+$color-gray-900: #222939;    // был $text-primary
 
-// Состояния
-$success-color: #4caf50;
-$error-color: #f44336;
-$warning-color: #ff9800;
+// Система цветов (Other)
+$color-orange-400: #ff7043;  // был $accent-color
+$color-green-400: #4caf50;   // был $success-color
+$color-red-400: #f44336;     // был $error-color
+$color-yellow-400: #ff9800;  // был $warning-color
 
+// Базовые цвета
+$color-white: #ffffff;       // был $bg-primary
+$color-black: #04071a;       // был $bg-footer
+
+
+// Тени
 $button-shadow: 0px 6px 32px 0px rgba(0, 148, 255, 0.7);
 $box-shadow: 0 1px 1px #ededed;
 $color-shadow-base: rgba(0, 0, 0, 0.1);
 
-
-$ui-button-blue: #0094ff;
-$ui-button-blue-hover: #007acc;
-$ui-button-blue-square: #4eb2ff;
-$bg-primary: #ffffff;
-$bg-secondary: #f5f7fa;
-$border-divider: #e0e0e0;
-$color-form-placeholder: #c7c7c9;
-$bg-footer: #04071a;
-$border-form: #8b8b8f;
-
-$gradient-main-bg: linear-gradient(220deg, $bg-primary 0%, #e3f0fc 87%);
-$gradient-ui-bg: linear-gradient(90deg, #4079ea 0%, #46c3e4 100%);
+// Градиенты
+$gradient-main-bg: linear-gradient(220deg, $color-white 0%, #e3f0fc 87%);
+$gradient-ui-bg: linear-gradient(90deg, $color-blue-600 0%, #46c3e4 100%);

@@ -11,7 +11,7 @@
   }
 
   &:hover {
-    color: $link-hover-color;
+    color: $color-blue-400;
   }
 
   &--black {
@@ -19,10 +19,10 @@
   }
 
   &--blue {
-    color: $link-login-color;
+    color: $color-blue-400;
   }
 
   &--white{
-    color: $bg-primary;
+    color: $color-white;
   }
 }

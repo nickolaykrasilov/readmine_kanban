@@ -26,28 +26,28 @@
   }
 
   &--blue {
-    color: $bg-primary;
-    background-color: $ui-button-blue;
+    color: $color-white;
+    background-color: $color-blue-400;
 
     &:hover {
-      background-color: $ui-button-blue-hover;
+      background-color: $color-blue-700;
     }
 
     #{$self}__icon {
-      background: rgba($bg-primary, 0.2);
+      background: rgba($color-white, 0.2);
     }
   }
 
   &--white {
-    color: $text-primary;
-    background-color: $bg-primary;
+    color: $color-gray-600;
+    background-color: $color-white;
 
     &:hover {
       background-color: rgba(220, 220, 220, 0.85);
     }
 
     #{$self}__icon {
-      background: $ui-color;
+      background: $color-blue-100;
     }
   }
 }

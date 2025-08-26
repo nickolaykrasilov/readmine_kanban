@@ -20,20 +20,20 @@
 
   &--blue {
     #{$self}__text {
-      color: $ui-button-blue;
+      color: $color-blue-400;
 
       &-part {
-        color: $bg-primary;
+        color: $color-white;
       }
     }
   }
 
   &--black {
     #{$self}__text {
-      color: $link-login-color;
+      color: $color-blue-400;
 
       &-part {
-        color: $text-primary;
+        color: $color-gray-600;
       }
     }
   }

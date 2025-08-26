@@ -13,7 +13,6 @@ const formData = ref({
   type: '',
   text: '',
 });
-
 </script>
 
 <template>

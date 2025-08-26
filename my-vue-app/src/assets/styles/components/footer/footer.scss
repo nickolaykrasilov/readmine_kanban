@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   padding: 40px 0 200px;
-  background-color: $bg-footer;
+  background-color: $color-black;
 
   @media (max-width: $breakpoint-md) {
     flex-direction: column;
