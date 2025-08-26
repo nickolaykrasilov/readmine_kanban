@@ -2,7 +2,10 @@
 import { defineProps, defineModel } from 'vue';
 
 defineProps({
-  placeholder: String,
+  placeholder: {
+    type: String,
+    default: '',
+  },
 });
 
 const modelValue = defineModel();
