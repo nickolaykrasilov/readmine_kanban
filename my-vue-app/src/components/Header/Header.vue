@@ -40,7 +40,7 @@ const handleItemSelected = (type, item) => {
 <template>
   <header class="header">
     <div class="header__container">
-        <Logo size="50" color="black" />
+      <Logo size="50" color="black" />
       <button
         v-if="isTablet"
         class="header__tablet-menu-button"
