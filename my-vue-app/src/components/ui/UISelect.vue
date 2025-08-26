@@ -2,7 +2,10 @@
 import { defineProps, defineModel, useAttrs } from 'vue';
 
 defineProps({
-  placeholder: String,
+  placeholder: {
+    type: String,
+    default: '',
+  },
   options: {
     type: Array,
     default: () => [],

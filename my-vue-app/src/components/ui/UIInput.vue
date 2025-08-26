@@ -2,7 +2,10 @@
 import { defineProps, defineModel } from 'vue';
 
 defineProps({
-  placeholder: String,
+  placeholder: {
+    type: String,
+    default: '',
+  },
   type: {
     type: String,
     default: 'text',
