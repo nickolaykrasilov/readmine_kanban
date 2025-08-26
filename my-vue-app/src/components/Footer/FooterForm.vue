@@ -28,9 +28,9 @@ const selectOptions = [
       ensure that all necessary tasks are completed
       throughout the project lifecycle.
     </h2>
-    <h3 class="footer__form-description description">
+    <p3 class="footer__form-description description">
       Fill out the form and we will contact you
-    </h3>
+    </p3>
     <form 
       class="footer__form-container"
       @submit.prevent="handleSubmit"
