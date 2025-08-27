@@ -1,9 +1,7 @@
  .title {
   max-width: 772px;
   font-family: $font-family-heading;
-  font-weight: 700;
   font-size: 60px;
-  line-height: $line-height-1;
   color: $color-gray-600;
 
   @media (max-width: $breakpoint-lg) {
@@ -16,6 +14,5 @@
   font-family: $font-family-base;
   font-weight: 400;
   font-size: 20px;
-  line-height: $line-height-base;
   color: $color-gray-600;
 }
