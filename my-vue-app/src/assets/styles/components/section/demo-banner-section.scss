@@ -1,0 +1,18 @@
+@import '../main/index';
+
+.demo-banner-section {
+  position: relative;
+  padding: 40px;
+  background: $gradient-main-bg;
+  z-index: $ui-index-3;
+  
+  &__banner {
+    position: relative;
+    z-index: $ui-index-4;
+    margin-top: 40px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 20px;
+    }
+  }
+}
