@@ -14,13 +14,17 @@
 
   &__ellipse-top {
     position: absolute;
-    top: 20%;
-    left: 52%;
-    transform: translate(-54%, -80%);
+    top: -6%;
+    left: 50%;
+    transform: translateX(-50%);
 
-    @media (max-width: $breakpoint-xxl) {
-      transform: translate(-100%, -100%);
-    }
+    // @media (max-width: $breakpoint-xxl) {
+    //   left: 25%;
+    // }
+
+    // @media (max-width: $breakpoint-md) {
+    //   left: -5%;
+    // }
   }
 
   &__title {
