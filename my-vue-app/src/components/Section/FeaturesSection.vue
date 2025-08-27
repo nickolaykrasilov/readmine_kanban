@@ -21,14 +21,7 @@ import FeaturesCard from '../FeaturesCard.vue';
           :card-data="card"
         />
       </div>
-      <img
-        src="../../assets/images/ellipse.png"
-        class="features-section__ellipse-top"
-      />
-      <img
-        src="../../assets/images/ellipse.png"
-        class="features-section__ellipse-down"
-      />
+
     </div>
   </section>
 </template>

@@ -10,6 +10,31 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: $ui-index-1;
+      width: 281px;
+      height: 281px;
+      border-radius: 50%;
+      background: #2BEFB5;
+      opacity: 0.26;
+      filter: blur(100px);
+      backdrop-filter: blur(200px);
+    }
+    
+    &::before {
+      top: 476px;
+      left: 423px;
+    }
+    
+    &::after {
+      top: 20%;
+      right: 30%;
+      transform: translate(-20%, 30%);
+    }
   }
 
   &__title {
@@ -57,21 +82,5 @@
       gap: 16px;
       padding: 0 16px;
     }
-  }
-
-  &__ellipse-top {
-    position: absolute;
-    top: 10%;
-    right: 8%;
-    z-index: $ui-index-1;
-    transform: translateX(10%, 10%);
-  }
-
-  &__ellipse-down {
-    position: absolute;
-    top: 20%;
-    right: 30%;
-    z-index: $ui-index-1;
-    transform: translate(-20%, 30%);
   }
 }
