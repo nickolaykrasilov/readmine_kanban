@@ -62,34 +62,16 @@
   &__ellipse-top {
     position: absolute;
     top: 10%;
-    right: 10%;
+    right: 8%;
     z-index: $ui-index-1;
-    transform: translate(50%, -50%);
-
-    @media (max-width: $breakpoint-xxl) {
-      transform: translate(0, -50%);
-      right: 5%;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      display: none;
-    }
+    transform: translateX(10%, 10%);
   }
 
   &__ellipse-down {
     position: absolute;
-    bottom: 20%;
-    left: 10%;
+    top: 20%;
+    right: 30%;
     z-index: $ui-index-1;
-    transform: translate(-50%, 50%);
-
-    @media (max-width: $breakpoint-xxl) {
-      transform: translate(-50%, 0);
-      left: 5%;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      display: none;
-    }
+    transform: translate(-20%, 30%);
   }
 }
