@@ -21,7 +21,6 @@ import FeaturesCard from '../FeaturesCard.vue';
           :card-data="card"
         />
       </div>
-
     </div>
   </section>
 </template>
