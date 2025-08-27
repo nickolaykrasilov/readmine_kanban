@@ -15,6 +15,5 @@ const modelValue = defineModel();
   <textarea
     v-model="modelValue"
     :placeholder="placeholder"
-    class="footer-form__textarea"
   />
 </template>

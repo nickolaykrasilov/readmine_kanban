@@ -33,11 +33,13 @@ const formData = ref({
         v-model="formData.name"
         placeholder="Name"
         type="text"
+        class="footer-form__input"
       />
       <UIInput
         v-model="formData.email"
         placeholder="Email"
         type="email"
+        class="footer-form__input"
       />
       <UISelect 
         v-model="formData.type"
@@ -48,6 +50,7 @@ const formData = ref({
       <UITextarea
         v-model="formData.text"
         placeholder="Text"
+        class="footer-form__textarea footer-form__input"
       />
       <UIButton
         label="Send"
