@@ -1,6 +1,6 @@
 <script setup>
-import { featureCards } from '../../models/ProductFeatures.js';
-import MainBannerCard from '../MainBanner/MainBannerCard.vue';
+import { productFeaturesCards } from '../../models/ProductFeatures.js';
+import FeaturesCard from '../MainBanner/FeaturesCard.vue';
 </script>
 
 <template>
@@ -15,8 +15,8 @@ import MainBannerCard from '../MainBanner/MainBannerCard.vue';
         powerful plugins.
       </p>
       <div class="features-section__cards-wrapper">
-        <MainBannerCard
-          v-for="card in featureCards"
+        <FeaturesCard
+          v-for="card in productFeaturesCards"
           :key="card.title"
           :card-data="card"
         />

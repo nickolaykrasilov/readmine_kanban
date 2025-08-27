@@ -38,5 +38,5 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/main-banner/main-banner-card.scss';
+@import '../../assets/styles/components/main-banner/features-card.scss';
 </style>
