@@ -1,6 +1,6 @@
 <script setup>
 import { productFeaturesCards } from '../../models/ProductFeatures.js';
-import FeaturesCard from '../MainBanner/FeaturesCard.vue';
+import FeaturesCard from '../FeaturesCard.vue';
 </script>
 
 <template>

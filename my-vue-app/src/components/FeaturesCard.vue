@@ -1,9 +1,9 @@
 <script setup>
 import { defineProps } from 'vue';
 
-import { iconComponents } from '../../models/ProductFeatures.js';
+import { iconComponents } from '../models/ProductFeatures.js';
 
-import UILink from '../ui/UILink.vue';
+import UILink from './ui/UILink.vue';
 
 defineProps({
   cardData: {
@@ -38,5 +38,5 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/main-banner/features-card.scss';
+@import '../assets/styles/components/features-card.scss';
 </style>
