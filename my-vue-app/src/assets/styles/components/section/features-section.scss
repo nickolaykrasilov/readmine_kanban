@@ -56,14 +56,14 @@
   &__description {
     max-width: 500px;
     margin-bottom: 48px;
-    font-size: 18px;
+    font-size: $font-size-lg;
     line-height: 1.5;
     color: $color-gray-1000;
 
     @media (max-width: $breakpoint-md) {
       margin-bottom: 32px;
       padding: 0 16px;
-      font-size: 16px;
+      font-size: $font-size-base;
     }
   }
 

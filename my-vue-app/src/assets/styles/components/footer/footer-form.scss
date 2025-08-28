@@ -16,16 +16,16 @@
     color: $color-white-100;
 
     @media (max-width: $breakpoint-md) {
-      font-size: 24px;
+      font-size: $font-size-3xl;
     }
 
     @media (max-width: $breakpoint-xs) {
-      font-size: 20px;
+      font-size: $font-size-xl;
     }
   }
 
   &__description {
-    font-size: 16px;
+    font-size: $font-size-base;
     font-weight: 400;
     line-height: $line-height-1;
     color: $color-white-100;
@@ -38,7 +38,7 @@
   &__input {
     width: 472px;
     padding: 32px 0;
-    font-size: 16px;
+    font-size: $font-size-base;
     color: $color-gray-400;
     background: transparent;
     border: none;
@@ -50,7 +50,7 @@
 
     @media (max-width: $breakpoint-md) {
       padding: 24px 0;
-      font-size: 14px;
+      font-size: $font-size-sm;
     }
 
     @media (max-width: $breakpoint-xs) {
@@ -70,7 +70,7 @@
 
   &__textarea {
     min-height: 100px;
-    font-size: 16px;
+    font-size: $font-size-base;
     color: $color-gray-400;
     background: transparent;
     border: 1px solid $color-gray-500;
@@ -78,7 +78,7 @@
 
     @media (max-width: $breakpoint-md) {
       min-height: 80px;
-      font-size: 14px;
+      font-size: $font-size-sm;
     }
 
     @media (max-width: $breakpoint-xs) {
