@@ -1,10 +1,8 @@
-// Система цветов (Blue)
 $color-blue-100: #d8eeff;
 $color-blue-400: #0094ff;
 $color-blue-600: #4079ea;
 $color-blue-700: #007acc;
 
-// Система цветов (Gray)
 $color-gray-100: #f8f9fa;
 $color-gray-200: #f5f7fa;
 $color-gray-300: #e0e0e0;
@@ -13,16 +11,13 @@ $color-gray-500: #8b8b8f;
 $color-gray-900: #717171;
 $color-gray-600: #222939;
 
-// Базовые цвета
 $color-white: #ffffff;
 $color-black: #04071a;
 
-// Тени
 $button-shadow: 0px 6px 32px 0px rgba(0, 148, 255, 0.7);
 $box-shadow: 0 1px 1px #ededed;
 $color-shadow-base: rgba(0, 0, 0, 0.1);
 
-// Градиенты
 $gradient-main-bg: linear-gradient(220deg, $color-white 0%, #e3f0fc 87%);
 $gradient-fade-in: linear-gradient(220deg, rgba(227, 240, 252, 0) 0%, #e3f0FC 100%);
 $gradient-ui-bg: linear-gradient(90deg, $color-blue-600 0%, #46c3e4 100%);
