@@ -1,10 +1,8 @@
  .title {
   max-width: 772px;
-  font-family: $font-family-heading;
-  font-weight: 700;
   font-size: 60px;
-  line-height: $line-height-1;
-  color: $text-primary;
+  font-family: $font-family-heading;
+  color: $color-gray-600;
 
   @media (max-width: $breakpoint-lg) {
     padding-right: 16px;
@@ -13,9 +11,8 @@
 }
 
 .description {
-  font-family: $font-family-base;
   font-weight: 400;
-  font-size: 20px;
-  line-height: $line-height-base;
-  color: $text-primary;
+  font-size: $font-size-xl;
+  font-family: $font-family-base;
+  color: $color-gray-600;
 }

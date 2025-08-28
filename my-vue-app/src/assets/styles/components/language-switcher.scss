@@ -1,22 +1,20 @@
 @import './main/index';
 
 .language-switcher {
-  $self: &;
-
   &__button {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
-    color: $language-switcher-text;
+    font-family: $font-family-base;
+    color: $color-gray-700;
     background: none;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: $language-switcher-hover-bg;
+      background-color: $color-black-alpha-5;
     }
   }
 
@@ -25,25 +23,25 @@
     min-width: 100px;
     margin: auto;
     padding-top: 4px;
-    background: $bg-primary;
-    border: 1px solid $border-divider;
+    background: $color-white-100;
+    border: 1px solid $color-gray-300;
     box-shadow: $box-shadow;
 
     @media (max-width: $breakpoint-lg) {
       display: flex;
-      margin: -30px 100px;
+      margin: -32px -208px;
     }
   }
 
   &__item {
     padding: 8px 16px;
     letter-spacing: 0;
-    color: $language-switcher-text;
+    color: $color-gray-700;
     cursor: pointer;
     list-style-type: none;
 
     &:hover {
-      background-color: $language-switcher-item-hover;
+      background-color: $color-gray-150;
     }
   }
 

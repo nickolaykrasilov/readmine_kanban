@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-import { LANGUAGES, DEFAULT_LANGUAGE } from '../models/languages.js';
+import { LANGUAGES, DEFAULT_LANGUAGE } from '../models/Languages.js';
 
 const currentLanguage = ref(DEFAULT_LANGUAGE);
 const isOpen = ref(false);

@@ -1,0 +1,45 @@
+@import '../main/index.scss';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 200px;
+  background-color: $color-gray-1000;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    align-items: flex-start;
+
+    @media (max-width: $breakpoint-xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__links {
+    position: relative;
+    top: 72%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: $font-size-base;
+
+    @media (max-width: $breakpoint-xxl) {
+      margin-left: 100px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 2rem;
+      margin-left: 0;
+      gap: 1rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      margin-top: 1rem;
+      align-items: center;
+    }
+  }
+}

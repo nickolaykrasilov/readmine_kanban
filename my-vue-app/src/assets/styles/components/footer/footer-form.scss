@@ -1,0 +1,127 @@
+@import '../main/index.scss';
+
+.footer-form {
+  max-width: 616px;
+  padding: 0 10rem;
+  font-family: $font-family-base;
+
+  @media (max-width: $breakpoint-xl) {
+    max-width: 100%;
+    padding: 0 5rem;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    color: $color-white-100;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-3xl;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__description {
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: $line-height-1;
+    color: $color-white-100;
+
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+    }
+  }
+
+  &__input {
+    width: 472px;
+    padding: 32px 0;
+    font-size: $font-size-base;
+    color: $color-gray-400;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $color-gray-500;
+
+    @media (max-width: $breakpoint-xl) {
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 24px 0;
+      font-size: $font-size-sm;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      padding: 16px 0;
+    }
+
+    &:hover {
+      border-bottom-color: $color-blue-400;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      color: $color-gray-600;
+      border-bottom-color: $color-blue-400;
+    }
+  }
+
+  &__textarea {
+    min-height: 100px;
+    font-size: $font-size-base;
+    color: $color-gray-400;
+    background: transparent;
+    border: 1px solid $color-gray-500;
+    border-radius: 4px;
+
+    @media (max-width: $breakpoint-md) {
+      min-height: 80px;
+      font-size: $font-size-sm;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      min-height: 60px;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      color: $color-gray-600;
+      border-bottom-color: $color-blue-400;
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+    appearance: none;
+
+    &:focus, 
+    &:not(:placeholder-shown) {
+      color: $color-gray-400;
+    }
+
+    &-icon {
+      position: absolute;
+      width: 12px;
+      height: 6px;
+      pointer-events: none;
+      transform: translate(-84%, 704%);
+
+      @media (max-width: $breakpoint-md) {
+        left: 82%;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        left: 72%;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+  }
+}

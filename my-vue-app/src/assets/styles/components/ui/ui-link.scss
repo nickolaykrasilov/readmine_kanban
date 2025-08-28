@@ -1,8 +1,6 @@
 @import '../main/index';
 
 .ui-link {
-  $self: &;
-
   display: inline-flex;
   gap: 0.5rem;
   text-decoration: none;
@@ -13,14 +11,18 @@
   }
 
   &:hover {
-    color: $link-hover-color;
+    color: $color-blue-400;
   }
 
   &--black {
-    color: $language-switcher-text;
+    color: $color-gray-700;
   }
 
   &--blue {
-    color: $link-login-color;
+    color: $color-blue-400;
+  }
+
+  &--white{
+    color: $color-white-100;
   }
 }

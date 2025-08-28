@@ -1,0 +1,47 @@
+@import '../main/index';
+
+.ui-banner {
+  position: relative;
+  z-index: $ui-index-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: $breakpoint-xl;
+  height: 288px;
+  margin: 0 auto;
+  background: $gradient-ui-bg;
+  border-radius: 20px;
+
+  &__title,
+  &__description {
+    margin-top: -24px;
+    color: $color-white-100;
+  }
+
+  &__decoration {
+    position: absolute;
+    pointer-events: none;
+
+    &-left {
+      top: 32%;
+      left: 0%;
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+
+    &-right {
+      top: -44%;
+      left: 76%;
+
+      @media (max-width: $breakpoint-xxl) {
+        right: -4%;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+}

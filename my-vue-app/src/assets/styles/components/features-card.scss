@@ -1,14 +1,12 @@
-@import '../main/index';
+@import './main/index';
 
 .card {
-  $self: &;
-
   display: flex;
   flex-direction: column;
   min-height: 328px;
   padding: 32px;
   font-family: $font-family-base;
-  background: $bg-primary;
+  background: $color-white-100;
   border-radius: 16px;
 
   @media (max-width: $breakpoint-lg) {
@@ -27,44 +25,40 @@
 
   &__title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-3xl;
     line-height: $line-height-1;
     text-align: left;
-    color: $text-primary;
+    color: $color-gray-600;
 
     @media (max-width: $breakpoint-md) {
-      font-size: 20px;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      font-size: 20px;
+      font-size: $font-size-xl;
     }
   }
 
   &__description {
     flex-grow: 1;
     font-weight: 400;
-    font-size: 16px;
+    font-size: $font-size-base;
     line-height: $line-height-base;
     text-align: left;
-    color: $text-secondary;
+    color: $color-gray-900;
     white-space: pre-line;
 
     @media (max-width: $breakpoint-md) {
-      font-size: 12px;
+      font-size: $font-size-xs;
     }
   }
 
   &__link {
-    font-size: 20px;
+    font-size: $font-size-xl;
 
     @media (max-width: $breakpoint-md) {
-      font-size: 16px;
+      font-size: $font-size-base;
     }
   }
 
   &__icons {
-    margin-bottom: 32px;
     display: flex;
+    margin-bottom: 32px;
   }
 }
