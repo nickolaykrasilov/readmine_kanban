@@ -43,7 +43,7 @@
     font-size: 60px;
     font-style: bold;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: $line-height-sm;
     font-family: $font-family-heading;
 
     @media (max-width: $breakpoint-md) {
@@ -57,7 +57,7 @@
     max-width: 500px;
     margin-bottom: 48px;
     font-size: $font-size-lg;
-    line-height: 1.5;
+    line-height: $line-height-base;
     color: $color-gray-1000;
 
     @media (max-width: $breakpoint-md) {

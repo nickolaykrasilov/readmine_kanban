@@ -18,7 +18,7 @@ defineProps({
 <template>
   <div 
     class="logo"
-    :class="`logo--${color}`" 
+    :class="`logo--${color}`"
   >
     <logoIcon :size="size" />
     <span class="logo__text">

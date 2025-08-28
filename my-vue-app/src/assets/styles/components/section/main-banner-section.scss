@@ -23,7 +23,7 @@
     margin: 0;
     font-size: 48px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: $line-height-sm;
   }
 
   &__text-block {
@@ -45,7 +45,7 @@
   &__description {
     margin: 0;
     font-size: $font-size-lg;
-    line-height: 1.5;
+    line-height: $line-height-base;
     color: $color-gray-1000;
 
     @media (max-width: $breakpoint-md) {
