@@ -20,7 +20,7 @@
   }
 
   &__title {
-    margin-top: 20px;
+    margin: 0;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
@@ -44,6 +44,7 @@
 
   &__description {
     font-size: 18px;
+    margin: 0;
     line-height: 1.5;
     color: $color-black;
 
