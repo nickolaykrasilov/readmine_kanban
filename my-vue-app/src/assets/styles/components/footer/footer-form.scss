@@ -1,7 +1,7 @@
 @import '../main/index.scss';
 
 .footer-form {
-  max-width: 614px;
+  max-width: 616px;
   padding: 0 10rem;
   font-family: $font-family-base;
 
@@ -103,17 +103,17 @@
 
     &-icon {
       position: absolute;
-      width: 10px;
+      width: 12px;
       height: 6px;
       pointer-events: none;
-      transform: translate(-82%, 700%);
+      transform: translate(-84%, 704%);
 
       @media (max-width: $breakpoint-md) {
         left: 82%;
       }
 
       @media (max-width: $breakpoint-xs) {
-        left: 70%;
+        left: 72%;
       }
     }
   }

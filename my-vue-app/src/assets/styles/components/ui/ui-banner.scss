@@ -23,7 +23,7 @@
     pointer-events: none;
 
     &-left {
-      top: 30%;
+      top: 32%;
       left: 0%;
 
       @media (max-width: $breakpoint-lg) {
@@ -32,11 +32,11 @@
     }
 
     &-right {
-      top: -42%;
+      top: -44%;
       left: 76%;
 
       @media (max-width: $breakpoint-xxl) {
-        right: -5%;
+        right: -4%;
       }
 
       @media (max-width: $breakpoint-lg) {
