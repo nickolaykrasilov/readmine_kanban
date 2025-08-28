@@ -24,4 +24,5 @@ $color-shadow-base: rgba(0, 0, 0, 0.1);
 
 // Градиенты
 $gradient-main-bg: linear-gradient(220deg, $color-white 0%, #e3f0fc 87%);
+$gradient-fade-in: linear-gradient(220deg, rgba(227, 240, 252, 0) 0%, #e3f0FC 100%);
 $gradient-ui-bg: linear-gradient(90deg, $color-blue-600 0%, #46c3e4 100%);
