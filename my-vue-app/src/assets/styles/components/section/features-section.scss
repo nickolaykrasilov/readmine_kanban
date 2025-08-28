@@ -26,8 +26,9 @@
     }
     
     &::before {
-      top: 476px;
-      left: 423px;
+      top: 60%;
+      left: 44%;
+      transform: translate(-20%, 30%);
     }
     
     &::after {
