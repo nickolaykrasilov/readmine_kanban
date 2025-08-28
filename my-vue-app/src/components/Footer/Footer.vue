@@ -31,7 +31,7 @@ import FooterForm from './FooterForm.vue';
         />
       </div>
     </div>
-      <FooterForm />
+    <FooterForm />
   </footer>
 </template>
 
