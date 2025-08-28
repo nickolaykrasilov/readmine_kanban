@@ -2,10 +2,10 @@
 
 .demo-banner-section {
   position: relative;
+  z-index: $ui-index-3;
   padding: 40px;
   background: $gradient-main-bg;
-  z-index: $ui-index-3;
-  
+
   &__banner {
     position: relative;
     z-index: $ui-index-4;
