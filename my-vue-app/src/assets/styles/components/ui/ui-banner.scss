@@ -6,8 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: $breakpoint-xl;
   height: 288px;
+  margin: 0 auto;
   background: $gradient-ui-bg;
   border-radius: 20px;
 
