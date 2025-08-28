@@ -8,13 +8,13 @@
     font-size: $font-size-sm;
     font-weight: 400;
     font-family: $font-family-base;
-    color: $language-switcher-text;
+    color: $color-gray-700;
     background: none;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: $language-switcher-hover-bg;
+      background-color: $color-black-alpha-5;
     }
   }
 
@@ -36,12 +36,12 @@
   &__item {
     padding: 8px 16px;
     letter-spacing: 0;
-    color: $language-switcher-text;
+    color: $color-gray-700;
     cursor: pointer;
     list-style-type: none;
 
     &:hover {
-      background-color: $language-switcher-item-hover;
+      background-color: $color-gray-150;
     }
   }
 
